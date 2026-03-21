@@ -79,7 +79,7 @@ const cards = [
     sub: "Hair, nails, skincare, and more",
     link: "/salon",
     linkText: "Services →",
-    image: "/images/studio/studio-001.jpg",
+    image: "/images/studio/studio-007.png",
     placeholder: "#EE8898",
     offset: 0,
     gradient: "linear-gradient(to bottom, rgba(183,110,121,0.20) 0%, rgba(61,26,31,0.75) 100%)",
