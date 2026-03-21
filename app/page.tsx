@@ -378,7 +378,7 @@ export default function Home() {
 
           <FadeUp delay={0.3}>
             <div className="flex flex-col md:flex-row gap-[14px] md:gap-[16px]">
-              <Link href="/bridal" 
+              <Link href="/services" 
                 className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105"
                 style={{
                   background: "rgba(255,255,255,0.20)",
@@ -389,7 +389,7 @@ export default function Home() {
                   padding: "0 24px",
                 }}
               >
-                Explore Bridal Work
+                Explore Services
               </Link>
               <Link href="/contact" 
                 className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105 rosegold-shimmer"
