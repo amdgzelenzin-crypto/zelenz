@@ -114,7 +114,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* LEFT — WHATSAPP */}
             <FadeUp>
-              <div className="relative p-8 lg:p-10 text-parchment h-full flex flex-col justify-between overflow-hidden">
+              <div className="relative p-8 lg:p-10 h-full flex flex-col justify-end overflow-hidden min-h-[400px]">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                   <img
@@ -128,18 +128,7 @@ export default function ContactPage() {
                     }}
                   />
                 </div>
-                {/* Content */}
-                <div className="relative z-10">
-                  <p className="text-[11px] font-sans font-medium tracking-[0.15em] uppercase text-parchment/50 mb-4">
-                    Quick Enquiry
-                  </p>
-                  <h2 className="font-serif font-light text-parchment text-2xl lg:text-3xl mb-4">
-                    For party makeup, salon appointments, and fast questions.
-                  </h2>
-                  <p className="font-sans text-parchment/60 text-sm mb-8">
-                    NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits.
-                  </p>
-                </div>
+                {/* Button only */}
                 <div className="relative z-10">
                   <a
                     href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
@@ -150,9 +139,6 @@ export default function ContactPage() {
                   >
                     Open WhatsApp
                   </a>
-                  <p className="font-sans text-xs text-parchment/40 mt-4">
-                    Text is always faster — voice notes make it harder to track your details accurately.
-                  </p>
                 </div>
               </div>
             </FadeUp>
