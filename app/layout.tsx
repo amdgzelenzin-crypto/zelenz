@@ -3,7 +3,7 @@ import { Playfair_Display, Lora, Jost, Cormorant } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
-import FloatingAmbience from "@/components/ui/FloatingAmbience";
+import ClientComponents from "@/components/ui/ClientComponents";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -103,6 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
+        <ClientComponents />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
