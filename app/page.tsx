@@ -598,48 +598,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──── MAP SECTION ──── */}
-      <section style={{ padding: '80px 24px', background: '#FFFFFF', maxWidth: '1200px', margin: '0 auto' }}>
-        <FadeUp>
-          <p style={{
-            fontFamily: 'var(--font-sans, sans-serif)',
-            fontSize: '11px',
-            letterSpacing: '0.25em',
-            color: '#B76E79',
-            textTransform: 'uppercase',
-            marginBottom: '12px',
-          }}>
-            FIND US
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.1}>
-          <h2 style={{
-            fontFamily: 'var(--font-display, serif)',
-            fontSize: 'clamp(28px, 4vw, 40px)',
-            fontWeight: '400',
-            fontStyle: 'italic',
-            color: '#4E4247',
-            marginBottom: '8px',
-          }}>
-            Visit the studio.
-          </h2>
-        </FadeUp>
-        <FadeUp delay={0.2}>
-          <p style={{
-            fontFamily: 'var(--font-body, serif)',
-            fontSize: '15px',
-            fontStyle: 'italic',
-            color: '#A86070',
-            marginBottom: '40px',
-          }}>
-            Pala, Kerala · Studio-only experience.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.3}>
-          <StudioMap />
-        </FadeUp>
-      </section>
-
       {/* ──── 6. FOOTER CTA ──── */}
       <section className="section-padding section-gradient-deep">
         <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)", textAlign: "center" }}>
@@ -718,6 +676,48 @@ export default function Home() {
             </div>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ──── MAP SECTION ──── */}
+      <section style={{ padding: '80px 24px', background: '#FFFFFF', maxWidth: '1200px', margin: '0 auto' }}>
+        <FadeUp>
+          <p style={{
+            fontFamily: 'var(--font-sans, sans-serif)',
+            fontSize: '11px',
+            letterSpacing: '0.25em',
+            color: '#B76E79',
+            textTransform: 'uppercase',
+            marginBottom: '12px',
+          }}>
+            FIND US
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <h2 style={{
+            fontFamily: 'var(--font-display, serif)',
+            fontSize: 'clamp(28px, 4vw, 40px)',
+            fontWeight: '400',
+            fontStyle: 'italic',
+            color: '#4E4247',
+            marginBottom: '8px',
+          }}>
+            Visit the studio.
+          </h2>
+        </FadeUp>
+        <FadeUp delay={0.2}>
+          <p style={{
+            fontFamily: 'var(--font-body, serif)',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            color: '#A86070',
+            marginBottom: '40px',
+          }}>
+            Pala, Kerala · Studio-only experience.
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.3}>
+          <StudioMap />
+        </FadeUp>
       </section>
     </>
   );

@@ -429,6 +429,16 @@ body {
   opacity: 0.5;
 }
 
+/* ────────────────────────────────────────
+   MOBILE OVERLAYS FIX
+   ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 88px !important;
+  }
+}
+
 /* Depth gradient for sections — Macaron Palette (Blush/Cream) */
 .pink-depth {
   background: linear-gradient(
