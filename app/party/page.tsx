@@ -59,7 +59,7 @@ export default function PartyPage() {
               <div className="w-full aspect-[4/3] relative overflow-hidden skeleton">
                 <Image
                   src="/images/party-makeup.jpg"
-                  alt="Party makeup by NIXTUDIO"
+                  alt="Party guest makeup by NIXTUDIO team, Pala Kerala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

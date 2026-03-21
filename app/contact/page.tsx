@@ -136,7 +136,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 z-0">
                   <img
                     src="/images/book-now.jpg"
-                    alt="Bookings are open"
+                    alt="Book an appointment at NIXTUDIO premium makeup studio Pala Kerala"
                     style={{
                       width: '100%',
                       height: '100%',

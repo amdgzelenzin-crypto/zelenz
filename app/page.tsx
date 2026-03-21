@@ -116,7 +116,7 @@ function HeroSlideshow() {
         >
           <Image
             src={src}
-            alt="NIXTUDIO Studio Interior"
+            alt="NIXTUDIO Nail Lounge interior — luxury makeup studio in Pala Kerala"
             fill
             priority={i === 0}
             className="object-cover object-center"

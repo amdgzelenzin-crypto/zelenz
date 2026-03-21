@@ -52,10 +52,19 @@ export function getGalleryImages(): GalleryItem[] {
         category = 'bridal';
       }
       
+      let customAlt = `NIXTUDIO ${category} work`;
+      if (category === 'bridal') {
+        customAlt = "HD bridal makeup by Nikita Liby, NIXTUDIO Pala Kerala";
+      } else if (category === 'party') {
+        customAlt = "Party guest makeup by NIXTUDIO team, Pala Kerala";
+      } else if (category === 'nails') {
+        customAlt = "Gel nail art by NIXTUDIO Nail Lounge, Pala Kerala";
+      }
+      
       return {
         src: `/images/gallery/${filename}`,
         category,
-        alt: `NIXTUDIO ${category} work`,
+        alt: customAlt,
         label: filename,
       };
     })

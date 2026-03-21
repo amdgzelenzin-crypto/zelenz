@@ -570,7 +570,7 @@ export default function SalonPage() {
               >
                 <Image
                   src="/images/studio/studio-007.png"
-                  alt="NIXTUDIO Nail Lounge Interior"
+                  alt="NIXTUDIO Nail Lounge interior — luxury makeup studio in Pala Kerala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"

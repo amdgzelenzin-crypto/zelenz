@@ -59,7 +59,7 @@ export default function BridalPage() {
         <div className="absolute inset-0 skeleton">
           <Image
             src="/images/hero-bridal.jpg"
-            alt="Bridal makeup by NIXTUDIO"
+            alt="Bridal makeup by Nikita Liby — NIXTUDIO premium makeup studio Pala Kerala"
             fill
             className="object-cover"
             priority

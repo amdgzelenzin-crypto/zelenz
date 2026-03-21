@@ -103,7 +103,7 @@ export default function AboutPage() {
                     >
                       <Image
                         src={`/images/studio/${label}`}
-                        alt={`NIXTUDIO studio ${i + 1}`}
+                        alt="NIXTUDIO Nail Lounge interior — luxury makeup studio in Pala Kerala"
                         fill
                         className="object-cover"
                         sizes="80vw"
