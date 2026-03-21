@@ -114,8 +114,22 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* LEFT — WHATSAPP */}
             <FadeUp>
-              <div className="p-8 lg:p-10 bg-espresso text-parchment h-full flex flex-col justify-between">
-                <div>
+              <div className="relative p-8 lg:p-10 text-parchment h-full flex flex-col justify-between overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src="/images/book-now.jpg"
+                    alt="Bookings are open"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                    }}
+                  />
+                </div>
+                {/* Content */}
+                <div className="relative z-10">
                   <p className="text-[11px] font-sans font-medium tracking-[0.15em] uppercase text-parchment/50 mb-4">
                     Quick Enquiry
                   </p>
@@ -126,7 +140,7 @@ export default function ContactPage() {
                     NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits.
                   </p>
                 </div>
-                <div>
+                <div className="relative z-10">
                   <a
                     href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
