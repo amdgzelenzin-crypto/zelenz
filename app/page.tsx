@@ -78,7 +78,7 @@ const cards = [
     tag: "HAIR · NAILS · SPA",
     heading: "Services",
     sub: "Hair, nails, skincare, and more",
-    link: "/salon",
+    link: "/services",
     linkText: "Services →",
     image: "/images/studio/studio-007.png",
     placeholder: "#EE8898",

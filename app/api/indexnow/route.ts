@@ -7,7 +7,7 @@ const urls = [
   `https://${HOST}`,
   `https://${HOST}/bridal`,
   `https://${HOST}/party`,
-  `https://${HOST}/salon`,
+  `https://${HOST}/services`,
   `https://${HOST}/about`,
   `https://${HOST}/contact`,
 ];

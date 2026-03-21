@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { href: "/bridal",  label: "Bridal"       },
-  { href: "/party",   label: "Party Makeup" },
-  { href: "/salon",   label: "SERVICES"     },
+  { href: "/bridal",  label: "BRIDAL"       },
+  { href: "/party",   label: "PARTY & GUESTS" },
+  { href: "/services",label: "SERVICES"     },
   { href: "/gallery", label: "Gallery"      },
   { href: "/about",   label: "About"        },
 ];
