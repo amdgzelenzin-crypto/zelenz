@@ -337,17 +337,18 @@ export default function Home() {
 
           <FadeUp delay={0.1}>
             <h1
-              className="text-[#FFFFFF] mb-4"
+              className="mb-4"
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
-                fontSize: "clamp(52px, 11vw, 88px)", // Matches exact mobile 52px constraint with clamp
+                fontSize: "clamp(52px, 11vw, 88px)",
                 lineHeight: 1.08,
+                color: "#FFFFFF",
               }}
             >
               Every face.<br />
               Carefully<br />
-              <span style={{ color: "#F9C8C8" }}>considered.</span>
+              considered.
             </h1>
           </FadeUp>
 
