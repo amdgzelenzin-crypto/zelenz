@@ -424,8 +424,8 @@ export default function ContactPage() {
               <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
                 +91 70347 26402
               </a>
-              <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
-                +91 70347 26402
+              <a href="tel:+917034726407" className="hover:text-espresso transition-colors">
+                +91 70347 26407
               </a>
               <a
                 href="mailto:nixtudio1@gmail.com"
