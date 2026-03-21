@@ -462,27 +462,23 @@ export default function Home() {
             {/* Portrait */}
             <FadeUp>
               <div
-                className="w-full h-[320px] md:h-auto md:aspect-[3/4] relative"
+                className="w-full relative"
                 style={{
                   background: "#F9C8C8",
                   borderRadius: "16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   overflow: "hidden",
                 }}
               >
                 <Image
                   src="/images/nikita-portrait.jpg"
                   alt="Nikita Liby — NIXTUDIO"
-                  fill
-                  className="object-cover object-top"
+                  width={800}
+                  height={1000}
+                  className="w-full h-auto"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                {/* Portrait image now shows via Image fill — no placeholder text needed */}
 
-
-                {/* Heart Pulse Mobile Bagde */}
+                {/* Heart Pulse Mobile Badge */}
                 <style dangerouslySetInnerHTML={{__html: `
                   @keyframes heartPulseNikita {
                     0%, 100% { transform: scale(1); opacity: 0.70; }
