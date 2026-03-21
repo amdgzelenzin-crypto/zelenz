@@ -566,10 +566,15 @@ export default function SalonPage() {
             </div>
             <FadeUp className="lg:col-span-7" delay={0.15}>
               <div 
-                className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px] flex items-center justify-center border border-taupe/10 shadow-sm"
-                style={{ background: "linear-gradient(135deg, #F9C8C8 0%, #E8A890 100%)" }}
+                className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px]"
               >
-                <span className="font-sans text-sm tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.60)" }}>Studio Interior</span>
+                <Image
+                  src="/images/studio/studio-007.png"
+                  alt="NIXTUDIO Nail Lounge Interior"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                />
               </div>
             </FadeUp>
           </div>
