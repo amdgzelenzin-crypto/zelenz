@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import ReviewMarquee from "@/components/ui/ReviewMarquee";
 import StatCounters from "@/components/ui/StatCounters";
+import StudioMap from "@/components/ui/StudioMap";
 
 /* ──────────────────────────────────────
    SCROLL INDICATOR (bottom-right arrow)
@@ -594,6 +595,48 @@ export default function Home() {
             <Link href="/gallery" className="btn-outline-gold">View All Work →</Link>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ──── MAP SECTION ──── */}
+      <section style={{ padding: '80px 24px', background: '#FFFFFF', maxWidth: '1200px', margin: '0 auto' }}>
+        <FadeUp>
+          <p style={{
+            fontFamily: 'var(--font-sans, sans-serif)',
+            fontSize: '11px',
+            letterSpacing: '0.25em',
+            color: '#B76E79',
+            textTransform: 'uppercase',
+            marginBottom: '12px',
+          }}>
+            FIND US
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <h2 style={{
+            fontFamily: 'var(--font-display, serif)',
+            fontSize: 'clamp(28px, 4vw, 40px)',
+            fontWeight: '400',
+            fontStyle: 'italic',
+            color: '#4E4247',
+            marginBottom: '8px',
+          }}>
+            Visit the studio.
+          </h2>
+        </FadeUp>
+        <FadeUp delay={0.2}>
+          <p style={{
+            fontFamily: 'var(--font-body, serif)',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            color: '#A86070',
+            marginBottom: '40px',
+          }}>
+            Pala, Kerala · Studio-only experience.
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.3}>
+          <StudioMap />
+        </FadeUp>
       </section>
 
       {/* ──── 6. FOOTER CTA ──── */}
