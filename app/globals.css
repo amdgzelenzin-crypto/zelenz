@@ -160,7 +160,13 @@ p {
 .section-dark     { background: #3D1520; }   /* footer only */
 
 .section-padding {
-  padding: clamp(60px, 8vw, 120px) 20px;
+  padding: 72px 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 100px 0;
+  }
 }
 @media (min-width: 768px) {
   .section-padding {
@@ -319,18 +325,25 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
-  border-bottom: 1px solid rgba(61,21,32,0.08);
+  border-bottom: 1px solid rgba(183,110,121,0.12);
   font-family: var(--font-body), Georgia, serif;
   font-size: 15px;
   color: #3D1520;
 }
 
-.service-row .price {
+.service-row .price, .service-row-price {
   font-family: var(--font-display), Georgia, serif;
   font-size: 16px;
-  font-weight: 400;
-  color: #D4A055;
+  font-weight: 600;
+  color: #B76E79;
 }
+
+.service-row-name {
+  font-size: 15px;
+  color: #4E4247;
+  font-weight: 400;
+}
+
 
 /* ────────────────────────────────────────
    ANIMATIONS
@@ -437,6 +450,30 @@ body {
   .scroll-to-top {
     bottom: 88px !important;
   }
+  footer {
+    padding-bottom: 96px;
+  }
+}
+
+/* ────────────────────────────────────────
+   SKELETON LOADERS
+   ──────────────────────────────────────── */
+
+@keyframes skeletonShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #F9C8C8 0%,
+    #FDE8E8 40%,
+    #F5D5C0 60%,
+    #F9C8C8 100%
+  );
+  background-size: 200% auto;
+  animation: skeletonShimmer 1.5s linear infinite;
 }
 
 /* Depth gradient for sections — Macaron Palette (Blush/Cream) */

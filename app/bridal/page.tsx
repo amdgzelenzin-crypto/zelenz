@@ -56,7 +56,7 @@ export default function BridalPage() {
     <>
       {/* ──────── BRIDAL HERO ──────── */}
       <section className="relative h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 skeleton">
           <Image
             src="/images/hero-bridal.jpg"
             alt="Bridal makeup by NIXTUDIO"

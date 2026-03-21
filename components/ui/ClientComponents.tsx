@@ -17,9 +17,15 @@ const ScrollToTop = dynamic(() => import('./ScrollToTop'), {
   loading: () => null,
 })
 
+const SmoothScroll = dynamic(() => import('./SmoothScroll'), {
+  ssr: false,
+  loading: () => null,
+})
+
 export default function ClientComponents() {
   return (
     <>
+      <SmoothScroll />
       <SiteLoader />
       <FloatingAmbience />
       <ScrollToTop />

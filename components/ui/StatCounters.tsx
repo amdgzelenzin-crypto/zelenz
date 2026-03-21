@@ -31,7 +31,7 @@ function useCountUp(target: number, duration = 2000, active: boolean) {
 function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
   const count = useCountUp(stat.value, 2000, active);
   return (
-    <div className="flex-1 text-center bg-white md:bg-transparent rounded-[100px] md:rounded-none px-[20px] py-[16px] md:p-0 border border-[#FADADD] md:border-none card-glow rosegold-shimmer md:shadow-none">
+    <div className="flex-1 text-center bg-white md:bg-transparent rounded-[100px] md:rounded-none px-[16px] py-[20px] md:p-0 border border-[#FADADD] md:border-none card-glow rosegold-shimmer md:shadow-none min-h-[100px] min-w-[100px] flex flex-col justify-center items-center">
       <p className="font-serif font-normal text-[32px] md:text-[clamp(40px,5vw,64px)] text-[#3D1520] md:text-[#D4A055] leading-none mb-1 md:mb-2 tracking-[-0.01em] gold-foil-text">
         {count}{active ? stat.suffix : ""}
       </p>
@@ -56,13 +56,33 @@ export default function StatCounters() {
   }, []);
 
   return (
-    <div ref={ref} className="flex md:items-stretch max-w-full md:max-w-[400px] gap-2 md:gap-0">
+    <div ref={ref} className="stat-grid">
+      <style dangerouslySetInnerHTML={{__html: `
+        .stat-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px;
+          max-width: 500px;
+        }
+        @media (max-width: 767px) {
+          .stat-grid {
+            gap: 16px;
+          }
+        }
+        @media (max-width: 480px) {
+          .stat-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .stat-grid > :nth-child(3) {
+            grid-column: 1 / -1;
+            width: 60%;
+            margin: 0 auto;
+          }
+        }
+      `}} />
       {stats.map((stat, i) => (
-        <div key={stat.label} className="flex items-stretch flex-1">
+        <div key={stat.label} className="stat-pill flex flex-col h-full w-full">
           <StatItem stat={stat} active={active} />
-          {i < stats.length - 1 && (
-            <div className="hidden md:block w-[1px] bg-[#F9C8C8] my-1 shrink-0 px-[0.5px]" />
-          )}
         </div>
       ))}
     </div>

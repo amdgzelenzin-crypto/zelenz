@@ -250,17 +250,17 @@ function PriceList({
       {items.map((s) => (
         <div
           key={s.name}
-          className="flex items-baseline justify-between gap-4 py-2.5 border-b border-taupe/8"
+          className="service-row"
         >
           <div>
-            <span className="font-sans text-sm text-espresso/70">{s.name}</span>
+            <span className="service-row-name">{s.name}</span>
             {s.note && (
               <span className="block font-sans text-xs text-taupe/60 mt-0.5">
                 {s.note}
               </span>
             )}
           </div>
-          <span className="font-sans text-sm font-medium text-espresso shrink-0">
+          <span className="service-row-price shrink-0">
             {s.price}
           </span>
         </div>
@@ -566,7 +566,7 @@ export default function SalonPage() {
             </div>
             <FadeUp className="lg:col-span-7" delay={0.15}>
               <div 
-                className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px]"
+                className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px] skeleton"
               >
                 <Image
                   src="/images/studio/studio-007.png"

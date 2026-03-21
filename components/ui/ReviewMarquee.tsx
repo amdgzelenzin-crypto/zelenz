@@ -17,7 +17,7 @@ const defaultReviews: ReviewItem[] = [
 
 export default function ReviewMarquee({ reviews = defaultReviews }: { reviews?: ReviewItem[] }) {
   return (
-    <section className="texture-grain pink-bloom" style={{ background: "#FFF0E8", padding: "clamp(60px, 8vw, 100px) 0", overflow: "hidden" }}>
+    <section className="texture-grain pink-bloom section-padding" style={{ background: "#FFF0E8", paddingBottom: "0", overflow: "hidden", marginBottom: "0" }}>
       {/* Heading */}
       <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)", marginBottom: "48px" }}>
         <p className="label-caps" style={{ marginBottom: "8px" }}>Kind Words</p>
@@ -77,7 +77,7 @@ export default function ReviewMarquee({ reviews = defaultReviews }: { reviews?: 
                 fontStyle: "italic",
                 fontSize: "16px",
                 lineHeight: 1.7,
-                color: "#3D1520",
+                color: "#2D1518",
                 marginBottom: "24px",
                 flex: 1,
               }}
@@ -93,7 +93,7 @@ export default function ReviewMarquee({ reviews = defaultReviews }: { reviews?: 
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontSize: "14px",
-                fontWeight: 500,
+                fontWeight: 600,
                 color: "#3D1520",
               }}
             >
@@ -104,7 +104,7 @@ export default function ReviewMarquee({ reviews = defaultReviews }: { reviews?: 
                 fontFamily: "var(--font-sans), sans-serif",
                 fontSize: "11px",
                 letterSpacing: "0.12em",
-                color: "#B07880",
+                color: "#6B3040",
                 marginTop: "4px",
               }}
             >

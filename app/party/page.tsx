@@ -56,7 +56,7 @@ export default function PartyPage() {
               </FadeUp>
             </div>
             <FadeUp className="lg:col-span-5 lg:col-start-8" delay={0.15}>
-              <div className="w-full aspect-[4/3] relative overflow-hidden">
+              <div className="w-full aspect-[4/3] relative overflow-hidden skeleton">
                 <Image
                   src="/images/party-makeup.jpg"
                   alt="Party makeup by NIXTUDIO"

@@ -109,9 +109,9 @@ function HeroSlideshow() {
   return (
     <div className="absolute inset-0">
       {heroImages.map((src, i) => (
-        <div
+          <div
           key={src}
-          className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
+          className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out skeleton"
           style={{ opacity: i === current ? 1 : 0 }}
         >
           <Image
@@ -151,6 +151,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
     >
       {/* Background image / placeholder */}
       <div
+        className="skeleton"
         style={{
           position: "absolute",
           inset: 0,
@@ -174,9 +175,11 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
         style={{
           position: "absolute",
           inset: 0,
-          background: card.gradient,
-          transition: "background 400ms ease",
-          opacity: hovered ? 0.05 : 0.12
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.65) 100%)",
+          zIndex: 1,
+          borderRadius: "inherit",
+          transition: "opacity 400ms ease",
+          opacity: hovered ? 0.8 : 1
         }}
       />
 
@@ -189,6 +192,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
             left: 0,
             right: 0,
             padding: "32px",
+            zIndex: 2,
           }}
         >
           {/* Tag */}
@@ -267,7 +271,7 @@ export default function Home() {
     <>
       {/* ──── 1. HERO — full screen ──── */}
       <section
-        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth"
+        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))]"
       >
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes petalSway {
@@ -324,6 +328,8 @@ export default function Home() {
         >
           <FadeUp>
             <p
+              className="mt-[16px] md:mt-0"
+
               style={{
                 fontFamily: "var(--font-sans), sans-serif",
                 fontSize: "10px",
@@ -371,27 +377,27 @@ export default function Home() {
           </FadeUp>
 
           <FadeUp delay={0.3}>
-            <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex flex-col md:flex-row gap-[14px] md:gap-[16px]">
               <Link href="/bridal" 
-                className="w-full md:w-fit min-w-[200px] text-center transition-transform hover:scale-105"
+                className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105"
                 style={{
                   background: "rgba(255,255,255,0.20)",
                   backdropFilter: "blur(10px)",
                   border: "1.5px solid rgba(255,255,255,0.50)",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "16px 24px",
+                  padding: "0 24px",
                 }}
               >
                 Explore Bridal Work
               </Link>
               <Link href="/contact" 
-                className="w-full md:w-fit min-w-[200px] text-center transition-transform hover:scale-105 rosegold-shimmer"
+                className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105 rosegold-shimmer"
                 style={{
                   border: "none",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "16px 24px",
+                  padding: "0 24px",
                 }}
               >
                 Check Availability
@@ -580,7 +586,7 @@ export default function Home() {
                   borderRadius: "8px",
                   textDecoration: "none",
                 }}
-                className="group"
+                className="group skeleton"
               >
                 <Image
                   src={`/images/gallery/${label}`}
