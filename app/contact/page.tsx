@@ -114,8 +114,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* LEFT — WHATSAPP */}
             <FadeUp>
-              <div className="relative p-8 lg:p-10 h-full flex flex-col justify-end overflow-hidden min-h-[400px]">
-                {/* Background Image */}
+              <div className="relative h-full flex flex-col overflow-hidden min-h-[500px]">
+                {/* Background Image - full clean image */}
                 <div className="absolute inset-0 z-0">
                   <img
                     src="/images/book-now.jpg"
@@ -123,13 +123,13 @@ export default function ContactPage() {
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover',
+                      objectFit: 'contain',
                       objectPosition: 'center',
                     }}
                   />
                 </div>
-                {/* Button only */}
-                <div className="relative z-10">
+                {/* Button at bottom */}
+                <div className="relative z-10 mt-auto p-8 lg:p-10">
                   <a
                     href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
