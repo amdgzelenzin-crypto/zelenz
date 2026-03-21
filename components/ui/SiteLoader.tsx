@@ -7,6 +7,9 @@ export default function SiteLoader() {
   const [leaving, setLeaving] = useState(false)
 
   useEffect(() => {
+    // Always restore visibility first
+    document.documentElement.style.visibility = 'visible'
+
     try {
       const seen = sessionStorage.getItem('nix-loaded')
       if (seen) return
@@ -33,6 +36,8 @@ export default function SiteLoader() {
       clearTimeout(exitTimer)
       clearTimeout(removeTimer)
       document.body.style.overflow = ''
+      // Safety — always restore visibility
+      document.documentElement.style.visibility = 'visible'
     }
   }, [])
 

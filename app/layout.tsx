@@ -78,6 +78,20 @@ export default function RootLayout({
     >
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var seen = sessionStorage.getItem('nix-loaded');
+                  if (!seen) {
+                    document.documentElement.style.visibility = 'hidden';
+                  }
+                } catch(e) {}
+              })();
+            `
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -102,7 +116,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
+      <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <ClientComponents />
         <Header />
         <main className="flex-1">{children}</main>
