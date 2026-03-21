@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 
 /* ────────────────────────────────────────
@@ -412,11 +413,15 @@ export default function SalonPage() {
               </FadeUp>
             </div>
             <FadeUp className="lg:col-span-7" delay={0.15}>
-              <div className="w-full aspect-[16/9] lg:aspect-[4/3] bg-pink-wash/40 flex items-center justify-center relative overflow-hidden border border-taupe/10">
-                <span className="text-espresso/60 font-sans text-sm tracking-wide z-10 label-caps">
-                  REPLACE: studio-interior-nail-lounge.jpg
-                </span>
-                <div className="absolute inset-0 bg-parchment/10 z-0" />
+              <div className="w-full aspect-[16/9] lg:aspect-[4/3] relative overflow-hidden border border-taupe/10 shadow-sm bg-pink-wash/10">
+                <Image 
+                  src="/images/studio-interior-nail-lounge.jpg" 
+                  alt="The Nail Lounge by NIXTUDIO" 
+                  fill 
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  priority
+                />
               </div>
             </FadeUp>
           </div>
@@ -596,14 +601,14 @@ export default function SalonPage() {
         <section id="nail-lounge" className="section-padding pt-0 pb-16">
           <FadeUp>
             <div className="mb-10 p-8 lg:p-12 border border-taupe/15 bg-parchment text-center max-w-2xl mx-auto">
-              <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl mb-2">
-                The Nail Lounge
+              <h2 className="font-serif font-light tracking-wider text-espresso text-3xl lg:text-5xl mb-3">
+                THE NAIL LOUNGE
               </h2>
               <p className="font-script text-brass text-2xl lg:text-3xl">by NIXTUDIO</p>
             </div>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <p className="label-caps mb-6">Gel Nails — Natural Nails</p>
+            <p className="label-caps mb-6">Gel Nails & Extensions</p>
           </FadeUp>
           <FadeUp delay={0.15}>
             <div className="max-w-3xl">

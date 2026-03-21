@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 
 const brands = [
@@ -101,10 +102,14 @@ export default function Home() {
               <Link href={item.link} className="group block relative h-[40vh] min-h-[300px] overflow-hidden">
                 {/* Background placeholder */}
                 {item.bgImageLabel ? (
-                  <div className="absolute inset-0 bg-pink-wash/40 group-hover:brightness-110 transition-all duration-500 flex flex-col items-center pt-16">
-                    <span className="text-espresso/60 font-sans text-[10px] tracking-widest uppercase z-10 px-4 text-center">
-                      {item.bgImageLabel}
-                    </span>
+                  <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                    <Image 
+                      src="/images/studio-interior-nail-lounge.jpg" 
+                      alt="NIXTUDIO Salon Interior" 
+                      fill 
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
                 ) : (
                   <div className="absolute inset-0 bg-pink/60 group-hover:brightness-110 transition-all duration-500" />
@@ -174,16 +179,13 @@ export default function Home() {
             <p className="label-caps text-center mb-10">Products Used</p>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 max-w-3xl mx-auto">
-              {brands.map((brand, i) => (
+            <div className="flex flex-wrap items-center justify-center gap-x-12 lg:gap-x-20 gap-y-8 max-w-5xl mx-auto px-4">
+              {brands.map((brand) => (
                 <span
                   key={brand}
-                  className="text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-espresso/60"
+                  className="text-xs font-sans font-medium tracking-[0.25em] uppercase text-espresso/60 px-2 lg:px-4"
                 >
                   {brand}
-                  {i < brands.length - 1 && (
-                    <span className="ml-6 text-taupe/30">·</span>
-                  )}
                 </span>
               ))}
             </div>
