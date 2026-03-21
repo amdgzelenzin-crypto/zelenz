@@ -156,6 +156,26 @@ export default function ContactPage() {
                   >
                     Open WhatsApp
                   </a>
+                  <p style={{
+                    fontFamily: 'var(--font-body, serif)',
+                    fontSize: '13px',
+                    fontStyle: 'italic',
+                    color: '#A86070',
+                    marginTop: '12px',
+                  }}>
+                    Or email us at{' '}
+                    <a
+                      href="mailto:nixtudio1@gmail.com"
+                      style={{
+                        color: '#B76E79',
+                        textDecoration: 'underline',
+                        textDecorationColor: 'rgba(183,110,121,0.40)',
+                        textUnderlineOffset: '3px',
+                      }}
+                    >
+                      nixtudio1@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </FadeUp>
@@ -406,6 +426,33 @@ export default function ContactPage() {
               </a>
               <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
                 +91 70347 26402
+              </a>
+              <a
+                href="mailto:nixtudio1@gmail.com"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#F5D5C8',
+                  textDecoration: 'none',
+                  fontFamily: 'var(--font-body, serif)',
+                  fontSize: '14px',
+                }}
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#B76E79"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                nixtudio1@gmail.com
               </a>
               <a
                 href="https://instagram.com/nixtudio"

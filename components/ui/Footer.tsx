@@ -187,6 +187,34 @@ export default function Footer() {
                   +91 70347 26402
                 </a>
               </div>
+              <a
+                href="mailto:nixtudio1@gmail.com"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#E8CC90',
+                  textDecoration: 'none',
+                  fontFamily: 'var(--font-body, serif)',
+                  fontSize: '14px',
+                  marginTop: '8px',
+                }}
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#E8CC90"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                nixtudio1@gmail.com
+              </a>
               <p
                 style={{
                   fontFamily: "var(--font-body), Georgia, serif",
