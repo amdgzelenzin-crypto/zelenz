@@ -1,25 +1,40 @@
 'use client'
 
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
 
 export default function SmoothScroll() {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    })
+    let lenis: any = null
 
-    function raf(time: number) {
-      lenis.raf(time)
+    const initLenis = async () => {
+      const Lenis = (
+        await import('@studio-freight/lenis')
+      ).default
+
+      lenis = new Lenis({
+        duration: 1.0,
+        easing: (t: number) =>
+          1 - Math.pow(1 - t, 3),
+        smoothWheel: true,
+        touchMultiplier: 1.5,
+        infinite: false,
+        gestureOrientation: 'vertical',
+      })
+
+      function raf(time: number) {
+        if (lenis) {
+          lenis.raf(time)
+        }
+        requestAnimationFrame(raf)
+      }
+
       requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    initLenis()
 
     return () => {
-      lenis.destroy()
+      if (lenis) lenis.destroy()
     }
   }, [])
 
