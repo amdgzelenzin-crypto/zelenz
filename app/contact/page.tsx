@@ -102,7 +102,7 @@ export default function ContactPage() {
     const encodedMessage = encodeURIComponent(message);
     
     // Redirect to WhatsApp
-    window.open(`https://wa.me/917034726407?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/917034726402?text=${encodedMessage}`, '_blank');
     
     setSubmitted(true);
   };
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 {/* Button at bottom */}
                 <div className="relative z-10 mt-auto p-8 lg:p-10">
                   <a
-                    href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+                    href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-3.5 bg-parchment text-espresso text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-parchment/90 transition-colors duration-300"
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     <p className="font-sans text-espresso/70 text-sm">
                       We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
                       <a
-                        href="https://wa.me/917034726407"
+                        href="https://wa.me/917034726402"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-espresso border-b border-espresso/40 hover:border-espresso transition-colors"
@@ -404,8 +404,8 @@ export default function ContactPage() {
               <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
                 +91 70347 26402
               </a>
-              <a href="tel:+917034726407" className="hover:text-espresso transition-colors">
-                +91 70347 26407
+              <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
+                +91 70347 26402
               </a>
               <a
                 href="https://instagram.com/nixtudio"

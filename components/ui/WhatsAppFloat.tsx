@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
       `}} />
       <div className="fixed bottom-6 right-6 z-50 lg:hidden">
         <a
-          href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+          href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center rounded-full text-white transition-transform duration-300 hover:scale-105"

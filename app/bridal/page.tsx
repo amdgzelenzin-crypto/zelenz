@@ -269,12 +269,12 @@ export default function BridalPage() {
                 <p className="font-sans text-espresso/70 text-sm">
                   We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
                   <a
-                    href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                    href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-espresso border-b border-espresso/40 hover:border-espresso transition-colors"
                   >
-                    WhatsApp us directly at +91 70347 26407
+                    WhatsApp us directly at +91 70347 26402
                   </a>
                   .
                 </p>
@@ -424,7 +424,7 @@ export default function BridalPage() {
                 <p className="text-sm text-taupe mt-4">
                   Prefer WhatsApp?{" "}
                   <a
-                    href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                    href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-espresso border-b border-espresso/40 hover:border-espresso transition-colors"

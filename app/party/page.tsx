@@ -165,7 +165,7 @@ export default function PartyPage() {
           <FadeUp delay={0.1}>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
-                href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup."
+                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase transition-all duration-300"

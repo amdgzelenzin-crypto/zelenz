@@ -176,7 +176,7 @@ export default function Footer() {
               <div>
                 <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", color: "#F9919F", marginBottom: "4px" }}>Bridal</p>
                 <a
-                  href="tel:+917034726407"
+                  href="tel:+917034726402"
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontSize: "16px",
@@ -184,7 +184,7 @@ export default function Footer() {
                     textDecoration: "none",
                   }}
                 >
-                  +91 70347 26407
+                  +91 70347 26402
                 </a>
               </div>
               <p
