@@ -12,11 +12,17 @@ const FloatingAmbience = dynamic(() => import('./FloatingAmbience'), {
   loading: () => null,
 })
 
+const ScrollToTop = dynamic(() => import('./ScrollToTop'), {
+  ssr: false,
+  loading: () => null,
+})
+
 export default function ClientComponents() {
   return (
     <>
       <SiteLoader />
       <FloatingAmbience />
+      <ScrollToTop />
     </>
   )
 }

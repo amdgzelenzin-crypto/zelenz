@@ -86,7 +86,24 @@ export default function ContactPage() {
   } = useForm<BridalFormData>();
 
   const onSubmit = (data: BridalFormData) => {
-    console.log("Bridal enquiry:", data);
+    // Format the message for WhatsApp
+    const message = `Hi, I'd like to enquire about bridal makeup.
+
+*Full Name:* ${data.name}
+*Phone:* ${data.phone}
+*Wedding Date:* ${data.date}
+*Time I Need to Leave:* ${data.leaveTime}
+*Event Type:* ${data.eventType}
+*Services Required:* ${data.services}
+*Additional Details:* ${data.details || 'None'}
+*How Did You Find Us:* ${data.referral || 'Not specified'}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/917034726407?text=${encodedMessage}`, '_blank');
+    
     setSubmitted(true);
   };
 

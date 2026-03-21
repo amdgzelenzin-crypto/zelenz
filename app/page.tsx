@@ -415,7 +415,7 @@ export default function Home() {
       </section>
 
       {/* ──── 2. EDITORIAL SERVICE CARDS ──── */}
-      <section style={{ background: "#FFFFFF", padding: "100px 48px" }}>
+      <section style={{ background: "#FFFFFF", padding: "100px 24px" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           {/* Section header */}
           <FadeUp>
@@ -443,6 +443,7 @@ export default function Home() {
               justifyContent: "center",
               alignItems: "flex-start",
               flexWrap: "wrap",
+              padding: "0 12px",
             }}
           >
             {cards.map((card, i) => (
@@ -693,7 +694,7 @@ export default function Home() {
                 Check Bridal Availability
               </Link>
               <a
-                href="https://wa.me/916282089746?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup."
+                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup."
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
