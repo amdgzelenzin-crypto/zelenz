@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeUp } from "@/components/ui/AnimationWrapper";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -11,10 +12,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Image */}
             <FadeUp className="lg:col-span-5">
-              <div className="w-full aspect-[3/4] bg-pink/80 flex items-center justify-center sticky top-28">
-                <span className="text-white/80 font-sans text-sm tracking-wide">
-                  REPLACE: nikita-editorial-portrait.jpg
-                </span>
+              <div className="w-full aspect-[3/4] relative overflow-hidden sticky top-28">
+                <Image
+                  src="/images/nikita-portrait.jpg"
+                  alt="Nikita Liby — NIXTUDIO"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
               </div>
             </FadeUp>
 
@@ -81,25 +86,28 @@ export default function AboutPage() {
                   {[
                     "studio-001.jpg",
                     "studio-002.jpg",
-                    "studio-003.jpg",
-                    "studio-004.jpg",
+                    "studio-003.png",
+                    "studio-004.png",
                     "studio-005.jpg",
+                    "studio-006.jpg",
                   ].map((label, i) => (
                     <div
                       key={i}
-                      className="shrink-0 flex items-center justify-center"
+                      className="shrink-0 relative overflow-hidden"
                       style={{
                         scrollSnapAlign: "start",
                         width: "min(80vw, 500px)",
                         height: "clamp(280px, 35vw, 400px)",
-                        background: "var(--pink-15, rgba(212,165,160,0.15))",
                         border: "1px solid rgba(158,123,117,0.10)",
                       }}
                     >
-                      <span className="text-[10px] font-sans tracking-widest uppercase"
-                        style={{ color: "var(--taupe)", opacity: 0.5 }}>
-                        {label}
-                      </span>
+                      <Image
+                        src={`/images/studio/${label}`}
+                        alt={`NIXTUDIO studio ${i + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="80vw"
+                      />
                     </div>
                   ))}
                 </div>

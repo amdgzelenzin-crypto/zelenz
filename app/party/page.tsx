@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 
 const packages = [
@@ -39,7 +40,7 @@ export default function PartyPage() {
   return (
     <>
       {/* ──────── SIMPLE HERO ──────── */}
-      <section className="pt-28 lg:pt-36 pb-16 lg:pb-20">
+      <section className="pt-28 lg:pt-36 pb-16 lg:pb-20" style={{ background: "#FFCDD4" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-6">
@@ -55,10 +56,14 @@ export default function PartyPage() {
               </FadeUp>
             </div>
             <FadeUp className="lg:col-span-5 lg:col-start-8" delay={0.15}>
-              <div className="w-full aspect-[4/3] bg-pink flex items-center justify-center">
-                <span className="text-white/80 font-sans text-sm tracking-wide">
-                  REPLACE: party-makeup.jpg
-                </span>
+              <div className="w-full aspect-[4/3] relative overflow-hidden">
+                <Image
+                  src="/images/party-makeup.jpg"
+                  alt="Party makeup by NIXTUDIO"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </FadeUp>
           </div>
@@ -66,102 +71,69 @@ export default function PartyPage() {
       </section>
 
       {/* ──────── IMPORTANT DISCLAIMER ──────── */}
-      <section className="section-padding bg-pink-15">
+      <section className="section-padding" style={{ background: "#FFF5F7" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12 max-w-3xl">
           <FadeUp>
-            <h2 className="font-serif font-light text-espresso text-2xl lg:text-3xl mb-6">
-              A note before you book.
-            </h2>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <div className="space-y-4 font-sans text-espresso/70">
-              <p>
-                Party makeup and bridal makeup are fundamentally different services.
-                If your event is an engagement, wedding, or wedding reception — please
-                visit our Bridal page. Party makeup is not offered as a substitute for
-                bridal work, regardless of guest count.
-              </p>
-              <p>
-                Party packages are available for: wedding-eve functions, Haldi, Sangeet,
-                birthday celebrations, professional events, and guest/family members.
-              </p>
+            <div style={{ borderLeft: "3px solid #C4903A", paddingLeft: "24px" }}>
+              <h2 className="font-serif font-light text-2xl lg:text-3xl mb-6" style={{ color: "#3D1520" }}>
+                A note before you book.
+              </h2>
+              <div className="space-y-4 font-sans" style={{ color: "#5C2D3A" }}>
+                <p>Party makeup and bridal makeup are fundamentally different services. If your event is an engagement, wedding, or wedding reception &mdash; please visit our Bridal page. Party makeup is not offered as a substitute for bridal work, regardless of guest count.</p>
+                <p>Party packages are available for: wedding-eve functions, Haldi, Sangeet, birthday celebrations, professional events, and guest/family members.</p>
+              </div>
+              <Link href="/bridal" className="inline-flex items-center gap-2 text-sm font-sans mt-6 transition-colors duration-300" style={{ color: "#C4903A" }}>
+                Booking a bridal event? →
+              </Link>
             </div>
-          </FadeUp>
-          <FadeUp delay={0.2}>
-            <Link
-              href="/bridal"
-              className="inline-flex items-center gap-2 text-sm font-sans text-espresso border-b border-espresso/40 pb-1 hover:border-espresso transition-colors duration-300 mt-6"
-            >
-              Booking a bridal event? →
-            </Link>
           </FadeUp>
         </div>
       </section>
 
       {/* ──────── PACKAGES ──────── */}
-      <section className="section-padding">
+      <section className="section-padding section-white">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <p className="label-caps mb-12">Party Makeup Packages</p>
-          </FadeUp>
-          <StaggerContainer
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl"
-            staggerDelay={0.12}
-          >
+          <FadeUp><p className="label-caps mb-12">Party Makeup Packages</p></FadeUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl" staggerDelay={0.12}>
             {packages.map((pkg) => (
               <StaggerItem key={pkg.title}>
-                <div className="p-6 lg:p-8 border border-taupe/15">
-                  <p className="label-caps text-taupe mb-3">{pkg.title}</p>
-                  <p className="font-sans text-sm text-espresso/60 mb-5">
-                    {pkg.desc}
-                  </p>
-                  <span className="font-serif text-3xl lg:text-4xl font-light text-espresso block">
-                    {pkg.price}
+                <div className="pricing-card">
+                  <p className="label-caps mb-3" style={{ color: "#A86070" }}>{pkg.title}</p>
+                  <p className="font-sans text-sm mb-5" style={{ color: "#5C2D3A", opacity: 0.7 }}>{pkg.desc}</p>
+                  <span className="price-medium block">
+                    <span className="price-rupee">₹</span>{pkg.price.replace("₹","")}
                   </span>
+                  <div style={{ width: "32px", height: "1px", background: "#C4903A", marginTop: "16px" }} />
                 </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
           <FadeUp delay={0.4}>
             <div className="mt-8 max-w-4xl space-y-1">
-              <p className="text-sm font-sans text-taupe">
-                All prices inclusive of 5% GST.
-              </p>
-              <p className="text-sm font-sans text-taupe">
-                Combo packages offer a more cost-effective option than booking makeup and hair separately.
-              </p>
+              <p className="text-sm font-sans" style={{ color: "#A86070" }}>All prices inclusive of 5% GST.</p>
+              <p className="text-sm font-sans" style={{ color: "#A86070" }}>Combo packages offer a more cost-effective option than booking makeup and hair separately.</p>
             </div>
           </FadeUp>
         </div>
       </section>
 
       {/* ──────── INDIVIDUAL PRICING ──────── */}
-      <section className="section-padding pt-0">
+      <section className="section-padding" style={{ background: "#FFE4E8" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <p className="label-caps mb-10">Individual Pricing</p>
-          </FadeUp>
+          <FadeUp><p className="label-caps mb-10">Individual Pricing</p></FadeUp>
           <FadeUp delay={0.1}>
-            <div className="max-w-2xl space-y-3">
+            <div className="max-w-2xl">
               {individualServices.map((s) => (
-                <div
-                  key={s.name}
-                  className="flex items-baseline justify-between gap-4 py-2 border-b border-taupe/8"
-                >
-                  <span className="font-sans text-sm text-espresso/70">
-                    {s.name}
-                  </span>
-                  <span className="font-sans text-sm font-medium text-espresso shrink-0">
-                    {s.price}
-                  </span>
+                <div key={s.name} className="service-row">
+                  <span className="service-row-name">{s.name}</span>
+                  <span className="service-row-price">{s.price}</span>
                 </div>
               ))}
             </div>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <p className="text-xs font-sans text-taupe/60 mt-6 max-w-2xl">
-              Advanced eye makeup (e.g. Smokey) is not included in any package.
-              Flowers for hair not provided. Hair accessories available at extra cost.
+            <p className="text-xs font-sans mt-6 max-w-2xl" style={{ color: "rgba(168,96,112,0.6)" }}>
+              Advanced eye makeup (e.g. Smokey) is not included in any package. Flowers for hair not provided. Hair accessories available at extra cost.
             </p>
           </FadeUp>
         </div>
@@ -183,27 +155,29 @@ export default function PartyPage() {
       </section>
 
       {/* ──────── FAST BOOKING CTA ──────── */}
-      <section className="section-padding">
+      <section className="section-padding section-gradient-deep">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="font-sans text-sm text-taupe mb-6 max-w-lg">
-              NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
+            <p className="font-sans text-sm mb-6 max-w-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
+              NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
-                href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20%0ANumber%20of%20people%3A%20"
+                href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-10 py-3.5 bg-espresso text-parchment text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-espresso/90 transition-colors duration-300"
+                className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase transition-all duration-300"
+                style={{ background: "#25D366", color: "#FFFFFF" }}
                 id="party-whatsapp-btn"
               >
                 WhatsApp to Book
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-sans text-espresso border-b border-espresso/40 pb-1 hover:border-espresso transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-sm font-sans border-b pb-1 transition-colors duration-300"
+                style={{ color: "rgba(255,255,255,0.80)", borderColor: "rgba(255,255,255,0.40)" }}
               >
                 Prefer a form? →
               </Link>

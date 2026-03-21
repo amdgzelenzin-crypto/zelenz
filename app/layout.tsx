@@ -1,29 +1,39 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Great_Vibes } from "next/font/google";
+import { Playfair_Display, Lora, Jost, Cormorant } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import FloatingAmbience from "@/components/ui/FloatingAmbience";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const playfair = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const lora = Lora({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+const jost = Jost({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300", "400", "500"],
+  display: "swap",
+});
+
+const cormorant = Cormorant({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  style: ["italic"],
   display: "swap",
 });
 
@@ -64,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} ${greatVibes.variable}`}
+      className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
         <script
@@ -92,7 +102,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-parchment text-espresso antialiased">
+      <body className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -157,38 +157,41 @@ const pmCombos = [
 ];
 
 /* ──── Category: Gel Nails ──── */
-const gelNatural = [
-  { name: "Solid Polish Hand/Feet", price: "₹1,100", single: "₹650" },
-  { name: "Neon Polish", price: "₹1,100", single: "₹650" },
-  { name: "Glitter Polish", price: "₹1,250", single: "₹700" },
-  { name: "Ombre / Special", price: "₹1,800", single: "₹1,200" },
-  { name: "French Polish", price: "₹1,800", single: "₹1,200" },
-  { name: "Gel with Dry Glitter", price: "₹1,600", single: "₹1,000" },
-  { name: "Chrome / Cat Eye", price: "₹1,500", single: "₹850" },
-  { name: "Dip Powder", price: "₹1,350", single: "₹850" },
-  { name: "BIAB / Gel Overlay / Acrylic Overlay", price: "₹1,800", single: "₹1,050" },
+const nlGel = [
+  { name: "Solid Polish", both: "₹1,100", one: "₹650" },
+  { name: "Neon Polish", both: "₹1,100", one: "₹650" },
+  { name: "Glitter Polish", both: "₹1,250", one: "₹700" },
+  { name: "Ombre / Special", both: "₹1,800", one: "₹1,200" },
+  { name: "French Polish", both: "₹1,800", one: "₹1,200" },
+  { name: "Gel with Dry Glitter", both: "₹1,600", one: "₹1,000" },
+  { name: "Chrome / Cat Eye", both: "₹1,500", one: "₹850" },
+  { name: "Dip Powder", both: "₹1,350", one: "₹850" },
+  { name: "BIAB / Gel / Acrylic Overlay", both: "₹1,800", one: "₹1,050" }
 ];
 
-const nailArt = [
+const nlArt = [
   { name: "Nail Art", price: "₹150/finger" },
   { name: "Advanced Nail Art", price: "₹250/finger" },
   { name: "3D Art", price: "₹350/finger" },
-  { name: "Jewellery", price: "₹200/finger" },
+  { name: "Jewellery", price: "₹200/finger" }
 ];
 
-const gelExtensions = [
-  { name: "New Set Form", price: "₹3,000", single: "₹1,650" },
-  { name: "New Set Acrylic", price: "₹2,750", single: "₹1,500" },
-  { name: "New Set Tip Gel", price: "₹2,750", single: "₹1,500" },
-  { name: "Gel Refill", price: "₹2,500", single: "₹1,350" },
-  { name: "Acrylic Refill", price: "₹2,500", single: "₹1,350" },
-  { name: "Soft Gel", price: "₹2,600", single: "₹1,400" },
-  { name: "Gum Gel", price: "₹3,250", single: "₹1,700" },
-  { name: "In-Built French Extension", price: "₹3,750", single: "₹2,300" },
-  { name: "In-Built Nail Art Extensions", price: "₹4,200", single: "₹2,800" },
-  { name: "Filing Add-on", price: "₹500", single: "₹350" },
-  { name: "Polish Removal", price: "₹550", single: "₹350" },
-  { name: "Extension Removal", price: "₹950", single: "₹550" },
+const nlExt = [
+  { name: "New Set Form", both: "₹3,000", one: "₹1,650" },
+  { name: "New Set Acrylic", both: "₹2,750", one: "₹1,500" },
+  { name: "New Set Tip Gel", both: "₹2,750", one: "₹1,500" },
+  { name: "Gel Refill", both: "₹2,500", one: "₹1,350" },
+  { name: "Acrylic Refill", both: "₹2,500", one: "₹1,350" },
+  { name: "Soft Gel", both: "₹2,600", one: "₹1,400" },
+  { name: "Gum Gel", both: "₹3,250", one: "₹1,700" },
+  { name: "In-Built French", both: "₹3,750", one: "₹2,300" },
+  { name: "In-Built Nail Art", both: "₹4,200", one: "₹2,800" },
+  { name: "Filing (Add-on)", both: "₹500", one: "₹350" }
+];
+
+const nlRem = [
+  { name: "Polish Removal", both: "₹550", one: "₹350" },
+  { name: "Extension Removal", both: "₹950", one: "₹550" }
 ];
 
 /* ──── Category: Waxing ──── */
@@ -354,6 +357,149 @@ function LengthTable({
   );
 }
 
+function NailTable({
+  title,
+  headers,
+  rows,
+  singleCol = false
+}: {
+  title: string;
+  headers: string[];
+  rows: any[];
+  singleCol?: boolean;
+}) {
+  return (
+    <div
+      style={{
+        background: "#FFFFFF",
+        borderRadius: "16px",
+        padding: "32px",
+        marginBottom: "24px",
+        border: "1px solid rgba(183,110,121,0.15)",
+        boxShadow: "0 2px 16px rgba(183,110,121,0.06)",
+      }}
+    >
+      <p
+        style={{
+          fontFamily: "var(--font-sans), sans-serif",
+          fontSize: "10px",
+          letterSpacing: "0.2em",
+          color: "#B76E79",
+          marginBottom: "20px",
+          textTransform: "uppercase",
+        }}
+      >
+        {title}
+      </p>
+      <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", minWidth: singleCol ? "auto" : "480px", tableLayout: "fixed" }}>
+          <thead>
+            <tr style={{ background: "rgba(183,110,121,0.10)" }}>
+              <th
+                style={{
+                  fontFamily: "var(--font-sans), sans-serif",
+                  fontSize: "10px",
+                  letterSpacing: "0.12em",
+                  color: "#4E4247",
+                  padding: "10px 16px",
+                  textAlign: "left",
+                  textTransform: "uppercase",
+                  width: singleCol ? "auto" : "55%",
+                }}
+              >
+                {headers[0]}
+              </th>
+              {!singleCol && headers.slice(1).map((h, i) => (
+                <th
+                  key={i}
+                  style={{
+                    fontFamily: "var(--font-sans), sans-serif",
+                    fontSize: "10px",
+                    letterSpacing: "0.12em",
+                    color: "#4E4247",
+                    padding: "10px 16px",
+                    textAlign: "right",
+                    textTransform: "uppercase",
+                    width: "22.5%",
+                  }}
+                >
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr
+                key={i}
+                className="hover:!bg-[rgba(253,232,232,0.50)] transition-colors duration-200"
+                style={{
+                  background: i % 2 === 0 ? "#FFFFFF" : "rgba(253,232,232,0.20)",
+                  borderBottom: i === rows.length - 1 ? "none" : "1px solid rgba(183,110,121,0.15)",
+                }}
+              >
+                <td
+                  style={{
+                    padding: "14px 16px",
+                    textAlign: "left",
+                    fontFamily: "var(--font-body), Georgia, serif",
+                    fontSize: "15px",
+                    color: "#4E4247",
+                    fontWeight: 400,
+                  }}
+                >
+                  {row.name}
+                </td>
+                {singleCol ? (
+                  <td
+                    style={{
+                      padding: "14px 16px",
+                      textAlign: "right",
+                      fontFamily: "var(--font-display), Georgia, serif",
+                      fontSize: "15px",
+                      color: "#B76E79",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {row.price}
+                  </td>
+                ) : (
+                  <>
+                    <td
+                      style={{
+                        padding: "14px 16px",
+                        textAlign: "right",
+                        fontFamily: "var(--font-display), Georgia, serif",
+                        fontSize: "15px",
+                        color: "#B76E79",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {row.both}
+                    </td>
+                    <td
+                      style={{
+                        padding: "14px 16px",
+                        textAlign: "right",
+                        fontFamily: "var(--font-display), Georgia, serif",
+                        fontSize: "15px",
+                        color: "#B76E79",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {row.one}
+                    </td>
+                  </>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 /* ────────────────────────────────────────
    SALON PAGE
    ──────────────────────────────────────── */
@@ -394,18 +540,24 @@ export default function SalonPage() {
   return (
     <>
       {/* ──────── HERO ──────── */}
-      <section className="pt-28 lg:pt-36 pb-16 lg:pb-20">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+      <section className="pt-28 lg:pt-36 pb-16 lg:pb-20 relative overflow-hidden" style={{ background: "#FDE8E8" }}>
+        <div 
+          className="absolute inset-0 pointer-events-none" 
+          style={{ 
+            background: "linear-gradient(135deg, rgba(212,160,85,0.15) 0%, rgba(183,110,121,0.10) 50%, transparent 100%)" 
+          }} 
+        />
+        <div className="mx-auto max-w-[1440px] px-4 md:px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-5">
               <FadeUp>
                 <h1 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-4">
-                  Salon Services
+                  Services
                 </h1>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="font-sans text-espresso/60 mb-2">
-                  Hair · Makeup · Nails · Spa
+                  Hair · Nails · Facials · Makeup · Spa · Waxing
                 </p>
                 <p className="font-sans text-sm text-taupe">
                   Appointment recommended. Walk-ins welcome based on availability.
@@ -413,15 +565,11 @@ export default function SalonPage() {
               </FadeUp>
             </div>
             <FadeUp className="lg:col-span-7" delay={0.15}>
-              <div className="w-full aspect-[16/9] lg:aspect-[4/3] relative overflow-hidden border border-taupe/10 shadow-sm bg-pink-wash/10">
-                <Image 
-                  src="/images/studio-interior-nail-lounge.jpg" 
-                  alt="The Nail Lounge by NIXTUDIO" 
-                  fill 
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  priority
-                />
+              <div 
+                className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px] flex items-center justify-center border border-taupe/10 shadow-sm"
+                style={{ background: "linear-gradient(135deg, #F9C8C8 0%, #E8A890 100%)" }}
+              >
+                <span className="font-sans text-sm tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.60)" }}>Studio Interior</span>
               </div>
             </FadeUp>
           </div>
@@ -429,7 +577,7 @@ export default function SalonPage() {
       </section>
 
       {/* ──────── STICKY CATEGORY NAV ──────── */}
-      <div className="sticky top-20 lg:top-24 z-30 bg-parchment/95 backdrop-blur-sm border-b border-taupe/10">
+      <div className="sticky top-20 lg:top-24 z-30 border-b" style={{ background: "rgba(255,245,247,0.95)", backdropFilter: "blur(12px)", borderColor: "#FFCDD4" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
             {categories.map((cat) => (
@@ -438,9 +586,13 @@ export default function SalonPage() {
                 onClick={() => scrollToSection(cat.id)}
                 className={`shrink-0 px-4 py-1.5 text-[11px] font-sans font-medium tracking-[0.1em] uppercase transition-colors duration-300 ${
                   activeCategory === cat.id
-                    ? "text-espresso border-b-2 border-pink"
-                    : "text-taupe hover:text-espresso"
+                    ? "border-b-2"
+                    : ""
                 }`}
+                style={{
+                  color: activeCategory === cat.id ? "#C4903A" : "#A86070",
+                  borderColor: activeCategory === cat.id ? "#C4903A" : "transparent",
+                }}
               >
                 {cat.label}
               </button>
@@ -598,39 +750,105 @@ export default function SalonPage() {
         </section>
 
         {/* THE NAIL LOUNGE */}
-        <section id="nail-lounge" className="section-padding pt-0 pb-16">
-          <FadeUp>
-            <div className="mb-10 p-8 lg:p-12 border border-taupe/15 bg-parchment text-center max-w-2xl mx-auto">
-              <h2 className="font-serif font-light tracking-wider text-espresso text-3xl lg:text-5xl mb-3">
-                THE NAIL LOUNGE
-              </h2>
-              <p className="font-script text-brass text-2xl lg:text-3xl">by NIXTUDIO</p>
-            </div>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <p className="label-caps mb-6">Gel Nails & Extensions</p>
-          </FadeUp>
-          <FadeUp delay={0.15}>
-            <div className="max-w-3xl">
-              <DualPriceList items={gelNatural} headers={["Both", "One Hand"]} />
-            </div>
-          </FadeUp>
-          <FadeUp delay={0.2}>
-            <div className="mt-6 max-w-2xl">
-              <PriceList items={nailArt} />
-            </div>
-          </FadeUp>
-          <FadeUp delay={0.25}>
-            <div className="mt-10">
-              <p className="label-caps mb-6">Gel Extensions</p>
-              <div className="max-w-3xl">
-                <DualPriceList
-                  items={gelExtensions}
-                  headers={["Full Set", "One Hand"]}
-                />
+        <section
+          id="nail-lounge"
+          className="marble-header relative overflow-hidden"
+          style={{
+            padding: "clamp(60px, 8vw, 80px) clamp(20px, 5vw, 48px)",
+          }}
+        >
+          <style dangerouslySetInnerHTML={{__html: `
+            .marble-header {
+              background-color: #ffffff;
+              background-image: 
+                linear-gradient(to right, rgba(212,160,85,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(212,160,85,0.05) 1px, transparent 1px),
+                radial-gradient(ellipse at 80% 20%, rgba(249,145,159,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(212,160,85,0.1) 0%, transparent 50%);
+              background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+            }
+            .marble-header::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 60px;
+              background: #FDE8E8;
+              border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+              pointer-events: none;
+            }
+          `}} />
+          {/* Decorative Accents */}
+          <div style={{ position: "absolute", top: 0, right: 0, width: "250px", height: "250px", background: "conic-gradient(from 200deg at 80% 20%, rgba(212,160,85,0.25) 0deg, rgba(183,110,121,0.20) 60deg, rgba(240,180,160,0.15) 120deg, transparent 180deg)", borderRadius: "0 0 0 100%", pointerEvents: "none", zIndex: 0 }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, width: "180px", height: "180px", background: "radial-gradient(ellipse at 20% 80%, rgba(183,110,121,0.18) 0%, rgba(212,160,85,0.12) 40%, transparent 70%)", borderRadius: "100% 0 0 0", pointerEvents: "none", zIndex: 0 }} />
+
+          <div style={{ maxWidth: "1024px", margin: "0 auto", position: "relative", zIndex: 10 }}>
+            <FadeUp>
+              <div
+                className="relative pl-6 mb-12"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-1 rosegold-shimmer rounded-full" />
+                <h2
+                  className="gold-foil-text"
+                  style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontSize: "clamp(32px, 5vw, 56px)",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    margin: 0,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  THE NAIL LOUNGE
+                </h2>
+                <p
+                  style={{
+                    fontFamily: "var(--font-script), Georgia, serif",
+                    fontSize: "20px",
+                    color: "#B76E79",
+                    fontStyle: "italic",
+                    marginTop: "8px",
+                  }}
+                >
+                  by NIXTUDIO
+                </p>
               </div>
-            </div>
-          </FadeUp>
+            </FadeUp>
+            
+            <FadeUp delay={0.1}>
+              <NailTable
+                title="GEL / ACRYLIC ON NATURAL NAILS"
+                headers={["Service", "Both/Feet", "One Hand"]}
+                rows={nlGel}
+              />
+            </FadeUp>
+            
+            <FadeUp delay={0.15}>
+              <NailTable
+                title="NAIL ART (PER FINGER)"
+                headers={["Nail Art", ""]}
+                rows={nlArt}
+                singleCol
+              />
+            </FadeUp>
+
+            <FadeUp delay={0.2}>
+              <NailTable
+                title="EXTENSIONS"
+                headers={["Service", "Both Hands", "One Hand"]}
+                rows={nlExt}
+              />
+            </FadeUp>
+
+            <FadeUp delay={0.25}>
+              <NailTable
+                title="REMOVAL"
+                headers={["Service", "Both/Feet", "One Hand"]}
+                rows={nlRem}
+              />
+            </FadeUp>
+          </div>
         </section>
 
         {/* WAXING */}
@@ -681,12 +899,10 @@ export default function SalonPage() {
       </div>
 
       {/* ──────── SALON PERKS ──────── */}
-      <section className="section-padding bg-pink-15">
+      <section className="section-padding section-gradient-pink">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <h2 className="font-serif font-light text-espresso text-2xl lg:text-3xl mb-10">
-              The NIXTUDIO experience.
-            </h2>
+            <h2 className="font-serif font-light text-white text-2xl lg:text-3xl mb-10">The NIXTUDIO experience.</h2>
           </FadeUp>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.12}>
             {[
@@ -695,9 +911,7 @@ export default function SalonPage() {
               "Complimentary 10-minute leg massage for services over 2 hours.",
             ].map((text) => (
               <StaggerItem key={text}>
-                <p className="font-sans text-sm text-espresso/70 leading-relaxed">
-                  {text}
-                </p>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>{text}</p>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -705,27 +919,29 @@ export default function SalonPage() {
       </section>
 
       {/* ──────── SALON BOOKING CTA ──────── */}
-      <section className="section-padding">
+      <section className="section-padding section-gradient-deep">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="font-sans text-sm text-taupe mb-6 max-w-lg">
+            <p className="font-sans text-sm mb-6 max-w-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
               Scheduling an appointment in advance ensures we can give you our full attention.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
-                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20book%20a%20salon%20appointment.%0AService%20required%3A%20%0APreferred%20date%20and%20time%3A%20"
+                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20book%20a%20salon%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-10 py-3.5 bg-espresso text-parchment text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-espresso/90 transition-colors duration-300"
+                className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase"
+                style={{ background: "#25D366", color: "#FFFFFF" }}
                 id="salon-whatsapp-btn"
               >
                 Book Appointment
               </a>
               <a
                 href="tel:+917034726402"
-                className="inline-flex items-center gap-2 text-sm font-sans text-espresso border-b border-espresso/40 pb-1 hover:border-espresso transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-sm font-sans border-b pb-1"
+                style={{ color: "rgba(255,255,255,0.80)", borderColor: "rgba(255,255,255,0.40)" }}
               >
                 Call to Schedule →
               </a>

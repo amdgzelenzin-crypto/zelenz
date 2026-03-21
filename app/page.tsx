@@ -1,279 +1,674 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
+import ReviewMarquee from "@/components/ui/ReviewMarquee";
+import StatCounters from "@/components/ui/StatCounters";
 
-const brands = [
-  "GUCCI", "CHANEL", "DIOR", "CHARLOTTE TILBURY",
-  "GIVENCHY", "NARS", "FENTY BEAUTY", "PAT McGRATH",
-  "URBAN DECAY", "MAC", "LAURA MERCIER", "HUDA BEAUTY",
+/* ──────────────────────────────────────
+   SCROLL INDICATOR (bottom-right arrow)
+   ────────────────────────────────────── */
+function ScrollIndicator() {
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const fn = () => setVisible(window.scrollY < 100);
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        bottom: "32px",
+        right: "48px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "6px",
+        opacity: visible ? 1 : 0,
+        transition: "opacity 0.4s ease",
+        pointerEvents: "none",
+        zIndex: 20,
+      }}
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        style={{ animation: "bounce-down 1.5s ease-in-out infinite" }}
+      >
+        <path d="M10 3v14M4 11l6 6 6-6" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────
+   EDITORIAL STAGGERED CARDS
+   ────────────────────────────────────── */
+const cards = [
+  {
+    tag: "BRIDAL EXPERIENCE",
+    heading: "Bridal",
+    sub: "For your engagement, wedding, and reception",
+    link: "/bridal",
+    linkText: "The Bridal Edit →",
+    image: "/images/gallery/bridal-001.jpg",
+    placeholder: "#F9C8C8",
+    offset: 0,
+    gradient: "linear-gradient(to bottom, rgba(249,145,159,0.15) 0%, rgba(61,26,31,0.75) 100%)",
+  },
+  {
+    tag: "PARTY & GUEST MAKEUP",
+    heading: "Party &\nGuests",
+    sub: "For every celebration in between",
+    link: "/party",
+    linkText: "Party Makeup →",
+    image: "/images/party-makeup.jpg",
+    placeholder: "#F4A8B0",
+    offset: 40,
+    gradient: "linear-gradient(to bottom, rgba(212,160,85,0.15) 0%, rgba(61,26,31,0.75) 100%)",
+  },
+  {
+    tag: "HAIR · NAILS · SPA",
+    heading: "Services",
+    sub: "Hair, nails, skincare, and more",
+    link: "/salon",
+    linkText: "Services →",
+    image: "/images/studio/studio-001.jpg",
+    placeholder: "#EE8898",
+    offset: 0,
+    gradient: "linear-gradient(to bottom, rgba(183,110,121,0.20) 0%, rgba(61,26,31,0.75) 100%)",
+  },
+];
+const heroImages = [
+  "/images/hero-bridal.jpg",
+  "/images/studio/studio-002.jpg",
+  "/images/studio/studio-003.png",
+  "/images/studio/studio-005.jpg",
+  "/images/studio/studio-006.jpg",
 ];
 
-const testimonials = [
-  {
-    quote: "She understood exactly what I wanted before I could even explain it. The result was effortless — I looked like myself, only luminous.",
-    name: "Aishwarya",
-    detail: "Bride, 2024",
-  },
-  {
-    quote: "From the pre-bridal guide to the final look, every step felt intentional and unhurried. I never once felt like just another booking.",
-    name: "Meera",
-    detail: "Bride, 2024",
-  },
-  {
-    quote: "The attention to detail was extraordinary. My skin had never looked like that in photographs before.",
-    name: "Devika",
-    detail: "Bride, 2023",
-  },
-];
+function HeroSlideshow() {
+  const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0">
+      {heroImages.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
+          style={{ opacity: i === current ? 1 : 0 }}
+        >
+          <Image
+            src={src}
+            alt="NIXTUDIO Studio Interior"
+            fill
+            priority={i === 0}
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      className="w-full h-[280px] md:h-[520px] md:max-w-[380px] max-md:mb-4 max-md:[&:nth-child(2)]:ml-4 card-glow"
+      style={{
+        marginTop: `${card.offset}px`,
+        borderRadius: "20px",
+        overflow: "hidden",
+        position: "relative",
+        cursor: "pointer",
+        boxShadow: hovered
+          ? "0 20px 60px rgba(61,21,32,0.22)"
+          : "0 8px 48px rgba(61,21,32,0.12)",
+        transition: "box-shadow 400ms ease",
+        flexShrink: 0,
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {/* Background image / placeholder */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: card.placeholder,
+          transform: hovered ? "scale(1.06)" : "scale(1)",
+          transition: "transform 600ms ease",
+        }}
+      >
+        <Image
+          src={card.image}
+          alt={card.heading}
+          fill
+          className="object-cover object-center"
+          sizes="380px"
+          onError={() => {}} // silently use placeholder bg on missing image
+        />
+      </div>
+
+      {/* Gradient overlay */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: card.gradient,
+          transition: "background 400ms ease",
+          opacity: hovered ? 0.05 : 0.12
+        }}
+      />
+
+      {/* Text content */}
+      <Link href={card.link} style={{ textDecoration: "none" }}>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: "32px",
+          }}
+        >
+          {/* Tag */}
+          <p
+            style={{
+              fontFamily: "var(--font-sans), sans-serif",
+              fontSize: "10px",
+              fontWeight: 400,
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+              color: "#E8A890",
+              marginBottom: "12px",
+            }}
+          >
+            {card.tag}
+          </p>
+
+          {/* Heading */}
+          <h2
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontSize: "clamp(36px, 5vw, 48px)",
+              fontWeight: 400,
+              fontStyle: "italic",
+              color: "#FFFFFF",
+              lineHeight: 1.15,
+              marginBottom: "8px",
+              whiteSpace: "pre-line",
+            }}
+          >
+            {card.heading}
+          </h2>
+
+          {/* Sub */}
+          <p
+            style={{
+              fontFamily: "var(--font-body), Georgia, serif",
+              fontSize: "14px",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.75)",
+              lineHeight: 1.5,
+              marginBottom: "20px",
+            }}
+          >
+            {card.sub}
+          </p>
+
+          {/* Link */}
+          <span
+            style={{
+              fontFamily: "var(--font-sans), sans-serif",
+              fontSize: "11px",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "#FFFFFF",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              transform: hovered ? "translateX(6px)" : "translateX(0)",
+              transition: "transform 300ms ease",
+            }}
+          >
+            {card.linkText}
+          </span>
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────
+   PAGE
+   ────────────────────────────────────── */
 export default function Home() {
   return (
     <>
-      {/* ──────── HERO ──────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="mx-auto max-w-[1440px] w-full px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 pt-24 lg:pt-0">
-          {/* Left — Text */}
-          <div className="lg:col-span-5 flex flex-col justify-center z-10 order-2 lg:order-1">
-            <FadeUp>
-              <p className="label-caps mb-5">Premium Makeup Studio</p>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <h1 className="font-serif font-light text-espresso leading-[1.08] mb-6">
-                Every face.<br />
-                Carefully considered.
-              </h1>
-            </FadeUp>
-            <FadeUp delay={0.2}>
-              <p className="font-sans text-lg text-espresso/70 mb-8 max-w-md">
-                Bridal makeup done exclusively by Nikita.
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.3}>
-              <Link
-                href="/bridal"
-                className="inline-flex items-center gap-2 text-sm font-sans text-espresso border-b border-espresso/40 pb-1 hover:border-espresso transition-colors duration-300 w-fit"
+      {/* ──── 1. HERO — full screen ──── */}
+      <section
+        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth"
+      >
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes petalSway {
+            0%, 100% { transform: rotate(var(--r)) translateY(0px); }
+            50% { transform: rotate(var(--r)) translateY(-12px); }
+          }
+          @keyframes bounceHero {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+          }
+        `}} />
+
+        {/* Gold Botanical Detail Line (Mobile Only) */}
+        <div className="absolute top-0 left-0 w-full h-1 z-50 md:hidden bg-[linear-gradient(90deg,transparent_0%,#D4A055_20%,#F9C8C8_50%,#D4A055_80%,transparent_100%)]" />
+
+        {/* Background image / placeholder */}
+        <HeroSlideshow />
+
+
+        {/* Gradient overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(61,26,31,0.5) 100%)",
+          }}
+        />
+
+        {/* Floating Petals Mobile Only */}
+        <div className="absolute inset-0 z-0 pointer-events-none md:hidden overflow-hidden">
+          <div style={{
+            position: "absolute", top: "15%", right: "8%", width: "60px", height: "80px",
+            background: "rgba(249,200,200,0.25)", borderRadius: "50% 0 50% 0",
+            ["--r" as any]: "45deg", transform: "rotate(45deg)",
+            animation: "petalSway 6s ease-in-out infinite"
+          }} />
+          <div style={{
+            position: "absolute", top: "25%", left: "5%", width: "40px", height: "55px",
+            background: "rgba(212,160,85,0.20)", borderRadius: "50% 0 50% 0",
+            ["--r" as any]: "-30deg", transform: "rotate(-30deg)",
+            animation: "petalSway 8s ease-in-out infinite reverse"
+          }} />
+          <div style={{
+            position: "absolute", bottom: "25%", right: "10%", width: "50px", height: "65px",
+            background: "rgba(249,145,159,0.20)", borderRadius: "0 50% 0 50%",
+            ["--r" as any]: "120deg", transform: "rotate(120deg)",
+            animation: "petalSway 7s ease-in-out infinite 2s"
+          }} />
+        </div>
+
+        {/* Text — bottom left */}
+        <div
+          className="absolute z-10 max-w-[680px] bottom-[40px] md:bottom-[80px] left-[20px] md:left-[clamp(24px,5vw,64px)]"
+        >
+          <FadeUp>
+            <p
+              style={{
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "10px",
+                fontWeight: 300,
+                letterSpacing: "0.30em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.75)",
+                marginBottom: "16px",
+              }}
+            >
+              Premium Makeup Studio · Pala, Kerala
+            </p>
+          </FadeUp>
+
+          <FadeUp delay={0.1}>
+            <h1
+              className="text-[#FFFFFF] mb-4"
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontStyle: "italic",
+                fontSize: "clamp(52px, 11vw, 88px)", // Matches exact mobile 52px constraint with clamp
+                lineHeight: 1.08,
+              }}
+            >
+              Every face.<br />
+              Carefully<br />
+              <span style={{ color: "#F9C8C8" }}>considered.</span>
+            </h1>
+          </FadeUp>
+
+          <FadeUp delay={0.2}>
+            <p
+              style={{
+                fontFamily: "var(--font-body), Georgia, serif",
+                fontSize: "16px",
+                fontStyle: "italic",
+                color: "rgba(255,255,255,0.85)",
+                lineHeight: 1.6,
+                marginBottom: "32px",
+              }}
+            >
+              Bridal makeup done exclusively by Nikita.
+            </p>
+          </FadeUp>
+
+          <FadeUp delay={0.3}>
+            <div className="flex flex-col md:flex-row gap-3">
+              <Link href="/bridal" 
+                className="w-full md:w-fit min-w-[200px] text-center transition-transform hover:scale-105"
+                style={{
+                  background: "rgba(255,255,255,0.20)",
+                  backdropFilter: "blur(10px)",
+                  border: "1.5px solid rgba(255,255,255,0.50)",
+                  color: "#FFFFFF",
+                  borderRadius: "50px",
+                  padding: "16px 24px",
+                }}
               >
                 Explore Bridal Work
-                <span className="text-xs">→</span>
               </Link>
-            </FadeUp>
-          </div>
+              <Link href="/contact" 
+                className="w-full md:w-fit min-w-[200px] text-center transition-transform hover:scale-105 rosegold-shimmer"
+                style={{
+                  border: "none",
+                  color: "#FFFFFF",
+                  borderRadius: "50px",
+                  padding: "16px 24px",
+                }}
+              >
+                Check Availability
+              </Link>
+            </div>
+          </FadeUp>
+        </div>
 
-          {/* Right — Image Placeholder */}
-          <div className="lg:col-span-7 relative order-1 lg:order-2">
-            <FadeUp delay={0.15}>
-              <div className="relative w-full aspect-[3/4] lg:aspect-[4/5] bg-pink flex items-center justify-center lg:ml-auto lg:-mr-12 xl:-mr-20">
-                <span className="text-white/80 font-sans text-sm tracking-wide">
-                  REPLACE: hero-bridal.jpg
-                </span>
-              </div>
-            </FadeUp>
+        {/* Scroll indicator */}
+        <div style={{
+          position: "absolute", bottom: "24px", left: "50%",
+          transform: "translateX(-50%)", zIndex: 10,
+        }}>
+          <div style={{
+            fontSize: "20px", color: "rgba(255,255,255,0.60)",
+            animation: "bounceHero 2s ease-in-out infinite",
+          }}>
+            ↓
           </div>
         </div>
       </section>
 
-      {/* ──────── THREE-PATH NAVIGATION ──────── */}
-      <section>
-        <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3" staggerDelay={0.15}>
-          {[
-            {
-              title: "Bridal",
-              sub: "For your engagement, wedding, and reception",
-              link: "/bridal",
-              linkText: "The Bridal Edit →",
-            },
-            {
-              title: "Party & Guests",
-              sub: "For every celebration in between",
-              link: "/party",
-              linkText: "Party Makeup →",
-            },
-            {
-              title: "Salon & Spa",
-              sub: "Hair, nails, skincare, and more",
-              link: "/salon",
-              linkText: "Salon Services →",
-              bgImageLabel: "REPLACE: studio-interior-nail-lounge.jpg",
-            },
-          ].map((item) => (
-            <StaggerItem key={item.title}>
-              <Link href={item.link} className="group block relative h-[40vh] min-h-[300px] overflow-hidden">
-                {/* Background placeholder */}
-                {item.bgImageLabel ? (
-                  <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 pointer-events-none">
-                    <Image 
-                      src="/images/studio-interior-nail-lounge.jpg" 
-                      alt="NIXTUDIO Salon Interior" 
-                      fill 
-                      className="object-cover object-center"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                ) : (
-                  <div className="absolute inset-0 bg-pink/60 group-hover:brightness-110 transition-all duration-500" />
-                )}
-                <div className="absolute inset-0 bg-espresso/40" />
+      {/* ──── 2. EDITORIAL SERVICE CARDS ──── */}
+      <section style={{ background: "#FFFFFF", padding: "100px 48px" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+          {/* Section header */}
+          <FadeUp>
+            <div style={{ textAlign: "center", marginBottom: "64px" }}>
+              <p className="label-caps" style={{ marginBottom: "12px" }}>Our Services</p>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display), Georgia, serif",
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  fontWeight: 400,
+                  color: "#3D1520",
+                  lineHeight: 1.2,
+                }}
+              >
+                Find your <em>perfect</em> experience.
+              </h2>
+            </div>
+          </FadeUp>
 
-                {/* Content */}
-                <div className="relative h-full flex flex-col justify-end p-8 lg:p-10">
-                  <h2 className="font-serif text-3xl lg:text-4xl text-white/95 mb-2">
-                    {item.title}
-                  </h2>
-                  <p className="font-sans text-sm text-white/70 mb-4">
-                    {item.sub}
-                  </p>
-                  <span className="font-sans text-sm text-white/80 group-hover:text-white transition-colors duration-300">
-                    {item.linkText}
-                  </span>
-
-                  {/* Pink hover line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-pink scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                </div>
-              </Link>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+          {/* Cards row */}
+          <div
+            style={{
+              display: "flex",
+              gap: "24px",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              flexWrap: "wrap",
+            }}
+          >
+            {cards.map((card, i) => (
+              <EditorialCard key={card.tag} card={card} index={i} />
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* ──────── NIKITA SIGNAL ──────── */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Image */}
-            <FadeUp className="lg:col-span-5">
-              <div className="w-full aspect-[3/4] bg-pink/60 flex items-center justify-center">
-                <span className="text-white/80 font-sans text-sm tracking-wide">
-                  REPLACE: nikita-portrait.jpg
-                </span>
+      {/* ──── 3. NIKITA SIGNAL — white ──── */}
+      <section className="section-padding" style={{ background: "#FDE8E8" }}>
+        <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "clamp(40px, 6vw, 80px)",
+              alignItems: "center",
+            }}
+          >
+            {/* Portrait */}
+            <FadeUp>
+              <div
+                className="w-full h-[320px] md:h-auto md:aspect-[3/4] relative"
+                style={{
+                  background: "#F9C8C8",
+                  borderRadius: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src="/images/nikita-portrait.jpg"
+                  alt="Nikita Liby — NIXTUDIO"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                {/* Portrait image now shows via Image fill — no placeholder text needed */}
+
+
+                {/* Heart Pulse Mobile Bagde */}
+                <style dangerouslySetInnerHTML={{__html: `
+                  @keyframes heartPulseNikita {
+                    0%, 100% { transform: scale(1); opacity: 0.70; }
+                    50% { transform: scale(1.15); opacity: 1; }
+                  }
+                `}} />
+                <div style={{
+                  position: "absolute", top: "-10px", right: "16px",
+                  fontSize: "28px", color: "#F9919F",
+                  animation: "heartPulseNikita 2s ease-in-out infinite",
+                  zIndex: 20
+                }}>
+                  ♥
+                </div>
               </div>
             </FadeUp>
 
             {/* Text */}
-            <div className="lg:col-span-6 lg:col-start-7">
-              <FadeUp>
-                <p className="label-caps mb-4">The Artist</p>
-              </FadeUp>
+            <div>
+              <FadeUp><p className="label-caps" style={{ marginBottom: "16px" }}>The Artist</p></FadeUp>
               <FadeUp delay={0.1}>
-                <h2 className="font-serif font-light text-espresso mb-6">
-                  Not delegated. Not supervised. Nikita.
+                <h2
+                  style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontSize: "clamp(32px, 4vw, 52px)",
+                    fontWeight: 400,
+                    lineHeight: 1.2,
+                    color: "#3D1520",
+                    marginBottom: "24px",
+                  }}
+                >
+                  Not delegated.<br />Not supervised. <em>Nikita.</em>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.2}>
-                <p className="font-sans text-espresso/70 max-w-lg">
+                <p
+                  style={{
+                    fontFamily: "var(--font-body), Georgia, serif",
+                    fontSize: "17px",
+                    lineHeight: 1.85,
+                    color: "#3D1520",
+                    marginBottom: "32px",
+                    maxWidth: "480px",
+                  }}
+                >
                   Every bridal booking — engagement, wedding, reception — is handled
                   exclusively by Nikita from first consultation to final look. This is
                   not a team service. This is a personal commitment.
                 </p>
               </FadeUp>
+              <FadeUp delay={0.3}>
+                <StatCounters />
+              </FadeUp>
+              <FadeUp delay={0.4}>
+                <Link href="/bridal" className="btn-primary" style={{ marginTop: "40px", display: "inline-flex" }}>
+                  The Bridal Edit
+                </Link>
+              </FadeUp>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ──────── BRAND ASSOCIATION STRIP ──────── */}
-      <section className="section-padding bg-pink-15">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <p className="label-caps text-center mb-10">Products Used</p>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-x-12 lg:gap-x-20 gap-y-8 max-w-5xl mx-auto px-4">
-              {brands.map((brand) => (
-                <span
-                  key={brand}
-                  className="text-xs font-sans font-medium tracking-[0.25em] uppercase text-espresso/60 px-2 lg:px-4"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </FadeUp>
-        </div>
-      </section>
+      {/* ──── 4. REVIEWS ──── */}
+      <ReviewMarquee />
 
-      {/* ──────── SOCIAL PROOF ──────── */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <StaggerContainer className="space-y-16 lg:space-y-20 max-w-3xl" staggerDelay={0.2}>
-            {testimonials.map((t) => (
-              <StaggerItem key={t.name}>
-                <blockquote>
-                  <p className="font-serif italic text-2xl lg:text-3xl font-light text-espresso/85 leading-snug mb-4">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <cite className="not-italic font-sans text-sm text-taupe">
-                    — {t.name}, {t.detail}
-                  </cite>
-                </blockquote>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* ──────── GALLERY PREVIEW — THE WORK ──────── */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+      {/* ──── 5. GALLERY PREVIEW ──── */}
+      <section className="section-padding" style={{ background: "#FFFFFF" }}>
+        <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)" }}>
           <FadeUp>
-            <p className="label-caps mb-10">The Work</p>
+            <p className="label-caps" style={{ marginBottom: "8px" }}>Portfolio</p>
+            <h2
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontWeight: 400,
+                color: "#3D1520",
+                marginBottom: "40px",
+              }}
+            >
+              The <em>Work.</em>
+            </h2>
           </FadeUp>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-            {[
-              { label: "bridal-001.jpg", cat: "bridal" },
-              { label: "bridal-002.jpg", cat: "bridal" },
-              { label: "party-001.jpg",  cat: "party"  },
-              { label: "party-002.jpg",  cat: "party"  },
-              { label: "hair-001.jpg",   cat: "hair"   },
-              { label: "nails-001.jpg",  cat: "nails"  },
-            ].map((item, i) => (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
+            {["bridal-001.jpg","bridal-002.jpg","party-001.jpg","party-002.jpg","nails-001.jpg","nails-002.jpg"].map((label, i) => (
               <Link
                 key={i}
                 href="/gallery"
-                className="group relative aspect-square overflow-hidden block"
-                style={{ background: "var(--pink-15, rgba(212,165,160,0.15))" }}
+                style={{
+                  display: "block",
+                  aspectRatio: "1/1",
+                  background: "#FFFFFF",
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                }}
+                className="group"
               >
-                <span className="absolute inset-0 flex items-center justify-center text-[10px] font-sans tracking-widest uppercase z-0"
-                  style={{ color: "var(--taupe)", opacity: 0.5 }}>
-                  {item.label}
-                </span>
-                <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                  style={{ background: "rgba(212,165,160,0.30)" }}>
-                  <span className="text-espresso text-xl font-light">+</span>
-                </div>
+                <Image
+                  src={`/images/gallery/${label}`}
+                  alt={`NIXTUDIO Work ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 33vw, 20vw"
+                />
               </Link>
             ))}
           </div>
           <FadeUp>
-            <Link href="/gallery" className="inline-flex items-center gap-2 text-sm font-sans text-brass hover:text-espresso transition-colors duration-300">
-              View All Work →
-            </Link>
+            <Link href="/gallery" className="btn-outline-gold">View All Work →</Link>
           </FadeUp>
         </div>
       </section>
 
-      {/* ──────── FOOTER CTA ──────── */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12 text-center">
+      {/* ──── 6. FOOTER CTA ──── */}
+      <section className="section-padding section-gradient-deep">
+        <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)", textAlign: "center" }}>
           <FadeUp>
-            <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-6">
+            <h2
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontSize: "clamp(36px, 5vw, 60px)",
+                fontWeight: 400,
+                fontStyle: "italic",
+                color: "#FFFFFF",
+                lineHeight: 1.2,
+                marginBottom: "16px",
+              }}
+            >
               Your date may already be booked.
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <p
+              style={{
+                fontFamily: "var(--font-body), Georgia, serif",
+                fontSize: "16px",
+                color: "rgba(255,255,255,0.80)",
+                marginBottom: "40px",
+                maxWidth: "400px",
+                margin: "0 auto 40px",
+              }}
+            >
+              Bridal dates fill months in advance. Check your availability now.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "16px" }}>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-3 bg-espresso text-parchment text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-espresso/90 transition-colors duration-300"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  padding: "14px 32px",
+                  borderRadius: "100px",
+                  background: "#FFFFFF",
+                  color: "#3D1520",
+                  fontFamily: "var(--font-sans), sans-serif",
+                  fontSize: "11px",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  transition: "opacity 300ms ease",
+                }}
               >
                 Check Bridal Availability
               </Link>
               <a
-                href="https://wa.me/917034726407?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                href="https://wa.me/916282089746?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-espresso text-espresso text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-espresso hover:text-parchment transition-colors duration-300"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  padding: "14px 32px",
+                  borderRadius: "100px",
+                  background: "transparent",
+                  color: "#FFFFFF",
+                  border: "1.5px solid rgba(255,255,255,0.55)",
+                  fontFamily: "var(--font-sans), sans-serif",
+                  fontSize: "11px",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  transition: "background 300ms ease",
+                }}
               >
                 WhatsApp Us
               </a>

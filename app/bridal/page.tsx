@@ -1,15 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
-
-const brands = [
-  "GUCCI", "CHANEL", "DIOR", "CHARLOTTE TILBURY",
-  "GIVENCHY", "NARS", "FENTY BEAUTY", "PAT McGRATH",
-  "URBAN DECAY", "MAC", "LAURA MERCIER", "HUDA BEAUTY",
-];
 
 const processSteps = [
   {
@@ -61,10 +56,15 @@ export default function BridalPage() {
     <>
       {/* ──────── BRIDAL HERO ──────── */}
       <section className="relative h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-pink flex items-center justify-center">
-          <span className="text-white/80 font-sans text-sm tracking-wide">
-            REPLACE: hero-bridal-fullscreen.jpg
-          </span>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-bridal.jpg"
+            alt="Bridal makeup by NIXTUDIO"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
         </div>
         <div className="absolute inset-0 bg-espresso/30" />
         <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 lg:px-12 pb-16 lg:pb-24">
@@ -79,21 +79,23 @@ export default function BridalPage() {
             </p>
           </FadeUp>
         </div>
+        {/* Gold trim bottom mobile */}
+        <div className="absolute bottom-0 left-0 w-full h-1 z-50 md:hidden bg-[linear-gradient(90deg,transparent_0%,#D4A055_20%,#F9C8C8_50%,#D4A055_80%,transparent_100%)]" />
       </section>
 
       {/* ──────── POSITIONING STATEMENT ──────── */}
-      <section className="section-padding">
+      <section className="section-padding section-white texture-grain">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl max-w-3xl leading-snug">
-              Bridal makeup is not a service. It is the last thing you put on before you become a bride.
+              One artist. <em>Your day.</em>
             </h2>
           </FadeUp>
         </div>
       </section>
 
       {/* ──────── THE NIKITA COMMITMENT ──────── */}
-      <section className="section-padding pt-0">
+      <section className="section-padding" style={{ background: "#FFE4E8" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Text */}
@@ -129,10 +131,10 @@ export default function BridalPage() {
       </section>
 
       {/* ──────── THE PROCESS ──────── */}
-      <section className="section-padding bg-pink-20">
+      <section className="section-padding section-gradient-process">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="label-caps mb-12">What to Expect</p>
+            <p className="label-caps mb-12">What to <em>Expect</em></p>
           </FadeUp>
           <StaggerContainer
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10"
@@ -140,13 +142,13 @@ export default function BridalPage() {
           >
             {processSteps.map((step) => (
               <StaggerItem key={step.num}>
-                <span className="font-serif text-5xl lg:text-6xl font-light text-espresso/15 block mb-3">
+                <span className="font-serif block mb-3" style={{ fontSize: "80px", fontWeight: 300, color: "#F9919F", lineHeight: 1 }}>
                   {step.num}
                 </span>
-                <h3 className="font-serif text-xl text-espresso mb-3">
+                <h3 className="font-serif text-xl mb-3" style={{ color: "#3D1520" }}>
                   {step.title}
                 </h3>
-                <p className="font-sans text-sm text-espresso/60 leading-relaxed">
+                <p className="font-sans text-sm leading-relaxed" style={{ color: "#5C2D3A" }}>
                   {step.desc}
                 </p>
               </StaggerItem>
@@ -155,94 +157,65 @@ export default function BridalPage() {
         </div>
       </section>
 
-      {/* ──────── BRAND STRIP ──────── */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <p className="label-caps text-center mb-10">Products Used</p>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 max-w-3xl mx-auto">
-              {brands.map((brand, i) => (
-                <span
-                  key={brand}
-                  className="text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-espresso/60"
-                >
-                  {brand}
-                  {i < brands.length - 1 && (
-                    <span className="ml-6 text-taupe/30">·</span>
-                  )}
-                </span>
-              ))}
-            </div>
-          </FadeUp>
-        </div>
-      </section>
+      {/* ──────── BRAND STRIP — removed (orbital moved to home) ──────── */}
 
-      {/* ──────── THE PACKAGE ──────── */}
-      <section className="section-padding pt-0">
+
+      {/* ──────── THE PACKAGE — gold pricing cards ──────── */}
+      <section className="section-padding section-cream">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <p className="label-caps mb-12">The Package</p>
           </FadeUp>
-          <StaggerContainer
-            className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-4xl"
-            staggerDelay={0.15}
-          >
-            {/* HD */}
-            <StaggerItem>
-              <div>
-                <span className="font-serif text-4xl lg:text-5xl font-light text-espresso block mb-2">
-                  ₹27,500
-                </span>
-                <span className="label-caps block mb-6">HD Makeup</span>
-                <ul className="space-y-2.5 text-sm font-sans text-espresso/70">
-                  <li>Makeup with detailed skin preparation</li>
-                  <li>Hairstyling</li>
-                  <li>Saree draping with or without pre-pleat</li>
-                  <li>Lashes</li>
-                  <li>Contact lenses</li>
-                  <li>Outfit setting</li>
-                  <li>Hair extensions if needed</li>
-                </ul>
-              </div>
-            </StaggerItem>
+          <div className="flex flex-col md:flex-row gap-8 max-w-3xl">
 
-            {/* Airbrush */}
-            <StaggerItem>
-              <div>
-                <span className="font-serif text-4xl lg:text-5xl font-light text-espresso block mb-2">
-                  ₹32,500
-                </span>
-                <span className="label-caps block mb-6">Airbrush Makeup</span>
-                <ul className="space-y-2.5 text-sm font-sans text-espresso/70">
-                  <li>Makeup with detailed skin preparation</li>
-                  <li>Hairstyling</li>
-                  <li>Saree draping with or without pre-pleat</li>
-                  <li>Lashes</li>
-                  <li>Contact lenses</li>
-                  <li>Outfit setting</li>
-                  <li>Hair extensions if needed</li>
-                </ul>
+            {/* HD Card */}
+            <div className="pricing-card flex-1 w-full max-md:p-[32px_24px] card-glow rosegold-shimmer" style={{ padding: "clamp(32px, 4vw, 40px)", borderRadius: "16px" }}>
+              <div className="bg-white h-full w-full rounded-[14px] p-6 lg:p-10 flex flex-col items-center">
+              <p className="label-caps mb-4" style={{ color: "#A86070" }}>HD Makeup</p>
+              <div className="price-display mb-2 max-md:text-[56px] gold-foil-text">
+                <span className="price-rupee">₹</span>27,500
               </div>
-            </StaggerItem>
-          </StaggerContainer>
-
-          <FadeUp delay={0.3}>
-            <div className="mt-10 max-w-4xl">
-              <p className="text-sm font-sans text-taupe">
-                All prices inclusive of 5% GST.
-              </p>
-              <p className="text-sm font-sans text-taupe">
-                Valid for Engagement, Wedding, and Wedding Reception.
-              </p>
+              <div style={{ width: "40px", height: "1px", margin: "20px 0" }} className="rosegold-shimmer" />
+              <ul className="space-y-0">
+                {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
+                  <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
+                    <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "#A86070" }}>Inclusive of 5% GST</p>
+              </div>
             </div>
-          </FadeUp>
+
+            {/* Airbrush Card — MOST POPULAR */}
+            <div className="pricing-card flex-1 w-full max-md:p-[32px_24px] card-glow rosegold-shimmer" style={{ position: "relative", padding: "clamp(32px, 4vw, 40px)", borderRadius: "16px" }}>
+              <div style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", background: "linear-gradient(135deg, #C4903A, #E8CC90)", color: "#FFFFFF", fontSize: "10px", letterSpacing: "0.15em", padding: "4px 20px", borderRadius: "100px", whiteSpace: "nowrap", zIndex: 10 }}>
+                MOST POPULAR
+              </div>
+              <div className="bg-white h-full w-full rounded-[14px] p-6 lg:p-10 flex flex-col items-center relative">
+              <p className="label-caps mb-4" style={{ color: "#A86070" }}>Airbrush Makeup</p>
+              <div className="price-display mb-2 max-md:text-[56px] gold-foil-text">
+                <span className="price-rupee">₹</span>32,500
+              </div>
+              <div style={{ width: "40px", height: "1px", margin: "20px 0" }} className="rosegold-shimmer" />
+              <ul className="space-y-0">
+                {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
+                  <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
+                    <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "#A86070" }}>Inclusive of 5% GST</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ──────── GOOD TO KNOW ──────── */}
-      <section className="section-padding bg-parchment">
+      <section className="section-padding" style={{ background: "#FFE4E8" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <p className="label-caps mb-12">Good to Know</p>
@@ -265,7 +238,7 @@ export default function BridalPage() {
       </section>
 
       {/* ──────── BOOKING FORM ──────── */}
-      <section className="section-padding">
+      <section className="section-padding section-white">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-3">
@@ -439,7 +412,7 @@ export default function BridalPage() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center px-10 py-3.5 bg-espresso text-parchment text-[11px] font-sans font-medium tracking-[0.12em] uppercase hover:bg-espresso/90 transition-colors duration-300"
+                  className="btn-primary px-10"
                 >
                   Send Enquiry
                 </button>

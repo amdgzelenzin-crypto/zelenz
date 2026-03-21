@@ -1,186 +1,513 @@
 @import "tailwindcss";
 
-/* ────────────────────────────────────────────
-   NIXTUDIO Design System — CSS Variables
-   ──────────────────────────────────────────── */
+/* ════════════════════════════════════════
+   NIXTUDIO — Macaron Pink × Gold System
+   Light, warm, feminine — editorial luxury
+   ════════════════════════════════════════ */
+
+/* ────────────────────────────────────────
+   CSS Custom Properties
+   ──────────────────────────────────────── */
 
 :root {
-  --parchment: #F5EDE6;
-  --pink: #D4A5A0;
-  --espresso: #2C1810;
-  --taupe: #9E7B75;
-  --brass: #C4883A;
+  --color-base:         #FDE8E8;
+  --color-base-light:   #FFF5F7;
+  --color-white:        #FFFFFF;
+  --color-cream:        #FFF0E8;
+
+  --color-pink-100:     #FDEEF0;
+  --color-pink-200:     #F9C8C8;
+  --color-pink-300:     #F4A8B0;
+  --color-pink-400:     #EE8898;
+
+  --color-rosegold-light: #F5D5C0;
+  --color-rosegold-mid:   #E8A890;
+  --color-rosegold-deep:  #D4907A;
+
+  --color-gold-pale:    #F5E8C8;
+  --color-gold-warm:    #D4A055;
+  --color-gold-rich:    #B8843A;
+
+  --color-text-dark:    #3D1520;
+  --color-text-mid:     #8A4858;
+  --color-text-soft:    #B07880;
+  --color-text-muted:   #C8A0A8;
+
+  /* Dark anchor — ONLY footer + brand strip */
+  --color-dark:         #3D1520;
 }
 
-/* ────────────────────────────────────────────
+/* ────────────────────────────────────────
    Tailwind v4 Theme Tokens
-   ──────────────────────────────────────────── */
+   ──────────────────────────────────────── */
 
 @theme inline {
-  /* Colors */
-  --color-parchment: #F5EDE6;
-  --color-pink: #D4A5A0;
-  --color-pink-wash: #EAC8C2;
-  --color-espresso: #2C1810;
-  --color-taupe: #9E7B75;
-  --color-brass: #C4883A;
+  /* Whites */
+  --color-snow:          #FFFFFF;
+  --color-blush-white:   #FFF5F7;
+  --color-cream:         #FFF0E8;
+  --color-base:          #FDE8E8;
 
-  /* Pink opacity variants */
-  --color-pink-15: rgba(212, 165, 160, 0.15);
-  --color-pink-20: rgba(212, 165, 160, 0.20);
-  --color-pink-30: rgba(212, 165, 160, 0.30);
+  /* Pink spectrum */
+  --color-pink-100:      #FDEEF0;
+  --color-pink-200:      #F9C8C8;
+  --color-pink-300:      #F4A8B0;
+  --color-pink-400:      #EE8898;
+  --color-pink-500:      #E06878;
 
-  /* Font families */
-  --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-dm-sans);
-  --font-script: var(--font-great-vibes);
+  /* Rose gold */
+  --color-rosegold-light: #F5D5C0;
+  --color-rosegold-mid:   #E8A890;
+  --color-rosegold-deep:  #D4907A;
+
+  /* Gold spectrum */
+  --color-gold-100:      #F5E8C8;
+  --color-gold-200:      #E8CC90;
+  --color-gold-300:      #D4A055;
+  --color-gold-400:      #C4903A;
+  --color-gold-500:      #B8843A;
+
+  /* Dark anchors — footer/brand strip ONLY */
+  --color-mauve-900:     #3D1520;
+
+  /* Legacy aliases */
+  --color-parchment:     #FDE8E8;
+  --color-pink:          #F9C8C8;
+  --color-espresso:      #3D1520;
+  --color-taupe:         #B07880;
+  --color-brass:         #D4A055;
+  --color-pink-wash:     #F9C8C8;
+  --color-pink-15:       rgba(244,168,176,0.15);
+
+  /* Font variables */
+  --font-serif:   var(--font-display);
+  --font-sans:    var(--font-sans);
+  --font-script:  var(--font-script);
+  --font-body:    var(--font-body);
 }
 
-/* ────────────────────────────────────────────
-   Base Styles
-   ──────────────────────────────────────────── */
+/* ────────────────────────────────────────
+   GLOBAL RESET
+   ──────────────────────────────────────── */
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: #FDE8E8;
+  color: #3D1520;
+  font-family: var(--font-body), Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-color: #F7EDE4;
-  background-image: url('/textures/marble.svg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: var(--espresso);
-  font-family: var(--font-dm-sans), sans-serif;
-  line-height: 1.75;
-  margin: 0;
-  padding: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* ────────────────────────────────────────────
-   Typography
-   ──────────────────────────────────────────── */
+/* ────────────────────────────────────────
+   TYPOGRAPHY SYSTEM
+   Playfair Display → headlines
+   Lora            → body / reading
+   Jost            → labels / nav
+   Cormorant       → logo script
+   ──────────────────────────────────────── */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-cormorant), serif;
-  font-weight: 300;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
   line-height: 1.15;
-  letter-spacing: 0.02em;
-  color: var(--espresso);
+  letter-spacing: 0.01em;
+  color: #3D1520;
 }
 
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-}
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h4 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 
-h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-h4 {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+/* em inside headings = italic + rose pink */
+h1 em, h2 em, h3 em, h4 em {
+  font-style: italic;
+  color: #F07080;
 }
 
 p {
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-body), Georgia, serif;
   font-weight: 400;
-  line-height: 1.75;
-  color: var(--espresso);
+  line-height: 1.8;
+  color: #3D1520;
 }
 
-/* ────────────────────────────────────────────
-   Selection
-   ──────────────────────────────────────────── */
+/* ────────────────────────────────────────
+   SECTION BACKGROUNDS
+   Light sections only → #FFFFFF / #FDE8E8
+   Dark → ONLY footer
+   ──────────────────────────────────────── */
 
-::selection {
-  background-color: var(--pink);
-  color: var(--espresso);
-}
-
-/* ────────────────────────────────────────────
-   Scrollbar
-   ──────────────────────────────────────────── */
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--parchment);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--taupe);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--espresso);
-}
-
-/* ────────────────────────────────────────────
-   Focus Styles
-   ──────────────────────────────────────────── */
-
-:focus-visible {
-  outline: 2px solid var(--brass);
-  outline-offset: 2px;
-}
-
-/* ────────────────────────────────────────────
-   Utility Classes
-   ──────────────────────────────────────────── */
+.section-white    { background: #FFFFFF; }
+.section-base     { background: #FDE8E8; }
+.section-pink-100 { background: #FDEEF0; }
+.section-pink-200 { background: #F9C8C8; }
+.section-cream    { background: #FFF0E8; }
+.section-dark     { background: #3D1520; }   /* footer only */
 
 .section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: clamp(60px, 8vw, 120px) 20px;
 }
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .section-padding {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding: clamp(60px, 8vw, 120px) clamp(24px, 5vw, 64px);
   }
 }
+
+.max-w-\[1440px\] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 768px) {
+  .max-w-\[1440px\] {
+    padding-left: clamp(24px, 5vw, 64px);
+    padding-right: clamp(24px, 5vw, 64px);
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────
+   LABELS
+   ──────────────────────────────────────── */
 
 .label-caps {
-  font-family: var(--font-dm-sans), sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #B07880;
+}
+
+/* ────────────────────────────────────────
+   PRICING
+   ──────────────────────────────────────── */
+
+.price-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 400;
+  color: #D4A055;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.price-medium {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  color: #D4A055;
+  line-height: 1;
+}
+
+.price-small {
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #D4A055;
+}
+
+.price-rupee {
+  font-size: 0.6em;
+  vertical-align: 0.15em;
+  letter-spacing: 0;
+  color: inherit;
+}
+
+/* ────────────────────────────────────────
+   BUTTONS
+   ──────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--taupe);
+  text-decoration: none;
+  background: #E8A890;
+  color: #FFFFFF;
+  border: none;
+  transition: background 300ms ease, transform 200ms ease;
+}
+.btn-primary:hover {
+  background: #D4907A;
+  transform: translateY(-1px);
 }
 
-.text-balance {
-  text-wrap: balance;
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 30px;
+  border-radius: 100px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  color: #3D1520;
+  border: 1.5px solid #D4A055;
+  transition: background 300ms ease, color 300ms ease;
+}
+.btn-outline-gold:hover {
+  background: #D4A055;
+  color: #FFFFFF;
 }
 
-/* ────────────────────────────────────────────
-   Marble Background — Mobile Performance Fix
-   ──────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-size: 300% auto;
-  }
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(255,255,255,0.18);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  backdrop-filter: blur(10px);
+  transition: background 300ms ease;
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.32);
 }
 
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-  }
+/* ────────────────────────────────────────
+   SECTION GRADIENT (footer CTA)
+   ──────────────────────────────────────── */
+
+.section-gradient-deep {
+  background: linear-gradient(135deg, #E06878 0%, #D4907A 50%, #C07060 100%);
+}
+
+.section-gradient-process {
+  background: linear-gradient(135deg, #F9C8C8 0%, #F5D5C0 100%);
+}
+
+/* ────────────────────────────────────────
+   SERVICE ROWS (salon / party pricing)
+   ──────────────────────────────────────── */
+
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(61,21,32,0.08);
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 15px;
+  color: #3D1520;
+}
+
+.service-row .price {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #D4A055;
+}
+
+/* ────────────────────────────────────────
+   ANIMATIONS
+   ──────────────────────────────────────── */
+
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    #C4903A 0%,
+    #F5E0A0 30%,
+    #C4903A 60%,
+    #F5E0A0 80%,
+    #C4903A 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Scroll indicator dot */
+@keyframes scroll-dot {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(28px); opacity: 0.3; }
+}
+
+/* Bounce down arrow */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+/* Orbital animations */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes orbit-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes counter-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+@keyframes counter-orbit-reverse {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ────────────────────────────────────────
+   SCROLLBAR
+   ──────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FDE8E8; }
+::-webkit-scrollbar-thumb {
+  background: #E8A890;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #D4907A; }
+
+/* ────────────────────────────────────────
+   TEXT SELECTION
+   ──────────────────────────────────────── */
+
+::selection {
+  background: rgba(232,168,144,0.30);
+  color: #3D1520;
+}
+
+/* ────────────────────────────────────────
+   DEPTH WITHOUT IMAGES (Kawaii Overhaul)
+   ──────────────────────────────────────── */
+
+/* Noise texture overlay */
+.texture-grain {
+  position: relative;
+}
+.texture-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Depth gradient for sections — Macaron Palette (Blush/Cream) */
+.pink-depth {
+  background: linear-gradient(
+    165deg,
+    #FFF5F7 0%,
+    #FDE8E8 40%,
+    #FFF0E8 75%,
+    #FFF5F7 100%
+  );
+}
+
+/* Rose gold shimmer effect */
+.rosegold-shimmer {
+  background: linear-gradient(
+    135deg,
+    #F9C8C8 0%,
+    #F5D5C0 20%,
+    #F0C090 35%,
+    #D4A055 50%,
+    #F0C090 65%,
+    #F5D5C0 80%,
+    #F9C8C8 100%
+  );
+  background-size: 300% 300%;
+  animation: shimmerMove 6s ease infinite;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Gold foil text effect */
+.gold-foil-text {
+  background: linear-gradient(
+    135deg,
+    #D4A055 0%,
+    #F5E6C8 30%,
+    #D4A055 50%,
+    #B8843A 70%,
+    #D4A055 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShine 3s linear infinite;
+}
+
+@keyframes goldShine {
+  to { background-position: 200% center }
+}
+
+/* Pink glow on cards */
+.card-glow {
+  box-shadow:
+    0 4px 24px rgba(249,145,159,0.15),
+    0 1px 6px rgba(249,145,159,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.80);
+}
+
+/* Radial bloom behind sections */
+.pink-bloom {
+  position: relative;
+}
+
+.pink-bloom::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%; height: 120%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(249,145,159,0.20) 0%,
+    rgba(212,160,85,0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
