@@ -14,7 +14,7 @@ const categories = [
   { id: "facials", label: "Facials" },
   { id: "cleanup", label: "Cleanup & Detan" },
   { id: "pedicure-manicure", label: "Pedicure & Manicure" },
-  { id: "gel-nails", label: "Gel Nails" },
+  { id: "nail-lounge", label: "The Nail Lounge" },
   { id: "waxing", label: "Waxing" },
   { id: "threading", label: "Threading" },
   { id: "massages", label: "Massages" },
@@ -392,22 +392,34 @@ export default function SalonPage() {
 
   return (
     <>
-      {/* ──────── HEADER ──────── */}
-      <section className="pt-28 lg:pt-36 pb-8">
+      {/* ──────── HERO ──────── */}
+      <section className="pt-28 lg:pt-36 pb-16 lg:pb-20">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <h1 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-3">
-              Salon Services
-            </h1>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <p className="font-sans text-espresso/60 mb-1">
-              Hair · Makeup · Nails · Spa
-            </p>
-            <p className="font-sans text-sm text-taupe">
-              Appointment recommended. Walk-ins welcome based on availability.
-            </p>
-          </FadeUp>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div className="lg:col-span-5">
+              <FadeUp>
+                <h1 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-4">
+                  Salon Services
+                </h1>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="font-sans text-espresso/60 mb-2">
+                  Hair · Makeup · Nails · Spa
+                </p>
+                <p className="font-sans text-sm text-taupe">
+                  Appointment recommended. Walk-ins welcome based on availability.
+                </p>
+              </FadeUp>
+            </div>
+            <FadeUp className="lg:col-span-7" delay={0.15}>
+              <div className="w-full aspect-[16/9] lg:aspect-[4/3] bg-pink-wash/40 flex items-center justify-center relative overflow-hidden border border-taupe/10">
+                <span className="text-espresso/60 font-sans text-sm tracking-wide z-10 label-caps">
+                  REPLACE: studio-interior-nail-lounge.jpg
+                </span>
+                <div className="absolute inset-0 bg-parchment/10 z-0" />
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
 
@@ -580,22 +592,30 @@ export default function SalonPage() {
           </FadeUp>
         </section>
 
-        {/* GEL NAILS */}
-        <section id="gel-nails" className="section-padding pt-0 pb-16">
+        {/* THE NAIL LOUNGE */}
+        <section id="nail-lounge" className="section-padding pt-0 pb-16">
           <FadeUp>
-            <p className="label-caps mb-6">Gel Nails — Natural Nails</p>
+            <div className="mb-10 p-8 lg:p-12 border border-taupe/15 bg-parchment text-center max-w-2xl mx-auto">
+              <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl mb-2">
+                The Nail Lounge
+              </h2>
+              <p className="font-script text-brass text-2xl lg:text-3xl">by NIXTUDIO</p>
+            </div>
           </FadeUp>
           <FadeUp delay={0.1}>
+            <p className="label-caps mb-6">Gel Nails — Natural Nails</p>
+          </FadeUp>
+          <FadeUp delay={0.15}>
             <div className="max-w-3xl">
               <DualPriceList items={gelNatural} headers={["Both", "One Hand"]} />
             </div>
           </FadeUp>
-          <FadeUp delay={0.15}>
+          <FadeUp delay={0.2}>
             <div className="mt-6 max-w-2xl">
               <PriceList items={nailArt} />
             </div>
           </FadeUp>
-          <FadeUp delay={0.2}>
+          <FadeUp delay={0.25}>
             <div className="mt-10">
               <p className="label-caps mb-6">Gel Extensions</p>
               <div className="max-w-3xl">

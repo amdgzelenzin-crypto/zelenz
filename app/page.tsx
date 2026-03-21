@@ -94,12 +94,21 @@ export default function Home() {
               sub: "Hair, nails, skincare, and more",
               link: "/salon",
               linkText: "Salon Services →",
+              bgImageLabel: "REPLACE: studio-interior-nail-lounge.jpg",
             },
           ].map((item) => (
             <StaggerItem key={item.title}>
               <Link href={item.link} className="group block relative h-[40vh] min-h-[300px] overflow-hidden">
                 {/* Background placeholder */}
-                <div className="absolute inset-0 bg-[#C4B0A8] group-hover:brightness-110 transition-all duration-500" />
+                {item.bgImageLabel ? (
+                  <div className="absolute inset-0 bg-pink-wash/40 group-hover:brightness-110 transition-all duration-500 flex flex-col items-center pt-16">
+                    <span className="text-espresso/60 font-sans text-[10px] tracking-widest uppercase z-10 px-4 text-center">
+                      {item.bgImageLabel}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 bg-pink/60 group-hover:brightness-110 transition-all duration-500" />
+                )}
                 <div className="absolute inset-0 bg-espresso/40" />
 
                 {/* Content */}
@@ -129,7 +138,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Image */}
             <FadeUp className="lg:col-span-5">
-              <div className="w-full aspect-[3/4] bg-[#C4B0A8] flex items-center justify-center">
+              <div className="w-full aspect-[3/4] bg-pink/60 flex items-center justify-center">
                 <span className="text-white/80 font-sans text-sm tracking-wide">
                   REPLACE: nikita-portrait.jpg
                 </span>

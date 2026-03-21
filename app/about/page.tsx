@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Image */}
             <FadeUp className="lg:col-span-5">
-              <div className="w-full aspect-[3/4] bg-[#C4B0A8] flex items-center justify-center sticky top-28">
+              <div className="w-full aspect-[3/4] bg-pink/80 flex items-center justify-center sticky top-28">
                 <span className="text-white/80 font-sans text-sm tracking-wide">
                   REPLACE: nikita-editorial-portrait.jpg
                 </span>

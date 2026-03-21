@@ -5,11 +5,11 @@
    ──────────────────────────────────────────── */
 
 :root {
-  --parchment: #F7F1EA;
-  --pink: #D4B5AB;
-  --espresso: #1E1510;
-  --taupe: #8A726A;
-  --brass: #C4987A;
+  --parchment: #F5EDE6;
+  --pink: #D4A5A0;
+  --espresso: #2C1810;
+  --taupe: #9E7B75;
+  --brass: #C4883A;
 }
 
 /* ────────────────────────────────────────────
@@ -18,16 +18,17 @@
 
 @theme inline {
   /* Colors */
-  --color-parchment: #F7F1EA;
-  --color-pink: #D4B5AB;
-  --color-espresso: #1E1510;
-  --color-taupe: #8A726A;
-  --color-brass: #C4987A;
+  --color-parchment: #F5EDE6;
+  --color-pink: #D4A5A0;
+  --color-pink-wash: #EAC8C2;
+  --color-espresso: #2C1810;
+  --color-taupe: #9E7B75;
+  --color-brass: #C4883A;
 
   /* Pink opacity variants */
-  --color-pink-15: rgba(212, 181, 171, 0.15);
-  --color-pink-20: rgba(212, 181, 171, 0.20);
-  --color-pink-30: rgba(212, 181, 171, 0.30);
+  --color-pink-15: rgba(212, 165, 160, 0.15);
+  --color-pink-20: rgba(212, 165, 160, 0.20);
+  --color-pink-30: rgba(212, 165, 160, 0.30);
 
   /* Font families */
   --font-serif: var(--font-cormorant);

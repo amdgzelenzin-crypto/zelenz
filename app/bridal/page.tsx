@@ -118,7 +118,7 @@ export default function BridalPage() {
 
             {/* Image */}
             <FadeUp className="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
-              <div className="w-full aspect-square bg-[#C4B0A8] flex items-center justify-center">
+              <div className="w-full aspect-square bg-pink/80 flex items-center justify-center">
                 <span className="text-white/80 font-sans text-sm tracking-wide">
                   REPLACE: nikita-detail-work.jpg
                 </span>
