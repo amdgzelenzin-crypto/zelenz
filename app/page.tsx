@@ -87,6 +87,8 @@ const cards = [
 ];
 const heroImages = [
   "/images/hero-bridal.jpg",
+  "/images/hero-bridal-2.jpg",
+  "/images/hero-bridal-3.jpg",
   "/images/studio/studio-002.jpg",
   "/images/studio/studio-003.png",
   "/images/studio/studio-005.jpg",
