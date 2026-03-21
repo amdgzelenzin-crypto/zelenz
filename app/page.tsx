@@ -563,7 +563,7 @@ export default function Home() {
             </h2>
           </FadeUp>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
-            {["bridal-001.jpg","bridal-002.jpg","party-001.jpg","party-002.jpg","nails-001.jpg","nails-002.jpg"].map((label, i) => (
+            {["bridal-001.jpg","bridal-002.jpg","bridal-003.jpg","party-001.jpg","party-002.jpg","nails-001.jpg"].map((label, i) => (
               <Link
                 key={i}
                 href="/gallery"
