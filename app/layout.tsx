@@ -38,24 +38,35 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "NIXTUDIO by Nikita Liby | Premium Makeup Studio in Pala",
-  description:
-    "Bridal, party, and salon services in Pala by Nikita Liby. Bridal makeup done exclusively by Nikita using international luxury brands.",
-  metadataBase: new URL("https://nixtudio.com"),
+  title: 'NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala',
+  description: 'Premium bridal makeup studio in Pala, Kerala by Nikita Liby. HD and airbrush bridal makeup done exclusively by Nikita. Engagement, wedding, and reception packages from ₹27,500.',
+  keywords: [
+    'bridal makeup Pala',
+    'bridal makeup Kerala',
+    'makeup artist Pala',
+    'makeup artist Kottayam',
+    'HD bridal makeup Kerala',
+    'airbrush makeup Kerala',
+    'NIXTUDIO',
+    'Nikita Liby makeup',
+    'engagement makeup Pala',
+    'wedding makeup Kerala',
+    'party makeup Pala',
+    'nail lounge Pala',
+  ],
   openGraph: {
-    type: "website",
-    siteName: "NIXTUDIO by Nikita Liby",
-    title: "NIXTUDIO by Nikita Liby | Premium Makeup Studio in Pala",
-    description:
-      "Bridal, party, and salon services in Pala by Nikita Liby. Bridal makeup done exclusively by Nikita using international luxury brands.",
-    url: "https://nixtudio.com",
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://nixtudio.in',
+    siteName: 'NIXTUDIO by Nikita Liby',
+    title: 'NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala',
+    description: 'Bridal makeup done exclusively by Nikita Liby in Pala, Kerala. HD and airbrush packages from ₹27,500.',
     images: [{ url: "/og/home-og.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NIXTUDIO by Nikita Liby | Premium Makeup Studio in Pala",
-    description:
-      "Bridal, party, and salon services in Pala by Nikita Liby. Bridal makeup done exclusively by Nikita using international luxury brands.",
+    title: "NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala",
+    description: "Bridal makeup done exclusively by Nikita Liby in Pala, Kerala. HD and airbrush packages from ₹27,500.",
     images: ["/og/home-og.jpg"],
   },
   verification: {
