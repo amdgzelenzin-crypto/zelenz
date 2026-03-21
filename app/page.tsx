@@ -213,6 +213,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ──────── GALLERY PREVIEW — THE WORK ──────── */}
+      <section className="section-padding">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+          <FadeUp>
+            <p className="label-caps mb-10">The Work</p>
+          </FadeUp>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+            {[
+              { label: "bridal-001.jpg", cat: "bridal" },
+              { label: "bridal-002.jpg", cat: "bridal" },
+              { label: "party-001.jpg",  cat: "party"  },
+              { label: "party-002.jpg",  cat: "party"  },
+              { label: "hair-001.jpg",   cat: "hair"   },
+              { label: "nails-001.jpg",  cat: "nails"  },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                href="/gallery"
+                className="group relative aspect-square overflow-hidden block"
+                style={{ background: "var(--pink-15, rgba(212,165,160,0.15))" }}
+              >
+                <span className="absolute inset-0 flex items-center justify-center text-[10px] font-sans tracking-widest uppercase z-0"
+                  style={{ color: "var(--taupe)", opacity: 0.5 }}>
+                  {item.label}
+                </span>
+                <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  style={{ background: "rgba(212,165,160,0.30)" }}>
+                  <span className="text-espresso text-xl font-light">+</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <FadeUp>
+            <Link href="/gallery" className="inline-flex items-center gap-2 text-sm font-sans text-brass hover:text-espresso transition-colors duration-300">
+              View All Work →
+            </Link>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ──────── FOOTER CTA ──────── */}
       <section className="section-padding">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12 text-center">

@@ -4,6 +4,7 @@ const footerNav = [
   { href: "/bridal", label: "Bridal" },
   { href: "/party", label: "Party Makeup" },
   { href: "/salon", label: "Salon" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

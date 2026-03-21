@@ -53,7 +53,11 @@ html {
 }
 
 body {
-  background-color: var(--parchment);
+  background-color: #F7EDE4;
+  background-image: url('/textures/marble.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--espresso);
   font-family: var(--font-dm-sans), sans-serif;
   line-height: 1.75;
@@ -162,4 +166,21 @@ p {
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* ────────────────────────────────────────────
+   Marble Background — Mobile Performance Fix
+   ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: 300% auto;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
 }

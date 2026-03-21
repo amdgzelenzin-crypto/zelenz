@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900">
+  <filter id="marble-cream-rosegold">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.012 0.006"
+      numOctaves="8"
+      seed="5"
+      result="noise"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.04 0.02"
+      numOctaves="4"
+      seed="12"
+      result="fine-noise"/>
+    <feMerge result="combined-noise">
+      <feMergeNode in="noise"/>
+      <feMergeNode in="fine-noise"/>
+    </feMerge>
+    <feComponentTransfer in="combined-noise">
+      <feFuncR type="linear" slope="0.14" intercept="0.86"/>
+      <feFuncG type="linear" slope="0.09" intercept="0.80"/>
+      <feFuncB type="linear" slope="0.07" intercept="0.76"/>
+    </feComponentTransfer>
+    <feGaussianBlur stdDeviation="0.4"/>
+  </filter>
+  <rect width="100%" height="100%" filter="url(#marble-cream-rosegold)" opacity="1"/>
+</svg>

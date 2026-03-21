@@ -66,6 +66,45 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
+              {/* ──────── STUDIO GALLERY STRIP ──────── */}
+              <div className="mt-12">
+                <p className="label-caps mb-6">The Studio</p>
+                <div
+                  className="flex gap-4 overflow-x-auto"
+                  style={{
+                    scrollSnapType: "x mandatory",
+                    WebkitOverflowScrolling: "touch",
+                    scrollbarWidth: "none",
+                    cursor: "grab",
+                  }}
+                >
+                  {[
+                    "studio-001.jpg",
+                    "studio-002.jpg",
+                    "studio-003.jpg",
+                    "studio-004.jpg",
+                    "studio-005.jpg",
+                  ].map((label, i) => (
+                    <div
+                      key={i}
+                      className="shrink-0 flex items-center justify-center"
+                      style={{
+                        scrollSnapAlign: "start",
+                        width: "min(80vw, 500px)",
+                        height: "clamp(280px, 35vw, 400px)",
+                        background: "var(--pink-15, rgba(212,165,160,0.15))",
+                        border: "1px solid rgba(158,123,117,0.10)",
+                      }}
+                    >
+                      <span className="text-[10px] font-sans tracking-widest uppercase"
+                        style={{ color: "var(--taupe)", opacity: 0.5 }}>
+                        {label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* ──────── THE STUDIO ──────── */}
               <FadeUp delay={0.25}>
                 <div className="mt-12">
