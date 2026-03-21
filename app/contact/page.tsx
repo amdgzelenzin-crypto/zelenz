@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
+import StudioMap from "@/components/ui/StudioMap";
 
 const faqs = [
   {
@@ -321,6 +322,59 @@ export default function ContactPage() {
             </div>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ──────── MAP SECTION ──────── */}
+      <section style={{
+        padding: '80px 24px',
+        background: '#FFFFFF',
+        maxWidth: '1200px',
+        margin: '0 auto',
+      }}>
+        {/* Section label */}
+        <FadeUp>
+          <p style={{
+            fontFamily: 'var(--font-sans, sans-serif)',
+            fontSize: '11px',
+            letterSpacing: '0.25em',
+            color: '#B76E79',
+            textTransform: 'uppercase',
+            marginBottom: '12px',
+          }}>
+            FIND US
+          </p>
+        </FadeUp>
+
+        {/* Section heading */}
+        <FadeUp delay={0.1}>
+          <h2 style={{
+            fontFamily: 'var(--font-display, serif)',
+            fontSize: 'clamp(28px, 4vw, 40px)',
+            fontWeight: '400',
+            fontStyle: 'italic',
+            color: '#4E4247',
+            marginBottom: '8px',
+          }}>
+            Visit the studio.
+          </h2>
+        </FadeUp>
+
+        <FadeUp delay={0.2}>
+          <p style={{
+            fontFamily: 'var(--font-body, serif)',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            color: '#A86070',
+            marginBottom: '40px',
+          }}>
+            Pala, Kerala · Studio-only experience. We do not travel for makeup.
+          </p>
+        </FadeUp>
+
+        {/* The map */}
+        <FadeUp delay={0.3}>
+          <StudioMap />
+        </FadeUp>
       </section>
 
       {/* ──────── LOCATION / CONTACT STRIP ──────── */}

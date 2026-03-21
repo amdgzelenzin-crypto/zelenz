@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 
 const ELEMENT_TYPES = [
-  { type: "heart", content: "♥", color: "#F9919F", fontSize: [10, 14] },
   { type: "sparkle", content: "✦", color: "#D4A055", fontSize: [8, 12] },
   { type: "sparkle2", content: "✧", color: "#D4A055", fontSize: [8, 12] },
 ];
