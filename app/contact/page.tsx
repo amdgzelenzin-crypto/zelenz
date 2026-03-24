@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
@@ -134,15 +135,15 @@ export default function ContactPage() {
               <div className="relative h-full flex flex-col overflow-hidden min-h-[500px]">
                 {/* Background Image - full clean image */}
                 <div className="absolute inset-0 z-0">
-                  <img
+                  <Image
                     src="/images/book-now.jpg"
                     alt="Book an appointment at NIXTUDIO premium makeup studio Pala Kerala"
+                    fill
                     style={{
-                      width: '100%',
-                      height: '100%',
                       objectFit: 'contain',
                       objectPosition: 'center',
                     }}
+                    loading="lazy"
                   />
                 </div>
                 {/* Button at bottom */}
