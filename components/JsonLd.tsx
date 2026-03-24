@@ -1,36 +1,40 @@
 export default function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "NIX Studio",
-    "description": "Premium bridal makeup studio in Pala, Kottayam, Kerala.",
+    "@type": "HealthAndBeautyBusiness",
+    "additionalType": [
+      "https://schema.org/BeautySalon",
+      "https://schema.org/MakeupArtist"
+    ],
+    "name": "NIXTUDIO",
+    "description": "NIXTUDIO is a premium bridal makeup studio in Pala, Kottayam, Kerala. Specialising in HD bridal makeup, airbrush makeup, traditional Kerala bridal looks, pre-bridal packages, party makeup, hair styling, nail art and spa services. Located at Moozhayil Building, Pala Ramapuram Road, near KSEB Office, Pala.",
     "url": "https://nixtudio.in",
-    "telephone": "REPLACE_WITH_PHONE_NUMBER",
+    "telephone": "070347 26402",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "REPLACE_WITH_STREET_ADDRESS",
+      "streetAddress": "Moozhayil Building, Pala Ramapuram Road, Near KSEB Office",
       "addressLocality": "Pala",
       "addressRegion": "Kerala",
-      "postalCode": "REPLACE_WITH_PINCODE",
+      "postalCode": "686575",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "REPLACE_WITH_LAT",
-      "longitude": "REPLACE_WITH_LNG"
+      "latitude": "9.7108",
+      "longitude": "76.6231"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         "opens": "09:00",
-        "closes": "20:00"
+        "closes": "19:30"
       }
     ],
     "image": "https://nixtudio.in/og-image.jpg",
     "priceRange": "₹₹",
     "servesCuisine": null,
-    "hasMap": "REPLACE_WITH_GOOGLE_MAPS_URL"
+    "hasMap": "https://maps.google.com/?q=NIXTUDIO+Moozhayil+Building+Pala+Ramapuram+Road+Pala+Kerala"
   }
 
   return (
