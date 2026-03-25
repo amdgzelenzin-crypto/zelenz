@@ -2,14 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Vercel DNS Configuration
 
-To point your domain `nixtudio.in` to this site on Vercel, use the following DNS records in your registrar:
+To point your domain `nixtudio.in` to this site on Vercel, update your DNS records in your registrar to match these exactly:
 
 | Type | Name | Value | TTL |
 | :--- | :--- | :--- | :--- |
-| **A** | `@` | `76.76.21.21` | 14400 |
-| **CNAME** | `www` | `cname.vercel-dns.com` | 14400 |
+| **A** | `@` | **`76.76.21.21`** (Change from `216.198.79.1`) | 14400 |
+| **CNAME** | `www` | **`cname.vercel-dns.com`** (Or the specific one from Vercel) | 14400 |
+| **TXT** | `@` | `google-site-verification=LAajSHtWnZO6fup_YAS_H67VWoEW_VOvJJnWG9fmqp4` | 70 |
 
-*Note: Your current A record is pointing to `216.198.79.1` (likely Bluehost). Change it to the Vercel IP above to make the site live.*
+*Note: Your current A record points to `216.198.79.1` (Bluehost). You **must** change it to `76.76.21.21` for the sitemap and site to work.*
 
 ## Getting Started
 
