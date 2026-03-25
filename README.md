@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Vercel DNS Configuration
+
+To point your domain `nixtudio.in` to this site on Vercel, use the following DNS records in your registrar:
+
+| Type | Name | Value | TTL |
+| :--- | :--- | :--- | :--- |
+| **A** | `@` | `76.76.21.21` | 14400 |
+| **CNAME** | `www` | `cname.vercel-dns.com` | 14400 |
+
+*Note: Your current A record is pointing to `216.198.79.1` (likely Bluehost). Change it to the Vercel IP above to make the site live.*
+
 ## Getting Started
 
 First, run the development server:
