@@ -17,6 +17,9 @@ export const metadata: Metadata = {
       "Bridal makeup in Pala by Nikita Liby. HD & airbrush packages from ₹27,500. Engagement, wedding & reception.",
     images: ["/og/bridal-og.jpg"],
   },
+  alternates: {
+    canonical: "/bridal",
+  },
 };
 
 export default function BridalLayout({

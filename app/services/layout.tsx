@@ -17,6 +17,9 @@ export const metadata: Metadata = {
       "Salon in Pala, Kerala — NIXTUDIO. Hair, nails, facials, spa, waxing & more by Nikita Liby. Walk-ins welcome.",
     images: ["/og/services-og.jpg"],
   },
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function SalonLayout({

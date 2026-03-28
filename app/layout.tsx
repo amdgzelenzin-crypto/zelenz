@@ -81,6 +81,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'NIXTUDIO' }],
   creator: 'NIXTUDIO',
   metadataBase: new URL('https://nixtudio.in'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',

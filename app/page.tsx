@@ -371,8 +371,8 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              Every face.<br />
-              Carefully<br />
+              Every face. <br />
+              Carefully <br />
               considered.
             </h2>
           </FadeUp>
@@ -538,7 +538,7 @@ export default function Home() {
                     marginBottom: "24px",
                   }}
                 >
-                  Not delegated.<br />Not supervised. <em>Nikita.</em>
+                  Not delegated. <br /> Not supervised. <em>Nikita.</em>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.2}>
