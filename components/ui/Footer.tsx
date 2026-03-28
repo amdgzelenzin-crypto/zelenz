@@ -220,10 +220,12 @@ export default function Footer() {
                   fontFamily: "var(--font-body), Georgia, serif",
                   fontSize: "14px",
                   color: "#F5D5C8",
-                  lineHeight: 1.5,
+                  lineHeight: 1.6,
                 }}
               >
-                Pala, Kerala<br />Mon – Sun, 10am – 7pm
+                <strong>Main Salon:</strong> Pala, Kerala<br />
+                <strong>Bridal Suite:</strong> Moozhayil House, Thodupuzha Rd<br />
+                Mon – Sun, 10am – 7pm
               </p>
               <a
                 href="https://wa.me/917034726402"

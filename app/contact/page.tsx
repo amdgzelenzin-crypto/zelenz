@@ -420,7 +420,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-sans text-taupe">
-              <span className="font-medium text-espresso">NIXTUDIO</span>
+              <span className="font-medium text-espresso">NIXTUDIO & BRIDAL SUITE</span>
               <span>Pala, Kerala</span>
               <a href="tel:+917034726402" className="hover:text-espresso transition-colors">
                 +91 70347 26402
