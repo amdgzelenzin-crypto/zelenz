@@ -71,7 +71,7 @@ export default function BridalPage() {
         <div className="absolute inset-0 skeleton">
           <Image
             src="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
-            alt="Luxury Christian bridal makeup look Pala Kerala — NIXTUDIO by Nikita Liby"
+            alt="Nix-Studio-Pala-Christian-Manavatty-Bridal-Makeup-Artist-Kottayam — Professional 'Azhagu' makeup studio by Nikita Liby"
             fill
             className="object-cover"
             priority
@@ -105,9 +105,9 @@ export default function BridalPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FadeUp className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
-                <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Christian Bridal Elegance</h3>
+                <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Christian Bridal Look</h3>
                 <p className="font-body text-espresso/70 text-sm leading-relaxed">
-                  Specialized in the ethereal 'Glow-from-within' aesthetic for Christian weddings in Pala. We focus on luminous skin and timeless sophistication that complements the white bridal gown and delicate veil.
+                  Specialized in the ethereal 'Glow-from-within' aesthetic for Christian church weddings in Pala and Kottayam. We focus on luminous skin and 'Azhagu' sophistication that complements the white bridal gown and delicate veil.
                 </p>
               </div>
             </FadeUp>
@@ -131,10 +131,10 @@ export default function BridalPage() {
           
           <FadeUp delay={0.3} className="mt-20 pt-16 border-t border-espresso/5">
             <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl max-w-3xl leading-snug">
-              One artist. <em>Your day.</em>
+              Specialized <em>Manavatty</em> Beauty Studio.
             </h2>
             <p className="font-sans text-espresso/60 text-sm mt-6 max-w-lg">
-              NIXTUDIO is the region&rsquo;s premier destination for high-intent bridal styling. Serving elite brides across Pala, Kottayam, Erattupetta, and Changanacherry with a focus on technical excellence.
+              NIXTUDIO is the region's premier destination for high-intent 'Azhagu' makeup in Pala. Specializing in Christian bride church ceremony styling and 'Pala Bridal Edit' photography-focused technical excellence for elite brides in Kottayam.
             </p>
           </FadeUp>
         </div>
@@ -156,10 +156,10 @@ export default function BridalPage() {
               </FadeUp>
               <FadeUp delay={0.2}>
                 <p className="font-sans text-espresso/70 max-w-lg mb-4">
-                  Every bridal look at NIXTUDIO — from your engagement to your wedding reception — is created entirely by Nikita. Not supervised by Nikita. Not started by Nikita and finished by an assistant. Done by Nikita. Start to finish.
+                  Every bridal look at NIXTUDIO — from your engagement to your wedding reception — is created entirely by Nikita. Our 'Humidity-resistant Airbrush Finish' is specifically engineered to survive 16-hour Kerala wedding marathons without cakeing.
                 </p>
                 <p className="font-sans text-espresso/70 max-w-lg">
-                  This is a personal commitment to every bride who books with us.
+                  Ask about our 'Happy Bride Story' sessions to capture your transformation from first look to final 'Manavatty' elegance.
                 </p>
               </FadeUp>
             </div>
@@ -169,7 +169,7 @@ export default function BridalPage() {
               <div className="w-full aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src="/images/detailed-bridal-makeover-pala-kottayam.webp"
-                  alt="Precision bridal makeup application by Nikita Liby in the NIXTUDIO private suite Pala — focusing on skin prep and HD detail"
+                  alt="Nix-Studio-Pala-Engagement-Look-Makeup-Artist-Kottayam — Precision 'Happy Bride Story' application for Christian ceremonies"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -215,8 +215,27 @@ export default function BridalPage() {
       <section className="section-padding section-cream">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="label-caps mb-12">The Package</p>
+            <p className="label-caps mb-4">Investment Tiers</p>
+            <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-12">The Bridal Package</h2>
+            <p className="font-sans text-espresso/60 text-sm mb-12 max-w-lg">
+              Transparent pricing for premium 'Manavatty' aesthetics. We offer specialized tiers for your wedding and pre-wedding functions.
+            </p>
           </FadeUp>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 border-b border-espresso/5 pb-16">
+            {[
+              { title: "Engagement / Reception", price: "₹14,500", desc: "Sophisticated styling for your first look." },
+              { title: "Premium Bridal (HD)", price: "₹27,500", desc: "Our signature high-definition bridal package." },
+              { title: "Luxury Bridal (Airbrush)", price: "₹32,500", desc: "Humidity-resistant finish for max durability." }
+            ].map((tier, i) => (
+              <FadeUp key={tier.title} delay={i * 0.1}>
+                <div className="p-8 border border-espresso/5 rounded-2xl bg-white/50">
+                  <h3 className="font-sans text-[10px] tracking-[0.2em] text-[#B76E79] mb-2 uppercase">{tier.title}</h3>
+                  <div className="text-2xl font-serif text-espresso mb-3">{tier.price}<span className="text-xs font-sans text-taupe/60 ml-1">+</span></div>
+                  <p className="font-sans text-[13px] text-taupe/70">{tier.desc}</p>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
           <div className="flex flex-col md:flex-row gap-8 max-w-3xl">
 
             {/* HD Card */}
@@ -249,6 +268,7 @@ export default function BridalPage() {
               <div className="price-display mb-2 max-md:text-[56px] gold-foil-text">
                 <span className="price-rupee">₹</span>32,500
               </div>
+              <p className="text-[11px] font-sans text-[#B76E79] mb-4 uppercase tracking-wider">Humidity-Resistant Finish</p>
               <div style={{ width: "40px", height: "1px", margin: "20px 0" }} className="rosegold-shimmer" />
               <ul className="space-y-0">
                 {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (

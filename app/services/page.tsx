@@ -24,9 +24,9 @@ const categories = [
 ];
 
 const makeupServices = [
-  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "From ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Airbrush aesthetics." },
-  { name: "Engagement / Reception Styling", price: "₹18,000+", note: "Nuanced looks optimized for specific event lighting (Pala & Kottayam)." },
-  { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused makeup for outdoor and studio sessions." },
+  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Starting at ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Humidity-resistant Airbrush 'Manavatty' aesthetics. Ask about our 'Happy Bride Story' sessions." },
+  { name: "Engagement / Reception Styling", price: "From ₹14,500", note: "Nuanced 'Azhagu' looks optimized for Pala & Kottayam church/hall lighting." },
+  { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
   { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
   { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
 ];
@@ -55,7 +55,7 @@ const stylingRows = [
 
 /* ──── Category: Hair Coloring ──── */
 const colorByNikita = [
-  { name: "Nix'ed Balayage / Highlights", price: "₹7,000+" },
+  { name: "Nix'ed Balayage / Highlights", price: "₹7,000+", note: "Bleach-free ammonia-free hair coloring for a 'Supermodel' low-maintenance gloss finish. Ideal for Kerala's bright sunlight." },
   { name: "Streaky-age", price: "₹4,500+" },
   { name: "Peekabooo", price: "₹4,000+" },
   { name: "Peekabooo with Balayage", price: "₹7,500+" },
@@ -95,8 +95,8 @@ const spaSingles = [
 ];
 
 const hairTreatments = [
-  { name: "Hair Botox (Formaldehyde Free)", price: "₹6,000+", note: "60–70% straighter, lasts 40–60 washes" },
-  { name: "Nanoplastia / Biotin (Formaldehyde Free)", price: "₹6,000+", note: "80–100% straighter, lasts 60–80 washes" },
+  { name: "Humidity-Resistant Hair Botox (Formaldehyde Free)", price: "₹6,000+", note: "Restoration and smoothing for 'Supermodel' silkiness. Lasts 40–60 washes." },
+  { name: "Nanoplastia / Biotin (Formaldehyde Free)", price: "₹6,000+", note: "80–100% straighter, lasts 60–80 washes." },
   { name: "Permanent Hair Spa", price: "₹3,500+", note: "20–30% straighter, lasts ~15 washes" },
   { name: "Smoothening / Straightening Full", price: "₹5,000+" },
   { name: "Smoothening / Straightening Crown", price: "₹3,000+" },
@@ -125,6 +125,7 @@ const premiumFacials = [
 ];
 
 const luxuryFacials = [
+  { name: "Vortex-Fusion HydraFacial", price: "₹7,500+", note: "FDA-approved clinical skin resurfacing optimized for humidity-prone Kerala skin." },
   { name: "Save the Date — Bridal Facial + Detan", price: "₹4,500" },
   { name: "Pigmentation & Even Tone", price: "₹3,750" },
   { name: "Acne Treatment & Oil Control", price: "₹3,250" },
@@ -586,7 +587,7 @@ export default function SalonPage() {
               >
                 <Image
                   src="/images/studio/nixtudio-studio-signage-pala-kerala.webp"
-                  alt="NIXTUDIO Luxury Bridal Salon & Nail Lounge entrance in Pala Kerala — Professional aesthetics and makeup studio"
+                  alt="Nix-Studio-Pala-Salon-Entrance-Makeup-Artist-Kottayam — Professional aesthetics and makeup studio"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"
@@ -940,6 +941,31 @@ export default function SalonPage() {
             </div>
           </FadeUp>
         </section>
+        {/* ──────── INVESTMENT TIERS ──────── */}
+        <section className="section-padding bg-white">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+            <FadeUp>
+              <p className="label-caps mb-4">Pricing Transparency</p>
+              <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-12">Investment Tiers</h2>
+            </FadeUp>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Premium Bridal", price: "₹27,500", desc: "Starting price for HD/Airbrush packages including styling and draping." },
+                { title: "Engagement Styling", price: "₹14,500", desc: "Sophisticated 'Azhagu' looks for your first ceremony." },
+                { title: "Clinical Aesthetics", price: "₹7,500", desc: "Starting price for FDA-approved Vortex-Fusion HydraFacial treatments." }
+              ].map((tier, i) => (
+                <FadeUp key={tier.title} delay={i * 0.1}>
+                  <div className="p-8 border border-taupe/15 rounded-2xl hover:border-taupe/30 transition-colors">
+                    <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-2 uppercase">{tier.title}</h3>
+                    <div className="text-3xl font-serif text-espresso mb-4">{tier.price}<span className="text-sm font-sans text-taupe/60 ml-1">+</span></div>
+                    <p className="font-sans text-sm text-taupe/70 leading-relaxed">{tier.desc}</p>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </div>
 
       {/* ──────── SALON PERKS ──────── */}

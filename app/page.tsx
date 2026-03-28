@@ -126,7 +126,15 @@ function HeroSlideshow() {
           >
             <Image
               src={src}
-              alt={i === 0 ? "Premium HD bridal makeup studio interior Pala Kerala — NIXTUDIO by Nikita Liby" : i === 1 ? "Flawless Christian bridal makeover by Nikita Liby Pala" : "Traditional Kerala Hindu bridal makeup and styling expert Kottayam"}
+              alt={
+                i === 0 ? "Nix-Studio-Pala-Manavatty-Bridal-Makeup-Artist-Kottayam — Premium studio interior" :
+                i === 1 ? "Nix-Studio-Pala-Christian-Bridal-Makeup-Look-Makeup-Artist-Kottayam — Flawless 'Azhagu' styling" :
+                i === 2 ? "Nix-Studio-Pala-Traditional-Hindu-Wedding-Makeup-Artist-Kottayam — Authentic temple bridal look" :
+                i === 3 ? "Nix-Studio-Pala-Luxury-Salon-Spa-Service-Kottayam — Advanced facial and hair care" :
+                i === 4 ? "Nix-Studio-Pala-Bleach-Free-Hair-Coloring-Service-Kottayam — Professional salon services" :
+                i === 5 ? "Nix-Studio-Pala-Vortex-Fusion-HydraFacial-Service-Kottayam — Medical-grade skin care" :
+                "Nix-Studio-Pala-Bridal-Prep-Suite-Makeup-Artist-Kottayam — Exclusive private bridal dressing lounge"
+              }
               fill
               priority={i === 0}
               className="object-cover object-center"
@@ -174,7 +182,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
       >
         <Image
           src={card.image}
-          alt={`Professional ${card.heading} services at NIXTUDIO salon Pala Kerala — specialized bridal and party styling`}
+          alt={`Nix-Studio-Pala-${card.heading}-Service-Makeup-Artist-Kottayam — Specialized 'Manavatty' and 'Azhagu' styling`}
           fill
           className="object-cover object-center"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -499,7 +507,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/nikita-liby-professional-makeup-artist-pala.webp"
-                  alt="Nikita Liby — Head Makeup Artist & Founder of NIXTUDIO Pala, specializing in HD and Airbrush bridal makeovers"
+                  alt="Nix-Studio-Pala-Nikita-Liby-Makeup-Artist-Kottayam — Founder and Head MUA specializing in 'Supermodel' aesthetics"
                   width={800}
                   height={1000}
                   className="w-full h-auto"
@@ -613,12 +621,12 @@ export default function Home() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
             {[
-              { src: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp", alt: "Christian bridal makeup in Pala - High Definition finish" },
-              { src: "/images/gallery/traditional-hindu-wedding-makeup-kottayam.webp", alt: "Traditional Hindu bridal makeover Kottayam Kerala" },
-              { src: "/images/gallery/south-indian-temple-wedding-makeup-pala.webp", alt: "Temple wedding jewelry and makeup Pala Kerala" },
-              { src: "/images/gallery/flawless-engagement-reception-styling-pala.webp", alt: "Engagement and reception party styling Pala" },
-              { src: "/images/gallery/bridesmaid-party-makeup-styling-pala.webp", alt: "Bridesmaid and guest party makeup Pala" },
-              { src: "/images/gallery/gel-nail-extensions-pala-kottayam.webp", alt: "Luxury gel nail extensions and art Pala salon" }
+              { src: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp", alt: "Nix-Studio-Pala-Christian-Bridal-Makeup-Makeup-Artist-Kottayam — HD finish" },
+              { src: "/images/gallery/traditional-hindu-wedding-makeup-kottayam.webp", alt: "Nix-Studio-Pala-Hindu-Wedding-Makeup-Makeup-Artist-Kottayam — Traditional styling" },
+              { src: "/images/gallery/south-indian-temple-wedding-makeup-pala.webp", alt: "Nix-Studio-Pala-Temple-Wedding-Makeup-Makeup-Artist-Kottayam — Authentic Azhagu" },
+              { src: "/images/gallery/flawless-engagement-reception-styling-pala.webp", alt: "Nix-Studio-Pala-Engagement-Reception-Styling-Makeup-Artist-Kottayam" },
+              { src: "/images/gallery/bridesmaid-party-makeup-styling-pala.webp", alt: "Nix-Studio-Pala-Party-Makeup-Guest-Styling-Makeup-Artist-Kottayam" },
+              { src: "/images/gallery/gel-nail-extensions-pala-kottayam.webp", alt: "Nix-Studio-Pala-Gel-Nail-Extensions-Lounge-Makeup-Artist-Kottayam" }
             ].map((img, i) => (
               <Link
                 key={i}
@@ -675,7 +683,7 @@ export default function Home() {
                   <div style={{ position: "relative", aspectRatio: "16/10", borderRadius: "24px", overflow: "hidden", marginBottom: "24px" }}>
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={`Nix-Studio-Pala-${post.title.replace(/\s+/g, '-')}-Makeup-Artist-Kottayam`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"

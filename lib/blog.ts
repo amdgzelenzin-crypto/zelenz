@@ -11,10 +11,10 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "hd-vs-airbrush-makeup-pala-guide",
-    title: "Pala Bridal Guide: HD vs Airbrush Makeup for Kerala Weddings",
-    excerpt: "Choosing between HD and Airbrush makeup is a critical decision for Kerala brides. Learn which one withstands the humidity of Pala while looking flawless in photos.",
-    date: "March 25, 2025",
+    slug: "hd-vs-airbrush-makeup-kerala-weddings",
+    title: "HD vs Airbrush Makeup for Kerala Weddings: The Honest Guide",
+    excerpt: "Choosing between HD and Airbrush makeup for the specific humidity of Pala and Kottayam. Featuring 'Happy Bride Story' comparisons and technical durability tips.",
+    date: "March 28, 2026",
     author: "Nikita Liby",
     category: "Bridal Tips",
     image: "/images/nixtudio-luxury-salon-interior-pala.webp",
@@ -55,13 +55,14 @@ export const blogPosts: BlogPost[] = [
       <p>We offer both. And we've done enough of each to tell you honestly — the technique matters far less than the person applying it. A skilled artist will make either look exceptional. An inexperienced one will make both look wrong.</p>
       <p>What we always discuss with our brides before the day: your skin type, your event timing, whether you'll be indoors or outdoors, how long you need it to last, and what your photography style is. That conversation shapes the recommendation more than any rule of thumb.</p>
       <p>If you're genuinely unsure — come in. We'll look at your skin, talk through your day, and tell you exactly what we think. No upsell. Just the right answer for you.</p>
+      <p><em>NIXTUDIO is a premium bridal makeup studio in Pala, Kerala. All bridal bookings are handled exclusively by Nikita Liby.</em></p>
     `
   },
   {
-    slug: "christian-bridal-trends-2025-kerala",
+    slug: "christian-bridal-makeup-trends-2025",
     title: "Christian Bridal Makeup Looks for 2025: From Pala to Changanacherry",
-    excerpt: "Explore the latest trends in Christian bridal aesthetics for 2025. From the 'Glow-from-within' look to sophisticated eye definitions perfect for church ceremonies.",
-    date: "March 20, 2025",
+    excerpt: "Discover the 2025 'Azhagu' aesthetic for Christian brides. Specialized church ceremony styling for the humid Kerala climate.",
+    date: "March 27, 2026",
     author: "Nikita Liby",
     category: "Trends",
     image: "/images/hd-christian-bridal-makeup-look-pala.webp",
@@ -98,13 +99,14 @@ export const blogPosts: BlogPost[] = [
       <h3>A note on 2025 specifically</h3>
       <p>Weddings this year are leaning more personal. Brides are more articulate about what they want, more willing to move away from what's "traditional" toward what feels right for them. We love this. The best bridal looks we've done have always come from brides who had a point of view and trusted us to execute it rather than starting from a reference photo and working backwards.</p>
       <p>If you know how you want to feel on your wedding day — tell us that. We'll figure out the rest.</p>
+      <p><em>NIXTUDIO specialises in Christian, Hindu, and Muslim bridal aesthetics. Studio located in Pala, Kerala.</em></p>
     `
   },
   {
-    slug: "pre-wedding-skin-prep-kerala-weather",
-    title: "Essential Pre-Wedding Skin Prep for Humid Kerala Weather",
-    excerpt: "Preparing your skin for a wedding in Pala requires a technical approach to hydration. Discover our recommended 30-day pre-bridal skincare protocol.",
-    date: "March 15, 2025",
+    slug: "pre-wedding-skin-prep-humid-kerala",
+    title: "Pre-Wedding Skin Prep: Dominating Humid Kerala Weather",
+    excerpt: "Your 'Manavatty' glow starts 30 days before. Discover the NIXTUDIO proprietary skin prep protocol for brides in Pala and Kottayam.",
+    date: "March 25, 2026",
     author: "Nikita Liby",
     category: "Skin Prep",
     image: "/images/nixtudio-bridal-makeup-appointment-booking.webp",
@@ -125,12 +127,14 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Week 1–4: Hydration, internally and externally.</strong></p>
       <p>Kerala heat dehydrates. Three litres of water a day isn't excessive — for someone who's also sweating regularly, it's maintenance. Skin that is properly hydrated from within responds to makeup differently than skin that is dry. The base sits better, blends smoother, and lasts longer.</p>
       <p>Externally: a good hyaluronic acid serum used consistently will make a visible difference in skin texture over 30 days. Layer it on damp skin, seal with moisturiser. That's it.</p>
-      <p><strong>Week 2–3: Address the specific issue.</strong></p>
+      <hr />
+      <h3>Address the specific issue</h3>
       <p>Every bride has one. For most Kerala brides, it's one of three: oiliness, hyperpigmentation, or uneven texture.</p>
       <p>For oiliness — niacinamide, used consistently, genuinely works. It's not dramatic, it's gradual. But over four weeks, you'll notice your skin staying mattified longer through the day.</p>
       <p>For pigmentation — Vitamin C in the morning, used with SPF, every single day. The SPF is non-negotiable. Without it, you're undoing the Vitamin C work every time you step outside.</p>
       <p>For texture — gentle exfoliation, twice a week. Not a scrub. An AHA (like lactic acid) or BHA applied for a few minutes and rinsed off. This is enough. More than twice a week in Kerala's climate often does more damage than good.</p>
-      <p><strong>Week 4: Slow everything down.</strong></p>
+      <hr />
+      <h3>Week 4: Slow everything down</h3>
       <p>The week before the wedding, your skin should be in maintenance mode. Gentle cleansing, good moisturiser, SPF. Nothing new. No treatments. Sleep properly. Drink water.</p>
       <hr />
       <h3>What to avoid — specifically</h3>
@@ -142,10 +146,7 @@ export const blogPosts: BlogPost[] = [
       <h3>On the day itself</h3>
       <p>Come to the studio with a clean, moisturised face. No makeup. No SPF applied — we'll handle the barrier. Eat something. This sounds obvious, but we've had brides arrive having skipped breakfast because they were nervous, and a drop in blood sugar shows on the face.</p>
       <p>We handle the rest. The base, the barrier, the prep before a single drop of foundation goes on. This is where the 30 days of preparation meet the two hours of application — and when both are done right, the result holds all day.</p>
-      <hr />
-      <h3>A final note</h3>
-      <p>Skin is not a problem to be solved. It's something to be understood and worked with. Every bride who comes to NIXTUDIO has different skin — different texture, different concerns, different history. The prep protocol above is a foundation, not a prescription.</p>
-      <p>If you're unsure about what your skin specifically needs, reach out before your booking. We're happy to talk through it.</p>
+      <p><em>NIXTUDIO is a bridal and beauty studio in Pala, Kerala. All consultations and applications are handled exclusively by Nikita Liby.</em></p>
     `
   }
 ];
