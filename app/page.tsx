@@ -6,11 +6,14 @@ import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import ReviewMarquee from "@/components/ui/ReviewMarquee";
 import StatCounters from "@/components/ui/StatCounters";
-import StudioMap from "@/components/ui/StudioMap";
+import dynamic from "next/dynamic";
+
+const StudioMap = dynamic(() => import("@/components/ui/StudioMap"), {
+  ssr: false,
+  loading: () => <div className="w-full h-[400px] skeleton rounded-[20px]" />
+});
 
 /* ──────────────────────────────────────
-   SCROLL INDICATOR (bottom-right arrow)
-   ────────────────────────────────────── */
 function ScrollIndicator() {
   const [visible, setVisible] = useState(true);
   useEffect(() => {
@@ -98,10 +101,15 @@ const heroImages = [
 
 function HeroSlideshow() {
   const [current, setCurrent] = useState(0);
+  const [mounted, setMounted] = useState<number[]>([0]);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
+      setCurrent((prev) => {
+        const next = (prev + 1) % heroImages.length;
+        setMounted((m) => m.includes(next) ? m : [...m, next]);
+        return next;
+      });
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -109,21 +117,23 @@ function HeroSlideshow() {
   return (
     <div className="absolute inset-0">
       {heroImages.map((src, i) => (
+        mounted.includes(i) && (
           <div
-          key={src}
-          className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out skeleton"
-          style={{ opacity: i === current ? 1 : 0 }}
-        >
-          <Image
-            src={src}
-            alt="Bridal makeup by Nikita Liby — NIXTUDIO makeup studio Pala Kerala"
-            fill
-            priority={i === 0}
-            className="object-cover object-center"
-            sizes="100vw"
-            quality={85}
-          />
-        </div>
+            key={src}
+            className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out skeleton"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <Image
+              src={src}
+              alt="Bridal makeup by Nikita Liby — NIXTUDIO makeup studio Pala Kerala"
+              fill
+              priority={i === 0}
+              className="object-cover object-center"
+              sizes="100vw"
+              quality={85}
+            />
+          </div>
+        )
       ))}
     </div>
   );
