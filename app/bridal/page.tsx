@@ -48,7 +48,19 @@ export default function BridalPage() {
   } = useForm<BridalFormData>();
 
   const onSubmit = (data: BridalFormData) => {
-    console.log("Bridal form submitted:", data);
+    let text = `Hi, I'd like to enquire about bridal makeup.\n\n`;
+    text += `*Name:* ${data.name}\n`;
+    text += `*Phone:* ${data.phone}\n`;
+    text += `*Date of function:* ${data.date}\n`;
+    text += `*Time I need to leave:* ${data.leaveTime}\n`;
+    text += `*Event type:* ${data.eventType}\n`;
+    if (data.services) text += `*Services required:* ${data.services}\n`;
+    if (data.referral) text += `*Found via:* ${data.referral}\n`;
+
+    const encodedText = encodeURIComponent(text);
+    const waUrl = `https://wa.me/917034726402?text=${encodedText}`;
+    
+    window.open(waUrl, "_blank");
     setSubmitted(true);
   };
 
@@ -424,23 +436,16 @@ export default function BridalPage() {
                   />
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+                <div>
                   <button
                     type="submit"
-                    className="btn-primary px-10 w-full sm:w-auto"
+                    className="btn-primary w-full sm:w-auto px-10 py-4 mt-4"
                   >
-                    Send Enquiry
+                    Send Enquiry via WhatsApp
                   </button>
-
-                  <a
-                    href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-outline-gold px-10 w-full sm:w-auto flex justify-center items-center gap-2"
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.996 1.996c1.196 0 2.378.196 3.528.58 2.03.684 3.737 1.956 4.965 3.5.584.72.932 1.488 1.156 2.22.424 1.4.524 3.01.2 4.498-.328 1.503-1.077 2.91-2.096 4.054a10 10 0 0 1-3.664 2.47c-1.396.536-3.003.856-4.526.856-1.55-.022-3.056-.46-4.32-1.09l-4.14 1.1c-.246.066-.465-.008-.6-.182a.584.584 0 0 1-.102-.34c0-.056.002-.124.016-.207l1.107-4c-.7-1.332-1.125-2.883-1.146-4.47-.024-1.57.34-3.13 1.05-4.502a10 10 0 0 1 2.898-3.41c1.558-1.137 3.51-1.63 5.674-1.6xM9.362 7.02c-.524.02-1.116.143-1.458.625l-.206.312c-.22.37-.417.818-.466 1.346-.07 1.05.286 2.062 1.03 2.92.83.94 1.838 1.63 3.007 2.146 1.178.508 2.382.72 3.61.545.6-.134 1.116-.546 1.396-1.107l.2-.4233c-.02-.857-.34-1.57-1.112-1.89l-1.306-.554a.792.792 0 0 0-.416-.018c-.29.074-.53.25-.79.497-.107.1-.197.18-.28.257-.14.12-.346.16-.547.054a9.123 9.123 0 0 1-2.906-2.584.582.582 0 0 1 .054-.74c.068-.088.163-.166.27-.26.222-.204.42-.42.508-.71.07-.225.045-.487-.132-.782a17.96 17.96 0 0 0-.485-.778l-.34-.52c-.288-.415-.595-.49-.86-.44-.194.024-.316.064-.52.17x"/></svg>
-                    WhatsApp Us
-                  </a>
+                  <p className="text-xs text-taupe/60 mt-3 font-sans">
+                    You will be redirected to WhatsApp to complete your enquiry.
+                  </p>
                 </div>
               </form>
             </FadeUp>
