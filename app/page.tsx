@@ -58,10 +58,10 @@ const cards = [
   {
     tag: "BRIDAL EXPERIENCE",
     heading: "Bridal",
-    sub: "For your engagement, wedding, and reception",
+    sub: "Exclusively designed Christian, Hindu, and Muslim bridal aesthetics.",
     link: "/bridal",
     linkText: "The Bridal Edit →",
-    image: "/images/gallery/bridal-001.jpg",
+    image: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp",
     placeholder: "#F9C8C8",
     offset: 0,
     gradient: "linear-gradient(to bottom, rgba(249,145,159,0.15) 0%, rgba(61,26,31,0.75) 100%)",
@@ -69,10 +69,10 @@ const cards = [
   {
     tag: "PARTY & GUEST MAKEUP",
     heading: "Party &\nGuests",
-    sub: "For every celebration in between",
+    sub: "Sophisticated engagement and reception styling.",
     link: "/party",
     linkText: "Party Makeup →",
-    image: "/images/party-makeup.jpg",
+    image: "/images/elegant-reception-party-makeup-pala.webp",
     placeholder: "#F4A8B0",
     offset: 40,
     gradient: "linear-gradient(to bottom, rgba(212,160,85,0.15) 0%, rgba(61,26,31,0.75) 100%)",
@@ -80,23 +80,23 @@ const cards = [
   {
     tag: "HAIR · NAILS · SPA",
     heading: "Services",
-    sub: "Hair, nails, skincare, and more",
+    sub: "Premium hair styling and luxury gel nail lounge.",
     link: "/services",
     linkText: "Services →",
-    image: "/images/studio/studio-007.png",
+    image: "/images/studio/nixtudio-studio-signage-pala-kerala.webp",
     placeholder: "#EE8898",
     offset: 0,
     gradient: "linear-gradient(to bottom, rgba(183,110,121,0.20) 0%, rgba(61,26,31,0.75) 100%)",
   },
 ];
 const heroImages = [
-  "/images/hero-bridal.jpg",
-  "/images/hero-bridal-2.jpg",
-  "/images/hero-bridal-3.jpg",
-  "/images/studio/studio-002.jpg",
-  "/images/studio/studio-003.png",
-  "/images/studio/studio-005.jpg",
-  "/images/studio/studio-006.jpg",
+  "/images/premium-bridal-makeup-studio-pala-kerala-hero.webp",
+  "/images/hd-bridal-makeup-artist-pala-kottayam.webp",
+  "/images/traditional-kerala-bridal-styling-pala.webp",
+  "/images/studio/premium-makeup-studio-interior-kerala.webp",
+  "/images/studio/nixtudio-luxury-salon-interior-pala.webp",
+  "/images/studio/bridal-prep-suite-pala-kottayam.webp",
+  "/images/studio/luxury-hair-spa-station-pala.webp",
 ];
 
 function HeroSlideshow() {
@@ -125,7 +125,7 @@ function HeroSlideshow() {
           >
             <Image
               src={src}
-              alt="Bridal makeup by Nikita Liby — NIXTUDIO makeup studio Pala Kerala"
+              alt={i === 0 ? "Premium HD bridal makeup studio interior Pala Kerala — NIXTUDIO by Nikita Liby" : i === 1 ? "Flawless Christian bridal makeover by Nikita Liby Pala" : "Traditional Kerala Hindu bridal makeup and styling expert Kottayam"}
               fill
               priority={i === 0}
               className="object-cover object-center"
@@ -173,7 +173,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
       >
         <Image
           src={card.image}
-          alt={`${card.heading} — NIXTUDIO beauty services in Pala Kerala`}
+          alt={`Professional ${card.heading} services at NIXTUDIO salon Pala Kerala — specialized bridal and party styling`}
           fill
           className="object-cover object-center"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -497,8 +497,8 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/images/nikita-portrait.jpg"
-                  alt="Nikita Liby — bridal makeup artist and founder of NIXTUDIO, Pala Kerala"
+                  src="/images/nikita-liby-professional-makeup-artist-pala.webp"
+                  alt="Nikita Liby — Head Makeup Artist & Founder of NIXTUDIO Pala, specializing in HD and Airbrush bridal makeovers"
                   width={800}
                   height={1000}
                   className="w-full h-auto"
@@ -589,8 +589,36 @@ export default function Home() {
               The <em>Work.</em>
             </h2>
           </FadeUp>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 border-y border-[rgba(61,21,32,0.1)] mb-16">
+            <FadeUp>
+              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Advanced Skin Prep</h4>
+              <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
+                Our proprietary 7-step hydration protocol ensures your base remains flawless and luminous through 16+ hours of Kerala's intensity and humidity.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Facial Architecture</h4>
+              <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
+                We use high-definition contouring and highlight placement to naturally refine facial structure, specifically optimized for multi-angle cinematic wedding photography.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.2}>
+              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Pigment Sync</h4>
+              <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
+                Scientific color theory mapping ensures your makeup undertones harmonize perfectly with specific gold temple jewelry and varied ceremonial lighting.
+              </p>
+            </FadeUp>
+          </div>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
-            {["bridal-001.jpg","bridal-002.jpg","bridal-003.jpg","party-001.jpg","party-002.jpg","nails-001.jpg"].map((label, i) => (
+            {[
+              { src: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp", alt: "Christian bridal makeup in Pala - High Definition finish" },
+              { src: "/images/gallery/traditional-hindu-wedding-makeup-kottayam.webp", alt: "Traditional Hindu bridal makeover Kottayam Kerala" },
+              { src: "/images/gallery/south-indian-temple-wedding-makeup-pala.webp", alt: "Temple wedding jewelry and makeup Pala Kerala" },
+              { src: "/images/gallery/flawless-engagement-reception-styling-pala.webp", alt: "Engagement and reception party styling Pala" },
+              { src: "/images/gallery/bridesmaid-party-makeup-styling-pala.webp", alt: "Bridesmaid and guest party makeup Pala" },
+              { src: "/images/gallery/gel-nail-extensions-pala-kottayam.webp", alt: "Luxury gel nail extensions and art Pala salon" }
+            ].map((img, i) => (
               <Link
                 key={i}
                 href="/gallery"
@@ -606,8 +634,8 @@ export default function Home() {
                 className="group skeleton"
               >
                 <Image
-                  src={`/images/gallery/${label}`}
-                  alt={label.startsWith('bridal') ? `HD bridal makeup look by Nikita Liby, NIXTUDIO Pala Kerala` : label.startsWith('party') ? `Party guest makeup by NIXTUDIO team, Pala Kerala` : `Gel nail art — The Nail Lounge by NIXTUDIO, Pala Kerala`}
+                  src={img.src}
+                  alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 33vw, 20vw"
@@ -618,7 +646,7 @@ export default function Home() {
             ))}
           </div>
           <FadeUp>
-            <Link href="/gallery" className="btn-outline-gold">View All Work →</Link>
+            <Link href="/gallery" className="btn-outline-gold">View Full Portfolio →</Link>
           </FadeUp>
         </div>
       </section>

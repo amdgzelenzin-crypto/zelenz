@@ -129,6 +129,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable} ${cormorantGaramond.variable} ${inter.variable}`}
     >
       <head>
@@ -136,7 +137,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/hero-bridal.jpg"
+          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
           type="image/webp"
         />
         <script

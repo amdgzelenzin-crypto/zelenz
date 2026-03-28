@@ -70,8 +70,8 @@ export default function BridalPage() {
       <section className="relative h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0 skeleton">
           <Image
-            src="/images/hero-bridal.jpg"
-            alt="Bridal makeup by Nikita Liby — NIXTUDIO premium makeup studio Pala Kerala"
+            src="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
+            alt="Luxury Christian bridal makeup look Pala Kerala — NIXTUDIO by Nikita Liby"
             fill
             className="object-cover"
             priority
@@ -102,14 +102,39 @@ export default function BridalPage() {
       {/* ──────── POSITIONING STATEMENT ──────── */}
       <section className="section-padding section-white texture-grain">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <FadeUp className="h-full">
+              <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
+                <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Christian Bridal Elegance</h3>
+                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                  Specialized in the ethereal 'Glow-from-within' aesthetic for Christian weddings in Pala. We focus on luminous skin and timeless sophistication that complements the white bridal gown and delicate veil.
+                </p>
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.1} className="h-full">
+              <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
+                <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Traditional Hindu Muhurtham</h3>
+                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                  Expert color theory mapping for traditional Hindu brides in Kottayam. We balance rich temple gold jewelry with bold, high-definition makeup that remains flawless through the warmth of the mandap.
+                </p>
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.2} className="h-full">
+              <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
+                <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Muslim Bridal Magnificence</h3>
+                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                  Intricate artistry designed for Muslim brides, focusing on striking eye definitions and regal styling that commands attention during the Nikkah and grand reception ceremonies.
+                </p>
+              </div>
+            </FadeUp>
+          </div>
+          
+          <FadeUp delay={0.3} className="mt-20 pt-16 border-t border-espresso/5">
             <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl max-w-3xl leading-snug">
               One artist. <em>Your day.</em>
             </h2>
-          </FadeUp>
-          <FadeUp delay={0.1}>
             <p className="font-sans text-espresso/60 text-sm mt-6 max-w-lg">
-              NIXTUDIO is Pala&rsquo;s only premium bridal makeup studio where every look is done exclusively by Nikita. Serving brides across Pala, Kottayam, and Changanacherry.
+              NIXTUDIO is the region&rsquo;s premier destination for high-intent bridal styling. Serving elite brides across Pala, Kottayam, Erattupetta, and Changanacherry with a focus on technical excellence.
             </p>
           </FadeUp>
         </div>
@@ -141,10 +166,10 @@ export default function BridalPage() {
 
             {/* Image */}
             <FadeUp className="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
-              <div className="w-full aspect-square relative overflow-hidden">
+              <div className="w-full aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="/images/nikita-detail-work.png"
-                  alt="Nikita Liby applying bridal makeup — NIXTUDIO studio Pala Kerala"
+                  src="/images/detailed-bridal-makeover-pala-kottayam.webp"
+                  alt="Precision bridal makeup application by Nikita Liby in the NIXTUDIO private suite Pala — focusing on skin prep and HD detail"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

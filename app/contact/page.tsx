@@ -136,8 +136,8 @@ export default function ContactPage() {
                 {/* Background Image - full clean image */}
                 <div className="absolute inset-0 z-0">
                   <Image
-                    src="/images/book-now.jpg"
-                    alt="Book an appointment at NIXTUDIO premium makeup studio Pala Kerala"
+                    src="/images/nixtudio-bridal-makeup-appointment-booking.webp"
+                    alt="Book a premium bridal makeup consultation at NIXTUDIO Pala Kerala"
                     fill
                     style={{
                       objectFit: 'contain',

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 
@@ -9,6 +10,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/Animation
    ──────────────────────────────────────── */
 
 const categories = [
+  { id: "makeup", label: "Bridal & Event Makeup" },
   { id: "haircut", label: "Haircut & Styling" },
   { id: "hair-coloring", label: "Hair Coloring" },
   { id: "hair-spa", label: "Hair Spa & Treatments" },
@@ -19,6 +21,14 @@ const categories = [
   { id: "waxing", label: "Waxing" },
   { id: "threading", label: "Threading" },
   { id: "massages", label: "Massages" },
+];
+
+const makeupServices = [
+  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "From ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Airbrush aesthetics." },
+  { name: "Engagement / Reception Styling", price: "₹18,000+", note: "Nuanced looks optimized for specific event lighting (Pala & Kottayam)." },
+  { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused makeup for outdoor and studio sessions." },
+  { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
+  { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
 ];
 
 /* ──── Category: Haircut ──── */
@@ -575,8 +585,8 @@ export default function SalonPage() {
                 className="w-full relative overflow-hidden rounded-xl h-[260px] lg:h-[400px] skeleton"
               >
                 <Image
-                  src="/images/studio/studio-007.png"
-                  alt="NIXTUDIO Nail Lounge interior — premium salon in Pala Kerala"
+                  src="/images/studio/nixtudio-studio-signage-pala-kerala.webp"
+                  alt="NIXTUDIO Luxury Bridal Salon & Nail Lounge entrance in Pala Kerala — Professional aesthetics and makeup studio"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"
@@ -616,8 +626,29 @@ export default function SalonPage() {
 
       {/* ──────── SERVICE SECTIONS ──────── */}
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12 pb-20">
+        
+        {/* BRIDAL & EVENT MAKEUP SILO */}
+        <section id="makeup" className="section-padding pb-16">
+          <FadeUp>
+            <p className="label-caps mb-2">Makeup Artistry — By Nikita</p>
+            <p className="text-xs font-sans text-taupe/60 mb-8 max-w-lg leading-relaxed">
+              Specialized high-definition bridal and occasion styling. We explicitly address nuanced parameters like religious bridal aesthetics and event-specific lighting requirements.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <div className="max-w-2xl">
+              <PriceList items={makeupServices} />
+            </div>
+            <div className="mt-8">
+              <Link href="/bridal" className="text-sm font-sans text-[#B76E79] border-b border-[#B76E79]/30 hover:border-[#B76E79] transition-colors">
+                View Detailed Bridal Packages →
+              </Link>
+            </div>
+          </FadeUp>
+        </section>
+
         {/* HAIRCUT & STYLING */}
-        <section id="haircut" className="section-padding pb-16">
+        <section id="haircut" className="section-padding pt-0 pb-16">
           <FadeUp>
             <p className="label-caps mb-2">Haircut</p>
             <p className="text-xs font-sans text-taupe/60 mb-8">
