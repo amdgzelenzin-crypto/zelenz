@@ -224,7 +224,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
           </p>
 
           {/* Heading */}
-          <h2
+          <h3
             style={{
               fontFamily: "var(--font-display), Georgia, serif",
               fontSize: "clamp(36px, 5vw, 48px)",
@@ -237,7 +237,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
             }}
           >
             {card.heading}
-          </h2>
+          </h3>
 
           {/* Sub */}
           <p
