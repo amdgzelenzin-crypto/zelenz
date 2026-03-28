@@ -32,44 +32,91 @@ export default function JsonLd() {
           "closes": "19:30"
         }
       ],
-      "image": "https://nixtudio.in/og-image.jpg",
-      "priceRange": "₹₹₹",
-      "hasMap": "https://maps.google.com/?q=NIXTUDIO+Moozhayil+Building+Pala+Ramapuram+Road+Pala+Kerala",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "6"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Jessy Joseph"
+          },
+          "reviewBody": "Extremely happy and satisfied with the makeup and hair for my wedding day. Executed everything perfectly."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Stelly Tomy"
+          },
+          "reviewBody": "engagement and wedding makeup done by Nikita, such a wonderful experience. Clearly guided me on what would suit me best."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Jane Josy"
+          },
+          "reviewBody": "Making me look my best on my BigDay. Work played a huge role in making me so happy and confident."
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Beauty Services",
+        "name": "NIXTUDIO Luxury Bridal & Beauty Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Bridal Makeup",
-              "description": "HD and airbrush bridal makeup by Nikita Liby"
+              "name": "Premium HD Bridal Makeup",
+              "description": "High-Definition bridal artistry optimized for Kerala's lighting and temple/reception environments."
             },
-            "price": "27500",
-            "priceCurrency": "INR"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Party Makeup"
-            },
-            "price": "5500",
-            "priceCurrency": "INR"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hair Salon Services"
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "27500",
+              "priceCurrency": "INR"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Gel Nails — The Nail Lounge"
+              "name": "Luxury Airbrush Bridal Makeup",
+              "description": "Ultra-long-lasting airbrush application designed for 16-hour humidity resistance."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "32500",
+              "priceCurrency": "INR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Celebrity Engagement & Reception Styling",
+              "description": "Sophisticated event styling from Pala and Kottayam's premier artist."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "14500",
+              "priceCurrency": "INR",
+              "priceType": "Starting at"
             }
           }
         ]
@@ -81,13 +128,9 @@ export default function JsonLd() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "HealthAndBeautyBusiness",
-      "additionalType": [
-        "https://schema.org/BeautySalon",
-        "https://schema.org/MakeupArtist"
-      ],
+      "@type": "BeautySalon",
       "name": "NIXTUDIO BRIDAL SUITE",
-      "description": "NIXTUDIO BRIDAL SUITE — Specialized luxury bridal prep location by Nikita Liby.",
+      "description": "NIXTUDIO BRIDAL SUITE — Specialized luxury bridal prep location by Nikita Liby in Pala.",
       "url": "https://nixtudio.in/bridal",
       "telephone": "+917034726402",
       "address": {
@@ -100,11 +143,7 @@ export default function JsonLd() {
       },
       "image": "https://nixtudio.in/og/bridal-og.jpg",
       "priceRange": "₹₹₹",
-      "hasMap": "https://maps.app.goo.gl/F6MtRGyNAoHAsmYe8",
-      "sameAs": [
-        "https://instagram.com/nixtudio",
-        "https://wa.me/917034726402"
-      ]
+      "hasMap": "https://maps.app.goo.gl/F6MtRGyNAoHAsmYe8"
     }
   ]
 

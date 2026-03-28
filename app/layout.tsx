@@ -55,7 +55,7 @@ const cormorant = Cormorant({
 export const metadata: Metadata = {
   title: "NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala",
   description:
-    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Bridal, party makeup, hair, nails & spa. Book today.",
+    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. HD & Airbrush bridal packages from ₹27,500. Hair, nails & spa. Book today.",
   keywords: [
     "bridal makeup Pala",
     "bridal makeup Kottayam",
