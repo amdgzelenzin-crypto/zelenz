@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export type ReviewItem = {
   quote: string;
@@ -10,40 +10,34 @@ export type ReviewItem = {
 
 const defaultReviews: ReviewItem[] = [
   {
-    quote:
-      "She understood exactly what I wanted before I could even explain it. The result was effortless — I looked like myself, only luminous.",
-    name: "Aishwarya S.",
-    detail: "Bride · 2024",
+    quote: "I was extremely happy and satisfied with the makeup and hair for my wedding day. It turned out even better than I had imagined! She understood each and every request of mine and executed everything perfectly...",
+    name: "Jessy Joseph",
+    detail: "Bride",
   },
   {
-    quote:
-      "From the pre-bridal guide to the final look, every step felt intentional and unhurried. I never once felt like just another booking.",
-    name: "Meera K.",
-    detail: "Bride · 2024",
+    quote: "I had my engagement and wedding makeup done by Nikita, and it was such a wonderful experience. She was very vocal and guided me clearly on what would suit me best, which I truly appreciated.",
+    name: "Stelly Tomy",
+    detail: "Bride",
   },
   {
-    quote:
-      "The attention to detail was extraordinary. My skin had never looked like that in photographs before.",
-    name: "Devika R.",
-    detail: "Bride · 2023",
+    quote: "Thank you so much Nikita for making me look my best on my BigDay. Your work played a huge role in making me so happy and confident on my wedding day. I looked exactly like what I expected ❤️",
+    name: "Jane Josy",
+    detail: "Bride",
   },
   {
-    quote:
-      "Nikita has an incredible eye. She enhanced what I already had and made me feel completely myself on the most important day.",
-    name: "Priya B.",
-    detail: "Bride · 2024",
+    quote: "Nikita did my bridal makeup and I couldn't be happier with the results. She understood exactly the look I wanted and made me feel so confident and beautiful on my big day.",
+    name: "Meenu Mathai",
+    detail: "Bride",
   },
   {
-    quote:
-      "I showed her one reference photo. She understood the soul of it immediately. The result was better than my imagination.",
-    name: "Sreelakshmi V.",
-    detail: "Bride · 2023",
+    quote: "I just wanted to share my amazing experience with Nikita 🫶, she made me feel beautiful on my engagement day and I received so many compliments. I highly recommend NIXTUDIO for anyone!",
+    name: "Riya Kurian",
+    detail: "Bride",
   },
   {
-    quote:
-      "Every bride deserves to feel seen. Nikita made sure I did — not just in the mirror, but in every photograph from that day.",
-    name: "Ananya M.",
-    detail: "Bride · 2024",
+    quote: "Absolutely loved my engagement and bridal makeup❤️! Huge thanks to Nikita for making the whole experience feel so friendly and comfortable. She really listened to what I wanted, and the final look was beautiful😌.",
+    name: "Aleena Varghese",
+    detail: "Bride",
   },
 ];
 
@@ -133,7 +127,10 @@ export default function ReviewMarquee({
 
   const SPEED = 0.5; // pixels per frame
 
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    setIsMounted(true);
     const track = trackRef.current;
     if (!track) return;
 
@@ -387,9 +384,18 @@ export default function ReviewMarquee({
             WebkitUserSelect: "none",
           }}
         >
-          {/* Render review cards TWICE for seamless infinite loop */}
-          {[...reviews, ...reviews].map((review, i) => (
-            <ReviewCard key={i} {...review} />
+          {/* SR-visible main reviews */}
+          {reviews.map((review, i) => (
+            <div key={`orig-${i}`}>
+              <ReviewCard {...review} />
+            </div>
+          ))}
+
+          {/* Client-side cloned reviews with aria-hidden to eliminate crawler duplicates */}
+          {isMounted && reviews.map((review, i) => (
+            <div key={`clone-${i}`} aria-hidden="true">
+              <ReviewCard {...review} />
+            </div>
           ))}
         </div>
       </div>

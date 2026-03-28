@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og/bridal-og.jpg"],
   },
   alternates: {
-    canonical: "/bridal",
+    canonical: "https://nixtudio.in/bridal",
   },
 };
 

@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   creator: 'NIXTUDIO',
   metadataBase: new URL('https://nixtudio.in'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://nixtudio.in',
   },
   openGraph: {
     type: 'website',
