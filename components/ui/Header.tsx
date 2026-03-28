@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/bridal",  label: "BRIDAL"       },
   { href: "/party",   label: "PARTY & GUESTS" },
   { href: "/services",label: "SERVICES"     },
+  { href: "/blog",    label: "JOURNAL"      },
   { href: "/gallery", label: "Gallery"      },
   { href: "/about",   label: "About"        },
 ];

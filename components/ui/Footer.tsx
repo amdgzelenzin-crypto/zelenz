@@ -6,6 +6,7 @@ const footerNav = [
   { href: "/bridal",  label: "Bridal"       },
   { href: "/party",   label: "Party & Guests" },
   { href: "/services",label: "Services"     },
+  { href: "/blog",    label: "Journal"      },
   { href: "/gallery", label: "Gallery"      },
   { href: "/about",   label: "About"        },
   { href: "/contact", label: "Contact"      },

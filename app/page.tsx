@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { blogPosts } from "@/lib/blog";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import ReviewMarquee from "@/components/ui/ReviewMarquee";
 import StatCounters from "@/components/ui/StatCounters";
@@ -648,6 +649,54 @@ export default function Home() {
           <FadeUp>
             <Link href="/gallery" className="btn-outline-gold">View Full Portfolio →</Link>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* ──── 5.5. LATEST FROM THE JOURNAL ──── */}
+      <section className="section-padding bg-white">
+        <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)" }}>
+          <header style={{ marginBottom: "60px" }}>
+            <FadeUp>
+              <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.25em", color: "#B76E79", textTransform: "uppercase", marginBottom: "12px" }}>
+                LEARNINGS & TRENDS
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <h2 style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 400, fontStyle: "italic", color: "#3D1520", lineHeight: 1.2 }}>
+                From the <em>Journal.</em>
+              </h2>
+            </FadeUp>
+          </header>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
+            {blogPosts.slice(0, 3).map((post, idx) => (
+              <FadeUp key={post.slug} delay={idx * 0.1}>
+                <Link href={`/blog/${post.slug}`} className="group block text-decoration-none">
+                  <div style={{ position: "relative", aspectRatio: "16/10", borderRadius: "24px", overflow: "hidden", marginBottom: "24px" }}>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "12px" }}>
+                    {post.category}
+                  </p>
+                  <h3 style={{ fontFamily: "var(--font-display), Georgia, serif", fontSize: "24px", color: "#3D1520", marginBottom: "12px", lineHeight: "1.3" }} className="group-hover:text-[#B76E79] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p style={{ fontFamily: "var(--font-body), serif", fontSize: "15px", color: "rgba(61,21,32,0.60)", lineHeight: "1.7", marginBottom: "20px" }}>
+                    {post.excerpt}
+                  </p>
+                  <span style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.1em", color: "#3D1520", fontWeight: 500, borderBottom: "1px solid #D4A055", paddingBottom: "4px" }}>
+                    Read Article
+                  </span>
+                </Link>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 
