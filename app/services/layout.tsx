@@ -1,9 +1,23 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Services — NIX Studio Bridal Makeup Pala',
-  description: 'Explore NIX Studio\'s full range of bridal services including HD makeup, airbrush, pre-bridal packages, and traditional Kerala bridal looks.',
-}
+  title: "Salon in Pala, Kerala — Hair, Nails & Spa | NIXTUDIO",
+  description:
+    "Salon in Pala, Kerala — NIXTUDIO. Hair, nails, facials, spa, waxing & more by Nikita Liby. Walk-ins welcome. Call 70347 26402.",
+  openGraph: {
+    title: "Salon in Pala, Kerala — Hair, Nails & Spa | NIXTUDIO",
+    description:
+      "Salon in Pala, Kerala — NIXTUDIO. Hair, nails, facials, spa, waxing & more by Nikita Liby. Walk-ins welcome.",
+    url: "https://nixtudio.in/services",
+    images: [{ url: "/og/services-og.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    title: "Salon in Pala, Kerala — Hair, Nails & Spa | NIXTUDIO",
+    description:
+      "Salon in Pala, Kerala — NIXTUDIO. Hair, nails, facials, spa, waxing & more by Nikita Liby. Walk-ins welcome.",
+    images: ["/og/services-og.jpg"],
+  },
+};
 
 export default function SalonLayout({
   children,

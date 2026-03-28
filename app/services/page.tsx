@@ -550,10 +550,13 @@ export default function SalonPage() {
         <div className="mx-auto max-w-[1440px] px-4 md:px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-5">
+              <h1 className="sr-only">
+                Salon in Pala, Kerala — Hair, Nails, Facials & Spa at NIXTUDIO
+              </h1>
               <FadeUp>
-                <h1 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-4">
+                <h2 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-4">
                   Services
-                </h1>
+                </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="font-sans text-espresso/60 mb-2">
@@ -561,6 +564,9 @@ export default function SalonPage() {
                 </p>
                 <p className="font-sans text-sm text-taupe">
                   Appointment recommended. Walk-ins welcome based on availability.
+                </p>
+                <p className="font-sans text-sm text-espresso/60 mt-4 max-w-lg">
+                  NIXTUDIO is Pala&rsquo;s premium salon offering hair, nails, facials, spa, and waxing services. Located in Pala, Kerala, walk-ins are welcome based on availability.
                 </p>
               </FadeUp>
             </div>
@@ -570,10 +576,12 @@ export default function SalonPage() {
               >
                 <Image
                   src="/images/studio/studio-007.png"
-                  alt="NIXTUDIO Nail Lounge interior — luxury makeup studio in Pala Kerala"
+                  alt="NIXTUDIO Nail Lounge interior — premium salon in Pala Kerala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"
+                  priority
+                  quality={85}
                 />
               </div>
             </FadeUp>

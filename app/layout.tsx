@@ -53,32 +53,42 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: 'NIXTUDIO — Bridal Makeup Artist in Pala, Kottayam Kerala',
-  description: 'NIXTUDIO is a premium bridal makeup studio in Pala, Kottayam, Kerala. HD bridal makeup, airbrush, traditional Kerala bridal looks, pre-bridal packages, nail art, hair styling and spa. Book your appointment today.',
+  title: "NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala",
+  description:
+    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Bridal, party makeup, hair, nails & spa. Book today.",
   keywords: [
     "bridal makeup Pala",
     "bridal makeup Kottayam",
+    "bridal makeup Kerala",
     "NIXTUDIO Pala",
     "HD bridal makeup Pala",
     "airbrush bridal makeup Kerala",
     "wedding makeup Pala Kerala",
     "makeup artist Pala",
+    "makeup artist Kottayam",
     "beauty salon Pala",
     "pre bridal package Pala",
     "nail art Pala",
+    "nail lounge Pala",
     "hair styling Pala",
     "spa Pala Kerala",
     "best makeup artist Kottayam",
-    "bridal makeup near me Pala"
+    "bridal makeup near me Pala",
+    "Nikita Liby makeup",
+    "engagement makeup Pala",
+    "party makeup Pala",
   ],
   authors: [{ name: 'NIXTUDIO' }],
   creator: 'NIXTUDIO',
   metadataBase: new URL('https://nixtudio.in'),
   openGraph: {
-    title: 'NIXTUDIO — Bridal Makeup Artist, Pala Kerala',
-    description: 'Premium bridal makeup studio in Pala, Kottayam. HD makeup, airbrush, traditional bridal looks. Book your wedding date.',
-    url: 'https://nixtudio.in',
-    siteName: 'NIXTUDIO',
+    type: 'website',
+    locale: 'en_IN',
+    url: "https://nixtudio.in",
+    siteName: "NIXTUDIO by Nikita Liby",
+    title: "NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala",
+    description:
+      "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Bridal, party makeup, hair, nails & spa.",
     images: [
       {
         url: '/og-image.jpg',
@@ -87,13 +97,11 @@ export const metadata: Metadata = {
         alt: 'NIXTUDIO Bridal Makeup Pala Kerala',
       },
     ],
-    locale: 'en_IN',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NIXTUDIO — Bridal Makeup Artist, Pala Kerala',
-    description: 'Premium bridal makeup studio in Pala, Kottayam. Book your wedding date.',
+    title: 'NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala',
+    description: 'Bridal makeup done exclusively by Nikita Liby in Pala, Kerala. HD and airbrush packages from ₹27,500.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -121,6 +129,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable} ${cormorantGaramond.variable} ${inter.variable}`}
     >
       <head>
+        {/* Preload hero image for LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bridal.jpg"
+          type="image/webp"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

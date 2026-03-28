@@ -6,10 +6,10 @@ export default function JsonLd() {
       "https://schema.org/BeautySalon",
       "https://schema.org/MakeupArtist"
     ],
-    "name": "NIXTUDIO",
+    "name": "NIXTUDIO by Nikita Liby",
     "description": "NIXTUDIO is a premium bridal makeup studio in Pala, Kottayam, Kerala. Specialising in HD bridal makeup, airbrush makeup, traditional Kerala bridal looks, pre-bridal packages, party makeup, hair styling, nail art and spa services. Located at Moozhayil Building, Pala Ramapuram Road, near KSEB Office, Pala.",
     "url": "https://nixtudio.in",
-    "telephone": "070347 26402",
+    "telephone": "+917034726402",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Moozhayil Building, Pala Ramapuram Road, Near KSEB Office",
@@ -32,9 +32,51 @@ export default function JsonLd() {
       }
     ],
     "image": "https://nixtudio.in/og-image.jpg",
-    "priceRange": "₹₹",
-    "servesCuisine": null,
-    "hasMap": "https://maps.google.com/?q=NIXTUDIO+Moozhayil+Building+Pala+Ramapuram+Road+Pala+Kerala"
+    "priceRange": "₹₹₹",
+    "hasMap": "https://maps.google.com/?q=NIXTUDIO+Moozhayil+Building+Pala+Ramapuram+Road+Pala+Kerala",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Beauty Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bridal Makeup",
+            "description": "HD and airbrush bridal makeup by Nikita Liby"
+          },
+          "price": "27500",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Party Makeup"
+          },
+          "price": "5500",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hair Salon Services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gel Nails — The Nail Lounge"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://instagram.com/nixtudio",
+      "https://wa.me/917034726402"
+    ]
   }
 
   return (

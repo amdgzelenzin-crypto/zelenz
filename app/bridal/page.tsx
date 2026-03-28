@@ -64,14 +64,18 @@ export default function BridalPage() {
             className="object-cover"
             priority
             sizes="100vw"
+            quality={85}
           />
         </div>
         <div className="absolute inset-0 bg-espresso/30" />
         <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 lg:px-12 pb-16 lg:pb-24">
+          <h1 className="sr-only">
+            Bridal Makeup Studio in Pala, Kerala — NIXTUDIO by Nikita Liby
+          </h1>
           <FadeUp>
-            <h1 className="font-serif font-light text-white text-5xl lg:text-7xl mb-3">
+            <h2 className="font-serif font-light text-white text-5xl lg:text-7xl mb-3">
               The Bridal Edit
-            </h1>
+            </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="font-sans text-white/70 text-sm tracking-wide">
@@ -90,6 +94,11 @@ export default function BridalPage() {
             <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl max-w-3xl leading-snug">
               One artist. <em>Your day.</em>
             </h2>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <p className="font-sans text-espresso/60 text-sm mt-6 max-w-lg">
+              NIXTUDIO is Pala&rsquo;s only premium bridal makeup studio where every look is done exclusively by Nikita. Serving brides across Pala, Kottayam, and Changanacherry.
+            </p>
           </FadeUp>
         </div>
       </section>
@@ -123,10 +132,11 @@ export default function BridalPage() {
               <div className="w-full aspect-square relative overflow-hidden">
                 <Image
                   src="/images/nikita-detail-work.png"
-                  alt="Nikita's detailed bridal work"
+                  alt="Nikita Liby applying bridal makeup — NIXTUDIO studio Pala Kerala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                 />
               </div>
             </FadeUp>

@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
   images: {
     remotePatterns: [
@@ -10,6 +9,9 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+    formats: ["image/webp"],
+    minimumCacheTTL: 86400,
+    deviceSizes: [375, 640, 750, 828, 1080, 1200, 1920],
   },
 };
 

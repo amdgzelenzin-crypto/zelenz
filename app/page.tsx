@@ -116,11 +116,12 @@ function HeroSlideshow() {
         >
           <Image
             src={src}
-            alt="NIXTUDIO Nail Lounge interior — luxury makeup studio in Pala Kerala"
+            alt="Bridal makeup by Nikita Liby — NIXTUDIO makeup studio Pala Kerala"
             fill
             priority={i === 0}
             className="object-cover object-center"
             sizes="100vw"
+            quality={85}
           />
         </div>
       ))}
@@ -162,10 +163,12 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
       >
         <Image
           src={card.image}
-          alt={card.heading}
+          alt={`${card.heading} — NIXTUDIO beauty services in Pala Kerala`}
           fill
           className="object-cover object-center"
-          sizes="380px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={80}
+          loading="lazy"
           onError={() => {}} // silently use placeholder bg on missing image
         />
       </div>
@@ -344,8 +347,11 @@ export default function Home() {
             </p>
           </FadeUp>
 
+          <h1 className="sr-only">
+            Bridal Makeup & Salon in Pala, Kerala — NIXTUDIO by Nikita Liby
+          </h1>
           <FadeUp delay={0.1}>
-            <h1
+            <h2
               className="mb-4"
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
@@ -358,7 +364,7 @@ export default function Home() {
               Every face.<br />
               Carefully<br />
               considered.
-            </h1>
+            </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
@@ -482,11 +488,12 @@ export default function Home() {
               >
                 <Image
                   src="/images/nikita-portrait.jpg"
-                  alt="Nikita Liby — NIXTUDIO"
+                  alt="Nikita Liby — bridal makeup artist and founder of NIXTUDIO, Pala Kerala"
                   width={800}
                   height={1000}
                   className="w-full h-auto"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                 />
 
                 {/* Heart Pulse Mobile Badge */}
@@ -590,10 +597,12 @@ export default function Home() {
               >
                 <Image
                   src={`/images/gallery/${label}`}
-                  alt={`NIXTUDIO Work ${i + 1}`}
+                  alt={label.startsWith('bridal') ? `HD bridal makeup look by Nikita Liby, NIXTUDIO Pala Kerala` : label.startsWith('party') ? `Party guest makeup by NIXTUDIO team, Pala Kerala` : `Gel nail art — The Nail Lounge by NIXTUDIO, Pala Kerala`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 33vw, 20vw"
+                  quality={80}
+                  loading="lazy"
                 />
               </Link>
             ))}
