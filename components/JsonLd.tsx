@@ -99,18 +99,41 @@ export default function JsonLd() {
         "itemListElement": [
           {
             "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "27500",
+              "priceCurrency": "INR"
+            },
             "itemOffered": {
               "@type": "Service",
-              "name": "Airbrush Bridal Makeup",
-              "description": "Ultra-durable, humidity-resistant airbrush finish for 16-hour Kerala wedding marathons."
+              "name": "Wedding Day Bridal Makeup",
+              "description": "Premium HD and humidity-resistant Airbrush bridal makeup for Kerala weddings. Personally styled by Nikita Liby."
             }
           },
           {
             "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "14500",
+              "priceCurrency": "INR"
+            },
             "itemOffered": {
               "@type": "Service",
-              "name": "Christian Bridal Styling",
-              "description": "Sophisticated 'Azhagu' styling specifically designed for cathedral veils and church ceremonies."
+              "name": "Engagement / Reception Styling",
+              "description": "Sophisticated 'Azhagu' styling optimized for Pala & Kottayam evening church and hall lighting."
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "12000",
+              "priceCurrency": "INR"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-Wedding / Post-Wedding Shoot",
+              "description": "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions."
             }
           }
         ]
