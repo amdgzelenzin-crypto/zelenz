@@ -176,7 +176,7 @@ export default function RootLayout({
           </div>
           <WhatsAppFloat />
           {/* Load Google Analytics at the end of body for better performance */}
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
+          <GoogleAnalytics gaId="G-R89TBWLTXG" />
         </LoadingProvider>
       </body>
     </html>
