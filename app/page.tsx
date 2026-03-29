@@ -137,6 +137,8 @@ function HeroSlideshow() {
               }
               fill
               priority={i === 0}
+              fetchPriority={i === 0 ? "high" : "auto"}
+              loading={i === 0 ? "eager" : "lazy"}
               className="object-cover object-center"
               sizes="100vw"
               quality={85}

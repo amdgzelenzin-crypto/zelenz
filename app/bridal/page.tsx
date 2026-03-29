@@ -75,6 +75,8 @@ export default function BridalPage() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
+            loading="eager"
             sizes="100vw"
             quality={85}
           />

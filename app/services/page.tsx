@@ -593,6 +593,8 @@ export default function SalonPage() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 60vw"
                   priority
+                  fetchPriority="high"
+                  loading="eager"
                   quality={85}
                 />
               </div>
