@@ -137,13 +137,13 @@ function HeroSlideshow() {
             <Image
               src={src}
               alt={
-                i === 0 ? "Nix-Studio-Pala-Manavatty-Bridal-Makeup-Artist-Kottayam — Premium studio interior" :
-                i === 1 ? "Nix-Studio-Pala-Christian-Bridal-Makeup-Look-Makeup-Artist-Kottayam — Flawless 'Azhagu' styling" :
-                i === 2 ? "Nix-Studio-Pala-Traditional-Hindu-Wedding-Makeup-Artist-Kottayam — Authentic temple bridal look" :
-                i === 3 ? "Nix-Studio-Pala-Luxury-Salon-Spa-Service-Kottayam — Advanced facial and hair care" :
-                i === 4 ? "Nix-Studio-Pala-Bleach-Free-Hair-Coloring-Service-Kottayam — Professional salon services" :
-                i === 5 ? "Nix-Studio-Pala-Vortex-Fusion-HydraFacial-Service-Kottayam — Medical-grade skin care" :
-                "Nix-Studio-Pala-Bridal-Prep-Suite-Makeup-Artist-Kottayam — Exclusive private bridal dressing lounge"
+                i === 0 ? "NIXTUDIO Pala luxury bridal makeup studio interior - Best makeup artist in Kottayam Kerala" :
+                i === 1 ? "Christian bridal makeup by Nikita Liby at NIXTUDIO Pala - HD makeup artist Kottayam" :
+                i === 2 ? "Traditional Hindu wedding makeup at NIXTUDIO - Temple bridal makeup Pala Kerala" :
+                i === 3 ? "Luxury salon spa services at NIXTUDIO Pala - Advanced facial and hair care Kottayam" :
+                i === 4 ? "Bleach-free hair coloring service at NIXTUDIO Pala - Professional hair salon Kottayam" :
+                i === 5 ? "Vortex Fusion HydraFacial treatment at NIXTUDIO Pala - Medical-grade skin care Kottayam Kerala" :
+                "Bridal prep suite at NIXTUDIO Pala - Exclusive private bridal dressing lounge Kottayam"
               }
               fill
               priority={i === 0}
@@ -194,7 +194,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
       >
         <Image
           src={card.image}
-          alt={`Nix-Studio-Pala-${card.heading}-Service-Makeup-Artist-Kottayam — Specialized 'Manavatty' and 'Azhagu' styling`}
+          alt={`${card.heading} services at NIXTUDIO Pala - ${card.sub} by best makeup artist in Kottayam Kerala`}
           fill
           className="object-cover object-center"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -387,7 +387,7 @@ export default function Home() {
 
           <FadeUp delay={0.1}>
             <h1
-              aria-label="Bridal Makeup & Salon in Pala, Kerala — NIXTUDIO by Nikita Liby. Every face. Carefully considered."
+              aria-label="NIXTUDIO — Premium Bridal Makeup Studio in Pala, Kerala by Nikita Liby. Best makeup artist in Kottayam offering HD and Airbrush bridal makeup services."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -398,8 +398,8 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              Every face. <br />
-              Carefully considered.
+              NIXTUDIO <br />
+              Premium Bridal Makeup Studio
             </h1>
           </FadeUp>
 
@@ -426,7 +426,7 @@ export default function Home() {
           <FadeUp delay={0.3}>
             <div className="flex flex-col md:flex-row gap-[14px] md:gap-[16px]">
               <Link href="/services" 
-                className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105"
+                className="w-full md:w-fit min-w-[200px] min-h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                 style={{
                   background: "rgba(255,255,255,0.20)",
                   backdropFilter: "blur(10px)",
@@ -434,17 +434,19 @@ export default function Home() {
                   color: "#FFFFFF",
                   borderRadius: "50px",
                   padding: "0 24px",
+                  minHeight: "56px", // Improved mobile touch target
                 }}
               >
                 Explore Services
               </Link>
               <Link href="/contact" 
-                className="w-full md:w-fit min-w-[200px] min-h-[52px] flex items-center justify-center transition-transform hover:scale-105 rosegold-shimmer"
+                className="w-full md:w-fit min-w-[200px] min-h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
                 style={{
                   border: "none",
                   color: "#FFFFFF",
                   borderRadius: "50px",
                   padding: "0 24px",
+                  minHeight: "56px", // Improved mobile touch target
                 }}
               >
                 Check Availability
@@ -529,7 +531,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/nikita-liby-professional-makeup-artist-pala.webp"
-                  alt="Nix-Studio-Pala-Nikita-Liby-Makeup-Artist-Kottayam — Founder and Head MUA specializing in 'Supermodel' aesthetics"
+                  alt="Nikita Liby - Professional makeup artist and founder of NIXTUDIO Pala Kerala - Best bridal makeup artist in Kottayam"
                   width={800}
                   height={1000}
                   className="w-full h-auto"
@@ -643,12 +645,12 @@ export default function Home() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
             {[
-              { src: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp", alt: "Nix-Studio-Pala-Christian-Bridal-Makeup-Makeup-Artist-Kottayam — HD finish" },
-              { src: "/images/gallery/traditional-hindu-wedding-makeup-kottayam.webp", alt: "Nix-Studio-Pala-Hindu-Wedding-Makeup-Makeup-Artist-Kottayam — Traditional styling" },
-              { src: "/images/gallery/south-indian-temple-wedding-makeup-pala.webp", alt: "Nix-Studio-Pala-Temple-Wedding-Makeup-Makeup-Artist-Kottayam — Authentic Azhagu" },
-              { src: "/images/gallery/flawless-engagement-reception-styling-pala.webp", alt: "Nix-Studio-Pala-Engagement-Reception-Styling-Makeup-Artist-Kottayam" },
-              { src: "/images/gallery/bridesmaid-party-makeup-styling-pala.webp", alt: "Nix-Studio-Pala-Party-Makeup-Guest-Styling-Makeup-Artist-Kottayam" },
-              { src: "/images/gallery/gel-nail-extensions-pala-kottayam.webp", alt: "Nix-Studio-Pala-Gel-Nail-Extensions-Lounge-Makeup-Artist-Kottayam" }
+              { src: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp", alt: "Christian bridal makeup by Nikita Liby at NIXTUDIO Pala - Best makeup artist in Kottayam with HD finish" },
+              { src: "/images/gallery/traditional-hindu-wedding-makeup-kottayam.webp", alt: "Traditional Hindu wedding makeup by Nikita Liby - Premium bridal studio near Pala Kerala" },
+              { src: "/images/gallery/south-indian-temple-wedding-makeup-pala.webp", alt: "South Indian temple wedding makeup at NIXTUDIO - Bridal makeup studio in Pala Kottayam" },
+              { src: "/images/gallery/flawless-engagement-reception-styling-pala.webp", alt: "Engagement reception makeup styling by Nikita Liby - Best makeup artist Kottayam Kerala" },
+              { src: "/images/gallery/bridesmaid-party-makeup-styling-pala.webp", alt: "Party makeup and bridesmaid styling at NIXTUDIO - Beauty salon Pala Kerala" },
+              { src: "/images/gallery/gel-nail-extensions-pala-kottayam.webp", alt: "Gel nail extensions at NIXTUDIO salon - Nail lounge Pala Kottayam Kerala" }
             ].map((img, i) => (
               <Link
                 key={i}
@@ -747,7 +749,7 @@ export default function Home() {
                   <div style={{ position: "relative", aspectRatio: "16/10", borderRadius: "24px", overflow: "hidden", marginBottom: "24px" }}>
                     <Image
                       src={post.image}
-                      alt={`Nix-Studio-Pala-${post.title.replace(/\s+/g, '-')}-Makeup-Artist-Kottayam`}
+                      alt={`${post.title} - Beauty blog by NIXTUDIO Pala Kerala - Best makeup artist tips and trends`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
