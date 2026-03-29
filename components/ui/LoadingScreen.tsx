@@ -1,14 +1,22 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function LoadingScreen() {
+  const [showContent, setShowContent] = useState(false)
+
   useEffect(() => {
     // Prevent scrolling during loading
     document.body.style.overflow = 'hidden'
     
+    // Show animated content after a brief delay to ensure blank pink shows first
+    const contentTimer = setTimeout(() => {
+      setShowContent(true)
+    }, 200) // Show content after 200ms of blank pink
+    
     return () => {
       document.body.style.overflow = ''
+      clearTimeout(contentTimer)
     }
   }, [])
 
@@ -129,19 +137,22 @@ export default function LoadingScreen() {
       `}</style>
       
       <div className="loading-screen">
-        <div className="loading-content">
-          <div className="loading-logo">
-            NIXTUDIO
+        {/* Blank pink background shows immediately */}
+        {showContent && (
+          <div className="loading-content">
+            <div className="loading-logo">
+              NIXTUDIO
+            </div>
+            <div className="loading-tagline">
+              every face. carefully considered.
+            </div>
+            <div className="loading-dots">
+              <div className="loading-dot"></div>
+              <div className="loading-dot"></div>
+              <div className="loading-dot"></div>
+            </div>
           </div>
-          <div className="loading-tagline">
-            every face. carefully considered.
-          </div>
-          <div className="loading-dots">
-            <div className="loading-dot"></div>
-            <div className="loading-dot"></div>
-            <div className="loading-dot"></div>
-          </div>
-        </div>
+        )}
       </div>
     </>
   )
