@@ -60,11 +60,48 @@ module.exports = {
       'christian-bridal-makeup-trends-2025',
       'pre-wedding-skin-prep-humid-kerala',
     ]
-    return blogSlugs.map((slug) => ({
+    
+    // Add SEO landing pages for search domination
+    const seoPages = [
+      {
+        loc: '/best-bridal-makeup-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/bridal-makeup-kottayam',
+        changefreq: 'daily',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/luxury-bridal-makeup-kerala',
+        changefreq: 'daily',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/airbrush-makeup-pala',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/bridal-makeup-price-pala',
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+    ]
+    
+    const blogPaths = blogSlugs.map((slug) => ({
       loc: `/blog/${slug}`,
       changefreq: 'monthly',
       priority: 0.7,
       lastmod: new Date().toISOString(),
     }))
+    
+    return [...seoPages, ...blogPaths]
   },
 }

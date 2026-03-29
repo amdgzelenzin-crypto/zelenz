@@ -1,5 +1,9 @@
-export default function JsonLd() {
-  const schema = {
+interface JsonLdProps {
+  data?: any
+}
+
+export default function JsonLd({ data }: JsonLdProps) {
+  const defaultSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -108,6 +112,8 @@ export default function JsonLd() {
       }
     ]
   }
+
+  const schema = data || defaultSchema
 
   return (
     <script
