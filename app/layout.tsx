@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
   display: "swap",
   preload: true,
+  fallback: ['Georgia', 'serif'],
 });
 
 const lora = Lora({
@@ -25,6 +26,7 @@ const lora = Lora({
   style: ["normal", "italic"],
   display: "swap",
   preload: false,
+  fallback: ['Georgia', 'serif'],
 });
 
 const jost = Jost({
@@ -33,6 +35,7 @@ const jost = Jost({
   weight: ["300", "400", "500"],
   display: "swap",
   preload: false,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 const cormorant = Cormorant({
@@ -42,6 +45,7 @@ const cormorant = Cormorant({
   style: ["italic"],
   display: "swap",
   preload: false,
+  fallback: ['Georgia', 'serif'],
 });
 
 export const metadata: Metadata = {
@@ -131,6 +135,15 @@ export default function RootLayout({
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
+        {/* Critical CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            body { font-family: Georgia, serif; }
+            .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+            @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+          `
+        }} />
+        
         {/* Preconnect to font domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -146,10 +159,13 @@ export default function RootLayout({
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Preconnect to Google domains for Analytics */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
       </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <LoadingProvider>
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
           <JsonLd />
           <ClientComponents />
           <div className="flex flex-col min-h-screen">
@@ -158,6 +174,8 @@ export default function RootLayout({
             <Footer />
           </div>
           <WhatsAppFloat />
+          {/* Load Google Analytics at the end of body for better performance */}
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
         </LoadingProvider>
       </body>
     </html>
