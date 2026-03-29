@@ -140,9 +140,11 @@ export default function RootLayout({
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
           <JsonLd />
           <ClientComponents />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
           <WhatsAppFloat />
         </LoadingProvider>
       </body>
