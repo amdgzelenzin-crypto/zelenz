@@ -52,13 +52,28 @@ export function getGalleryImages(): GalleryItem[] {
         category = 'bridal';
       }
       
+      // Generate more descriptive alt text based on category and filename patterns
       let customAlt = `NIXTUDIO ${category} work`;
       if (category === 'bridal') {
-        customAlt = "HD bridal makeup by Nikita Liby, NIXTUDIO Pala Kerala";
+        if (name.includes('christian')) {
+          customAlt = "Christian bridal makeup by Nikita Liby at NIXTUDIO Pala Kerala - Best makeup artist in Kottayam";
+        } else if (name.includes('hindu')) {
+          customAlt = "Traditional Hindu wedding makeup by NIXTUDIO - Temple bridal makeup Pala Kerala";
+        } else if (name.includes('muslim')) {
+          customAlt = "Muslim bridal makeup by Nikita Liby - Premium bridal studio Pala Kottayam";
+        } else if (name.includes('engagement')) {
+          customAlt = "Engagement makeup styling by NIXTUDIO - Best makeup artist Kottayam Kerala";
+        } else if (name.includes('reception')) {
+          customAlt = "Wedding reception makeup by NIXTUDIO - Party makeup artist Pala Kerala";
+        } else {
+          customAlt = "HD bridal makeup by Nikita Liby at NIXTUDIO Pala Kerala - Best makeup artist in Kottayam";
+        }
       } else if (category === 'party') {
-        customAlt = "Party guest makeup by NIXTUDIO team, Pala Kerala";
+        customAlt = "Party makeup and guest styling by NIXTUDIO - Beauty salon Pala Kerala";
+      } else if (category === 'hair') {
+        customAlt = "Professional hair styling by NIXTUDIO - Hair salon Pala Kottayam Kerala";
       } else if (category === 'nails') {
-        customAlt = "Gel nail art by NIXTUDIO Nail Lounge, Pala Kerala";
+        customAlt = "Gel nail extensions and nail art by NIXTUDIO - Nail lounge Pala Kerala";
       }
       
       return {

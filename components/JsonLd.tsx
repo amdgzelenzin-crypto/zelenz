@@ -7,7 +7,7 @@ export default function JsonLd({ data }: JsonLdProps) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "HealthAndBeautyBusiness",
+        "@type": ["LocalBusiness", "BeautySalon", "HealthAndBeautyBusiness"],
         "@id": "https://www.nixtudio.in/#business",
         "name": "NIXTUDIO by Nikita Liby",
         "url": "https://www.nixtudio.in",
@@ -36,6 +36,51 @@ export default function JsonLd({ data }: JsonLdProps) {
             "closes": "19:00"
           }
         ],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "9.7115",
+            "longitude": "76.6225"
+          },
+          "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Beauty Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bridal Makeup",
+                "description": "HD and Airbrush bridal makeup services"
+              },
+              "priceCurrency": "INR",
+              "price": "27500"
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Hair Styling",
+                "description": "Professional hair styling and treatments"
+              },
+              "priceCurrency": "INR",
+              "price": "3500"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service", 
+                "name": "Nail Services",
+                "description": "Gel nail extensions and nail art"
+              },
+              "priceCurrency": "INR",
+              "price": "2000"
+            }
+          ]
+        },
         "founder": {
           "@id": "https://www.nixtudio.in/#person"
         },
@@ -43,6 +88,37 @@ export default function JsonLd({ data }: JsonLdProps) {
           "https://www.instagram.com/nixtudio.in",
           "https://www.facebook.com/nixtudio.in",
           "https://wa.me/917034726402"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.nixtudio.in/#professional-service",
+        "name": "Bridal Makeup Services",
+        "description": "Professional bridal makeup and beauty services by Nikita Liby",
+        "provider": {
+          "@id": "https://www.nixtudio.in/#business"
+        },
+        "serviceType": [
+          "Bridal Makeup",
+          "Engagement Makeup", 
+          "Party Makeup",
+          "Hair Styling",
+          "Nail Services",
+          "Skin Care"
+        ],
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Pala, Kerala"
+          },
+          {
+            "@type": "Place", 
+            "name": "Kottayam, Kerala"
+          },
+          {
+            "@type": "Place",
+            "name": "Changanacherry, Kerala"
+          }
         ]
       },
       {
