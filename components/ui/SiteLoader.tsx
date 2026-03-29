@@ -14,6 +14,7 @@ export default function SiteLoader() {
       return
     }
 
+    // Show loader immediately on mount
     setVisible(true)
 
     const exitTimer = setTimeout(() => {

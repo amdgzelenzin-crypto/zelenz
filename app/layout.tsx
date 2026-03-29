@@ -6,6 +6,7 @@ import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ClientComponents from "@/components/ui/ClientComponents";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import JsonLd from '@/components/JsonLd'
+import { LoadingProvider } from '@/contexts/LoadingContext'
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -135,13 +136,15 @@ export default function RootLayout({
         />
               </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
-        <JsonLd />
-        <ClientComponents />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+        <LoadingProvider>
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />
+          <JsonLd />
+          <ClientComponents />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </LoadingProvider>
       </body>
     </html>
   );

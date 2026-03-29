@@ -6,6 +6,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { blogPosts } from "@/lib/blog";
 import { FadeUp } from "@/components/ui/AnimationWrapper";
+import { useLoading } from "@/contexts/LoadingContext";
 
 // Dynamic imports for heavy components
 const ReviewMarquee = dynamic(() => import("@/components/ui/ReviewMarquee"), {
@@ -300,6 +301,13 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
    PAGE
    ────────────────────────────────────── */
 export default function Home() {
+  const { isLoading, isReady } = useLoading();
+
+  // Don't render content until loader is ready or if loading is complete
+  if (!isReady) {
+    return null;
+  }
+
   return (
     <>
       {/* ──── 1. HERO — full screen ──── */}
