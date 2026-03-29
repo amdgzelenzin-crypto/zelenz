@@ -17,12 +17,18 @@ const ScrollToTop = dynamic(() => import('./ScrollToTop'), {
   loading: () => null,
 })
 
+const AccessibilityFixes = dynamic(() => import('./AccessibilityFixes'), {
+  ssr: false,
+  loading: () => null,
+})
+
 export default function ClientComponents() {
   return (
     <>
       <SiteLoader />
       <FloatingAmbience />
       <ScrollToTop />
+      <AccessibilityFixes />
     </>
   )
 }
