@@ -82,22 +82,22 @@ export default function BridalMakeupCostPalaBlog() {
             {/* Article Meta */}
             <div className="flex items-center justify-center gap-6 text-gray-600 mb-12">
               <div className="flex items-center">
-                <span className="text-[#D4A055] mr-2">📅</span>
+                <span className="text-[#D4A055] mr-2">•</span>
                 <span>Updated March 30, 2026</span>
               </div>
               <div className="flex items-center">
-                <span className="text-[#D4A055] mr-2">✍️</span>
+                <span className="text-[#D4A055] mr-2">•</span>
                 <span>By Nikita Liby</span>
               </div>
               <div className="flex items-center">
-                <span className="text-[#D4A055] mr-2">⏱️</span>
+                <span className="text-[#D4A055] mr-2">•</span>
                 <span>8 min read</span>
               </div>
             </div>
             
             {/* Quick Summary Box */}
             <div className="bg-pink-50 border-2 border-pink-200 rounded-xl p-6 mb-12">
-              <h2 className="text-2xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>💰 Quick Price Overview</h2>
+              <h2 className="text-2xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Quick Price Overview</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-4">
                   <div className="text-lg font-bold text-[#D4A055] mb-2">Basic Package</div>
@@ -253,7 +253,7 @@ export default function BridalMakeupCostPalaBlog() {
             <h2 className="text-3xl font-bold mb-6">Additional Costs to Consider</h2>
             
             <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold mb-4 text-yellow-800">💰 Additional Costs to Consider</h3>
+              <h3 className="text-xl font-bold mb-4 text-yellow-800">Additional Costs to Consider</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-bold mb-3">Additional Services</h4>
@@ -279,25 +279,25 @@ export default function BridalMakeupCostPalaBlog() {
             <h3 className="text-2xl font-bold mb-4">How to Avoid Hidden Costs</h3>
             <div className="space-y-4">
               <div className="flex items-start">
-                <span className="text-green-600 mr-3">✓</span>
+                <span className="text-green-600 mr-3">•</span>
                 <div>
                   <strong>Get Everything in Writing:</strong> Ensure all services, inclusions, and additional charges are clearly mentioned in your contract.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-green-600 mr-3">✓</span>
+                <span className="text-green-600 mr-3">•</span>
                 <div>
                   <strong>Ask About Trial Sessions:</strong> Clarify how many trial sessions are included and the cost for additional ones.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-green-600 mr-3">✓</span>
+                <span className="text-green-600 mr-3">•</span>
                 <div>
                   <strong>Discuss Travel Plans:</strong> If your venue is outside Pala, discuss travel charges upfront.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-green-600 mr-3">✓</span>
+                <span className="text-green-600 mr-3">•</span>
                 <div>
                   <strong>Family Services:</strong> If you need makeup for family members, ask about package deals.
                 </div>
@@ -316,7 +316,7 @@ export default function BridalMakeupCostPalaBlog() {
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-green-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-green-800">💎 Good Value Indicators</h3>
+                <h3 className="text-xl font-bold mb-4 text-green-800">Good Value Indicators</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Premium, authentic products</li>
                   <li>• Experienced artist (5+ years)</li>
@@ -329,7 +329,7 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
               
               <div className="bg-red-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-red-800">⚠️ Red Flags</h3>
+                <h3 className="text-xl font-bold mb-4 text-red-800">Red Flags</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Suspiciously low prices</li>
                   <li>• No trial sessions offered</li>
@@ -343,7 +343,7 @@ export default function BridalMakeupCostPalaBlog() {
             </div>
             
             <div className="bg-pink-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4 text-[#B76E79]">💰 Value vs Price</h3>
+              <h3 className="text-xl font-bold mb-4 text-[#B76E79]">Value vs Price</h3>
               <p className="text-gray-700 mb-4">
                 Your wedding photos will last forever. Here's what spending a bit more on makeup actually gets you:
               </p>
@@ -386,25 +386,25 @@ export default function BridalMakeupCostPalaBlog() {
             <h3 className="text-2xl font-bold mb-4">Cost-Saving Tips Without Compromising Quality</h3>
             <div className="space-y-4">
               <div className="flex items-start">
-                <span className="text-[#B76E79] mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">•</span>
                 <div>
                   <strong>Book Early:</strong> Early bookings often come with better pricing and more availability.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-[#B76E79] mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">•</span>
                 <div>
                   <strong>Package Deals:</strong> Ask for family package discounts when booking multiple services.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-[#B76E79] mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">•</span>
                 <div>
                   <strong>Off-Season Discounts:</strong> Some artists offer discounts for non-peak wedding months.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-[#B76E79] mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">•</span>
                 <div>
                   <strong>Weekday Weddings:</strong> Consider weekday weddings for potential cost savings.
                 </div>
@@ -422,7 +422,7 @@ export default function BridalMakeupCostPalaBlog() {
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-orange-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-orange-800">🌴 Climate Considerations</h3>
+                <h3 className="text-xl font-bold mb-4 text-orange-800">Climate Considerations</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Humidity-proof products cost more</li>
                   <li>• Airbrush makeup recommended for monsoon</li>
@@ -432,7 +432,7 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
               
               <div className="bg-orange-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-orange-800">🏛️ Traditional Requirements</h3>
+                <h3 className="text-xl font-bold mb-4 text-orange-800">Traditional Requirements</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Heavy jewelry coordination</li>
                   <li>• Traditional saree draping</li>
@@ -443,7 +443,7 @@ export default function BridalMakeupCostPalaBlog() {
             </div>
             
             <div className="bg-purple-50 rounded-xl p-6 mt-8">
-              <h3 className="text-xl font-bold mb-4 text-purple-800">📍 Location Impact on Pricing</h3>
+              <h3 className="text-xl font-bold mb-4 text-purple-800">Location Impact on Pricing</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span>Pala City Center:</span>
@@ -496,7 +496,7 @@ export default function BridalMakeupCostPalaBlog() {
               </ul>
               
               <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4 mt-6">
-                <h4 className="font-bold mb-2 text-yellow-800">💳 Cancellation Policy</h4>
+                <h4 className="font-bold mb-2 text-yellow-800">Cancellation Policy</h4>
                 <p className="text-gray-700 text-sm">
                   Most artists in Pala follow this policy: 50% refund if cancelled 30+ days before, 
                   25% refund if cancelled 15-29 days before, no refund for cancellations within 14 days.
@@ -516,7 +516,7 @@ export default function BridalMakeupCostPalaBlog() {
             </p>
             
             <div className="bg-pink-50 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>🎯 Final Recommendations</h3>
+              <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Final Recommendations</h3>
               <ol className="space-y-3 text-gray-700">
                 <li><strong>Book 6-8 months in advance</strong> for peak season dates</li>
                 <li><strong>Choose HD or Airbrush makeup</strong> for best results in Kerala climate</li>

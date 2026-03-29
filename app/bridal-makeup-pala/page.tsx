@@ -171,7 +171,7 @@ export default function BridalMakeupPalaPage() {
                 <div className="text-gray-600">Airbrush Expert</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-2">📍</div>
+                <div className="text-3xl mb-2">•</div>
                 <div className="text-2xl font-bold text-[#D4A055]">Pala</div>
                 <div className="text-gray-600">Based</div>
               </div>
@@ -397,7 +397,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               
               <div className="bg-purple-50 p-6">
-                <h4 className="text-xl font-bold mb-3">💡 What works for Pala weddings:</h4>
+                <h4 className="text-xl font-bold mb-3">What works for Pala weddings:</h4>
                 <p className="text-gray-700">
                   For <strong>indoor church weddings in Pala</strong> like St. Thomas or St. Mary's, the lighting is usually 
                   controlled, so HD makeup works beautifully and is more budget-friendly. 
@@ -416,7 +416,7 @@ export default function BridalMakeupPalaPage() {
             
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">🎯 Local Wedding Experience</h3>
+                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">Local Wedding Experience</h3>
                 <p className="text-gray-700 mb-4">
                   Working regularly in Pala means I understand the specific challenges of our local venues. 
                   Church lighting conditions, temple makeup requirements, and how humidity affects different makeup types.
@@ -438,7 +438,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">💎 Quality Products</h3>
+                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">Quality Products</h3>
                 <p className="text-gray-700 mb-4">
                   I use specific brands that perform well in Kerala's climate - MAC for their staying power, 
                   Charlotte Tilbury for photography, and Bobbi Brown for natural coverage. 
@@ -680,7 +680,7 @@ export default function BridalMakeupPalaPage() {
             <p className="text-xl mb-8">Let's create the perfect look for your special day</p>
             
             <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 mb-8 text-[#B76E79]">
-              <p className="font-semibold">📅 Planning ahead helps</p>
+              <p className="font-semibold">Planning ahead helps</p>
               <p className="text-sm mt-1">Popular wedding dates typically book 3-6 months in advance</p>
             </div>
             
@@ -705,7 +705,7 @@ export default function BridalMakeupPalaPage() {
                 <div>Discuss your wedding look with no obligation</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="font-bold mb-2">💰 Transparent Pricing</div>
+                <div className="font-bold mb-2">Transparent Pricing</div>
                 <div>No hidden costs - clear package details</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">

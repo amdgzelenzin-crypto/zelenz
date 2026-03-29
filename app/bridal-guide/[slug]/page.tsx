@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-const guides = {
+interface Guide {
+  title: string
+  content: string
+}
+
+const guides: Record<string, Guide> = {
   "natural-bridal-makeup-pala": {
     title: "Natural Bridal Makeup in Pala",
     content: `
@@ -111,33 +116,43 @@ const guides = {
   }
 }
 
-export default function GuideTopic({ params }: { params: { slug: string } }) {
-  const guide = guides[params.slug as keyof typeof guides]
+export default async function GuideTopic({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  
+  const guide = guides[slug]
   
   if (!guide) {
     notFound()
   }
 
   return (
-    <div className="min-h-screen bg-snow">
-      <section className="section-padding section-base">
-        <div className="max-w-4xl mx-auto px-6">
-          <Link href="/bridal-guide" className="text-espresso/70 hover:text-espresso mb-8 inline-block">
+    <div className="min-h-screen bg-[#FDE8E8]">
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link href="/bridal-guide" className="mb-8 inline-flex items-center text-sm hover:opacity-70 transition" style={{color: '#3D1520', opacity: 0.7, fontFamily: 'var(--font-body)'}}>
             ← Back to Guide
           </Link>
           
-          <p className="label-caps mb-4">Official Journal</p>
-          <h1 className="font-serif text-5xl lg:text-7xl mb-8">{guide.title}</h1>
+          <div className="mb-12">
+            <p className="text-xs font-sans tracking-widest uppercase text-[#B07880] mb-4">Official Journal</p>
+            <h1 className="text-5xl lg:text-6xl mb-6" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em', color: '#3D1520', fontWeight: 400}}>{guide.title}</h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#D4A055] to-[#B76E79] rounded-full"></div>
+          </div>
           
           <div 
-            className="font-body text-espresso/70 prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: guide.content }}
+            className="space-y-12 max-w-none bg-white rounded-2xl shadow-lg p-12"
+            style={{fontFamily: 'var(--font-body)', color: '#3D1520', lineHeight: '1.8'}}
+            dangerouslySetInnerHTML={{ __html: guide.content.replace(/<h2>/g, '<h2 class="text-3xl mb-6" style="font-family: var(--font-display); letter-spacing: 0.01em; color: #3D1520; font-weight: 400;">').replace(/<h3>/g, '<h3 class="text-2xl mb-4" style="font-family: var(--font-display); letter-spacing: 0.01em; color: #3D1520; font-weight: 400;">').replace(/<p>/g, '<p class="mb-4 text-lg">').replace(/<ul>/g, '<ul class="space-y-3">').replace(/<li>/g, '<li class="flex items-start"><span class="text-[#D4A055] mr-3 mt-1">•</span><span>').replace(/<\/li>/g, '</span></li>').replace(/<strong>/g, '<strong style="color: #B76E79;">') }}
           />
           
-          <div className="mt-12 pt-8 border-t border-espresso/20">
-            <Link href="/contact" className="btn-primary">
-              Book Your Bridal Consultation
-            </Link>
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-[#D4A055] to-[#B76E79] rounded-2xl p-8">
+              <h3 className="text-2xl mb-4 text-white" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Ready to Book Your Consultation?</h3>
+              <p className="text-white mb-6 opacity-90">Let's create your perfect bridal look together</p>
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-[#D4A055] rounded-full font-sans text-xs tracking-widest uppercase hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Book Your Bridal Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>

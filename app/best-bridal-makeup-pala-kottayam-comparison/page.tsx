@@ -278,7 +278,7 @@ export default function BridalMakeupComparisonPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Why NIXTUDIO Ranks #1</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-4">🎯</div>
+                <div className="text-3xl mb-4">•</div>
                 <h3 className="text-xl font-bold mb-3">Personal Expert</h3>
                 <p className="text-gray-600 mb-4">
                   Nikita Liby personally handles every bride with 6+ years of dedicated bridal makeup experience.
@@ -288,7 +288,7 @@ export default function BridalMakeupComparisonPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-4">💎</div>
+                <div className="text-3xl mb-4">•</div>
                 <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
                 <p className="text-gray-600 mb-4">
                   Only uses international premium brands like MAC, Bobbi Brown, Charlotte Tilbury.
@@ -424,7 +424,7 @@ export default function BridalMakeupComparisonPage() {
                 <div>Book this month and get free skincare worth ₹3,000</div>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
-                <div className="font-bold mb-2">💰 Best Value</div>
+                <div className="font-bold mb-2">Best Value</div>
                 <div>Premium service at competitive pricing</div>
               </div>
               <div className="bg-white/10 rounded-lg p-4">

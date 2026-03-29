@@ -88,7 +88,7 @@ export default function KeralaWeddingMakeupGuide() {
                 <div className="text-gray-600">Makeup Techniques Covered</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">💰</div>
+                <div className="text-3xl mb-2">•</div>
                 <div className="text-2xl font-bold text-purple-600">₹14K-45K</div>
                 <div className="text-gray-600">Price Range Guide</div>
               </div>
@@ -158,7 +158,7 @@ export default function KeralaWeddingMakeupGuide() {
             
             {/* Section 1: Kerala Wedding Traditions */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">🏛️ Understanding Kerala Wedding Traditions</h2>
+              <h2 className="text-3xl font-bold mb-6">Understanding Kerala Wedding Traditions</h2>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -255,7 +255,7 @@ export default function KeralaWeddingMakeupGuide() {
                   </table>
                 </div>
                 <div className="mt-8 bg-purple-50 rounded-lg p-6">
-                  <h4 className="text-xl font-bold mb-3">💡 Expert Recommendation:</h4>
+                  <h4 className="text-xl font-bold mb-3">Expert Recommendation:</h4>
                   <p className="text-gray-700">
                     For Kerala's humid climate, <strong>airbrush makeup</strong> is recommended for outdoor weddings 
                     and <strong>HD makeup</strong> for indoor ceremonies. Many brides choose hybrid techniques 
@@ -303,7 +303,7 @@ export default function KeralaWeddingMakeupGuide() {
 
             {/* Section 4: Choosing Artist */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">🎯 How to Choose Your Makeup Artist</h2>
+              <h2 className="text-3xl font-bold mb-6">How to Choose Your Makeup Artist</h2>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>

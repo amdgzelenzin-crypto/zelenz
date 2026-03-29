@@ -53,7 +53,7 @@ const structuredData = {
 export default function BridalMakeupChecklistPage() {
   const checklistCategories = [
     {
-      title: "📅 6 Months Before Wedding",
+      title: "6 Months Before Wedding",
       items: [
         "Research and shortlist makeup artists",
         "Check artist availability for your date",
@@ -63,7 +63,7 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "📅 3 Months Before Wedding",
+      title: "3 Months Before Wedding",
       items: [
         "Book your makeup artist",
         "Schedule first trial session",
@@ -73,7 +73,7 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "📅 1 Month Before Wedding",
+      title: "1 Month Before Wedding",
       items: [
         "Schedule second trial session",
         "Finalize makeup look with artist",
@@ -83,7 +83,7 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "📅 1 Week Before Wedding",
+      title: "1 Week Before Wedding",
       items: [
         "Final trial session with full outfit",
         "Take photos of approved look",
@@ -93,7 +93,7 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "📅 Wedding Day Morning",
+      title: "Wedding Day Morning",
       items: [
         "Wake up 3 hours before makeup",
         "Cleanse and moisturize face",
@@ -163,7 +163,7 @@ export default function BridalMakeupChecklistPage() {
                 <div className="text-gray-600">Timeline</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">🌴</div>
+                <div className="text-3xl mb-2">•</div>
                 <div className="text-2xl font-bold text-green-600">100%</div>
                 <div className="text-gray-600">Kerala Specific</div>
               </div>
@@ -225,7 +225,7 @@ export default function BridalMakeupChecklistPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Why This Checklist Works</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">🎯</div>
+                <div className="text-4xl mb-4">•</div>
                 <h3 className="text-xl font-bold mb-3">Proven Timeline</h3>
                 <p className="text-gray-600">
                   Based on 500+ Kerala weddings. 
@@ -233,7 +233,7 @@ export default function BridalMakeupChecklistPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🌴</div>
+                <div className="text-4xl mb-4">•</div>
                 <h3 className="text-xl font-bold mb-3">Kerala Specific</h3>
                 <p className="text-gray-600">
                   Designed for Kerala's climate, venues, 
@@ -241,7 +241,7 @@ export default function BridalMakeupChecklistPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">💎</div>
+                <div className="text-4xl mb-4">•</div>
                 <h3 className="text-xl font-bold mb-3">Expert Verified</h3>
                 <p className="text-gray-600">
                   Created by Nikita Liby with 6+ years 

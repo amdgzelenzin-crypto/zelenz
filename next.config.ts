@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   compress: true,
   poweredByHeader: false,
+  allowedDevOrigins: ['127.0.0.1'],
   turbopack: {}, // Use Turbopack with default settings
   images: {
     remotePatterns: [
@@ -16,6 +17,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 86400,
     deviceSizes: [375, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    qualities: [75, 90],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
