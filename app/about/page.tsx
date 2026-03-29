@@ -295,8 +295,7 @@ export default function AboutPage() {
                     <p>
                       Complimentary tea, coffee, or juice on all services.
                       Complimentary food and drinks for services over two hours.
-                      And a complimentary 10-minute leg massage for longer appointments —
-                      because the experience matters as much as the result.
+                      The experience matters as much as the result.
                     </p>
                     <p>
                       Walk-ins are welcome when availability allows, but{" "}

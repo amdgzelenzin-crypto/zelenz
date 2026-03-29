@@ -22,7 +22,7 @@ export default function SiteLoader() {
 
     const exitTimer = setTimeout(() => {
       setLeaving(true)
-    }, 2200)
+    }, 800)
 
     const removeTimer = setTimeout(() => {
       setVisible(false)
@@ -30,7 +30,7 @@ export default function SiteLoader() {
       try {
         sessionStorage.setItem('nix-loaded', 'true')
       } catch (e) {}
-    }, 2900)
+    }, 1200)
 
     return () => {
       clearTimeout(exitTimer)

@@ -7,12 +7,7 @@ import { blogPosts } from "@/lib/blog";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import ReviewMarquee from "@/components/ui/ReviewMarquee";
 import StatCounters from "@/components/ui/StatCounters";
-import dynamic from "next/dynamic";
-
-const StudioMap = dynamic(() => import("@/components/ui/StudioMap"), {
-  ssr: false,
-  loading: () => <div className="w-full h-[400px] skeleton rounded-[20px]" />
-});
+import StudioMap from "@/components/ui/StudioMap";
 
 /* ──────────────────────────────────────
 function ScrollIndicator() {
@@ -371,20 +366,21 @@ export default function Home() {
           <h1 className="sr-only">
             Bridal Makeup & Salon in Pala, Kerala — NIXTUDIO by Nikita Liby
           </h1>
+
           <FadeUp delay={0.1}>
             <h2
-              className="mb-4"
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
-                fontSize: "clamp(52px, 11vw, 88px)",
-                lineHeight: 1.08,
+                fontSize: "clamp(48px, 9vw, 92px)",
+                fontWeight: 300,
+                lineHeight: 1.1,
+                marginBottom: "24px",
                 color: "#FFFFFF",
               }}
             >
               Every face. <br />
-              Carefully <br />
-              considered.
+              Carefully considered.
             </h2>
           </FadeUp>
 
@@ -392,23 +388,21 @@ export default function Home() {
             <p
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "16px",
+                fontSize: "18px",
                 fontStyle: "italic",
-                color: "rgba(255,255,255,0.85)",
+                color: "rgba(255,255,255,0.9)",
                 lineHeight: 1.6,
-                marginBottom: "12px",
+                marginBottom: "40px",
               }}
             >
               Bridal makeup done exclusively by Nikita.
             </p>
           </FadeUp>
 
-          {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
-          <FadeUp delay={0.25}>
-            <p className="font-sans text-[13px] md:text-sm text-white/70 max-w-lg mb-[32px] leading-relaxed">
-              <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings.
-            </p>
-          </FadeUp>
+          {/* ──────── GEO BLUF (Hidden for pure visual aesthetic) ──────── */}
+          <div className="sr-only">
+            <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings.
+          </div>
 
           <FadeUp delay={0.3}>
             <div className="flex flex-col md:flex-row gap-[14px] md:gap-[16px]">
@@ -835,7 +829,9 @@ export default function Home() {
           </p>
         </FadeUp>
         <FadeUp delay={0.3}>
-          <StudioMap />
+          <div className="w-full h-auto min-h-[400px]">
+            <StudioMap />
+          </div>
         </FadeUp>
       </section>
     </>

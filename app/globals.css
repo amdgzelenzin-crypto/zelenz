@@ -95,10 +95,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 96px;
   /* Fallback — show site if JS fails */
   animation: revealFallback 0s 3s forwards;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @keyframes revealFallback {

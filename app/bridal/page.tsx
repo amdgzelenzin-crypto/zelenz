@@ -81,7 +81,7 @@ export default function BridalPage() {
             quality={85}
           />
         </div>
-        <div className="absolute inset-0 bg-espresso/30" />
+        <div className="absolute inset-0 bg-espresso/55" />
         <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 lg:px-12 pb-16 lg:pb-24">
           <h1 className="sr-only">
             Bridal Makeup Studio in Pala, Kerala — NIXTUDIO by Nikita Liby

@@ -7,8 +7,7 @@ export default function StudioMap() {
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
-          boxShadow: '0 8px 40px rgba(183,110,121,0.18), 0 2px 8px rgba(183,110,121,0.10)',
-          filter: 'sepia(45%) hue-rotate(295deg) saturate(55%) brightness(105%) contrast(95%)',
+          boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
         }}>
           <iframe
             src="https://maps.google.com/maps?q=Pala,Kerala,India&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -51,8 +50,7 @@ export default function StudioMap() {
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
-          boxShadow: '0 8px 40px rgba(183,110,121,0.18), 0 2px 8px rgba(183,110,121,0.10)',
-          filter: 'sepia(45%) hue-rotate(295deg) saturate(55%) brightness(105%) contrast(95%)',
+          boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
         }}>
           <iframe
             src="https://maps.google.com/maps?q=Moozhayil+House,+Thodupuzha+Rd,+Pala,+Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
