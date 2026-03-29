@@ -64,6 +64,12 @@ module.exports = {
     // Add SEO landing pages for search domination
     const seoPages = [
       {
+        loc: '/bridal-makeup-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
         loc: '/best-bridal-makeup-pala',
         changefreq: 'daily',
         priority: 1.0,
