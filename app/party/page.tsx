@@ -95,15 +95,31 @@ export default function PartyPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp><p className="label-caps mb-12">Party Makeup Packages</p></FadeUp>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl" staggerDelay={0.12}>
-            {packages.map((pkg) => (
+            {packages.map((pkg, index) => (
               <StaggerItem key={pkg.title}>
-                <div className="pricing-card">
-                  <p className="label-caps mb-3" style={{ color: "#A86070" }}>{pkg.title}</p>
-                  <p className="font-sans text-sm mb-5" style={{ color: "#5C2D3A", opacity: 0.7 }}>{pkg.desc}</p>
-                  <span className="price-medium block">
-                    <span className="price-rupee">₹</span>{pkg.price.replace("₹","")}
-                  </span>
-                  <div style={{ width: "32px", height: "1px", background: "#C4903A", marginTop: "16px" }} />
+                <div className="premium-pricing-card group">
+                  {/* Premium shimmer overlay */}
+                  <div className="premium-shimmer" />
+                  
+                  {/* Gradient border effect */}
+                  <div className="premium-border" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 p-8">
+                    <p className="label-caps mb-3 transition-colors duration-300 group-hover:text-[#C4903A]" style={{ color: "#A86070" }}>
+                      {pkg.title}
+                    </p>
+                    <p className="font-sans text-sm mb-5 transition-opacity duration-300 group-hover:opacity-80" style={{ color: "#5C2D3A", opacity: 0.7 }}>
+                      {pkg.desc}
+                    </p>
+                    <span className="price-medium block transition-transform duration-300 group-hover:scale-105">
+                      <span className="price-rupee">₹</span>{pkg.price.replace("₹","")}
+                    </span>
+                    <div className="premium-divider" />
+                  </div>
+                  
+                  {/* Hover glow effect */}
+                  <div className="premium-glow" />
                 </div>
               </StaggerItem>
             ))}

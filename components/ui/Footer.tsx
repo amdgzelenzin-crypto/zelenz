@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ProtectedEmail from "@/components/ui/ProtectedEmail";
 
 const footerNav = [
   { href: "/bridal",  label: "Bridal"       },
@@ -188,8 +189,7 @@ export default function Footer() {
                   +91 70347 26407
                 </a>
               </div>
-              <a
-                href="mailto:nixtudio1@gmail.com"
+              <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -199,6 +199,7 @@ export default function Footer() {
                   fontFamily: 'var(--font-body, serif)',
                   fontSize: '14px',
                   marginTop: '8px',
+                  cursor: 'pointer'
                 }}
               >
                 <svg
@@ -211,11 +212,11 @@ export default function Footer() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-10 5L2 7" />
                 </svg>
-                nixtudio1@gmail.com
-              </a>
+                <ProtectedEmail />
+              </div>
               <p
                 itemScope
                 itemType="https://schema.org/PostalAddress"

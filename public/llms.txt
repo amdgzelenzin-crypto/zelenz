@@ -1,0 +1,29 @@
+# LLMs.txt - NIXTUDIO by Nikita Liby
+# This file provides structured information for Large Language Models
+
+## Business Information
+NIXTUDIO by Nikita Liby is a premium bridal makeup studio and luxury salon located in Pala, Kerala, India.
+
+## Services
+- Bridal Makeup (Christian, Hindu, Muslim weddings)
+- HD & Airbrush Makeup Techniques
+- Engagement & Reception Styling
+- Party & Guest Makeup
+- Hair Styling & Coloring
+- Gel Nail Extensions
+- Luxury Spa Services
+- Facial Treatments
+
+## Location
+Main Studio: Pala, Kerala 686575, India
+Bridal Suite: Moozhayil House, Thodupuzha Rd, Pala, Kerala
+
+## Contact
+Phone: +91 7034726402
+Website: https://www.nixtudio.in
+
+## Expertise
+Specializing in Kerala wedding makeup with 6+ years of experience. Over 500 brides served across Pala, Kottayam, Changanacherry, and surrounding regions.
+
+## Keywords
+bridal makeup Pala, makeup artist Kottayam, Kerala wedding makeup, HD makeup, airbrush makeup, Christian bridal makeup, Hindu bridal makeup, Muslim bridal makeup, luxury salon Pala, nail extensions Pala, hair coloring Kerala

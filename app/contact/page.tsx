@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
-import StudioMap from "@/components/ui/StudioMap";
+import ProtectedEmail from "@/components/ui/ProtectedEmail";
+import GoogleMapsEmbed from "@/components/ui/GoogleMapsEmbed";
 
 const faqs = [
   {
@@ -165,17 +166,7 @@ export default function ContactPage() {
                     marginTop: '12px',
                   }}>
                     Or email us at{' '}
-                    <a
-                      href="mailto:nixtudio1@gmail.com"
-                      style={{
-                        color: '#B76E79',
-                        textDecoration: 'underline',
-                        textDecorationColor: 'rgba(183,110,121,0.40)',
-                        textUnderlineOffset: '3px',
-                      }}
-                    >
-                      nixtudio1@gmail.com
-                    </a>
+                    <ProtectedEmail />
                   </p>
                 </div>
               </div>
@@ -411,7 +402,7 @@ export default function ContactPage() {
 
         {/* The map */}
         <FadeUp delay={0.3}>
-          <StudioMap />
+          <GoogleMapsEmbed />
         </FadeUp>
       </section>
 
@@ -428,24 +419,24 @@ export default function ContactPage() {
               <a href="tel:+917034726407" className="hover:text-espresso transition-colors">
                 +91 70347 26407
               </a>
-              <a
-                href="mailto:nixtudio1@gmail.com"
+              <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
-                  color: '#F5D5C8',
+                  color: '#3D1520',
                   textDecoration: 'none',
                   fontFamily: 'var(--font-body, serif)',
                   fontSize: '14px',
+                  cursor: 'pointer'
                 }}
               >
                 <svg
-                  width="15"
-                  height="15"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#B76E79"
+                  stroke="#3D1520"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -453,8 +444,8 @@ export default function ContactPage() {
                   <rect x="2" y="4" width="20" height="16" rx="2"/>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                 </svg>
-                nixtudio1@gmail.com
-              </a>
+                <ProtectedEmail />
+              </div>
               <a
                 href="https://instagram.com/nixtudio"
                 target="_blank"

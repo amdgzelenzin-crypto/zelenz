@@ -42,7 +42,7 @@ const cormorant = Cormorant({
 export const metadata: Metadata = {
   title: "NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala",
   description:
-    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. HD & Airbrush bridal packages from ₹27,500. Hair, nails & spa. Book today.",
+    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Specializing in Christian, Hindu, Muslim wedding makeup. HD & Airbrush techniques. 500+ brides served. Hair, nails & spa services. Book your perfect bridal look today.",
   keywords: [
     "bridal makeup Pala",
     "bridal makeup Kottayam",
@@ -63,7 +63,13 @@ export const metadata: Metadata = {
     "bridal makeup near me Pala",
     "Nikita Liby makeup",
     "engagement makeup Pala",
-    "party makeup Pala",
+    "Christian bridal makeup Pala",
+    "Hindu bridal makeup Kerala",
+    "Muslim bridal makeup Pala",
+    "traditional Kerala wedding makeup",
+    "temple bridal makeup Kottayam",
+    "luxury bridal suite Pala",
+    "bridal prep lounge Kerala",
   ],
   authors: [{ name: 'NIXTUDIO' }],
   creator: 'NIXTUDIO',
@@ -120,30 +126,16 @@ export default function RootLayout({
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
-        {/* Preload hero image for LCP - AVIF favored in 2026 */}
+        {/* Preload hero image for LCP - WebP format */}
         <link
           rel="preload"
           as="image"
-          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.avif"
-          type="image/avif"
+          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
+          type="image/webp"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var seen = sessionStorage.getItem('nix-loaded');
-                  if (!seen) {
-                    document.documentElement.style.visibility = 'hidden';
-                  }
-                } catch(e) {}
-              })();
-            `
-          }}
-        />
-      </head>
+              </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
-        <GoogleAnalytics gaId="REPLACE_WITH_G_MEASUREMENT_ID" />
+        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
         <JsonLd />
         <ClientComponents />
         <Header />

@@ -36,8 +36,9 @@ export default function JsonLd() {
           "@id": "https://www.nixtudio.in/#person"
         },
         "sameAs": [
-          "https://www.instagram.com/nixtudio_pala",
-          "https://www.facebook.com/nixtudiopala"
+          "https://www.instagram.com/nixtudio.in",
+          "https://www.facebook.com/nixtudio.in",
+          "https://wa.me/917034726402"
         ]
       },
       {

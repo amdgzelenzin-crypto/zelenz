@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function StudioMap() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
@@ -9,12 +11,36 @@ export default function StudioMap() {
           borderRadius: '20px', overflow: 'hidden',
           boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
         }}>
-          <iframe
-            src="https://maps.google.com/maps?q=Pala,Kerala,India&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%" height="400" style={{ border: 'none', display: 'block' }}
-            allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-            title="NIXTUDIO Main Salon — Pala, Kerala"
-          />
+          <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+            <Image
+              src="https://maps.googleapis.com/maps/api/staticmap?center=Pala,Kerala,India&zoom=15&size=800x400&markers=color:red%7CPala,Kerala,India&key=YOUR_API_KEY"
+              alt="NIXTUDIO Main Salon — Pala, Kerala"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={85}
+            />
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(135deg, rgba(61,21,32,0.05) 0%, rgba(183,110,121,0.1) 100%)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{
+                  fontFamily: 'var(--font-display, serif)', fontSize: '24px',
+                  color: '#3D1520', marginBottom: '8px'
+                }}>
+                  📍 Pala, Kerala
+                </div>
+                <div style={{
+                  fontFamily: 'var(--font-body, serif)', fontSize: '14px',
+                  color: '#B76E79', fontStyle: 'italic'
+                }}>
+                  Main Studio Location
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div style={{
           position: 'absolute', bottom: '20px', left: '20px', zIndex: 10,
@@ -52,12 +78,36 @@ export default function StudioMap() {
           borderRadius: '20px', overflow: 'hidden',
           boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
         }}>
-          <iframe
-            src="https://maps.google.com/maps?q=Moozhayil+House,+Thodupuzha+Rd,+Pala,+Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%" height="400" style={{ border: 'none', display: 'block' }}
-            allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-            title="NIXTUDIO BRIDAL SUITE — Pala, Kerala"
-          />
+          <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+            <Image
+              src="https://maps.googleapis.com/maps/api/staticmap?center=Moozhayil+House,Thodupuzha+Rd,Pala,Kerala&zoom=15&size=800x400&markers=color:red%7CMoozhayil+House,Thodupuzha+Rd,Pala,Kerala&key=YOUR_API_KEY"
+              alt="NIXTUDIO BRIDAL SUITE — Pala, Kerala"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={85}
+            />
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(135deg, rgba(61,21,32,0.05) 0%, rgba(183,110,121,0.1) 100%)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{
+                  fontFamily: 'var(--font-display, serif)', fontSize: '24px',
+                  color: '#3D1520', marginBottom: '8px'
+                }}>
+                  🏛️ Bridal Suite
+                </div>
+                <div style={{
+                  fontFamily: 'var(--font-body, serif)', fontSize: '14px',
+                  color: '#B76E79', fontStyle: 'italic'
+                }}>
+                  Moozhayil House, Pala
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div style={{
           position: 'absolute', bottom: '20px', left: '20px', zIndex: 10,
