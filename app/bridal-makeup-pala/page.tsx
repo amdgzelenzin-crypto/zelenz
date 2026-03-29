@@ -3,6 +3,8 @@ import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// DEPLOYMENT TRIGGER: Pages are built and ready - Vercel should deploy these
+
 export const metadata: Metadata = {
   title: 'Bridal Makeup Pala | Expert HD & Airbrush Wedding Makeup | NIXTUDIO',
   description: 'Professional bridal makeup artist in Pala, Kerala. Specializing in HD & airbrush makeup for Kerala weddings. 6+ years experience • Transparent pricing • Local expertise.',
