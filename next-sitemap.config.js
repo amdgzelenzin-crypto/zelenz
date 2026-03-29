@@ -70,6 +70,30 @@ module.exports = {
         lastmod: new Date().toISOString(),
       },
       {
+        loc: '/bridal-makeup-price-pala-transparent',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/kerala-wedding-makeup-guide',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/bridal-makeup-portfolio-before-after',
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/best-bridal-makeup-pala-kottayam-comparison',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
         loc: '/bridal-makeup-kottayam',
         changefreq: 'daily',
         priority: 0.9,
