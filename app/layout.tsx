@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: true,
 });
 
 const lora = Lora({
@@ -23,6 +24,7 @@ const lora = Lora({
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: false,
 });
 
 const jost = Jost({
@@ -30,6 +32,7 @@ const jost = Jost({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   display: "swap",
+  preload: false,
 });
 
 const cormorant = Cormorant({
@@ -38,12 +41,13 @@ const cormorant = Cormorant({
   weight: ["300", "400"],
   style: ["italic"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
   title: "NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala",
   description:
-    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Specializing in Christian, Hindu, Muslim wedding makeup. HD & Airbrush techniques. 500+ brides served. Hair, nails & spa services. Book your perfect bridal look today.",
+    "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Specializing in Christian, Hindu, Muslim wedding makeup. 500+ brides served.",
   keywords: [
     "bridal makeup Pala",
     "bridal makeup Kottayam",
@@ -127,6 +131,10 @@ export default function RootLayout({
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
+        {/* Preconnect to font domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         {/* Preload hero image for LCP - WebP format */}
         <link
           rel="preload"
@@ -134,7 +142,11 @@ export default function RootLayout({
           href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
           type="image/webp"
         />
-              </head>
+        
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <LoadingProvider>
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "YOUR_ACTUAL_GA_MEASUREMENT_ID"} />

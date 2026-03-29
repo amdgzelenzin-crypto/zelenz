@@ -385,12 +385,9 @@ export default function Home() {
             </p>
           </FadeUp>
 
-          <h1 className="sr-only">
-            Bridal Makeup & Salon in Pala, Kerala — NIXTUDIO by Nikita Liby
-          </h1>
-
           <FadeUp delay={0.1}>
-            <h2
+            <h1
+              aria-label="Bridal Makeup & Salon in Pala, Kerala — NIXTUDIO by Nikita Liby. Every face. Carefully considered."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -403,7 +400,7 @@ export default function Home() {
             >
               Every face. <br />
               Carefully considered.
-            </h2>
+            </h1>
           </FadeUp>
 
           <FadeUp delay={0.2}>

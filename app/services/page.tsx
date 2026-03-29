@@ -331,6 +331,7 @@ function LengthTable({
   return (
     <div className="overflow-x-auto -mx-6 px-6">
       <table className="w-full min-w-[500px]">
+        <caption className="sr-only">Hair service lengths and pricing options</caption>
         <thead>
           <tr>
             {headers.map((h) => (
@@ -404,6 +405,7 @@ function NailTable({
       </p>
       <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", minWidth: singleCol ? "auto" : "480px", tableLayout: "fixed" }}>
+          <caption className="sr-only">{title} pricing and services</caption>
           <thead>
             <tr style={{ background: "rgba(183,110,121,0.10)" }}>
               <th

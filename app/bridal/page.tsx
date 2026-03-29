@@ -120,7 +120,7 @@ export default function BridalPage() {
             <FadeUp className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Christian Bridal Look</h3>
-                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                <p className="font-body text-white/90 text-sm leading-relaxed">
                   Specialized in the ethereal 'Glow-from-within' aesthetic for Christian church weddings in Pala and Kottayam. We focus on luminous skin and 'Azhagu' sophistication that complements the white bridal gown and delicate veil.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function BridalPage() {
             <FadeUp delay={0.1} className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Traditional Hindu Muhurtham</h3>
-                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                <p className="font-body text-white/90 text-sm leading-relaxed">
                   Expert color theory mapping for traditional Hindu brides in Kottayam. We balance rich temple gold jewelry with bold, high-definition makeup that remains flawless through the warmth of the mandap.
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function BridalPage() {
             <FadeUp delay={0.2} className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Muslim Bridal Magnificence</h3>
-                <p className="font-body text-espresso/70 text-sm leading-relaxed">
+                <p className="font-body text-white/90 text-sm leading-relaxed">
                   Intricate artistry designed for Muslim brides, focusing on striking eye definitions and regal styling that commands attention during the Nikkah and grand reception ceremonies.
                 </p>
               </div>
@@ -144,10 +144,10 @@ export default function BridalPage() {
           </div>
           
           <FadeUp delay={0.3} className="mt-20 pt-16 border-t border-espresso/5">
-            <h2 className="font-serif font-light text-espresso text-3xl lg:text-5xl max-w-3xl leading-snug">
+            <h2 className="font-serif font-light text-white text-3xl lg:text-5xl max-w-3xl leading-snug">
               Specialized <em>Manavatty</em> Beauty Studio.
             </h2>
-            <p className="font-sans text-espresso/60 text-sm mt-6 max-w-lg">
+            <p className="font-sans text-white text-sm mt-6 max-w-lg">
               NIXTUDIO is the region's premier destination for high-intent 'Azhagu' makeup in Pala. Specializing in Christian bride church ceremony styling and 'Pala Bridal Edit' photography-focused technical excellence for elite brides in Kottayam.
             </p>
           </FadeUp>
@@ -164,15 +164,15 @@ export default function BridalPage() {
                 <p className="label-caps mb-4">The Commitment</p>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h2 className="font-serif font-light text-espresso mb-6">
+                <h2 className="font-serif font-light text-white mb-6">
                   One artist. Your day.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.2}>
-                <p className="font-sans text-espresso/70 max-w-lg mb-4">
+                <p className="font-sans text-white/80 max-w-lg mb-4">
                   Every bridal look at NIXTUDIO — from your engagement to your wedding reception — is created entirely by Nikita. Our 'Humidity-resistant Airbrush Finish' is specifically engineered to survive 16-hour Kerala wedding marathons without cakeing.
                 </p>
-                <p className="font-sans text-espresso/70 max-w-lg">
+                <p className="font-sans text-white/80 max-w-lg">
                   Ask about our 'Happy Bride Story' sessions to capture your transformation from first look to final 'Manavatty' elegance.
                 </p>
               </FadeUp>
@@ -210,10 +210,10 @@ export default function BridalPage() {
                 <span className="font-serif block mb-3" style={{ fontSize: "80px", fontWeight: 300, color: "#F9919F", lineHeight: 1 }}>
                   {step.num}
                 </span>
-                <h3 className="font-serif text-xl mb-3" style={{ color: "#3D1520" }}>
+                <h3 className="font-serif text-xl mb-3" style={{ color: "#FFFFFF" }}>
                   {step.title}
                 </h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "#5C2D3A" }}>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.9)" }}>
                   {step.desc}
                 </p>
               </StaggerItem>
@@ -230,8 +230,8 @@ export default function BridalPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <p className="label-caps mb-4">Investment Tiers</p>
-            <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-12">The Bridal Package</h2>
-            <p className="font-sans text-espresso/60 text-sm mb-12 max-w-lg">
+            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-12">The Bridal Package</h2>
+            <p className="font-sans text-white/80 text-sm mb-12 max-w-lg">
               Transparent pricing for premium 'Manavatty' aesthetics. We offer specialized tiers for your wedding and pre-wedding functions.
             </p>
           </FadeUp>
@@ -244,8 +244,8 @@ export default function BridalPage() {
               <FadeUp key={tier.title} delay={i * 0.1}>
                 <div className="p-8 border border-espresso/5 rounded-2xl bg-white/50">
                   <h3 className="font-sans text-[10px] tracking-[0.2em] text-[#B76E79] mb-2 uppercase">{tier.title}</h3>
-                  <div className="text-2xl font-serif text-espresso mb-3">{tier.price}<span className="text-xs font-sans text-taupe/60 ml-1">+</span></div>
-                  <p className="font-sans text-[13px] text-taupe/70">{tier.desc}</p>
+                  <div className="text-2xl font-serif text-white mb-3">{tier.price}<span className="text-xs font-sans text-white/70 ml-1">+</span></div>
+                  <p className="font-sans text-[13px] text-white/80">{tier.desc}</p>
                 </div>
               </FadeUp>
             ))}
@@ -264,11 +264,11 @@ export default function BridalPage() {
                 {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
                   <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
                     <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#FFFFFF" }}>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "#A86070" }}>Inclusive of 5% GST</p>
+              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "rgba(255,255,255,0.8)" }}>Inclusive of 5% GST</p>
               </div>
             </div>
 
@@ -288,11 +288,11 @@ export default function BridalPage() {
                 {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
                   <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
                     <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#FFFFFF" }}>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "#A86070" }}>Inclusive of 5% GST</p>
+              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "rgba(255,255,255,0.8)" }}>Inclusive of 5% GST</p>
               </div>
             </div>
           </div>
@@ -313,7 +313,7 @@ export default function BridalPage() {
               "Once booked, date changes are subject to availability only.",
             ].map((text, i) => (
               <StaggerItem key={i}>
-                <p className="font-sans text-espresso/70 leading-relaxed">
+                <p className="font-sans text-white/90 leading-relaxed">
                   {text}
                 </p>
               </StaggerItem>
@@ -326,17 +326,17 @@ export default function BridalPage() {
       <section className="section-padding section-white">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-3">
+            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-3">
               Let&rsquo;s begin.
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <p className="font-sans text-espresso/60 mb-4 max-w-lg">
+            <p className="font-sans text-white/80 mb-4 max-w-lg">
               Share your wedding details and we&rsquo;ll confirm your availability.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <p className="font-sans text-sm text-taupe mb-10 max-w-lg">
+            <p className="font-sans text-sm text-white/90 mb-10 max-w-lg">
               NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
             </p>
           </FadeUp>
@@ -344,16 +344,16 @@ export default function BridalPage() {
           {submitted ? (
             <FadeUp>
               <div className="max-w-lg p-8 border border-taupe/15">
-                <p className="font-serif text-2xl text-espresso mb-3">
+                <p className="font-serif text-2xl text-white mb-3">
                   Thank you.
                 </p>
-                <p className="font-sans text-espresso/70 text-sm">
+                <p className="font-sans text-white/90 text-sm">
                   We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
                   <a
                     href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-espresso border-b border-espresso/40 hover:border-espresso transition-colors"
+                    className="text-white border-b border-white/40 hover:border-white transition-colors"
                   >
                     WhatsApp us directly at +91 70347 26402
                   </a>
@@ -377,7 +377,7 @@ export default function BridalPage() {
                       id="bridal-name"
                       type="text"
                       {...register("name", { required: "Name is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
                     />
                     {errors.name && (
                       <span className="text-xs text-brass mt-1 block">
@@ -395,7 +395,7 @@ export default function BridalPage() {
                       id="bridal-phone"
                       type="tel"
                       {...register("phone", { required: "Phone is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
                     />
                     {errors.phone && (
                       <span className="text-xs text-brass mt-1 block">
@@ -413,7 +413,7 @@ export default function BridalPage() {
                       id="bridal-date"
                       type="date"
                       {...register("date", { required: "Date is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
                     />
                     {errors.date && (
                       <span className="text-xs text-brass mt-1 block">
@@ -431,7 +431,7 @@ export default function BridalPage() {
                       id="bridal-time"
                       type="time"
                       {...register("leaveTime", { required: "Time is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
                     />
                     {errors.leaveTime && (
                       <span className="text-xs text-brass mt-1 block">
@@ -449,7 +449,7 @@ export default function BridalPage() {
                   <select
                     id="bridal-event"
                     {...register("eventType", { required: "Please select event type" })}
-                    className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors appearance-none"
+                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors appearance-none"
                   >
                     <option value="">Select event type</option>
                     <option value="engagement">Engagement</option>
@@ -475,7 +475,7 @@ export default function BridalPage() {
                     id="bridal-services"
                     rows={3}
                     {...register("services")}
-                    className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors resize-none"
                   />
                 </div>
 
@@ -491,7 +491,7 @@ export default function BridalPage() {
                     id="bridal-referral"
                     type="text"
                     {...register("referral")}
-                    className="w-full px-4 py-3 bg-transparent border border-taupe/25 text-espresso font-sans text-sm focus:border-espresso focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
                   />
                 </div>
 

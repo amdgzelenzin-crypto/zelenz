@@ -648,6 +648,53 @@ body {
   z-index: 2;
 }
 
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced focus states for better accessibility */
+*:focus-visible {
+  outline: 2px solid #D4A055;
+  outline-offset: 2px;
+}
+
+/* Ensure text meets WCAG AA contrast standards */
+.text-espresso\/60 {
+  color: #5C2D3A; /* Darker for better contrast */
+}
+
+.text-taupe\/60 {
+  color: #8A4858; /* Darker for better contrast */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-espresso\/60,
+  .text-taupe\/60 {
+    color: #3D1520;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .premium-pricing-card:hover .premium-border {
   opacity: 1;
 }
