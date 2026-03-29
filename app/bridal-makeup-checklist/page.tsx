@@ -346,12 +346,12 @@ export default function BridalMakeupChecklistPage() {
               >
                 Book Your Makeup Artist
               </Link>
-              <button 
-                onClick={() => alert('Checklist download feature coming soon! Contact us directly for the complete guide.')}
+              <Link 
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition"
               >
-                Get Full Checklist
-              </button>
+                Get Full Checklist - Contact Us
+              </Link>
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
