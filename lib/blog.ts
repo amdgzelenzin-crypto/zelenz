@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 28, 2026",
     author: "Nikita Liby",
     category: "Bridal Tips",
-    image: "/images/nixtudio-luxury-salon-interior-pala.webp",
+    image: "https://images.unsplash.com/photo-1573497019940-0336d568e5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     content: `
       <h3>There's no universally right answer. But there is a right answer for you.</h3>
       <p>Every bride who walks into NIXTUDIO eventually asks the same question — <em>HD or Airbrush?</em> And honestly, the answer isn't something you can Google your way to. It depends on your skin, your event, your timeline, and sometimes even the time of day your photographs will be taken.</p>
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 27, 2026",
     author: "Nikita Liby",
     category: "Trends",
-    image: "/images/hd-christian-bridal-makeup-look-pala.webp",
+    image: "https://images.unsplash.com/photo-1573497019940-0336d568e5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     content: `
       <h3>The Christian bride in Kerala has always had her own aesthetic. 2025 is refining it beautifully.</h3>
       <p>There's a particular kind of grace to Christian bridal makeup in Kerala. It's not the bold drama of a South Indian temple wedding or the richness of a Muslim bridal look. It's quieter than that. More restrained. The kind of beauty that photographs softly and ages well in the albums your grandchildren will one day look through.</p>
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 25, 2026",
     author: "Nikita Liby",
     category: "Skin Prep",
-    image: "/images/nixtudio-bridal-makeup-appointment-booking.webp",
+    image: "https://images.unsplash.com/photo-1573497019940-0336d568e5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     content: `
       <h3>Your makeup is only as good as the skin underneath it.</h3>
       <p>This isn't something most studios will say upfront, because it's not in their interest to tell you that the work happens before you arrive. But it's true, and it's especially true in Kerala.</p>
