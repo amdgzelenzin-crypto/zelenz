@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const INDEX_NOW_KEY = "a8f3b2e1c9d4f7a6b5e2d1c8f3a9b7e4";
-const HOST = "www.nixtudio.in";
+const HOST = "nixtudio.in";
 
 const urls = [
   `https://${HOST}`,

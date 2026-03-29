@@ -12,7 +12,7 @@ User-agent: GPTBot
 Disallow: /
 
 # Host
-Host: https://www.nixtudio.in
+Host: https://nixtudio.in
 
 # Sitemaps
-Sitemap: https://www.nixtudio.in/sitemap.xml
+Sitemap: https://nixtudio.in/sitemap.xml

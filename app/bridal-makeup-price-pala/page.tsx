@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bridal Makeup Price Pala | NIXTUDIO Transparent Pricing',
     description: 'Complete pricing guide for bridal makeup services in Pala. No hidden costs, premium quality, best value.',
-    url: 'https://www.nixtudio.in/bridal-makeup-price-pala',
+    url: 'https://nixtudio.in/bridal-makeup-price-pala',
     images: [{
       url: '/images/bridal-makeup-price-pala-nixtudio.jpg',
       width: 1200,
@@ -38,7 +38,7 @@ const structuredData = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "NIXTUDIO",
-    "url": "https://www.nixtudio.in",
+    "url": "https://nixtudio.in",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pala",

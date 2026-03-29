@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Airbrush Makeup Pala | NIXTUDIO Advanced Studio',
     description: 'Advanced airbrush makeup services in Pala. Flawless finish, long-lasting, perfect for bridal and special occasions.',
-    url: 'https://www.nixtudio.in/airbrush-makeup-pala',
+    url: 'https://nixtudio.in/airbrush-makeup-pala',
     images: [{
       url: '/images/airbrush-makeup-pala-nixtudio.jpg',
       width: 1200,
@@ -38,7 +38,7 @@ const structuredData = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "NIXTUDIO",
-    "url": "https://www.nixtudio.in",
+    "url": "https://nixtudio.in",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pala",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Bridal Makeup Pala | NIXTUDIO #1 Makeup Studio',
     description: 'Premium bridal makeup by Nixtudio in Pala, Kerala. Natural glowing looks, HD & airbrush techniques. Book your perfect bridal transformation.',
-    url: 'https://www.nixtudio.in/best-bridal-makeup-pala',
+    url: 'https://nixtudio.in/best-bridal-makeup-pala',
     images: [{
       url: '/images/best-bridal-makeup-pala-nixtudio.jpg',
       width: 1200,
@@ -35,7 +35,7 @@ const structuredData = {
   "@type": "LocalBusiness",
   "name": "NIXTUDIO - Best Bridal Makeup Pala",
   "description": "Premier bridal makeup studio in Pala, Kerala specializing in luxury HD and airbrush bridal makeup",
-  "url": "https://www.nixtudio.in",
+  "url": "https://nixtudio.in",
   "telephone": "+91-XXXXXXXXXX",
   "address": {
     "@type": "PostalAddress",

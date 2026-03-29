@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Luxury Bridal Makeup Kerala | NIXTUDIO Premium Studio',
     description: 'Premium luxury bridal makeup experience across Kerala. Exclusive services, HD techniques, and personalized attention.',
-    url: 'https://www.nixtudio.in/luxury-bridal-makeup-kerala',
+    url: 'https://nixtudio.in/luxury-bridal-makeup-kerala',
     images: [{
       url: '/images/luxury-bridal-makeup-kerala-nixtudio.jpg',
       width: 1200,
@@ -38,7 +38,7 @@ const structuredData = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "NIXTUDIO",
-    "url": "https://www.nixtudio.in",
+    "url": "https://nixtudio.in",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pala",

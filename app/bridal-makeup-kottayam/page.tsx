@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bridal Makeup Kottayam | NIXTUDIO Premium Studio',
     description: 'Premium bridal makeup services across Kottayam district. HD, airbrush, and natural looks by Nixtudio.',
-    url: 'https://www.nixtudio.in/bridal-makeup-kottayam',
+    url: 'https://nixtudio.in/bridal-makeup-kottayam',
     images: [{
       url: '/images/bridal-makeup-kottayam-nixtudio.jpg',
       width: 1200,
@@ -38,7 +38,7 @@ const structuredData = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "NIXTUDIO",
-    "url": "https://www.nixtudio.in"
+    "url": "https://nixtudio.in"
   },
   "areaServed": {
     "@type": "Place",

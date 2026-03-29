@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.nixtudio.in',
+  siteUrl: 'https://nixtudio.in',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,

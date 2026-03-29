@@ -8,12 +8,12 @@ export default function JsonLd({ data }: JsonLdProps) {
     "@graph": [
       {
         "@type": ["LocalBusiness", "BeautySalon", "HealthAndBeautyBusiness"],
-        "@id": "https://www.nixtudio.in/#business",
+        "@id": "https://nixtudio.in/#business",
         "name": "NIXTUDIO by Nikita Liby",
-        "url": "https://www.nixtudio.in",
+        "url": "https://nixtudio.in",
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
-        "image": "https://www.nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+        "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
         "description": "NIXTUDIO is Pala's premier high-end unisex salon & bridal studio, specializing in FDA-approved facial treatments, hair care, and professional bridal aesthetics.",
         "address": {
           "@type": "PostalAddress",
@@ -82,7 +82,7 @@ export default function JsonLd({ data }: JsonLdProps) {
           ]
         },
         "founder": {
-          "@id": "https://www.nixtudio.in/#person"
+          "@id": "https://nixtudio.in/#person"
         },
         "sameAs": [
           "https://www.instagram.com/nixtudio.in",
@@ -92,11 +92,11 @@ export default function JsonLd({ data }: JsonLdProps) {
       },
       {
         "@type": "ProfessionalService",
-        "@id": "https://www.nixtudio.in/#professional-service",
+        "@id": "https://nixtudio.in/#professional-service",
         "name": "Bridal Makeup Services",
         "description": "Professional bridal makeup and beauty services by Nikita Liby",
         "provider": {
-          "@id": "https://www.nixtudio.in/#business"
+          "@id": "https://nixtudio.in/#business"
         },
         "serviceType": [
           "Bridal Makeup",
@@ -123,17 +123,17 @@ export default function JsonLd({ data }: JsonLdProps) {
       },
       {
         "@type": "Person",
-        "@id": "https://www.nixtudio.in/#person",
+        "@id": "https://nixtudio.in/#person",
         "name": "Nikita Liby",
         "jobTitle": "Founder & Creative Director",
         "description": "Professional makeup artist and hairstylist specializing in international luxury bridal aesthetics and precision hair treatments in Pala, Kerala.",
-        "image": "https://www.nixtudio.in/images/studio/nikita-liby-makeup-artist-pala.webp",
-        "url": "https://www.nixtudio.in/about"
+        "image": "https://nixtudio.in/images/studio/nikita-liby-makeup-artist-pala.webp",
+        "url": "https://nixtudio.in/about"
       },
       {
         "@type": "Service",
         "name": "Bridal Makeup & Styling",
-        "provider": { "@id": "https://www.nixtudio.in/#business" },
+        provider: { "@id": "https://nixtudio.in/#business" },
         "areaServed": {
           "@type": "State",
           "name": "Kerala"

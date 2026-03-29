@@ -63,16 +63,6 @@ const nextConfig: NextConfig = {
       ],
     },
   ],
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'nixtudio.in' }],
-        destination: 'https://www.nixtudio.in/:path*',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
