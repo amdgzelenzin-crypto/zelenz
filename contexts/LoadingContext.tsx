@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import LoadingScreen from '@/components/ui/LoadingScreen'
 
 interface LoadingContextType {
   isLoading: boolean
@@ -53,7 +54,8 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
 
   return (
     <LoadingContext.Provider value={{ isLoading, isReady }}>
-      {children}
+      {isLoading && <LoadingScreen />}
+      {isReady && children}
     </LoadingContext.Provider>
   )
 }
