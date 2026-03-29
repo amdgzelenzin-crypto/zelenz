@@ -3,47 +3,93 @@
 import { useEffect, useState } from 'react'
 
 export default function LoadingScreen() {
-  const [showContent, setShowContent] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [leaving, setLeaving] = useState(false)
 
   useEffect(() => {
-    // Prevent scrolling during loading
-    document.body.style.overflow = 'hidden'
-    
-    // Show animated content after a brief delay to ensure blank pink shows first
-    const contentTimer = setTimeout(() => {
-      setShowContent(true)
-    }, 200) // Show content after 200ms of blank pink
-    
+    try {
+      const seen = sessionStorage.getItem('nix-loaded')
+      if (seen) return
+    } catch (e) {
+      return
+    }
+
+    // Show loader immediately
+    setMounted(true)
+
+    const exitTimer = setTimeout(() => {
+      setLeaving(true)
+    }, 800)
+
+    const removeTimer = setTimeout(() => {
+      setMounted(false)
+      try {
+        sessionStorage.setItem('nix-loaded', 'true')
+      } catch (e) {}
+    }, 1200)
+
     return () => {
-      document.body.style.overflow = ''
-      clearTimeout(contentTimer)
+      clearTimeout(exitTimer)
+      clearTimeout(removeTimer)
     }
   }, [])
+
+  if (!mounted) return null
 
   return (
     <>
       <style>{`
-        .loading-screen {
+        @keyframes goldFill {
+          from { width: 0% }
+          to   { width: 100% }
+        }
+        @keyframes letterIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes scriptIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes loaderSlideUp {
+          from { transform: translateY(0) }
+          to   { transform: translateY(-100%) }
+        }
+        .nix-loader {
           position: fixed;
           inset: 0;
-          background: #FDE8E8;
+          background: #3D1520;
           z-index: 99999;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
         }
-        
-        .loading-content {
-          text-align: center;
-          animation: fadeInUp 1s ease-out;
+        .nix-loader.leaving {
+          animation: loaderSlideUp
+            700ms cubic-bezier(0.76, 0, 0.24, 1)
+            forwards;
         }
-        
-        .loading-logo {
+        .nix-letters {
+          display: flex;
+          gap: 2px;
+        }
+        .nix-letter {
           font-family: var(--font-display), 'Playfair Display', serif;
           font-size: clamp(32px, 8vw, 56px);
-          font-weight: 300;
-          font-style: italic;
+          font-weight: 400;
           letter-spacing: 0.25em;
           background: linear-gradient(135deg,
             #D4A055 0%,
@@ -55,104 +101,73 @@ export default function LoadingScreen() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 24px;
-          animation: shimmerText 2s ease-in-out infinite;
+          opacity: 0;
+          animation: letterIn 400ms
+            ease forwards;
         }
-        
-        .loading-tagline {
-          font-family: var(--font-body), 'Georgia', serif;
+        .nix-script {
+          font-family: var(--font-script), 'Georgia', serif;
           font-size: clamp(14px, 3vw, 18px);
           font-style: italic;
-          color: rgba(61, 21, 32, 0.6);
+          color: #F9C8C8;
+          opacity: 0;
+          margin-top: 6px;
+          animation: scriptIn 500ms
+            ease 600ms forwards;
+          letter-spacing: 0.05em;
+        }
+        .nix-bar-track {
+          width: clamp(120px, 30vw, 200px);
+          height: 2px;
+          background: rgba(249, 200, 200, 0.15);
+          border-radius: 2px;
+          margin-top: 40px;
+          overflow: hidden;
+        }
+        .nix-bar-fill {
+          height: 100%;
+          width: 0%;
+          border-radius: 2px;
+          background: linear-gradient(90deg,
+            #B76E79,
+            #D4A055,
+            #B76E79);
+          animation: goldFill 2s
+            cubic-bezier(0.4, 0, 0.2, 1)
+            0.2s forwards;
+        }
+        .nix-tagline {
+          font-family: var(--font-body), 'Georgia', serif;
+          font-size: clamp(10px, 2.5vw, 12px);
+          font-style: italic;
+          color: rgba(249, 200, 200, 0.45);
+          margin-top: 20px;
           letter-spacing: 0.15em;
-          margin-top: 8px;
-          animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        .loading-dots {
-          display: flex;
-          gap: 8px;
-          margin-top: 32px;
-          animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .loading-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: rgba(61, 21, 32, 0.3);
-          animation: pulse 1.5s ease-in-out infinite;
-        }
-        
-        .loading-dot:nth-child(2) {
-          animation-delay: 0.2s;
-        }
-        
-        .loading-dot:nth-child(3) {
-          animation-delay: 0.4s;
-        }
-        
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes shimmerText {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-        
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 0.3;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.6;
-            transform: scale(1.2);
-          }
-        }
-        
-        /* Add subtle texture matching main site */
-        .loading-screen::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background-image: 
-            radial-gradient(circle at 20% 30%, rgba(249, 200, 200, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(212, 160, 85, 0.08) 0%, transparent 50%),
-            radial-gradient(circle at 40% 80%, rgba(249, 145, 159, 0.06) 0%, transparent 50%);
-          pointer-events: none;
         }
       `}</style>
-      
-      <div className="loading-screen">
-        {/* Blank pink background shows immediately */}
-        {showContent && (
-          <div className="loading-content">
-            <div className="loading-logo">
-              NIXTUDIO
-            </div>
-            <div className="loading-tagline">
-              every face. carefully considered.
-            </div>
-            <div className="loading-dots">
-              <div className="loading-dot"></div>
-              <div className="loading-dot"></div>
-              <div className="loading-dot"></div>
-            </div>
-          </div>
-        )}
+      <div
+        className={`nix-loader ${leaving ? 'leaving' : ''}`}
+      >
+        <div className="nix-letters">
+          {'NIXTUDIO'.split('').map((letter, i) => (
+            <span
+              key={i}
+              className="nix-letter"
+              style={{
+                animationDelay: `${i * 60}ms`,
+              }}
+            >
+              {letter}
+            </span>
+          ))}
+        </div>
+        <div className="nix-script">by Nikita Liby</div>
+        <div className="nix-bar-track">
+          <div className="nix-bar-fill" />
+        </div>
+        <div className="nix-tagline">
+          every face. carefully considered.
+        </div>
       </div>
     </>
   )

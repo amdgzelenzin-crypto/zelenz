@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-import LoadingScreen from '@/components/ui/LoadingScreen'
+import LoadingScreen from '@/components/ui/SiteLoader'
 
 interface LoadingContextType {
   isLoading: boolean

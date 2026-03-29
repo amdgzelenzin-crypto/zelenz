@@ -14,7 +14,7 @@ export default function SiteLoader() {
       return
     }
 
-    // Show loader immediately on first load - no delay
+    // Show loader immediately on mount
     requestAnimationFrame(() => {
       setVisible(true)
     })
@@ -89,7 +89,7 @@ export default function SiteLoader() {
           gap: 2px;
         }
         .nix-letter {
-          font-family: var(--font-display, 'Playfair Display', serif);
+          font-family: var(--font-display), 'Playfair Display', serif;
           font-size: clamp(32px, 8vw, 56px);
           font-weight: 400;
           letter-spacing: 0.25em;
@@ -108,7 +108,7 @@ export default function SiteLoader() {
             ease forwards;
         }
         .nix-script {
-          font-family: var(--font-script, 'Georgia', serif);
+          font-family: var(--font-script), 'Georgia', serif;
           font-size: clamp(14px, 3vw, 18px);
           font-style: italic;
           color: #F9C8C8;
@@ -139,7 +139,7 @@ export default function SiteLoader() {
             0.2s forwards;
         }
         .nix-tagline {
-          font-family: var(--font-body, 'Georgia', serif);
+          font-family: var(--font-body), 'Georgia', serif;
           font-size: clamp(10px, 2.5vw, 12px);
           font-style: italic;
           color: rgba(249, 200, 200, 0.45);
