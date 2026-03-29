@@ -311,19 +311,24 @@ export default function KeralaWeddingMakeupGuide() {
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
-                        <span><strong>Portfolio Quality:</strong> Consistent, high-quality work</li>
+                        <span><strong>Portfolio Quality:</strong> Consistent, high-quality work</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
-                        <span><strong>Experience:</strong> 5+ years with weddings</li>
+                        <span><strong>Experience:</strong> 5+ years with weddings</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
-                        <span><strong>Reviews:</strong> 4.5+ rating, 50+ reviews</li>
+                        <span><strong>Reviews:</strong> 4.5+ rating, 50+ reviews</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
-                        <span><strong>Professional Products:</strong> Premium brands only</li>
+                        <span><strong>Professional Products:</strong> Premium brands only</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
-                        <span><strong>Trial Sessions:</strong> Offered and recommended</li>
+                        <span><strong>Trial Sessions:</strong> Offered and recommended</span>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -331,19 +336,24 @@ export default function KeralaWeddingMakeupGuide() {
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
                         <span className="text-red-600 mr-2">✗</span>
-                        <span><strong>No Portfolio:</strong> Can't verify quality</li>
+                        <span><strong>No Portfolio:</strong> Can't verify quality</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-red-600 mr-2">✗</span>
-                        <span><strong>Hidden Costs:</strong> Unclear pricing</li>
+                        <span><strong>Hidden Costs:</strong> Unclear pricing</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-red-600 mr-2">✗</span>
-                        <span><strong>Poor Reviews:</strong> Under 4.0 rating</li>
+                        <span><strong>Poor Reviews:</strong> Under 4.0 rating</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-red-600 mr-2">✗</span>
-                        <span><strong>No Experience:</strong> New to bridal makeup</li>
+                        <span><strong>No Experience:</strong> New to bridal makeup</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="text-red-600 mr-2">✗</span>
-                        <span><strong>No Trial:</strong> Refuses test sessions</li>
+                        <span><strong>No Trial:</strong> Refuses test sessions</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
