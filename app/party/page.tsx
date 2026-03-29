@@ -175,7 +175,7 @@ export default function PartyPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <p className="font-sans text-sm mb-6 max-w-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
-              NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits.
+              NIXTUDIO is a studio-only experience. We are based in <Link href='/bridal-makeup-pala' className='text-white/90 underline decoration-white/30 hover:decoration-white/60 transition-colors'>Pala</Link> and do not offer home or venue visits.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>

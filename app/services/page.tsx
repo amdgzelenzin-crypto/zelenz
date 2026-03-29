@@ -25,7 +25,7 @@ const categories = [
 
 const makeupServices = [
   { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Starting at ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Humidity-resistant Airbrush 'Manavatty' aesthetics. Ask about our 'Happy Bride Story' sessions." },
-  { name: "Engagement / Reception Styling", price: "From ₹14,500", note: "Nuanced 'Azhagu' looks optimized for Pala & Kottayam church/hall lighting." },
+  { name: "Engagement / Reception Styling", price: "From ₹14,500", note: "Nuanced 'Azhagu' looks optimized for <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala</Link> & Kottayam church/hall lighting." },
   { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
   { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
   { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
@@ -580,7 +580,7 @@ export default function SalonPage() {
                 </p>
                 {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
                 <p className="font-sans text-sm text-espresso/80 mt-6 max-w-lg leading-relaxed">
-                  <strong>NIXTUDIO is Pala&rsquo;s premier high-end unisex salon</strong>, specializing in FDA-approved Vortex-Fusion HydraFacial, humidity-resistant Hair Botox, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
+                  <strong>NIXTUDIO is <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala&rsquo;s</Link> premier high-end unisex salon</strong>, specializing in FDA-approved Vortex-Fusion HydraFacial, humidity-resistant Hair Botox, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
                 </p>
               </FadeUp>
             </div>

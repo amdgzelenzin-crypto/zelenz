@@ -611,16 +611,17 @@ export default function Home() {
         <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)" }}>
           <FadeUp>
             <p className="label-caps" style={{ marginBottom: "8px" }}>Portfolio</p>
-            <h2
+            <p
               style={{
-                fontFamily: "var(--font-display), Georgia, serif",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "14px",
                 fontWeight: 400,
                 color: "#3D1520",
-                marginBottom: "40px",
+                marginBottom: "16px",
               }}
             >
-              The <em>Work.</em>
-            </h2>
+              Premium Makeup Studio · <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala</Link>, Kerala
+            </p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 border-y border-[rgba(61,21,32,0.1)] mb-16">
             <FadeUp>
