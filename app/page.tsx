@@ -396,10 +396,17 @@ export default function Home() {
                 fontStyle: "italic",
                 color: "rgba(255,255,255,0.85)",
                 lineHeight: 1.6,
-                marginBottom: "32px",
+                marginBottom: "12px",
               }}
             >
               Bridal makeup done exclusively by Nikita.
+            </p>
+          </FadeUp>
+
+          {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
+          <FadeUp delay={0.25}>
+            <p className="font-sans text-[13px] md:text-sm text-white/70 max-w-lg mb-[32px] leading-relaxed">
+              <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings.
             </p>
           </FadeUp>
 

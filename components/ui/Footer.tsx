@@ -73,7 +73,7 @@ export default function Footer() {
                 maxWidth: "240px",
               }}
             >
-              Premium makeup studio in Pala, Kerala. Every face. Carefully considered.
+              Premium makeup studio in <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span>. Every face. Carefully considered.
             </p>
           </div>
 
@@ -217,6 +217,8 @@ export default function Footer() {
                 nixtudio1@gmail.com
               </a>
               <p
+                itemScope
+                itemType="https://schema.org/PostalAddress"
                 style={{
                   fontFamily: "var(--font-body), Georgia, serif",
                   fontSize: "14px",
@@ -224,8 +226,10 @@ export default function Footer() {
                   lineHeight: 1.6,
                 }}
               >
-                <strong>Main Salon:</strong> Pala, Kerala<br />
-                <strong>Bridal Suite:</strong> Moozhayil House, Thodupuzha Rd<br />
+                <strong>Main Salon:</strong> <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span><br />
+                <strong>Bridal Suite:</strong> <span itemProp="streetAddress">Moozhayil House, Thodupuzha Rd</span><br />
+                <meta itemProp="addressCountry" content="IN" />
+                <span itemProp="postalCode">686575</span><br />
                 Mon – Sun, 10am – 7pm
               </p>
               <a

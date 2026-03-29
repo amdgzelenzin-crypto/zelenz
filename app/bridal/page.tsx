@@ -96,8 +96,14 @@ export default function BridalPage() {
               By Nikita Liby
             </p>
           </FadeUp>
-          {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
-          <FadeUp delay={0.15}>
+          <FadeUp delay={0.25}>
+            <p className="font-sans text-[13px] md:text-sm text-white/80 max-w-lg mb-8 leading-relaxed">
+              Explore our <Link href="/bridal-guide" className="text-white border-b border-white/30 hover:border-white transition-colors">Official Bridal Guide</Link> for expert tips on skincare, natural makeup aesthetics, and premium venue planning in Kottayam.
+            </p>
+          </FadeUp>
+
+          <FadeUp delay={0.3}>
+            {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
             <p className="font-sans text-white/90 text-sm md:text-base max-w-xl mt-6 leading-relaxed">
               NIXTUDIO is the leading premium bridal makeup studio in Pala and Kottayam, specializing in long-wear HD and humidity-resistant Airbrush aesthetics for Kerala weddings. Personally styled by Nikita Liby.
             </p>

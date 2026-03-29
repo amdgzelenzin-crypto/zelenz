@@ -1,145 +1,112 @@
 export default function JsonLd() {
-  const schema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "NIXTUDIO | Premium Hair & Skin Salon, Pala",
-      "description": "NIXTUDIO is Pala's premier high-end unisex salon specializing in FDA-approved Vortex-Fusion HydraFacial, Humidity-resistant Hair Botox, and Bleach-free ammonia-free hair coloring with a 'Supermodel' low-maintenance gloss finish. The leader in medical-grade aesthetics in Kottayam.",
-      "url": "https://www.nixtudio.in/services",
-      "telephone": "+917034726402",
-      "image": "https://www.nixtudio.in/images/studio/nixtudio-luxury-salon-interior-pala.webp",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Moozhayil Building, Pala Ramapuram Road, Near KSEB Office",
-        "addressLocality": "Pala",
-        "addressRegion": "Kerala",
-        "postalCode": "686575",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "9.710815",
-        "longitude": "76.623122"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "09:00",
-          "closes": "19:30"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "240"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Luxury Salon Services",
-        "itemListElement": [
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HealthAndBeautyBusiness",
+        "@id": "https://www.nixtudio.in/#business",
+        "name": "NIXTUDIO by Nikita Liby",
+        "url": "https://www.nixtudio.in",
+        "telephone": "+917034726402",
+        "priceRange": "₹₹₹",
+        "image": "https://www.nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+        "description": "NIXTUDIO is Pala's premier high-end unisex salon & bridal studio, specializing in FDA-approved facial treatments, hair care, and professional bridal aesthetics.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+          "addressLocality": "Pala",
+          "addressRegion": "Kerala",
+          "postalCode": "686575",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "9.7115",
+          "longitude": "76.6225"
+        },
+        "openingHoursSpecification": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Vortex-Fusion HydraFacial",
-              "description": "FDA-approved clinical skin resurfacing optimized for Kerala's tropical humidity."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Humidity-Resistant Hair Botox",
-              "description": "Formaldehyde-free hair restoration and smoothing for long-lasting 'Supermodel' silkiness."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Bleach-Free Hair Coloring",
-              "description": "Ammonia-free technical coloring with a high-gloss, low-maintenance aesthetic."
-            }
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "19:00"
           }
+        ],
+        "founder": {
+          "@id": "https://www.nixtudio.in/#person"
+        },
+        "sameAs": [
+          "https://www.instagram.com/nixtudio_pala",
+          "https://www.facebook.com/nixtudiopala"
         ]
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "MakeupArtist"],
-      "additionalType": "https://schema.org/WeddingService",
-      "name": "NIXTUDIO BRIDAL SUITE | Luxury Bridal Makeup, Pala",
-      "description": "The premier 'Manavatty' beauty studio and 'Azhagu' makeup destination in Pala. Specializing in Christian bride church ceremony styling, Humidity-resistant Airbrush finish, and 'Happy Bride Story' photography-focused aesthetics by Nikita Liby. Serving elite brides in Kottayam and Changanacherry.",
-      "url": "https://www.nixtudio.in/bridal",
-      "telephone": "+917034726402",
-      "image": "https://www.nixtudio.in/images/gallery/hd-christian-bridal-makeup-look-pala.webp",
-      "priceRange": "₹₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
-        "addressLocality": "Pala",
-        "addressRegion": "Kerala",
-        "postalCode": "686575",
-        "addressCountry": "IN"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "9.7115",
-        "longitude": "76.6225"
+      {
+        "@type": "Person",
+        "@id": "https://www.nixtudio.in/#person",
+        "name": "Nikita Liby",
+        "jobTitle": "Founder & Creative Director",
+        "description": "Professional makeup artist and hairstylist specializing in international luxury bridal aesthetics and precision hair treatments in Pala, Kerala.",
+        "image": "https://www.nixtudio.in/images/studio/nikita-liby-makeup-artist-pala.webp",
+        "url": "https://www.nixtudio.in/about"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "120"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bridal Packages",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
+      {
+        "@type": "Service",
+        "name": "Bridal Makeup & Styling",
+        "provider": { "@id": "https://www.nixtudio.in/#business" },
+        "areaServed": {
+          "@type": "State",
+          "name": "Kerala"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Bridal Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
               "price": "27500",
-              "priceCurrency": "INR"
+              "priceCurrency": "INR",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wedding Day Bridal Makeup",
+                "description": "HD and Airbrush bridal makeup with 16-hour humidity resistance."
+              }
             },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wedding Day Bridal Makeup",
-              "description": "Premium HD and humidity-resistant Airbrush bridal makeup for Kerala weddings. Personally styled by Nikita Liby."
-            }
-          },
-          {
-            "@type": "Offer",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
+            {
+              "@type": "Offer",
               "price": "14500",
-              "priceCurrency": "INR"
-            },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Engagement / Reception Styling",
-              "description": "Sophisticated 'Azhagu' styling optimized for Pala & Kottayam evening church and hall lighting."
+              "priceCurrency": "INR",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Engagement Styling",
+                "description": "Sophisticated party and engagement makeup for church and hall events."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does NIXTUDIO provide home services for bridal makeup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide luxury on-site bridal services across Kottayam, Changanacherry, and nearby regions in Kerala for a premium experience."
             }
           },
           {
-            "@type": "Offer",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "12000",
-              "priceCurrency": "INR"
-            },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Pre-Wedding / Post-Wedding Shoot",
-              "description": "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions."
+            "@type": "Question",
+            "name": "What are the bridal makeup rates in Pala?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NIXTUDIO's bridal packages start at ₹27,500, which includes specialized skin preparation, HD/Airbrush application, hair styling, and draping."
             }
           }
         ]
       }
-    }
-  ]
+    ]
+  }
 
   return (
     <script

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter, Playfair_Display, Lora, Jost, Cormorant } from "next/font/google";
+import { Playfair_Display, Lora, Jost, Cormorant } from "next/font/google";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
@@ -7,19 +7,6 @@ import ClientComponents from "@/components/ui/ClientComponents";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import JsonLd from '@/components/JsonLd'
 import "./globals.css";
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '600'],
-  variable: '--font-cormorant',
-  display: 'swap',
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 const playfair = Playfair_Display({
   variable: "--font-display",
@@ -130,15 +117,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable} ${cormorantGaramond.variable} ${inter.variable}`}
+      className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
-        {/* Preload hero image for LCP */}
+        {/* Preload hero image for LCP - AVIF favored in 2026 */}
         <link
           rel="preload"
           as="image"
-          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
-          type="image/webp"
+          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.avif"
+          type="image/avif"
         />
         <script
           dangerouslySetInnerHTML={{

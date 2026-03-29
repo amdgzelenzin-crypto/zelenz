@@ -3,12 +3,12 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-# OAI-SearchBot
-User-agent: OAI-SearchBot
+# OAI-SearchBot,Google-Extended
+User-agent: OAI-SearchBot,Google-Extended
 Allow: /
 
-# GPTBot,Google-Extended
-User-agent: GPTBot,Google-Extended
+# GPTBot
+User-agent: GPTBot
 Disallow: /
 
 # Host
