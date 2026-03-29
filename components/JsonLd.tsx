@@ -67,7 +67,8 @@ export default function JsonLd() {
     },
     {
       "@context": "https://schema.org",
-      "@type": ["MakeupArtist", "WeddingService"],
+      "@type": ["LocalBusiness", "MakeupArtist"],
+      "additionalType": "https://schema.org/WeddingService",
       "name": "NIXTUDIO BRIDAL SUITE | Luxury Bridal Makeup, Pala",
       "description": "The premier 'Manavatty' beauty studio and 'Azhagu' makeup destination in Pala. Specializing in Christian bride church ceremony styling, Humidity-resistant Airbrush finish, and 'Happy Bride Story' photography-focused aesthetics by Nikita Liby. Serving elite brides in Kottayam and Changanacherry.",
       "url": "https://nixtudio.in/bridal",
