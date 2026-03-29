@@ -22,6 +22,11 @@ const AccessibilityFixes = dynamic(() => import('./AccessibilityFixes'), {
   loading: () => null,
 })
 
+const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
+  ssr: false,
+  loading: () => null,
+})
+
 export default function ClientComponents() {
   return (
     <>
@@ -29,6 +34,7 @@ export default function ClientComponents() {
       <FloatingAmbience />
       <ScrollToTop />
       <AccessibilityFixes />
+      <PerformanceMonitor />
     </>
   )
 }
