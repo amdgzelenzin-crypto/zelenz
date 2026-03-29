@@ -25,10 +25,11 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
-    // Check if user has already seen the loader
+    // Check if user has already seen loader
     try {
       const seen = sessionStorage.getItem('nix-loaded')
       if (seen) {
+        // If already seen, show content immediately without loader
         setIsLoading(false)
         setIsReady(true)
         return
@@ -37,10 +38,8 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
       // If sessionStorage fails, proceed with loader
     }
 
-    // Show loader immediately
-    setIsLoading(true)
-
-    // Hide loader after animation completes
+    // For first-time visitors, ensure loader shows immediately
+    // Don't allow content to render until loader animation completes
     const timer = setTimeout(() => {
       setIsLoading(false)
       setIsReady(true)

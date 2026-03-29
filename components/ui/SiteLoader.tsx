@@ -14,8 +14,10 @@ export default function SiteLoader() {
       return
     }
 
-    // Show loader immediately on mount
-    setVisible(true)
+    // Show loader immediately on first load - no delay
+    requestAnimationFrame(() => {
+      setVisible(true)
+    })
 
     const exitTimer = setTimeout(() => {
       setLeaving(true)
