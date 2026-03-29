@@ -325,48 +325,51 @@ export default function BridalPage() {
       {/* ──────── BOOKING FORM ──────── */}
       <section className="section-padding section-white">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <FadeUp>
-            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-3">
-              Let&rsquo;s begin.
-            </h2>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <p className="font-sans text-white/80 mb-4 max-w-lg">
-              Share your wedding details and we&rsquo;ll confirm your availability.
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.15}>
-            <p className="font-sans text-sm text-white/90 mb-10 max-w-lg">
-              NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
-            </p>
-          </FadeUp>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Form Content */}
+            <div className="lg:col-span-7">
+              <FadeUp>
+                <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-3">
+                  Let&rsquo;s begin.
+                </h2>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="font-sans text-white/80 mb-4 max-w-lg">
+                  Share your wedding details and we&rsquo;ll confirm your availability.
+                </p>
+              </FadeUp>
+              <FadeUp delay={0.15}>
+                <p className="font-sans text-sm text-white/90 mb-10 max-w-lg">
+                  NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
+                </p>
+              </FadeUp>
 
-          {submitted ? (
-            <FadeUp>
-              <div className="max-w-lg p-8 border border-taupe/15">
-                <p className="font-serif text-2xl text-white mb-3">
-                  Thank you.
-                </p>
-                <p className="font-sans text-white/90 text-sm">
-                  We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
-                  <a
-                    href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white border-b border-white/40 hover:border-white transition-colors"
+              {submitted ? (
+                <FadeUp>
+                  <div className="max-w-lg p-8 border border-taupe/15">
+                    <p className="font-serif text-2xl text-white mb-3">
+                      Thank you.
+                    </p>
+                    <p className="font-sans text-white/90 text-sm">
+                      We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
+                      <a
+                        href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white border-b border-white/40 hover:border-white transition-colors"
+                      >
+                        WhatsApp us directly at +91 70347 26402
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </FadeUp>
+              ) : (
+                <FadeUp delay={0.2}>
+                  <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="max-w-2xl space-y-6"
                   >
-                    WhatsApp us directly at +91 70347 26402
-                  </a>
-                  .
-                </p>
-              </div>
-            </FadeUp>
-          ) : (
-            <FadeUp delay={0.2}>
-              <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="max-w-2xl space-y-6"
-              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
@@ -509,6 +512,24 @@ export default function BridalPage() {
               </form>
             </FadeUp>
           )}
+            </div>
+            
+            {/* Image */}
+            <div className="lg:col-span-5">
+              <FadeUp className="lg:col-start-9">
+                <div className="w-full aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Book a premium bridal makeup consultation at NIXTUDIO Pala Kerala"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    quality={80}
+                  />
+                </div>
+              </FadeUp>
+            </div>
+          </div>
         </div>
       </section>
     </>

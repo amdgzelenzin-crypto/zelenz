@@ -685,6 +685,48 @@ export default function Home() {
       {/* ──── 5.5. LATEST FROM THE JOURNAL ──── */}
       <section className="section-padding bg-white">
         <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 clamp(24px, 5vw, 48px)" }}>
+          <FadeUp>
+            <div style={{ position: "relative", height: "300px", borderRadius: "24px", overflow: "hidden", marginBottom: "60px" }}>
+              <Image
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+                alt="Beauty journal and makeup trends editorial"
+                fill
+                className="object-cover"
+                sizes="100vw"
+                quality={80}
+              />
+              <div style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(to bottom, rgba(61,26,31,0.1) 0%, rgba(61,26,31,0.3) 100%)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}>
+                <div style={{ textAlign: "center", color: "#FFFFFF" }}>
+                  <h2 style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontSize: "clamp(36px, 6vw, 64px)",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    marginBottom: "16px"
+                  }}>
+                    Beauty Insights
+                  </h2>
+                  <p style={{
+                    fontFamily: "var(--font-sans), sans-serif",
+                    fontSize: "16px",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                    opacity: 0.9
+                  }}>
+                    Expert Tips & Latest Trends
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
+          
           <header style={{ marginBottom: "60px" }}>
             <FadeUp>
               <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.25em", color: "#B76E79", textTransform: "uppercase", marginBottom: "12px" }}>
