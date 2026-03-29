@@ -87,7 +87,7 @@ export default function BridalPage() {
             Bridal Makeup Studio in Pala, Kerala — NIXTUDIO by Nikita Liby
           </h1>
           <FadeUp>
-            <h2 className="font-serif font-light text-white text-5xl lg:text-7xl mb-3">
+            <h2 className="font-serif font-light text-white text-5xl lg:text-7xl mb-3" style={{ color: "#FFFFFF" }}>
               The Bridal Edit
             </h2>
           </FadeUp>
@@ -264,7 +264,7 @@ export default function BridalPage() {
                 {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
                   <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
                     <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#FFFFFF" }}>{item}</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -288,7 +288,7 @@ export default function BridalPage() {
                 {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
                   <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
                     <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#FFFFFF" }}>{item}</span>
+                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
                   </li>
                 ))}
               </ul>
