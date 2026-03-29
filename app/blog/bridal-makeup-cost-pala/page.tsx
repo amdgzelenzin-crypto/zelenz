@@ -62,17 +62,17 @@ export default function BridalMakeupCostPalaBlog() {
     <>
       <JsonLd data={articleSchema} />
       
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
         {/* Hero Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold">
                 2026 Complete Pricing Guide • Local Expert Analysis
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Bridal Makeup Cost <span className="text-blue-600">Pala 2026</span>: Complete Price Guide
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>
+              Bridal Makeup Cost <span className="text-[#D4A055]">Pala 2026</span>: Complete Price Guide
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Everything you need to know about wedding makeup pricing in Pala, Kerala. 
@@ -82,35 +82,35 @@ export default function BridalMakeupCostPalaBlog() {
             {/* Article Meta */}
             <div className="flex items-center justify-center gap-6 text-gray-600 mb-12">
               <div className="flex items-center">
-                <span className="text-blue-600 mr-2">📅</span>
+                <span className="text-[#D4A055] mr-2">📅</span>
                 <span>Updated March 30, 2026</span>
               </div>
               <div className="flex items-center">
-                <span className="text-blue-600 mr-2">✍️</span>
+                <span className="text-[#D4A055] mr-2">✍️</span>
                 <span>By Nikita Liby</span>
               </div>
               <div className="flex items-center">
-                <span className="text-blue-600 mr-2">⏱️</span>
+                <span className="text-[#D4A055] mr-2">⏱️</span>
                 <span>8 min read</span>
               </div>
             </div>
             
             {/* Quick Summary Box */}
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-              <h2 className="text-2xl font-bold mb-4">💰 Quick Price Overview</h2>
+            <div className="bg-pink-50 border-2 border-pink-200 rounded-xl p-6 mb-12">
+              <h2 className="text-2xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>💰 Quick Price Overview</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-blue-600 mb-2">Basic Package</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">Basic Package</div>
                   <div className="text-2xl font-bold mb-1">₹14,500</div>
                   <div className="text-sm text-gray-600">Essential makeup services</div>
                 </div>
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-blue-600 mb-2">HD Makeup</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">HD Makeup</div>
                   <div className="text-2xl font-bold mb-1">₹22,000-27,500</div>
                   <div className="text-sm text-gray-600">Premium HD application</div>
                 </div>
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-blue-600 mb-2">Airbrush Makeup</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">Airbrush Makeup</div>
                   <div className="text-2xl font-bold mb-1">₹25,000-32,000</div>
                   <div className="text-sm text-gray-600">Advanced airbrush system</div>
                 </div>
@@ -123,7 +123,7 @@ export default function BridalMakeupCostPalaBlog() {
         <article className="max-w-4xl mx-auto px-4 pb-16">
           {/* Introduction */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">Understanding Bridal Makeup Costs in Pala</h2>
+            <h2 className="text-3xl font-bold mb-6" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Understanding Bridal Makeup Costs in Pala</h2>
             <p className="text-gray-700 mb-4">
               When planning your wedding in Pala, makeup costs can be confusing. 
               After working with local brides for 6+ years, I've noticed most questions about pricing 
@@ -142,13 +142,13 @@ export default function BridalMakeupCostPalaBlog() {
 
           {/* Detailed Pricing Breakdown */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">Complete Wedding Makeup Price Breakdown</h2>
+            <h2 className="text-3xl font-bold mb-6" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Complete Wedding Makeup Price Breakdown</h2>
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-blue-600 text-white">
+                    <tr className="bg-[#D4A055] text-white">
                       <th className="p-4 text-left">Package Type</th>
                       <th className="p-4 text-center">Price Range</th>
                       <th className="p-4 text-center">Duration</th>
@@ -195,7 +195,7 @@ export default function BridalMakeupCostPalaBlog() {
             
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-blue-600">Basic Package (₹14,500 - ₹18,000)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Basic Package (₹14,500 - ₹18,000)</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Pre-makeup consultation (1 session)</li>
                   <li>• Wedding day makeup application</li>
@@ -206,7 +206,7 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
               
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-blue-600">HD Makeup Package (₹22,000 - ₹27,500)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">HD Makeup Package (₹22,000 - ₹27,500)</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• 2 Pre-makeup trial sessions</li>
                   <li>• HD makeup application</li>
@@ -219,7 +219,7 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
               
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-blue-600">Airbrush Package (₹25,000 - ₹32,000)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Airbrush Package (₹25,000 - ₹32,000)</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• 2 Pre-makeup trial sessions</li>
                   <li>• Airbrush makeup application</li>
@@ -233,7 +233,7 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
               
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-blue-600">Luxury Package (₹35,000 - ₹45,000)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Luxury Package (₹35,000 - ₹45,000)</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• 3 Pre-makeup trial sessions</li>
                   <li>• Engagement + Wedding + Reception makeup</li>
@@ -342,8 +342,8 @@ export default function BridalMakeupCostPalaBlog() {
               </div>
             </div>
             
-            <div className="bg-blue-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4 text-blue-800">💰 Value vs Price</h3>
+            <div className="bg-pink-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 text-[#B76E79]">💰 Value vs Price</h3>
               <p className="text-gray-700 mb-4">
                 Your wedding photos will last forever. Here's what spending a bit more on makeup actually gets you:
               </p>
@@ -386,25 +386,25 @@ export default function BridalMakeupCostPalaBlog() {
             <h3 className="text-2xl font-bold mb-4">Cost-Saving Tips Without Compromising Quality</h3>
             <div className="space-y-4">
               <div className="flex items-start">
-                <span className="text-blue-600 mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">💡</span>
                 <div>
                   <strong>Book Early:</strong> Early bookings often come with better pricing and more availability.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">💡</span>
                 <div>
                   <strong>Package Deals:</strong> Ask for family package discounts when booking multiple services.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">💡</span>
                 <div>
                   <strong>Off-Season Discounts:</strong> Some artists offer discounts for non-peak wedding months.
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-3">💡</span>
+                <span className="text-[#B76E79] mr-3">💡</span>
                 <div>
                   <strong>Weekday Weddings:</strong> Consider weekday weddings for potential cost savings.
                 </div>
@@ -515,8 +515,8 @@ export default function BridalMakeupCostPalaBlog() {
               a lifetime, and professional makeup is an investment in those memories.
             </p>
             
-            <div className="bg-blue-50 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold mb-4">🎯 Final Recommendations</h3>
+            <div className="bg-pink-50 rounded-xl p-6 mb-8">
+              <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>🎯 Final Recommendations</h3>
               <ol className="space-y-3 text-gray-700">
                 <li><strong>Book 6-8 months in advance</strong> for peak season dates</li>
                 <li><strong>Choose HD or Airbrush makeup</strong> for best results in Kerala climate</li>
@@ -536,14 +536,14 @@ export default function BridalMakeupCostPalaBlog() {
           </section>
 
           {/* CTA Section */}
-          <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+          <section className="bg-gradient-to-r from-[#D4A055] to-[#B76E79] rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Book Your Wedding Makeup?</h2>
             <p className="text-xl mb-6">Get a personalized quote for your wedding day</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link 
                 href="/bridal-makeup-pala"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
+                className="bg-white text-[#D4A055] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
               >
                 View Our Packages
               </Link>
