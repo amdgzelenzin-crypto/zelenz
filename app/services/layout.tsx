@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Salon in Pala, Kerala — Hair, Nails & Spa | NIXTUDIO",
     description:
       "Salon in Pala, Kerala — NIXTUDIO. Hair, nails, facials, spa, waxing & more by Nikita Liby. Walk-ins welcome.",
-    url: "https://nixtudio.in/services",
+    url: "https://www.nixtudio.in/services",
     images: [{ url: "/og/services-og.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og/services-og.jpg"],
   },
   alternates: {
-    canonical: "https://nixtudio.in/services",
+    canonical: "https://www.nixtudio.in/services",
   },
 };
 

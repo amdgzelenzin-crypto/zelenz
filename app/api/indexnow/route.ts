@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const INDEX_NOW_KEY = "a8f3b2e1c9d4f7a6b5e2d1c8f3a9b7e4";
-const HOST = "nixtudio.in";
+const HOST = "www.nixtudio.in";
 
 const urls = [
   `https://${HOST}`,
@@ -10,6 +10,11 @@ const urls = [
   `https://${HOST}/services`,
   `https://${HOST}/about`,
   `https://${HOST}/contact`,
+  `https://${HOST}/gallery`,
+  `https://${HOST}/blog`,
+  `https://${HOST}/blog/hd-vs-airbrush-makeup-kerala-weddings`,
+  `https://${HOST}/blog/christian-bridal-makeup-trends-2025`,
+  `https://${HOST}/blog/pre-wedding-skin-prep-humid-kerala`,
 ];
 
 export async function POST() {

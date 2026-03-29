@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     title: 'About Nikita Liby — Lead Bridal Makeup Artist, Pala Kerala | NIXTUDIO',
     description:
       'Meet Nikita Liby — the artist behind every NIXTUDIO bridal look. Exclusive, one-artist bridal service in Pala, Kottayam, Kerala.',
-    url: 'https://nixtudio.in/about',
+    url: 'https://www.nixtudio.in/about',
     type: 'profile',
   },
   alternates: {
-    canonical: 'https://nixtudio.in/about',
+    canonical: 'https://www.nixtudio.in/about',
   },
 }
 

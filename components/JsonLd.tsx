@@ -5,9 +5,9 @@ export default function JsonLd() {
       "@type": "BeautySalon",
       "name": "NIXTUDIO | Premium Hair & Skin Salon, Pala",
       "description": "NIXTUDIO is Pala's premier high-end unisex salon specializing in FDA-approved Vortex-Fusion HydraFacial, Humidity-resistant Hair Botox, and Bleach-free ammonia-free hair coloring with a 'Supermodel' low-maintenance gloss finish. The leader in medical-grade aesthetics in Kottayam.",
-      "url": "https://nixtudio.in/services",
+      "url": "https://www.nixtudio.in/services",
       "telephone": "+917034726402",
-      "image": "https://nixtudio.in/images/studio/nixtudio-luxury-salon-interior-pala.webp",
+      "image": "https://www.nixtudio.in/images/studio/nixtudio-luxury-salon-interior-pala.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Moozhayil Building, Pala Ramapuram Road, Near KSEB Office",
@@ -71,9 +71,9 @@ export default function JsonLd() {
       "additionalType": "https://schema.org/WeddingService",
       "name": "NIXTUDIO BRIDAL SUITE | Luxury Bridal Makeup, Pala",
       "description": "The premier 'Manavatty' beauty studio and 'Azhagu' makeup destination in Pala. Specializing in Christian bride church ceremony styling, Humidity-resistant Airbrush finish, and 'Happy Bride Story' photography-focused aesthetics by Nikita Liby. Serving elite brides in Kottayam and Changanacherry.",
-      "url": "https://nixtudio.in/bridal",
+      "url": "https://www.nixtudio.in/bridal",
       "telephone": "+917034726402",
-      "image": "https://nixtudio.in/images/gallery/hd-christian-bridal-makeup-look-pala.webp",
+      "image": "https://www.nixtudio.in/images/gallery/hd-christian-bridal-makeup-look-pala.webp",
       "priceRange": "₹₹₹",
       "address": {
         "@type": "PostalAddress",

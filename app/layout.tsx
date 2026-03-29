@@ -80,14 +80,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'NIXTUDIO' }],
   creator: 'NIXTUDIO',
-  metadataBase: new URL('https://nixtudio.in'),
+  metadataBase: new URL('https://www.nixtudio.in'),
   alternates: {
-    canonical: 'https://nixtudio.in',
+    canonical: 'https://www.nixtudio.in',
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: "https://nixtudio.in",
+    url: "https://www.nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
     title: "NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala",
     description:

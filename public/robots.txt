@@ -1,9 +1,10 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
 
 # Host
-Host: https://nixtudio.in
+Host: https://www.nixtudio.in
 
 # Sitemaps
-Sitemap: https://nixtudio.in/sitemap.xml
+Sitemap: https://www.nixtudio.in/sitemap.xml

@@ -78,14 +78,14 @@ export default function AboutPage() {
             "@type": "Person",
             name: "Nikita Liby",
             jobTitle: "Lead Bridal Makeup Artist & Founder",
-            url: "https://nixtudio.in/about",
-            image: "https://nixtudio.in/images/nikita-portrait.jpg",
+            url: "https://www.nixtudio.in/about",
+            image: "https://www.nixtudio.in/images/nikita-portrait.jpg",
             description:
               "Nikita Liby is the founder and lead bridal makeup artist at NIXTUDIO in Pala, Kerala. With 6+ years of experience, she personally handles every bridal appointment — from engagement to reception.",
             affiliation: {
               "@type": "BeautySalon",
               name: "NIXTUDIO",
-              url: "https://nixtudio.in",
+              url: "https://www.nixtudio.in",
             },
             address: {
               "@type": "PostalAddress",
