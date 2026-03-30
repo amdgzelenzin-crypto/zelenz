@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { twMerge } from 'tailwind-merge';
 
 interface FancyTextProps {
   children: string;
@@ -22,7 +21,7 @@ export default function FancyText({
 }: FancyTextProps) {
   return (
     <motion.div
-      className={twMerge('relative inline-block', className)}
+      className={`relative inline-block ${className}`}
       initial="hidden"
       animate="visible"
       transition={{ staggerChildren: stagger, delayChildren: delay }}
@@ -30,7 +29,7 @@ export default function FancyText({
       {children.split('').map((char, i) => (
         <motion.span
           key={i}
-          className={twMerge('inline-block', fillClassName)}
+          className={`inline-block ${fillClassName}`}
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
