@@ -113,6 +113,28 @@ export default function BridalPage() {
         <div className="absolute bottom-0 left-0 w-full h-1 z-50 md:hidden bg-[linear-gradient(90deg,transparent_0%,#D4A055_20%,#F9C8C8_50%,#D4A055_80%,transparent_100%)]" />
       </section>
 
+      {/* ──────── OUR PHILOSOPHY ──────── */}
+      <section className="section-padding section-white">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-12 max-w-4xl">
+          <FadeUp>
+            <h2 className="font-serif font-light text-espresso text-3xl lg:text-4xl mb-6">
+              Our Philosophy
+            </h2>
+            <div className="space-y-4 font-sans text-espresso/70 leading-relaxed">
+              <p>
+                Every bride is unique, and so is her vision for her big day. At Nixtudio, we believe that bridal makeup is an art that goes far beyond regular party makeup. Each look is carefully curated to reflect the bride's personality, preferences, and overall wedding aesthetic, whether it's a simple makeup, nude makeup, heavy glam, no-makeup look, dewy finish, or a bold statement style.
+              </p>
+              <p>
+                Once you book with us, you'll receive a personalized pre-bridal guide—a set of notes detailing everything you can do to prepare yourself for your big day, along with essential day-of-function instructions.
+              </p>
+              <p>
+                All bridal work is done exclusively by Nikita, assisted by her trained team. On the day of your function, we begin with a detailed consultation to understand your preferences, demonstrating every step of the makeup process to ensure you feel confident and comfortable. For hair styling, we show multiple options and finalize the perfect look based on your outfit, features, and our suggestions.
+              </p>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ──────── POSITIONING STATEMENT ──────── */}
       <section className="section-padding section-white texture-grain">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">

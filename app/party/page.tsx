@@ -33,7 +33,7 @@ const individualServices = [
   { name: "Hair Extensions", price: "₹2,000" },
   { name: "Lashes / Lens", price: "₹500 per pair" },
   { name: "Simple Eye Makeup Only", price: "₹1,000" },
-  { name: "Advanced Eye Makeup (e.g. Smokey)", price: "₹1,500" },
+  { name: "Advanced Eye Makeup (e.g. Smokey)", price: "₹1,500", note: "Not included in any package" },
 ];
 
 export default function PartyPage() {
@@ -76,12 +76,22 @@ export default function PartyPage() {
           <FadeUp>
             <div style={{ borderLeft: "3px solid #C4903A", paddingLeft: "24px" }}>
               <h2 className="font-serif font-light text-2xl lg:text-3xl mb-6" style={{ color: "#3D1520" }}>
-                A note before you book.
+                Important Disclaimer
               </h2>
               <div className="space-y-4 font-sans" style={{ color: "#5C2D3A" }}>
-                <p>Party makeup and bridal makeup are fundamentally different services. If your event is an engagement, wedding, or wedding reception &mdash; please visit our Bridal page. Party makeup is not offered as a substitute for bridal work, regardless of guest count.</p>
-                <p>Party packages are available for: wedding-eve functions, Haldi, Sangeet, birthday celebrations, professional events, and guest/family members.</p>
+                <p><strong>NOT FOR BRIDES:</strong> Party makeup services are strictly not applicable for bridal events (Engagements/Weddings).</p>
+                <p>Bridal makeup requires specialized products, expertise, and time. Booking party makeup for a bridal event is not allowed regardless of guest count.</p>
+                <p><strong>Exceptions:</strong> Party makeup can be booked for wedding-eve, Haldi, Sangeet, or guest makeup.</p>
+                <p><strong>Booking requires signing a confirmation that the client is not a bride.</strong></p>
               </div>
+              
+              <div className="mt-6 p-4 bg-rose/10 rounded-lg">
+                <p className="text-sm font-medium text-rose/80 mb-2">Note on Pricing</p>
+                <p className="text-sm font-sans text-rose/70">
+                  "Simple" makeup does not mean "less" makeup. It refers to a soft, minimal look, but still involves the same high-quality products, time, and skill as a glam look.
+                </p>
+              </div>
+              
               <Link href="/bridal" className="inline-flex items-center gap-2 text-sm font-sans mt-6 transition-colors duration-300" style={{ color: "#C4903A" }}>
                 Booking a bridal event? →
               </Link>
@@ -141,7 +151,14 @@ export default function PartyPage() {
             <div className="max-w-2xl">
               {individualServices.map((s) => (
                 <div key={s.name} className="service-row">
-                  <span className="service-row-name">{s.name}</span>
+                  <div>
+                    <span className="service-row-name">{s.name}</span>
+                    {s.note && (
+                      <span className="block font-sans text-xs text-taupe/60 mt-0.5">
+                        {s.note}
+                      </span>
+                    )}
+                  </div>
                   <span className="service-row-price">{s.price}</span>
                 </div>
               ))}

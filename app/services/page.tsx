@@ -25,7 +25,7 @@ const categories = [
 
 const makeupServices = [
   { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Starting at ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Humidity-resistant Airbrush 'Manavatty' aesthetics. Ask about our 'Happy Bride Story' sessions." },
-  { name: "Engagement / Reception Styling", price: "From ₹14,500", note: "Nuanced 'Azhagu' looks optimized for", link: { href: '/bridal-makeup-pala', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
+  { name: "Engagement / Reception Styling", price: "₹27,500 - ₹32,500", note: "HD Makeup (₹27,500) or Airbrush (₹32,500). Nuanced 'Azhagu' looks optimized for", link: { href: '/bridal-makeup-pala', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
   { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
   { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
   { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
@@ -589,6 +589,31 @@ export default function SalonPage() {
                   <strong>NIXTUDIO is <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala&rsquo;s</Link> premier high-end unisex salon</strong>, specializing in FDA-approved Vortex-Fusion HydraFacial, humidity-resistant Hair Botox, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
                 </p>
               </FadeUp>
+              
+              {/* Salon Experience Details */}
+              <FadeUp delay={0.2}>
+                <div className="mt-6 p-4 bg-white/80 rounded-xl border border-rose/20 backdrop-blur-sm">
+                  <p className="text-xs font-sans font-medium text-rose mb-3">Experience Luxury (#justNIXit)</p>
+                  <div className="space-y-2 text-xs font-sans text-espresso/70">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose rounded-full"></div>
+                      <span><strong>Hygiene:</strong> Equipment is either single-use or thoroughly sanitized</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose rounded-full"></div>
+                      <span><strong>Appointments:</strong> Prior scheduling recommended</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose rounded-full"></div>
+                      <span><strong>Complimentary:</strong> Food & Drinks menu for 2+ hour services</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-rose rounded-full"></div>
+                      <span><strong>Complimentary:</strong> Tea/Coffee/Juice on all services</span>
+                    </div>
+                  </div>
+                </div>
+              </FadeUp>
             </div>
             <FadeUp className="lg:col-span-7" delay={0.15}>
               <div 
@@ -651,12 +676,122 @@ export default function SalonPage() {
             <div className="max-w-2xl">
               <PriceList items={makeupServices} />
             </div>
-            <div className="mt-8">
-              <Link href="/bridal" className="text-sm font-sans text-[#B76E79] border-b border-[#B76E79]/30 hover:border-[#B76E79] transition-colors">
-                View Detailed Bridal Packages →
-              </Link>
+          </FadeUp>
+          
+          {/* Premium Brands Section */}
+          <FadeUp delay={0.2}>
+            <div className="mt-12 p-6 bg-white rounded-2xl border border-taupe/15" style={{ background: "linear-gradient(135deg, #FFFFFF 0%, #FFF8F8 100%)" }}>
+              <p className="label-caps mb-4">Premium Brands We Use</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm font-sans text-espresso/70">
+                <div>• Gucci</div>
+                <div>• Chanel</div>
+                <div>• Dior</div>
+                <div>• Charlotte Tilbury</div>
+                <div>• Givenchy</div>
+                <div>• NARS</div>
+                <div>• Fenty Beauty</div>
+                <div>• Urban Decay</div>
+                <div>• Too Faced</div>
+                <div>• Huda Beauty</div>
+                <div>• Makeup by Mario</div>
+                <div>• Pat McGrath</div>
+                <div>• MAC</div>
+                <div>• Laura Mercier</div>
+              </div>
             </div>
           </FadeUp>
+
+          {/* Bridal Package Details */}
+          <FadeUp delay={0.3}>
+            <div className="mt-8 p-6 bg-rose/5 rounded-2xl border border-rose/20">
+              <p className="label-caps mb-4">What's Included in Bridal Packages</p>
+              <div className="space-y-3 text-sm font-sans text-espresso/70">
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Makeup with detailed skin prep</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Professional hairstyling</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Saree draping (with/without pre-pleating)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Lashes & Lens</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Outfit setting</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose">•</span>
+                  <span>Hair extensions (if needed)</span>
+                </div>
+              </div>
+              <p className="text-xs font-sans text-taupe/60 mt-4">
+                All prices inclusive of 5% GST
+              </p>
+            </div>
+          </FadeUp>
+
+          {/* Booking Information */}
+          <FadeUp delay={0.4}>
+            <div className="mt-8 p-6 bg-blue/5 rounded-2xl border border-blue/20">
+              <p className="label-caps mb-4">Bridal Booking Information</p>
+              <div className="space-y-3 text-sm font-sans text-espresso/70">
+                <div className="flex items-start gap-2">
+                  <span className="text-blue">•</span>
+                  <span><strong>How to book:</strong> Ask for detailed Terms & Conditions and confirm your slot to block dates</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-blue">•</span>
+                  <span><strong>Changes:</strong> Changes in slot or venue are subject to availability</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-blue">•</span>
+                  <span><strong>Trials:</strong> Please note there will be no trials for makeup and hair</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-blue">•</span>
+                  <span><strong>Guest Makeup:</strong> Additional makeup/hair for family or guests is charged separately under the Party Makeup catalogue</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-blue">•</span>
+                  <span><strong>Guest Requirements:</strong> All guest requirements must be informed at the time of booking</span>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
+
+          {/* What We Provide */}
+          <FadeUp delay={0.5}>
+            <div className="mt-8 p-6 bg-green/5 rounded-2xl border border-green/20">
+              <p className="label-caps mb-4">What We Provide for Brides</p>
+              <div className="space-y-3 text-sm font-sans text-espresso/70">
+                <div className="flex items-start gap-2">
+                  <span className="text-green">•</span>
+                  <span>Hair extensions, lashes, lenses, slides, pins, bun, nets, bands, and hairpins</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-green">•</span>
+                  <span>Note: Flowers for hair are not provided</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-green">•</span>
+                  <span>Emergency Hair Accessories: Limited availability at extra cost</span>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
+
+          <div className="mt-8">
+            <Link href="/bridal" className="text-sm font-sans text-[#B76E79] border-b border-[#B76E79]/30 hover:border-[#B76E79] transition-colors">
+              View Detailed Bridal Packages →
+            </Link>
+          </div>
         </section>
 
         {/* HAIRCUT & STYLING */}
