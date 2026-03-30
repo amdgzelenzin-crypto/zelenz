@@ -269,7 +269,7 @@ export default function BridalMakeupPricePala() {
   return (
     <>
       <JsonLd data={structuredData} />
-      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white" style={{ fontFamily: "var(--font-body), Georgia, serif" }}>
         {/* Hero Section */}
         <section className="relative h-[600px] overflow-hidden">
           <div className="absolute inset-0">
@@ -284,10 +284,16 @@ export default function BridalMakeupPricePala() {
           </div>
           <div className="relative container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl text-white">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 
+                className="text-5xl md:text-6xl font-bold mb-6"
+                style={{ fontFamily: "var(--font-display), Georgia, serif", lineHeight: 1.2 }}
+              >
                 Bridal Makeup Price Pala
               </h1>
-              <p className="text-xl md:text-2xl mb-8">
+              <p 
+                className="text-2xl md:text-3xl mb-8 leading-relaxed"
+                style={{ fontFamily: "var(--font-body), Georgia, serif" }}
+              >
                 Transparent pricing with no hidden costs. 
                 Premium quality at the best value in Kerala.
               </p>
@@ -313,10 +319,16 @@ export default function BridalMakeupPricePala() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-green-100 p-8 rounded-xl max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4 text-green-800">
+              <h2 
+                className="text-3xl font-bold mb-4 text-green-800"
+                style={{ fontFamily: "var(--font-display), Georgia, serif" }}
+              >
                 Price Match Guarantee
               </h2>
-              <p className="text-xl text-green-700">
+              <p 
+                className="text-2xl text-green-700 leading-relaxed"
+                style={{ fontFamily: "var(--font-body), Georgia, serif" }}
+              >
                 Found comparable bridal makeup at a lower price? We'll match it! 
                 Plus, you'll get our premium products and 16+ hour lasting guarantee.
               </p>
@@ -328,10 +340,16 @@ export default function BridalMakeupPricePala() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">
+              <h2 
+                className="text-4xl font-bold mb-6 text-gray-900"
+                style={{ fontFamily: "var(--font-display), Georgia, serif" }}
+              >
                 Bridal Makeup Packages Pala
               </h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p 
+                className="text-2xl text-gray-700 leading-relaxed"
+                style={{ fontFamily: "var(--font-body), Georgia, serif" }}
+              >
                 Choose from our carefully designed bridal makeup price pala packages. 
                 Each offers exceptional value with premium products and professional service.
               </p>
@@ -341,21 +359,46 @@ export default function BridalMakeupPricePala() {
               {packages.map((pkg, index) => (
                 <div key={index} className={`bg-white p-8 rounded-xl shadow-lg ${pkg.popular ? 'ring-4 ring-green-500 scale-105' : ''}`}>
                   {pkg.popular && (
-                    <div className="bg-green-500 text-white text-center py-2 px-4 rounded-lg mb-4 font-bold">
+                    <div className="bg-green-500 text-white text-center py-2 px-4 rounded-lg mb-4 font-bold" style={{ fontFamily: "var(--font-sans), sans-serif" }}>
                       MOST POPULAR
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{pkg.name}</h3>
+                  <h3 
+                    className="text-2xl font-bold mb-2 text-gray-900"
+                    style={{ fontFamily: "var(--font-display), Georgia, serif" }}
+                  >
+                    {pkg.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-green-600">{pkg.price}</span>
-                    <span className="text-lg text-gray-500 line-through ml-2">{pkg.originalPrice}</span>
+                    <span 
+                      className="text-4xl font-bold text-green-600"
+                      style={{ fontFamily: "var(--font-sans), sans-serif" }}
+                    >
+                      {pkg.price}
+                    </span>
+                    <span 
+                      className="text-lg text-gray-500 line-through ml-2"
+                      style={{ fontFamily: "var(--font-sans), sans-serif" }}
+                    >
+                      {pkg.originalPrice}
+                    </span>
                   </div>
-                  <p className="text-gray-700 mb-6">{pkg.description}</p>
+                  <p 
+                    className="text-lg text-gray-700 mb-6 leading-relaxed"
+                    style={{ fontFamily: "var(--font-body), Georgia, serif" }}
+                  >
+                    {pkg.description}
+                  </p>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         <span className="text-green-500 mr-2 mt-1">✓</span>
-                        <span className="text-gray-700">{feature}</span>
+                        <span 
+                          className="text-gray-700 text-base"
+                          style={{ fontFamily: "var(--font-body), Georgia, serif" }}
+                        >
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -366,6 +409,7 @@ export default function BridalMakeupPricePala() {
                         ? 'bg-green-600 hover:bg-green-700 text-white' 
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                     }`}
+                    style={{ fontFamily: "var(--font-sans), sans-serif" }}
                   >
                     Book This Package
                   </Link>
