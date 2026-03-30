@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import GuideDownloadForm from '@/components/GuideDownloadForm'
 import ScrollToFormButton from '@/components/ScrollToFormButton'
+import { FadeIn, PremiumBox, StaggerContainer, StaggerItem } from '@/components/ui/PremiumAnimations'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -76,41 +77,53 @@ export default function BridalSkinPrepGuide() {
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-rose/5 to-pink/5">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-rose/10 text-rose text-sm font-semibold rounded-full">
-                FREE DOWNLOAD • KERALA CLIMATE OPTIMIZED
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-serif text-espresso mb-6 leading-tight">
-              7-Day Bridal Skin<br/>Preparation Guide
-            </h1>
-            <p className="text-xl text-espresso/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-              The ultimate pre-bridal skincare routine designed specifically for Kerala's tropical climate. 
-              Expert tips from Nikita Liby to ensure your skin is perfectly prepped for flawless, humidity-resistant makeup.
-            </p>
+            <FadeIn delay={0.2}>
+              <div className="mb-6">
+                <span className="inline-block px-6 py-3 bg-gradient-to-r from-rose/10 to-pink/10 text-rose text-sm font-semibold rounded-full border border-rose/20">
+                  EXCLUSIVE DOWNLOAD • KERALA CLIMATE OPTIMIZED
+                </span>
+              </div>
+            </FadeIn>
             
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <div className="flex items-center gap-2 text-sm text-taupe">
-                <span className="w-2 h-2 bg-rose rounded-full"></span>
-                Kerala Climate Expert
-              </div>
-              <div className="flex items-center gap-2 text-sm text-taupe">
-                <span className="w-2 h-2 bg-rose rounded-full"></span>
-                500+ Brides Served
-              </div>
-              <div className="flex items-center gap-2 text-sm text-taupe">
-                <span className="w-2 h-2 bg-rose rounded-full"></span>
-                Instant Download
-              </div>
-            </div>
-
-            <div id="download-form" className="bg-white rounded-2xl shadow-xl p-8 max-w-md mx-auto">
-              <h3 className="text-lg font-semibold text-espresso mb-4">Download Your Free Guide</h3>
-              <GuideDownloadForm />
-              <p className="text-xs text-taupe text-center mt-4">
-                PDF Guide (2.3 MB) • No spam, unsubscribe anytime
+            <FadeIn delay={0.3}>
+              <h1 className="text-4xl md:text-5xl font-serif text-espresso mb-6 leading-tight">
+                7-Day Bridal Skin<br/>Preparation Guide
+              </h1>
+            </FadeIn>
+            
+            <FadeIn delay={0.4}>
+              <p className="text-xl text-espresso/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+                The ultimate pre-bridal skincare routine designed specifically for Kerala's tropical climate. 
+                Expert tips from Nikita Liby to ensure your skin is perfectly prepped for flawless, humidity-resistant makeup.
               </p>
-            </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.5}>
+              <div className="flex flex-wrap justify-center gap-8 mb-8">
+                <div className="flex items-center gap-3 text-sm text-taupe">
+                  <div className="w-3 h-3 bg-gradient-to-r from-rose to-pink rounded-full"></div>
+                  <span className="font-medium">Kerala Climate Expert</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-taupe">
+                  <div className="w-3 h-3 bg-gradient-to-r from-rose to-pink rounded-full"></div>
+                  <span className="font-medium">500+ Brides Served</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-taupe">
+                  <div className="w-3 h-3 bg-gradient-to-r from-rose to-pink rounded-full"></div>
+                  <span className="font-medium">Instant Download</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <PremiumBox className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto border border-rose/10">
+                <h3 className="text-lg font-semibold text-espresso mb-6">Request Your Exclusive Guide</h3>
+                <GuideDownloadForm />
+                <p className="text-xs text-taupe text-center mt-6">
+                  Premium PDF Guide (2.3 MB) • Personalized consultation available
+                </p>
+              </PremiumBox>
+            </FadeIn>
           </div>
         </section>
 

@@ -71,10 +71,11 @@ export default function GuideDownloadForm() {
         <input
           type="tel"
           name="whatsapp"
-          placeholder="WhatsApp Number (Optional)"
+          placeholder="WhatsApp Number"
           value={formData.whatsapp}
           onChange={handleChange}
           className="w-full p-3 border border-rose/20 rounded-lg focus:border-rose focus:outline-none"
+          required
         />
       </div>
       <div>
