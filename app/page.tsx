@@ -389,7 +389,7 @@ export default function Home() {
           <FadeUp delay={0.1}>
             <h1
               className="hero-title"
-              aria-label="NIXTUDIO — Pala's Premium Woman Salon & Bridal Artistry Studio by Nikita Liby. Best makeup artist in Kottayam offering HD and Airbrush bridal makeup services and premium beauty treatments."
+              aria-label="NIXTUDIO — Pala's #1 Destination for Luxury Bridal Artistry & Advanced Hair Care by Nikita Liby. Expert HD & Airbrush bridal makeup artist in Kottayam Kerala. Premium hair salon specializing in bleach-free balayage, keratin treatments, and luxury beauty services near Carmel Hospital Pala."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -400,9 +400,9 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              Pala's Premium Woman
+              Pala's #1 Destination for
               <br />
-              Salon & Bridal Artistry Studio
+              Luxury Bridal Artistry & Advanced Hair Care
             </h1>
           </FadeUp>
 
