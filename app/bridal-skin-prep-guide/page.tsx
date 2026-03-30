@@ -1,41 +1,15 @@
-import { Metadata } from 'next'
+'use client'
+
 import JsonLd from '@/components/JsonLd'
 import GuideDownloadForm from '@/components/GuideDownloadForm'
 import ScrollToFormButton from '@/components/ScrollToFormButton'
 import { FadeIn, PremiumBox, StaggerContainer, StaggerItem } from '@/components/ui/PremiumAnimations'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Gift, Quote, Calendar, Wind, Diamond, Sparkles, Leaf, Droplets } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Free 7-Day Bridal Skin Prep Guide | Kerala Wedding | NIXTUDIO',
-  description: 'Download our free 7-day bridal skin preparation guide designed for Kerala\'s tropical climate. Expert tips by Nikita Liby for flawless wedding makeup.',
-  keywords: [
-    'bridal skin prep guide',
-    'kerala wedding skin care',
-    '7 day bridal routine',
-    'pre-bridal home care',
-    'bridal skincare kerala',
-    'wedding prep guide',
-    'flawless bridal skin',
-    'nixtudio skin guide'
-  ],
-  openGraph: {
-    title: 'Free 7-Day Bridal Skin Prep Guide | Kerala Wedding | NIXTUDIO',
-    description: 'Download our free 7-day bridal skin preparation guide designed for Kerala\'s tropical climate.',
-    url: 'https://nixtudio.in/bridal-skin-prep-guide',
-    images: [{
-      url: '/images/bridal-skin-prep-guide.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'Bridal Skin Prep Guide - NIXTUDIO'
-    }]
-  },
-  alternates: {
-    canonical: 'https://nixtudio.in/bridal-skin-prep-guide',
-  },
-}
-
-const leadMagnetSchema = {
+const structuredData = {
   "@context": "https://schema.org",
   "@type": "DigitalDocument",
   "name": "7-Day Bridal Skin Preparation Guide",
@@ -71,7 +45,7 @@ const leadMagnetSchema = {
 export default function BridalSkinPrepGuide() {
   return (
     <>
-      <JsonLd data={leadMagnetSchema} />
+      <JsonLd data={structuredData} />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -179,7 +153,15 @@ export default function BridalSkinPrepGuide() {
               
               <div className="space-y-6">
                 <div className="bg-gradient-to-br from-rose/10 to-pink/10 p-6 rounded-xl">
-                  <h3 className="font-semibold text-espresso mb-4">🎁 Bonus Materials</h3>
+                  <div className="flex items-center gap-3 mb-4">
+                    <motion.div 
+                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-rose-50/50 border border-rose-100/50"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Gift className="w-5 h-5 text-rose-600" strokeWidth={1.5} />
+                    </motion.div>
+                    <h3 className="font-semibold text-espresso">Bonus Materials</h3>
+                  </div>
                   <ul className="space-y-2 text-sm text-taupe">
                     <li className="flex items-start gap-2">
                       <span className="text-rose">•</span>
@@ -205,7 +187,15 @@ export default function BridalSkinPrepGuide() {
                 </div>
                 
                 <div className="bg-blue/5 p-6 rounded-xl">
-                  <h3 className="font-semibold text-espresso mb-4">🌟 Expert Insights</h3>
+                  <div className="flex items-center gap-3 mb-4">
+                    <motion.div 
+                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50/50 border border-blue-100/50"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Quote className="w-5 h-5 text-blue-600" strokeWidth={1.5} />
+                    </motion.div>
+                    <h3 className="font-semibold text-espresso">Expert Insights</h3>
+                  </div>
                   <p className="text-taupe text-sm mb-3">
                     "After 500+ Kerala brides, I've identified the exact skincare protocol that works with our tropical climate, not against it."
                   </p>
@@ -374,15 +364,30 @@ export default function BridalSkinPrepGuide() {
             
             <div className="mt-12 flex justify-center gap-8 text-sm">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📥</span>
+                <motion.div 
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-rose-50/50 border border-rose-100/50"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Diamond className="w-4 h-4 text-rose-600" strokeWidth={1.5} />
+                </motion.div>
                 <span>Instant PDF Download</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📧</span>
+                <motion.div 
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-50/50 border border-blue-100/50"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Wind className="w-4 h-4 text-blue-600" strokeWidth={1.5} />
+                </motion.div>
                 <span>Email Support Included</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🌿</span>
+                <motion.div 
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-green-50/50 border border-green-100/50"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Leaf className="w-4 h-4 text-green-600" strokeWidth={1.5} />
+                </motion.div>
                 <span>Kerala Climate Tested</span>
               </div>
             </div>

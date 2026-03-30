@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Church, Building, Trees, Building2, Wind, Calendar, Gift, Diamond, Award, Quote } from 'lucide-react'
 
 interface CalculatorData {
   weddingDate: string
@@ -35,11 +37,11 @@ export default function BridalCalculator() {
   const [isCalculating, setIsCalculating] = useState(false)
 
   const venueTypes = [
-    { value: 'church', label: 'Christian Church', icon: '⛪' },
-    { value: 'temple', label: 'Hindu Temple', icon: '🛕' },
-    { value: 'mosque', label: 'Muslim Mosque', icon: '🕌' },
-    { value: 'outdoor', label: 'Outdoor/Backwater', icon: '🌴' },
-    { value: 'hall', label: 'Convention Hall', icon: '🏛️' }
+    { value: 'church', label: 'Christian Church', icon: Church },
+    { value: 'temple', label: 'Hindu Temple', icon: Building2 },
+    { value: 'mosque', label: 'Muslim Mosque', icon: Building },
+    { value: 'outdoor', label: 'Outdoor/Backwater', icon: Trees },
+    { value: 'hall', label: 'Convention Hall', icon: Building }
   ]
 
   const functionOptions = [
@@ -167,18 +169,25 @@ export default function BridalCalculator() {
             <h2 className="text-2xl font-serif text-espresso mb-6">Where is your venue?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {venueTypes.map((venue) => (
-                <button
-                  key={venue.value}
-                  onClick={() => setData({...data, venueType: venue.value})}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    data.venueType === venue.value 
-                      ? 'border-rose bg-rose/10' 
-                      : 'border-rose/20 hover:border-rose/40'
-                  }`}
-                >
-                  <div className="text-2xl mb-2">{venue.icon}</div>
-                  <div className="font-medium text-espresso">{venue.label}</div>
-                </button>
+                <motion.button
+                    key={venue.value}
+                    onClick={() => setData({...data, venueType: venue.value})}
+                    className={`p-4 rounded-lg border-2 transition-all ${
+                      data.venueType === venue.value 
+                        ? 'border-rose bg-rose/10' 
+                        : 'border-rose/20 hover:border-rose/40'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <motion.div 
+                      className="w-12 h-12 mx-auto mb-3 flex items-center justify-center rounded-lg bg-rose-50/50 border border-rose-100/50"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <venue.icon className="w-6 h-6 text-rose-600" strokeWidth={1.5} />
+                    </motion.div>
+                    <div className="font-medium text-espresso">{venue.label}</div>
+                  </motion.button>
               ))}
             </div>
             <div className="flex gap-4 mt-6">
@@ -267,7 +276,7 @@ export default function BridalCalculator() {
                 disabled={data.functions.length === 0 || isCalculating}
                 className="flex-1 bg-rose text-white py-3 rounded-lg font-semibold disabled:bg-gray-300 hover:bg-rose/90"
               >
-                {isCalculating ? 'Analyzing...' : 'Get My Recommendation 🎯'}
+                {isCalculating ? 'Analyzing...' : 'Get My Recommendation'}
               </button>
             </div>
           </div>
@@ -277,7 +286,15 @@ export default function BridalCalculator() {
         return (
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="text-center mb-8">
-              <div className="text-4xl mb-4">🎉</div>
+              <motion.div 
+                className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-rose-50/50 border border-rose-100/50"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Award className="w-8 h-8 text-rose-600" strokeWidth={1.5} />
+              </motion.div>
               <h2 className="text-3xl font-serif text-espresso mb-2">Your Personalized Recommendation</h2>
               <p className="text-taupe">AI-analyzed based on your Kerala wedding requirements</p>
             </div>
