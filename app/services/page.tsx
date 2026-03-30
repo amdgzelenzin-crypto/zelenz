@@ -240,7 +240,6 @@ const threadingServices = [
 const massageServices = [
   { name: "Head Oil Massage with Hair Wash", price: "₹1,200" },
   { name: "Head Oil Massage (25 mins)", price: "₹700" },
-  { name: "Leg Massage (20 mins)", price: "₹550" },
   { name: "Hand Massage (20 mins)", price: "₹400" },
   { name: "Leg & Hand Massage (30 mins)", price: "₹900" },
 ];
@@ -1118,16 +1117,15 @@ export default function SalonPage() {
       <section className="section-padding section-gradient-pink">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <h2 className="font-serif font-light text-white text-2xl lg:text-3xl mb-10">The NIXTUDIO experience.</h2>
+            <h2 className="font-serif font-light text-2xl lg:text-3xl mb-10" style={{ color: "#3D1520" }}>The NIXTUDIO experience.</h2>
           </FadeUp>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.12}>
             {[
               "Complimentary tea, coffee, or juice on all services.",
               "Complimentary food and drinks for services over 2 hours.",
-              "Complimentary 10-minute leg massage for services over 2 hours.",
             ].map((text) => (
               <StaggerItem key={text}>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>{text}</p>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: "#4E4247" }}>{text}</p>
               </StaggerItem>
             ))}
           </StaggerContainer>
