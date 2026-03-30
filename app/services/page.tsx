@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
+import FancyText from "@/components/ui/fancy-text";
+import { Gift, Sparkles, Heart, Star } from "lucide-react";
 
 /* ────────────────────────────────────────
    DATA
@@ -257,13 +260,21 @@ function PriceList({
 }) {
   return (
     <div className="space-y-0">
-      {items.map((s) => (
-        <div
+      {items.map((s, index) => (
+        <motion.div
           key={s.name}
-          className="service-row"
+          className="service-row group"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          whileHover={{ 
+            backgroundColor: "rgba(183,110,121,0.05)",
+            paddingLeft: "24px",
+            paddingRight: "24px"
+          }}
         >
           <div>
-            <span className="service-row-name">{s.name}</span>
+            <span className="service-row-name group-hover:text-rose transition-colors duration-300">{s.name}</span>
             {(s.note || s.link) && (
               <span className="block font-sans text-xs text-taupe/60 mt-0.5">
                 {s.note}
@@ -276,13 +287,23 @@ function PriceList({
               </span>
             )}
           </div>
-          <span className="service-row-price shrink-0">
+          <motion.span 
+            className="service-row-price shrink-0 group-hover:text-rose group-hover:scale-105 transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
+          >
             {s.price}
-          </span>
-        </div>
+          </motion.span>
+        </motion.div>
       ))}
       {note && (
-        <p className="text-xs font-sans text-taupe/60 mt-4">{note}</p>
+        <motion.p 
+          className="text-xs font-sans text-taupe/60 mt-4" 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: items.length * 0.1 + 0.2 }}
+        >
+          {note}
+        </motion.p>
       )}
     </div>
   );
@@ -572,18 +593,42 @@ export default function SalonPage() {
                 Salon in Pala, Kerala — Hair, Nails, Facials & Spa at NIXTUDIO
               </h1>
               <FadeUp>
-                <h2 className="font-serif font-light text-espresso text-4xl lg:text-5xl mb-4">
-                  Services
-                </h2>
+                <div className="mb-6">
+                  <FancyText
+                    className="font-serif font-light text-4xl lg:text-5xl leading-tight"
+                    fillClassName="text-espresso"
+                    stagger={0.05}
+                    duration={0.8}
+                    delay={0.1}
+                  >
+                    Services
+                  </FancyText>
+                </div>
               </FadeUp>
-              <FadeUp delay={0.1}>
-                <p className="font-sans text-espresso/60 mb-2">
-                  Hair · Nails · Facials · Makeup · Spa · Waxing
-                </p>
-                <p className="font-sans text-sm text-taupe">
+              <FadeUp delay={0.2}>
+                <motion.div 
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-rose/10 rounded-full border border-rose/20 mb-4"
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(183,110,121,0.2)" }}
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                >
+                  <motion.div
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  >
+                    <Sparkles className="w-4 h-4 text-rose" />
+                  </motion.div>
+                  <span className="font-sans text-sm text-espresso/70">
+                    Hair · Nails · Facials · Makeup · Spa · Waxing
+                  </span>
+                </motion.div>
+              </FadeUp>
+              <FadeUp delay={0.3}>
+                <p className="font-sans text-sm text-taupe mb-6">
                   Appointment recommended. Walk-ins welcome based on availability.
                 </p>
-                {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
+              </FadeUp>
+              {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
+              <FadeUp>
                 <p className="font-sans text-sm text-espresso/80 mt-6 max-w-lg leading-relaxed">
                   <strong>NIXTUDIO is <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala&rsquo;s</Link> premier high-end unisex salon</strong>, specializing in FDA-approved Vortex-Fusion HydraFacial, humidity-resistant Hair Botox, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
                 </p>
@@ -679,61 +724,106 @@ export default function SalonPage() {
           
           {/* Premium Brands Section */}
           <FadeUp delay={0.2}>
-            <div className="mt-12 p-6 bg-white rounded-2xl border border-taupe/15" style={{ background: "linear-gradient(135deg, #FFFFFF 0%, #FFF8F8 100%)" }}>
-              <p className="label-caps mb-4">Premium Brands We Use</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm font-sans text-espresso/70">
-                <div>• Gucci</div>
-                <div>• Chanel</div>
-                <div>• Dior</div>
-                <div>• Charlotte Tilbury</div>
-                <div>• Givenchy</div>
-                <div>• NARS</div>
-                <div>• Fenty Beauty</div>
-                <div>• Urban Decay</div>
-                <div>• Too Faced</div>
-                <div>• Huda Beauty</div>
-                <div>• Makeup by Mario</div>
-                <div>• Pat McGrath</div>
-                <div>• MAC</div>
-                <div>• Laura Mercier</div>
+            <motion.div 
+              className="mt-12 p-6 bg-white rounded-2xl border border-taupe/15 shadow-lg" 
+              style={{ background: "linear-gradient(135deg, #FFFFFF 0%, #FFF8F8 100%)" }}
+              whileHover={{ 
+                boxShadow: "0 8px 32px rgba(183,110,121,0.15)",
+                y: -2
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <motion.div
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-rose-50/50 border border-rose-100/50"
+                  whileHover={{ scale: 1.05, rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Star className="w-5 h-5 text-rose" strokeWidth={1.5} />
+                </motion.div>
+                <p className="label-caps mb-0">Premium Brands We Use</p>
               </div>
-            </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm font-sans text-espresso/70">
+                {[
+                  "Gucci", "Chanel", "Dior", "Charlotte Tilbury",
+                  "Givenchy", "NARS", "Fenty Beauty", "Urban Decay",
+                  "Too Faced", "Huda Beauty", "Makeup by Mario", "Pat McGrath",
+                  "MAC", "Laura Mercier"
+                ].map((brand, index) => (
+                  <motion.div
+                    key={brand}
+                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-rose/5 transition-colors cursor-default"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 + index * 0.05, duration: 0.4 }}
+                    whileHover={{ 
+                      backgroundColor: "rgba(183,110,121,0.1)",
+                      scale: 1.05
+                    }}
+                  >
+                    <div className="w-2 h-2 bg-gradient-to-r from-rose to-pink rounded-full"></div>
+                    <span>{brand}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </FadeUp>
 
           {/* Bridal Package Details */}
           <FadeUp delay={0.3}>
-            <div className="mt-8 p-6 bg-rose/5 rounded-2xl border border-rose/20">
-              <p className="label-caps mb-4">What's Included in Bridal Packages</p>
-              <div className="space-y-3 text-sm font-sans text-espresso/70">
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Makeup with detailed skin prep</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Professional hairstyling</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Saree draping (with/without pre-pleating)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Lashes & Lens</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Outfit setting</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose">•</span>
-                  <span>Hair extensions (if needed)</span>
-                </div>
+            <motion.div 
+              className="mt-8 p-6 bg-rose/5 rounded-2xl border border-rose/20"
+              whileHover={{ 
+                backgroundColor: "rgba(183,110,121,0.1)",
+                scale: 1.02
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <motion.div
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-rose-50/50 border border-rose-100/50"
+                  whileHover={{ scale: 1.05, rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Gift className="w-5 h-5 text-rose" strokeWidth={1.5} />
+                </motion.div>
+                <p className="label-caps mb-0">What's Included in Bridal Packages</p>
               </div>
-              <p className="text-xs font-sans text-taupe/60 mt-4">
+              <div className="space-y-3 text-sm font-sans text-espresso/70">
+                {[
+                  "Makeup with detailed skin prep",
+                  "Professional hairstyling", 
+                  "Saree draping (with/without pre-pleating)",
+                  "Lashes & Lens",
+                  "Outfit setting",
+                  "Hair extensions (if needed)"
+                ].map((item, index) => (
+                  <motion.div
+                    key={item}
+                    className="flex items-start gap-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
+                  >
+                    <motion.span 
+                      className="text-rose"
+                      whileHover={{ scale: 1.2 }}
+                    >
+                      •
+                    </motion.span>
+                    <span>{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.p 
+                className="text-xs font-sans text-taupe/60 mt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.0, duration: 0.4 }}
+              >
                 All prices inclusive of 5% GST
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </FadeUp>
 
           {/* Booking Information */}
@@ -1117,15 +1207,65 @@ export default function SalonPage() {
       <section className="section-padding section-gradient-pink">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <h2 className="font-serif font-light text-2xl lg:text-3xl mb-10" style={{ color: "#3D1520" }}>The NIXTUDIO experience.</h2>
+            <div className="text-center mb-12">
+              <FancyText
+                className="font-serif font-light text-2xl lg:text-3xl mb-4"
+                fillClassName="#3D1520"
+                stagger={0.05}
+                duration={0.8}
+                delay={0.1}
+              >
+                The NIXTUDIO experience.
+              </FancyText>
+              <motion.div
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full backdrop-blur-sm"
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.3)" }}
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              >
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  <Heart className="w-4 h-4" style={{ color: "#3D1520" }} />
+                </motion.div>
+                <span className="font-sans text-sm" style={{ color: "#4E4247" }}>
+                  Premium luxury amenities
+                </span>
+              </motion.div>
+            </div>
           </FadeUp>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.12}>
             {[
-              "Complimentary tea, coffee, or juice on all services.",
-              "Complimentary food and drinks for services over 2 hours.",
-            ].map((text) => (
-              <StaggerItem key={text}>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "#4E4247" }}>{text}</p>
+              {
+                text: "Complimentary tea, coffee, or juice on all services.",
+                icon: "☕"
+              },
+              {
+                text: "Complimentary food and drinks for services over 2 hours.",
+                icon: "🫖"
+              }
+            ].map((item, index) => (
+              <StaggerItem key={item.text}>
+                <motion.div
+                  className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20"
+                  whileHover={{ 
+                    scale: 1.05,
+                    backgroundColor: "rgba(255,255,255,0.2)",
+                    y: -5
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  <motion.div
+                    className="text-3xl mb-4"
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  >
+                    {item.icon}
+                  </motion.div>
+                  <p className="font-sans text-sm leading-relaxed" style={{ color: "#4E4247" }}>
+                    {item.text}
+                  </p>
+                </motion.div>
               </StaggerItem>
             ))}
           </StaggerContainer>
