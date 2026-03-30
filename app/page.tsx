@@ -365,7 +365,7 @@ export default function Home() {
 
         {/* Text — left side */}
         <div
-          className="hero-container absolute z-10 max-w-[600px] top-1/2 -translate-y-1/2 left-[10%]"
+          className="hero-container absolute z-10 max-w-[600px] top-1/2 -translate-y-1/2 left-[3%]"
           style={{ textAlign: "left" }}
         >
           <FadeUp>
