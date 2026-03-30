@@ -338,6 +338,29 @@ export default function Footer() {
             Pala, Kerala · India
           </p>
         </div>
+
+        {/* Stealth SEO Footer Anchor */}
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "20px",
+            paddingTop: "20px",
+            borderTop: "1px solid rgba(245,210,200,0.08)",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-sans), sans-serif",
+              fontSize: "10px",
+              color: "rgba(245,210,200,0.40)",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              lineHeight: 1.4,
+            }}
+          >
+            Also providing premium woman's salon services and bespoke skin treatments in Pala & Kottayam.
+          </p>
+        </div>
       </div>
     </footer>
   );

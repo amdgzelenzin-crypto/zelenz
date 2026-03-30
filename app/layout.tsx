@@ -49,10 +49,12 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "NIXTUDIO by Nikita Liby | Premium Bridal Makeup Studio, Pala",
+  title: "Nixtudio | Premium Bridal Makeup & Best Woman Salon in Pala",
   description:
-    "Best makeup artist in Kottayam & Pala, Kerala. NIXTUDIO offers premium bridal makeup, HD & airbrush services by Nikita Liby.",
+    "Pala's luxury destination for HD bridal makeup, airbrush artistry, and premium woman's salon services. Serving elite clients in Kottayam and Ettumanoor.",
   keywords: [
+    "best woman salon Pala",
+    "premium salon Kottayam", 
     "bridal makeup Pala",
     "bridal makeup Kottayam",
     "bridal makeup Kerala",
@@ -80,6 +82,10 @@ export const metadata: Metadata = {
     "temple bridal makeup Kottayam",
     "luxury bridal suite Pala",
     "bridal prep lounge Kerala",
+    "woman salon Ettumanoor",
+    "top salon Pala",
+    "luxury beauty salon Kottayam",
+    "premium woman's salon Kerala",
   ],
   authors: [{ name: 'NIXTUDIO' }],
   creator: 'NIXTUDIO',
@@ -92,9 +98,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: "https://nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
-    title: "NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala",
+    title: "Nixtudio | Premium Bridal Makeup & Best Woman Salon in Pala",
     description:
-      "NIXTUDIO — Premium bridal makeup & salon in Pala, Kerala by Nikita Liby. Bridal, party makeup, hair, nails & spa.",
+      "Pala's luxury destination for HD bridal makeup, airbrush artistry, and premium woman's salon services. Serving elite clients in Kottayam and Ettumanoor.",
     images: [
       {
         url: '/og-image.jpg',
@@ -106,8 +112,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NIXTUDIO | Premium Bridal Makeup Studio, Pala Kerala',
-    description: 'Bridal makeup done exclusively by Nikita Liby in Pala, Kerala. HD and airbrush packages from ₹27,500.',
+    title: 'Nixtudio | Premium Bridal Makeup & Best Woman Salon in Pala',
+    description: 'Pala\'s luxury destination for HD bridal makeup, airbrush artistry, and premium woman\'s salon services. Serving elite clients in Kottayam and Ettumanoor.',
     images: ['/og-image.jpg'],
   },
   robots: {

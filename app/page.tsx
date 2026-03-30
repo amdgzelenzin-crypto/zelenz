@@ -387,7 +387,7 @@ export default function Home() {
 
           <FadeUp delay={0.1}>
             <h1
-              aria-label="NIXTUDIO — Premium Bridal Makeup Studio in Pala, Kerala by Nikita Liby. Best makeup artist in Kottayam offering HD and Airbrush bridal makeup services."
+              aria-label="NIXTUDIO — Pala's Premium Woman Salon & Bridal Artistry Studio by Nikita Liby. Best makeup artist in Kottayam offering HD and Airbrush bridal makeup services and premium beauty treatments."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -398,8 +398,9 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              NIXTUDIO <br />
-              Premium Bridal Makeup Studio
+              Pala's Premium Woman
+              <br />
+              Salon & Bridal Artistry Studio
             </h1>
           </FadeUp>
 

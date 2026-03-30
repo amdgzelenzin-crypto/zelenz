@@ -7,14 +7,14 @@ export default function JsonLd({ data }: JsonLdProps) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "BeautySalon", "HealthAndBeautyBusiness"],
+        "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
         "@id": "https://nixtudio.in/#business",
-        "name": "NIXTUDIO by Nikita Liby",
+        "name": "Nixtudio",
         "url": "https://nixtudio.in",
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "description": "NIXTUDIO is Pala's premier high-end unisex salon & bridal studio, specializing in FDA-approved facial treatments, hair care, and professional bridal aesthetics.",
+        "description": "Nixtudio is Pala's premier high-end beauty salon & bridal studio, specializing in FDA-approved facial treatments, hair care, and professional bridal aesthetics.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
@@ -36,19 +36,31 @@ export default function JsonLd({ data }: JsonLdProps) {
             "closes": "19:00"
           }
         ],
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": "9.7115",
-            "longitude": "76.6225"
-          },
-          "geoRadius": "50000"
-        },
+        "areaServed": ["Pala", "Kottayam", "Ettumanoor"],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Beauty Services",
           "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Premium Hair Styling",
+                "description": "Professional hair styling, cutting, and treatments"
+              },
+              "priceCurrency": "INR",
+              "price": "3500"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Glass Skin Treatments",
+                "description": "Advanced facial treatments and skin care services"
+              },
+              "priceCurrency": "INR",
+              "price": "4500"
+            },
             {
               "@type": "Offer",
               "itemOffered": {
@@ -63,17 +75,7 @@ export default function JsonLd({ data }: JsonLdProps) {
               "@type": "Offer", 
               "itemOffered": {
                 "@type": "Service",
-                "name": "Hair Styling",
-                "description": "Professional hair styling and treatments"
-              },
-              "priceCurrency": "INR",
-              "price": "3500"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service", 
-                "name": "Nail Services",
+                "name": "Premium Nail Services",
                 "description": "Gel nail extensions and nail art"
               },
               "priceCurrency": "INR",
