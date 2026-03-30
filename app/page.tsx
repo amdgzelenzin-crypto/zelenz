@@ -391,10 +391,10 @@ export default function Home() {
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
-                fontSize: "clamp(48px, 9vw, 92px)",
+                fontSize: "clamp(41px, 7.6vw, 78px)",
                 fontWeight: 300,
-                lineHeight: 1.1,
-                marginBottom: "24px",
+                lineHeight: 1.2,
+                marginBottom: "32px",
                 color: "#FFFFFF",
               }}
             >
@@ -412,7 +412,7 @@ export default function Home() {
                 fontStyle: "italic",
                 color: "rgba(255,255,255,0.9)",
                 lineHeight: 1.6,
-                marginBottom: "40px",
+                marginBottom: "56px",
               }}
             >
               Bridal makeup done exclusively by Nikita.
