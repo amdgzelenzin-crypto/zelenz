@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
+import GuideDownloadForm from '@/components/GuideDownloadForm'
+import ScrollToFormButton from '@/components/ScrollToFormButton'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -102,50 +104,9 @@ export default function BridalSkinPrepGuide() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md mx-auto">
+            <div id="download-form" className="bg-white rounded-2xl shadow-xl p-8 max-w-md mx-auto">
               <h3 className="text-lg font-semibold text-espresso mb-4">Download Your Free Guide</h3>
-              <form className="space-y-4" onSubmit={(e) => {
-                e.preventDefault()
-                // Handle form submission
-                alert('Thank you! Your guide will be downloaded shortly.')
-              }}>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full p-3 border border-rose/20 rounded-lg focus:border-rose focus:outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full p-3 border border-rose/20 rounded-lg focus:border-rose focus:outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="WhatsApp Number (Optional)"
-                    className="w-full p-3 border border-rose/20 rounded-lg focus:border-rose focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Wedding Date (Optional)"
-                    className="w-full p-3 border border-rose/20 rounded-lg focus:border-rose focus:outline-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-rose text-white py-4 rounded-lg font-semibold hover:bg-rose/90 transition-colors"
-                >
-                  Download Free Guide →
-                </button>
-              </form>
+              <GuideDownloadForm />
               <p className="text-xs text-taupe text-center mt-4">
                 PDF Guide (2.3 MB) • No spam, unsubscribe anytime
               </p>
@@ -292,12 +253,9 @@ export default function BridalSkinPrepGuide() {
             
             <div className="text-center mt-8">
               <p className="text-espresso mb-4">Get the complete 7-day protocol with product recommendations and troubleshooting tips.</p>
-              <button
-                onClick={() => document.getElementById('download-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-rose text-white px-8 py-4 rounded-lg font-semibold hover:bg-rose/90 transition-colors"
-              >
+              <ScrollToFormButton className="bg-rose text-white px-8 py-4 rounded-lg font-semibold hover:bg-rose/90 transition-colors">
                 Download Full Guide
-              </button>
+              </ScrollToFormButton>
             </div>
           </div>
         </section>
@@ -390,12 +348,9 @@ export default function BridalSkinPrepGuide() {
               Join 500+ Kerala brides who've used this guide to achieve flawless wedding day skin
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => document.getElementById('download-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-rose px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+              <ScrollToFormButton className="bg-white text-rose px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Download Free Guide
-              </button>
+              </ScrollToFormButton>
               <Link 
                 href="/bridal-makeup-calculator" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-rose transition-colors"
