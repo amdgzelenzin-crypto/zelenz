@@ -363,9 +363,10 @@ export default function Home() {
           }} />
         </div>
 
-        {/* Text — bottom left */}
+        {/* Text — left side */}
         <div
-          className="absolute z-10 max-w-[680px] bottom-[40px] md:bottom-[80px] left-[20px] md:left-[clamp(24px,5vw,64px)]"
+          className="hero-container absolute z-10 max-w-[600px] top-1/2 -translate-y-1/2 left-[10%]"
+          style={{ textAlign: "left" }}
         >
           <FadeUp>
             <p
@@ -387,6 +388,7 @@ export default function Home() {
 
           <FadeUp delay={0.1}>
             <h1
+              className="hero-title"
               aria-label="NIXTUDIO — Pala's Premium Woman Salon & Bridal Artistry Studio by Nikita Liby. Best makeup artist in Kottayam offering HD and Airbrush bridal makeup services and premium beauty treatments."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
@@ -406,18 +408,41 @@ export default function Home() {
 
           <FadeUp delay={0.2}>
             <p
+              className="hero-subtext"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "18px",
+                fontSize: "clamp(18px, 2.5vw, 20px)",
                 fontStyle: "italic",
                 color: "rgba(255,255,255,0.9)",
                 lineHeight: 1.6,
-                marginBottom: "56px",
+                marginTop: "32px",
+                marginBottom: "40px",
               }}
             >
               Bridal makeup done exclusively by Nikita.
             </p>
           </FadeUp>
+
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              @media (min-width: 1024px) {
+                .hero-title {
+                  font-size: 64px !important;
+                  line-height: 1.2 !important;
+                  margin-bottom: 32px !important;
+                }
+                .hero-subtext {
+                  margin-top: 40px !important;
+                  margin-bottom: 48px !important;
+                  font-size: 20px !important;
+                  display: block !important;
+                }
+                .hero-container {
+                  max-width: 800px !important;
+                }
+              }
+            `
+          }} />
 
           {/* ──────── GEO BLUF (Hidden for pure visual aesthetic) ──────── */}
           <div className="sr-only">
