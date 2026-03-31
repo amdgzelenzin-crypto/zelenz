@@ -9,12 +9,12 @@ export default function JsonLd({ data }: JsonLdProps) {
       {
         "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
         "@id": "https://nixtudio.in/#business",
-        "name": "Nixtudio",
+        "name": "Nixtudio - Best Bridal Makeup Studio in Pala, Kerala",
         "url": "https://nixtudio.in",
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "description": "Nixtudio is Pala's #1 premium bridal makeup studio and salon. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated bridal makeup studio & luxury hair salon in Pala, Kerala.",
+        "description": "Nixtudio is Pala's #1 premium bridal makeup studio and salon. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated bridal makeup studio & luxury hair salon in Pala, Kottayam, Kerala. Book your appointment today.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
@@ -36,7 +36,7 @@ export default function JsonLd({ data }: JsonLdProps) {
             "closes": "19:00"
           },
           {
-            "@type": "OpeningHoursSpecification", 
+            "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Sunday"],
             "opens": "11:00",
             "closes": "18:00"
@@ -54,51 +54,140 @@ export default function JsonLd({ data }: JsonLdProps) {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Premium Hair Styling",
-                "description": "Professional hair styling, cutting, and treatments"
-              },
-              "priceCurrency": "INR",
-              "price": "3500"
+                "name": "HD Bridal Makeup",
+                "description": "Traditional HD bridal makeup application by Nikita Liby. Perfect for church ceremonies and indoor venues in Pala, Kerala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Glass Skin Treatments",
-                "description": "Advanced facial treatments and skin care services"
-              },
-              "priceCurrency": "INR",
-              "price": "4500"
+                "name": "Airbrush Bridal Makeup",
+                "description": "Advanced airbrush makeup technique for outdoor Kerala weddings. Sweat-resistant and long-lasting coverage for humid climates.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Bridal Makeup",
-                "description": "HD and Airbrush bridal makeup services"
-              },
-              "priceCurrency": "INR",
-              "price": "27500"
+                "name": "Luxury Hair Styling",
+                "description": "Professional hair styling and updo services for weddings and special events in Pala, Kerala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
             },
             {
-              "@type": "Offer", 
+              "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Premium Nail Services",
-                "description": "Gel nail extensions and nail art"
-              },
-              "priceCurrency": "INR",
-              "price": "2000"
+                "name": "Gel Nail Extensions",
+                "description": "Premium gel nail extensions and nail art services by expert technicians at Nixtudio salon in Pala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Vortex Fusion HydraFacial",
+                "description": "Medical-grade HydraFacial treatment for deep cleansing and hydration. Advanced skincare technology available at Nixtudio Pala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
             }
           ]
         },
-        "founder": {
-          "@id": "https://nixtudio.in/#person"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "reviewCount": 127,
+          "bestRating": "5",
+          "worstRating": "4"
         },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Jessy Joseph"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "reviewBody": "I was extremely happy and satisfied with makeup and hair for my wedding day. It turned out even better than I had imagined! She understood each and every request of mine and executed everything perfectly.",
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "Nixtudio"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Stelly Tomy"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "reviewBody": "I had my engagement and wedding makeup done by Nikita, and it was such a wonderful experience. She was very vocal and guided me clearly on what would suit me best, which I truly appreciated.",
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "Nixtudio"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Jane Josy"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "reviewBody": "Thank you so much Nikita for making me look my best on my BigDay. Your work played a huge role in making me so happy and confident on my wedding day. I looked exactly like what I expected ",
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "Nixtudio"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Meenu Mathai"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "reviewBody": "Nikita did my bridal makeup and I couldn't be happier with results. She understood exactly what look I wanted and made me feel so confident and beautiful on my big day.",
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "Nixtudio"
+            }
+          }
+        ],
         "sameAs": [
           "https://www.instagram.com/nixtudio.in",
-          "https://www.facebook.com/nixtudio.in",
-          "https://wa.me/917034726402"
+          "https://www.facebook.com/nixtudio.in"
         ]
       },
       {
@@ -111,7 +200,7 @@ export default function JsonLd({ data }: JsonLdProps) {
         },
         "serviceType": [
           "Bridal Makeup",
-          "Engagement Makeup", 
+          "Engagement Makeup",
           "Party Makeup",
           "Hair Styling",
           "Nail Services",
@@ -123,7 +212,7 @@ export default function JsonLd({ data }: JsonLdProps) {
             "name": "Pala, Kerala"
           },
           {
-            "@type": "Place", 
+            "@type": "Place",
             "name": "Kottayam, Kerala"
           },
           {
@@ -144,7 +233,9 @@ export default function JsonLd({ data }: JsonLdProps) {
       {
         "@type": "Service",
         "name": "Bridal Makeup & Styling",
-        provider: { "@id": "https://nixtudio.in/#business" },
+        "provider": {
+          "@id": "https://nixtudio.in/#business"
+        },
         "areaServed": {
           "@type": "State",
           "name": "Kerala"
