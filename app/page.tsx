@@ -401,28 +401,44 @@ export default function Home() {
             </p>
           </FadeUp>
 
-          <FadeUp delay={0.1}>
-            <h1
-              className="hero-title"
-              style={{
-                fontFamily: "var(--font-display), Georgia, serif",
-                fontStyle: "italic",
-                fontSize: "clamp(36px, 6.5vw, 68px)",
-                fontWeight: 300,
-                lineHeight: 1.1,
-                marginBottom: "24px",
-                color: "#FFFFFF",
-                textAlign: "center",
-                maxWidth: "90vw",
-                wordWrap: "break-word",
-                hyphens: "auto",
-              }}
-            >
-              Pala's #1 Bridal Makeup Studio
-              <br />
-              & Luxury Hair Salon
-            </h1>
-          </FadeUp>
+          {/* Server-side rendered H1 for SEO with CSS animation */}
+          <h1
+            className="hero-title"
+            style={{
+              fontFamily: "var(--font-display), Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "clamp(36px, 6.5vw, 68px)",
+              fontWeight: 300,
+              lineHeight: 1.1,
+              marginBottom: "24px",
+              color: "#FFFFFF",
+              textAlign: "center",
+              maxWidth: "90vw",
+              wordWrap: "break-word",
+              hyphens: "auto",
+              opacity: 0,
+              transform: "translateY(30px)",
+              animation: "fadeInUp 0.8s ease-out 0.3s forwards"
+            }}
+          >
+            Pala's #1 Bridal Makeup Studio
+            <br />
+            & Luxury Hair Salon
+          </h1>
+
+          {/* Add CSS animation keyframes */}
+          <style jsx>{`
+            @keyframes fadeInUp {
+              from {
+                opacity: 0;
+                transform: translateY(30px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          `}</style>
 
           <FadeUp delay={0.2}>
             <h2
