@@ -109,7 +109,7 @@ export const metadata: Metadata = {
       "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/studio/nixtudio-studio-signage-pala-kerala.webp',
         width: 1200,
         height: 630,
         alt: 'NIXTUDIO Bridal Makeup Pala Kerala',
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
     description: "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
-    images: ['/og-image.jpg'],
+    images: ['/images/studio/nixtudio-studio-signage-pala-kerala.webp'],
   },
   robots: {
     index: true,
@@ -160,10 +160,6 @@ export default function RootLayout({
         {/* Preconnect to font domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Font display swap optimization */}
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" />
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" as="style" />
         
         {/* Preload hero image for LCP - WebP format */}
         <link
