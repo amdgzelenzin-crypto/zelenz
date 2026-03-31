@@ -14,7 +14,7 @@ export default function JsonLd({ data }: JsonLdProps) {
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "description": "Nixtudio is Pala's premier high-end beauty salon & bridal studio, specializing in FDA-approved facial treatments, hair care, and professional bridal aesthetics.",
+        "description": "Nixtudio is Pala's #1 premium bridal makeup studio and salon. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated bridal makeup studio & luxury hair salon in Pala, Kerala.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
@@ -36,7 +36,10 @@ export default function JsonLd({ data }: JsonLdProps) {
             "closes": "19:00"
           }
         ],
-        "areaServed": ["Pala", "Kottayam", "Ettumanoor"],
+        "areaServed": ["Pala", "Kottayam", "Ettumanoor", "Central Travancore"],
+        "servesCuisine": ["Kerala Bridal Makeup", "Traditional Bridal Artistry"],
+        "hasMap": "https://maps.google.com/maps?q=Nixtudio+Pala+Kerala",
+        "keywords": "bridal studio Pala, salon Pala, bridal makeup Kerala, makeup studio Pala Kerala, best bridal makeup Pala, luxury bridal salon Pala",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Beauty Services",

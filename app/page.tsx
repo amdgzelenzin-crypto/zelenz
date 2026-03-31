@@ -389,7 +389,7 @@ export default function Home() {
           <FadeUp delay={0.1}>
             <h1
               className="hero-title"
-              aria-label="NIXTUDIO — Pala's #1 Destination for Luxury Bridal Artistry & Advanced Hair Care by Nikita Liby. Expert HD & Airbrush bridal makeup artist in Kottayam Kerala. Premium hair salon specializing in bleach-free balayage, keratin treatments, and luxury beauty services near Carmel Hospital Pala."
+              aria-label="NIXTUDIO — Pala's #1 Bridal Makeup Studio & Luxury Hair Salon. Premium bridal artistry & advanced hair care in Pala, Kerala. Bridal makeup done exclusively by Nikita — Pala's most trusted name in bridal beauty."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -400,14 +400,12 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              Pala's #1 Destination for
-              <br />
-              Luxury Bridal Artistry & Advanced Hair Care
+              Pala's #1 Bridal Makeup Studio & Luxury Hair Salon
             </h1>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p
+            <h2
               className="hero-subtext"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
@@ -416,10 +414,25 @@ export default function Home() {
                 color: "rgba(255,255,255,0.9)",
                 lineHeight: 1.6,
                 marginTop: "32px",
+                marginBottom: "20px",
+                fontWeight: 400,
+              }}
+            >
+              Premium Bridal Artistry & Advanced Hair Care in Pala, Kerala
+            </h2>
+            <p
+              className="hero-tagline"
+              style={{
+                fontFamily: "var(--font-body), Georgia, serif",
+                fontSize: "clamp(16px, 2.2vw, 18px)",
+                fontStyle: "italic",
+                color: "rgba(255,255,255,0.8)",
+                lineHeight: 1.6,
+                marginTop: "0px",
                 marginBottom: "40px",
               }}
             >
-              Bridal makeup done exclusively by Nikita.
+              Bridal makeup done exclusively by Nikita — Pala's most trusted name in bridal beauty.
             </p>
           </FadeUp>
 
