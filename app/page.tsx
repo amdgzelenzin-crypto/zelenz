@@ -434,9 +434,7 @@ export default function Home() {
               hyphens: "auto",
             }}
           >
-            Best Bridal Makeup Studio Pala
-            <br />
-            Luxury Hair Salon Kerala
+            Pala's #1 Choice for Bridal Makeup & Luxury Hair Salon
           </h1>
 
           <FadeUp delay={0.2}>
@@ -453,9 +451,7 @@ export default function Home() {
                 maxWidth: "600px",
               }}
             >
-              Premium Bridal Makeup Artist Pala Kerala
-              <br />
-              & Luxury Hair Salon Kottayam
+              Kerala's most trusted name for HD Bridal Makeovers and Premium Hair Styling by Nikita Liby.
             </h2>
             <p
               className="hero-tagline"
