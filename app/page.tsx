@@ -1,7 +1,12 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { blogPosts } from "@/lib/blog";
+import { FadeUp } from "@/components/ui/AnimationWrapper";
+import { useLoading } from "@/contexts/LoadingContext";
 
 // Dynamic imports for heavy components
 const ReviewMarquee = dynamic(
