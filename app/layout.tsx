@@ -49,9 +49,9 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
+  title: "Best Bridal Makeup Studio Pala Kerala | Luxury Hair Salon Kottayam | NIXTUDIO",
   description:
-    "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
+    "Best bridal makeup studio in Pala, Kerala. Premium bridal makeup artist & luxury hair salon in Kottayam. Expert bridal artistry by Nikita. Top-rated salon. Book now.",
   keywords: [
     "bridal studio Pala",
     "bridal studio Kottayam",
@@ -104,9 +104,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: "https://nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
-    title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
+    title: "Best Bridal Makeup Studio Pala Kerala | Luxury Hair Salon Kottayam | NIXTUDIO",
     description:
-      "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
+      "Best bridal makeup studio in Pala, Kerala. Premium bridal makeup artist & luxury hair salon in Kottayam. Expert bridal artistry by Nikita. Top-rated salon. Book now.",
     images: [
       {
         url: '/images/studio/nixtudio-studio-signage-pala-kerala.webp',
@@ -118,8 +118,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
-    description: "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
+    title: "Best Bridal Makeup Studio Pala Kerala | Luxury Hair Salon Kottayam | NIXTUDIO",
+    description: "Best bridal makeup studio in Pala, Kerala. Premium bridal makeup artist & luxury hair salon in Kottayam. Expert bridal artistry by Nikita. Top-rated salon. Book now.",
     images: ['/images/studio/nixtudio-studio-signage-pala-kerala.webp'],
   },
   robots: {

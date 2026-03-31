@@ -318,17 +318,38 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
 export default function Home() {
   const { isLoading, isReady } = useLoading();
 
-  // Don't render content until loader is ready or if loading is complete
-  if (!isReady) {
-    return null;
-  }
-
   return (
     <>
+      
       {/* ──── 1. HERO — full screen ──── */}
       <section
         className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))]"
       >
+        {/* Don't render interactive content until ready, but keep basic structure */}
+        {!isReady ? (
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20">
+            <h1
+              className="hero-title"
+              style={{
+                fontFamily: "var(--font-display), Georgia, serif",
+                fontStyle: "italic",
+                fontSize: "clamp(36px, 6.5vw, 68px)",
+                fontWeight: 300,
+                lineHeight: 1.1,
+                marginBottom: "24px",
+                color: "#FFFFFF",
+                textAlign: "center",
+                maxWidth: "90vw",
+                wordWrap: "break-word",
+                hyphens: "auto",
+              }}
+            >
+              Best Bridal Makeup Studio Pala
+              <br />
+              Luxury Hair Salon Kerala
+            </h1>
+          </div>
+        ) : (
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes petalSway {
             0%, 100% { transform: rotate(var(--r)) translateY(0px); }
@@ -412,9 +433,9 @@ export default function Home() {
               hyphens: "auto",
             }}
           >
-            Pala's #1 Bridal Makeup Studio
+            Best Bridal Makeup Studio Pala
             <br />
-            & Luxury Hair Salon
+            Luxury Hair Salon Kerala
           </h1>
 
           <FadeUp delay={0.2}>
@@ -431,9 +452,9 @@ export default function Home() {
                 maxWidth: "600px",
               }}
             >
-              Premium Bridal Artistry & Advanced Hair Care
+              Premium Bridal Makeup Artist Pala Kerala
               <br />
-              in Pala, Kerala
+              & Luxury Hair Salon Kottayam
             </h2>
             <p
               className="hero-tagline"
@@ -612,7 +633,7 @@ export default function Home() {
                   lineHeight: 1.2,
                 }}
               >
-                Find your <em>perfect</em> experience.
+                Find Your <em>Bridal Makeup</em> Experience
               </h2>
             </div>
           </FadeUp>
@@ -698,7 +719,7 @@ export default function Home() {
                     marginBottom: "24px",
                   }}
                 >
-                  Not delegated. <br /> Not supervised. <em>Nikita.</em>
+                  Best Bridal Makeup Artist <br /> Not delegated. <em>Nikita.</em>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.2}>
