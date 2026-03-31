@@ -338,7 +338,7 @@ export default function Home() {
                 lineHeight: 1.1,
                 marginBottom: "24px",
                 color: "#FFFFFF",
-                textAlign: "center",
+                textAlign: "left",
                 maxWidth: "90vw",
                 wordWrap: "break-word",
                 hyphens: "auto",
@@ -374,7 +374,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(61,26,31,0.5) 100%)",
+            background: "linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(61,26,31,0.5) 100%)",
           }}
         />
 
@@ -401,7 +401,11 @@ export default function Home() {
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20">
+        <div className="relative z-10 h-full px-4 py-16 md:py-20">
+          <div className="max-w-[1200px] mx-auto h-full flex items-center">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left Column - Text Content */}
+              <div className="text-center lg:text-left lg:col-span-1">
           {/* Location Label */}
           <FadeUp>
             <p style={{
@@ -428,7 +432,7 @@ export default function Home() {
               lineHeight: 1.1,
               marginBottom: "24px",
               color: "#FFFFFF",
-              textAlign: "center",
+              textAlign: "left",
               maxWidth: "90vw",
               wordWrap: "break-word",
               hyphens: "auto",
@@ -565,7 +569,7 @@ export default function Home() {
           </div>
 
           <FadeUp delay={0.3}>
-            <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center px-4 md:px-0">
+            <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-start items-center px-4 md:px-0">
               <Link href="/services" 
                 className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                 aria-label="Explore NIXTUDIO services including bridal makeup, hair styling, and nail services"
@@ -598,6 +602,12 @@ export default function Home() {
               </Link>
             </div>
           </FadeUp>
+              </div>
+
+              {/* Right Column - Empty for visual balance */}
+              <div className="hidden lg:block lg:col-span-1"></div>
+            </div>
+          </div>
 
           <style dangerouslySetInnerHTML={{
             __html: `
@@ -717,7 +727,7 @@ export default function Home() {
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           {/* Section header */}
           <FadeUp>
-            <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <div style={{ textAlign: "left", marginBottom: "64px" }}>
               <p className="label-caps" style={{ marginBottom: "12px" }}>Our Services</p>
               <h2
                 style={{
@@ -949,7 +959,7 @@ export default function Home() {
                 alignItems: "center",
                 justifyContent: "center"
               }}>
-                <div style={{ textAlign: "center", color: "#FFFFFF" }}>
+                <div style={{ textAlign: "left", color: "#FFFFFF" }}>
                   <h2 style={{
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontSize: "clamp(36px, 6vw, 64px)",
