@@ -9,20 +9,35 @@ import { FadeUp } from "@/components/ui/AnimationWrapper";
 import { useLoading } from "@/contexts/LoadingContext";
 
 // Dynamic imports for heavy components
-const ReviewMarquee = dynamic(() => import("@/components/ui/ReviewMarquee"), {
-  ssr: false,
-  loading: () => null,
-});
+const ReviewMarquee = dynamic(
+  () => import("@/components/ui/ReviewMarquee")
+    .then(mod => ({ default: mod.default || mod }))
+    .catch(() => ({ default: () => <div className="text-center py-8">Reviews loading...</div> })),
+  {
+    ssr: false,
+    loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg mb-8"></div>,
+  }
+);
 
-const StatCounters = dynamic(() => import("@/components/ui/StatCounters"), {
-  ssr: false,
-  loading: () => null,
-});
+const StatCounters = dynamic(
+  () => import("@/components/ui/StatCounters")
+    .then(mod => ({ default: mod.default || mod }))
+    .catch(() => ({ default: () => <div className="text-center py-4">Stats loading...</div> })),
+  {
+    ssr: false,
+    loading: () => <div className="animate-pulse bg-gray-200 h-20 rounded-lg mb-8"></div>,
+  }
+);
 
-const GoogleMapsEmbed = dynamic(() => import("@/components/ui/GoogleMapsEmbed"), {
-  ssr: false,
-  loading: () => null,
-});
+const GoogleMapsEmbed = dynamic(
+  () => import("@/components/ui/GoogleMapsEmbed")
+    .then(mod => ({ default: mod.default || mod }))
+    .catch(() => ({ default: () => <div className="text-center py-8">Map loading...</div> })),
+  {
+    ssr: false,
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg mb-8"></div>,
+  }
+);
 
 /* ──────────────────────────────────────
 function ScrollIndicator() {
@@ -393,14 +408,20 @@ export default function Home() {
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
-                fontSize: "clamp(41px, 7.6vw, 78px)",
+                fontSize: "clamp(36px, 6.5vw, 68px)",
                 fontWeight: 300,
-                lineHeight: 1.2,
-                marginBottom: "32px",
+                lineHeight: 1.1,
+                marginBottom: "24px",
                 color: "#FFFFFF",
+                textAlign: "center",
+                maxWidth: "90vw",
+                wordWrap: "break-word",
+                hyphens: "auto",
               }}
             >
-              Pala's #1 Bridal Makeup Studio & Luxury Hair Salon
+              Pala's #1 Bridal Makeup Studio
+              <br />
+              & Luxury Hair Salon
             </h1>
           </FadeUp>
 
@@ -409,30 +430,38 @@ export default function Home() {
               className="hero-subtext"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "clamp(18px, 2.5vw, 20px)",
+                fontSize: "clamp(16px, 2.2vw, 19px)",
                 fontStyle: "italic",
                 color: "rgba(255,255,255,0.9)",
-                lineHeight: 1.6,
-                marginTop: "32px",
-                marginBottom: "20px",
+                lineHeight: 1.4,
+                marginTop: "20px",
+                marginBottom: "16px",
                 fontWeight: 400,
+                textAlign: "center",
+                maxWidth: "85vw",
               }}
             >
-              Premium Bridal Artistry & Advanced Hair Care in Pala, Kerala
+              Premium Bridal Artistry & Advanced Hair Care
+              <br />
+              in Pala, Kerala
             </h2>
             <p
               className="hero-tagline"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "clamp(16px, 2.2vw, 18px)",
+                fontSize: "clamp(14px, 2vw, 16px)",
                 fontStyle: "italic",
                 color: "rgba(255,255,255,0.8)",
-                lineHeight: 1.6,
+                lineHeight: 1.5,
                 marginTop: "0px",
-                marginBottom: "40px",
+                marginBottom: "32px",
+                textAlign: "center",
+                maxWidth: "80vw",
               }}
             >
-              Bridal makeup done exclusively by Nikita — Pala's most trusted name in bridal beauty.
+              Bridal makeup done exclusively by Nikita —
+              <br />
+              Pala's most trusted name in bridal beauty.
             </p>
           </FadeUp>
 
@@ -441,17 +470,87 @@ export default function Home() {
               @media (min-width: 1024px) {
                 .hero-title {
                   font-size: 64px !important;
-                  line-height: 1.2 !important;
-                  margin-bottom: 32px !important;
+                  line-height: 1.1 !important;
+                  margin-bottom: 24px !important;
+                  text-align: center !important;
                 }
                 .hero-subtext {
-                  margin-top: 40px !important;
-                  margin-bottom: 48px !important;
-                  font-size: 20px !important;
-                  display: block !important;
+                  font-size: 19px !important;
+                  text-align: center !important;
+                  margin-bottom: 16px !important;
                 }
-                .hero-container {
-                  max-width: 800px !important;
+                .hero-tagline {
+                  font-size: 16px !important;
+                  text-align: center !important;
+                  margin-bottom: 32px !important;
+                }
+                .hero-buttons {
+                  padding: 0 0 !important;
+                  gap: 24px !important;
+                }
+                .hero-button {
+                  min-width: 200px !important;
+                  height: 56px !important;
+                  font-size: 18px !important;
+                  padding: 0 24px !important;
+                }
+              }
+              
+              @media (max-width: 768px) {
+                .hero-title {
+                  font-size: 36px !important;
+                  line-height: 1.1 !important;
+                  margin-bottom: 20px !important;
+                  text-align: center !important;
+                }
+                .hero-subtext {
+                  font-size: 16px !important;
+                  text-align: center !important;
+                  margin-bottom: 12px !important;
+                }
+                .hero-tagline {
+                  font-size: 14px !important;
+                  text-align: center !important;
+                  margin-bottom: 24px !important;
+                }
+                .hero-buttons {
+                  padding: 0 20px !important;
+                  gap: 16px !important;
+                }
+                .hero-button {
+                  min-width: 150px !important;
+                  height: 48px !important;
+                  font-size: 15px !important;
+                  padding: 0 18px !important;
+                }
+              }
+              
+              @media (max-width: 480px) {
+                .hero-title {
+                  font-size: 28px !important;
+                  line-height: 1.0 !important;
+                  margin-bottom: 16px !important;
+                  text-align: center !important;
+                }
+                .hero-subtext {
+                  font-size: 14px !important;
+                  text-align: center !important;
+                  margin-bottom: 10px !important;
+                }
+                .hero-tagline {
+                  font-size: 12px !important;
+                  text-align: center !important;
+                  margin-bottom: 20px !important;
+                }
+                .hero-buttons {
+                  padding: 0 16px !important;
+                  gap: 12px !important;
+                }
+                .hero-button {
+                  min-width: 140px !important;
+                  height: 44px !important;
+                  font-size: 14px !important;
+                  padding: 0 16px !important;
                 }
               }
             `
@@ -463,29 +562,31 @@ export default function Home() {
           </div>
 
           <FadeUp delay={0.3}>
-            <div className="flex flex-col md:flex-row gap-[14px] md:gap-[16px]">
+            <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center px-4 md:px-0">
               <Link href="/services" 
-                className="w-full md:w-fit min-w-[200px] min-h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                 style={{
                   background: "rgba(255,255,255,0.20)",
                   backdropFilter: "blur(10px)",
                   border: "1.5px solid rgba(255,255,255,0.50)",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "0 24px",
-                  minHeight: "56px", // Improved mobile touch target
+                  padding: "0 20px",
+                  fontSize: "16px",
+                  fontWeight: 500,
                 }}
               >
                 Explore Services
               </Link>
               <Link href="/contact" 
-                className="w-full md:w-fit min-w-[200px] min-h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
+                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
                 style={{
                   border: "none",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "0 24px",
-                  minHeight: "56px", // Improved mobile touch target
+                  padding: "0 20px",
+                  fontSize: "16px",
+                  fontWeight: 500,
                 }}
               >
                 Check Availability
