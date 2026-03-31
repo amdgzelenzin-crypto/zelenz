@@ -34,6 +34,12 @@ export default function JsonLd({ data }: JsonLdProps) {
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "10:00",
             "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification", 
+            "dayOfWeek": ["Sunday"],
+            "opens": "11:00",
+            "closes": "18:00"
           }
         ],
         "areaServed": ["Pala", "Kottayam", "Ettumanoor", "Central Travancore"],

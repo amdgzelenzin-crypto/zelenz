@@ -161,6 +161,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
+        {/* Font display swap optimization */}
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" as="style" />
+        
         {/* Preload hero image for LCP - WebP format */}
         <link
           rel="preload"
