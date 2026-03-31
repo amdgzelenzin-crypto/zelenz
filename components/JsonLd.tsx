@@ -3,6 +3,33 @@ interface JsonLdProps {
 }
 
 export default function JsonLd({ data }: JsonLdProps) {
+  // Specific LocalBusiness schema for Google Maps
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Nixtudio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+      "addressLocality": "Pala",
+      "addressRegion": "Kerala",
+      "postalCode": "686575",
+      "addressCountry": "IN"
+    },
+    "telephone": "+917034726402",
+    "founder": "Nikita Liby",
+    "url": "https://nixtudio.in",
+    "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+    "description": "Premium bridal makeup studio and luxury salon in Pala, Kerala",
+    "priceRange": "₹₹₹",
+    "openingHours": "Mo-Sa 10:00-19:00, Su 11:00-18:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "9.7115",
+      "longitude": "76.6225"
+    }
+  };
+
   const defaultSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -452,12 +479,12 @@ export default function JsonLd({ data }: JsonLdProps) {
     ]
   }
 
-  const schema = data || defaultSchema
+  const finalSchema = data || [localBusinessSchema, ...defaultSchema["@graph"]];
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(finalSchema) }}
     />
   )
 }
