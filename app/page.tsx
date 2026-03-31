@@ -373,22 +373,22 @@ export default function Home() {
           }} />
         </div>
 
-        {/* Text — left side */}
-        <div
-          className="hero-container relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20"
-        >
+        {/* Main Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20">
           {/* Location Label */}
-          <p style={{
-            fontFamily: "var(--font-sans), sans-serif",
-            fontSize: "11px",
-            letterSpacing: "0.30em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.75)",
-            marginBottom: "16px",
-          }}
-          >
-            Premium Makeup Studio · Pala, Kerala
-          </p>
+          <FadeUp>
+            <p style={{
+              fontFamily: "var(--font-sans), sans-serif",
+              fontSize: "11px",
+              letterSpacing: "0.30em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.75)",
+              marginBottom: "16px",
+            }}
+            >
+              Premium Makeup Studio · Pala, Kerala
+            </p>
+          </FadeUp>
 
           {/* H1 - Critical for SEO */}
           <h1
@@ -412,24 +412,35 @@ export default function Home() {
             & Luxury Hair Salon
           </h1>
 
-          {/* H2 - Secondary heading */}
-          <h2
-            className="hero-subtext"
-            style={{
-              fontFamily: "var(--font-body), Georgia, serif",
-              fontSize: "clamp(16px, 2.2vw, 19px)",
-              fontStyle: "italic",
-              color: "rgba(255,255,255,0.9)",
-              lineHeight: 1.4,
-              marginTop: "20px",
-              marginBottom: "32px",
-              maxWidth: "600px",
-            }}
-          >
-            Premium Bridal Artistry & Advanced Hair Care
-            <br />
-            in Pala, Kerala
-          </h2>
+          <FadeUp delay={0.2}>
+            <h2
+              className="hero-subtext"
+              style={{
+                fontFamily: "var(--font-body), Georgia, serif",
+                fontSize: "clamp(16px, 2.2vw, 19px)",
+                fontStyle: "italic",
+                color: "rgba(255,255,255,0.9)",
+                lineHeight: 1.4,
+                marginTop: "20px",
+                marginBottom: "32px",
+                maxWidth: "600px",
+              }}
+            >
+              Premium Bridal Artistry & Advanced Hair Care
+              <br />
+              in Pala, Kerala
+            </h2>
+            <p
+              className="hero-tagline"
+              style={{
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "14px",
+                color: "rgba(255,255,255,0.8)",
+                marginBottom: "40px",
+                maxWidth: "500px",
+                lineHeight: 1.6,
+              }}
+            >
               Pala's most trusted name in bridal beauty.
             </p>
           </FadeUp>
