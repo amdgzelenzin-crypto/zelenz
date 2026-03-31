@@ -1143,22 +1143,6 @@ export default function Home() {
           </div>
         </FadeUp>
       </section>
-
-      {/* ──── POWERED BY WATERMARK ──── */}
-      <a 
-        href="https://revol-q.vercel.app/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 group opacity-40 hover:opacity-100 transition-all duration-500 ease-in-out"
-        aria-label="Crafted by Revol-Q"
-      >
-        <span className="hidden group-hover:block text-[10px] tracking-[0.2em] uppercase text-zinc-500 transition-all">
-          Built by Revol-Q
-        </span>
-        <div className="w-8 h-8 border border-zinc-300 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm">
-          <span className="text-xs font-light tracking-tighter text-zinc-800">R</span>
-        </div>
-      </a>
     </>
   );
 }

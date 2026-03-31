@@ -355,6 +355,50 @@ export default function Footer() {
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
+                <a
+                  href="https://revol-q.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-all duration-300 group"
+                  aria-label="Crafted by Revol-Q"
+                >
+                  <span className="text-[9px] tracking-[0.3em] font-light text-[#D4AF37]">
+                    CRAFTED BY REVOL-Q
+                  </span>
+                  <div
+                    style={{
+                      width: "36px",
+                      height: "36px",
+                      border: "1px solid rgba(212, 175, 55, 0.4)",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 300ms ease",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.borderColor = "#D4AF37";
+                      e.currentTarget.style.transform = "scale(1.05)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.4)";
+                      e.currentTarget.style.transform = "scale(1)";
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      style={{
+                        width: "16px",
+                        height: "16px",
+                        fill: "none",
+                        stroke: "#D4AF37",
+                        strokeWidth: "1.5",
+                      }}
+                    >
+                      <path d="M8 20V4h6a4 4 0 0 1 0 8H8m6 0l4 8" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
