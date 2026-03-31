@@ -1,12 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { blogPosts } from "@/lib/blog";
-import { FadeUp } from "@/components/ui/AnimationWrapper";
-import { useLoading } from "@/contexts/LoadingContext";
 
 // Dynamic imports for heavy components
 const ReviewMarquee = dynamic(
@@ -380,28 +375,22 @@ export default function Home() {
 
         {/* Text — left side */}
         <div
-          className="hero-container absolute z-10 max-w-[600px] top-1/2 -translate-y-1/2 left-[3%]"
-          style={{ textAlign: "left" }}
+          className="hero-container relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20"
         >
-          <FadeUp>
-            <p
-              className="mt-[16px] md:mt-0"
+          {/* Location Label */}
+          <p style={{
+            fontFamily: "var(--font-sans), sans-serif",
+            fontSize: "11px",
+            letterSpacing: "0.30em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.75)",
+            marginBottom: "16px",
+          }}
+          >
+            Premium Makeup Studio · Pala, Kerala
+          </p>
 
-              style={{
-                fontFamily: "var(--font-sans), sans-serif",
-                fontSize: "10px",
-                fontWeight: 300,
-                letterSpacing: "0.30em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.75)",
-                marginBottom: "16px",
-              }}
-            >
-              Premium Makeup Studio · Pala, Kerala
-            </p>
-          </FadeUp>
-
-          {/* Server-side rendered H1 for SEO with CSS animation */}
+          {/* H1 - Critical for SEO */}
           <h1
             className="hero-title"
             style={{
@@ -423,42 +412,24 @@ export default function Home() {
             & Luxury Hair Salon
           </h1>
 
-          <FadeUp delay={0.2}>
-            <h2
-              className="hero-subtext"
-              style={{
-                fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "clamp(16px, 2.2vw, 19px)",
-                fontStyle: "italic",
-                color: "rgba(255,255,255,0.9)",
-                lineHeight: 1.4,
-                marginTop: "20px",
-                marginBottom: "16px",
-                fontWeight: 400,
-                textAlign: "center",
-                maxWidth: "85vw",
-              }}
-            >
-              Premium Bridal Artistry & Advanced Hair Care
-              <br />
-              in Pala, Kerala
-            </h2>
-            <p
-              className="hero-tagline"
-              style={{
-                fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                fontStyle: "italic",
-                color: "rgba(255,255,255,0.8)",
-                lineHeight: 1.5,
-                marginTop: "0px",
-                marginBottom: "32px",
-                textAlign: "center",
-                maxWidth: "80vw",
-              }}
-            >
-              Bridal makeup done exclusively by Nikita —
-              <br />
+          {/* H2 - Secondary heading */}
+          <h2
+            className="hero-subtext"
+            style={{
+              fontFamily: "var(--font-body), Georgia, serif",
+              fontSize: "clamp(16px, 2.2vw, 19px)",
+              fontStyle: "italic",
+              color: "rgba(255,255,255,0.9)",
+              lineHeight: 1.4,
+              marginTop: "20px",
+              marginBottom: "32px",
+              maxWidth: "600px",
+            }}
+          >
+            Premium Bridal Artistry & Advanced Hair Care
+            <br />
+            in Pala, Kerala
+          </h2>
               Pala's most trusted name in bridal beauty.
             </p>
           </FadeUp>
