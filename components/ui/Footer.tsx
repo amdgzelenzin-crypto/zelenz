@@ -355,6 +355,48 @@ export default function Footer() {
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
+                <a
+                  href="https://revol-q.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Revol-Q"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "44px",
+                    height: "44px",
+                    borderRadius: "50%",
+                    background: "transparent",
+                    border: "1.5px solid #B78472",
+                    color: "#B78472",
+                    textDecoration: "none",
+                    transition: "all 300ms ease",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.color = "#D4AF37";
+                    e.currentTarget.style.borderColor = "#D4AF37";
+                    e.currentTarget.style.transform = "scale(1.1)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.color = "#B78472";
+                    e.currentTarget.style.borderColor = "#B78472";
+                    e.currentTarget.style.transform = "scale(1)";
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      fill: "none",
+                      stroke: "#B78472",
+                      strokeWidth: "1.5",
+                    }}
+                  >
+                    <path d="M8 20V4h6a4 4 0 0 1 0 8H8m6 0l4 8" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -390,7 +432,24 @@ export default function Footer() {
               letterSpacing: "0.05em",
             }}
           >
-            POWERED BY REVOL-Q
+            <a 
+              href="https://revol-q.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "rgba(245,210,200,0.45)",
+                textDecoration: "none",
+                transition: "color 250ms ease",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = "#D4AF37";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = "rgba(245,210,200,0.45)";
+              }}
+            >
+              POWERED BY REVOL-Q
+            </a>
           </p>
           <p
             style={{
