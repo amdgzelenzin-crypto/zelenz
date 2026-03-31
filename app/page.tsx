@@ -260,7 +260,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
           </p>
 
           {/* Heading */}
-          <h3
+          <h2
             style={{
               fontFamily: "var(--font-display), Georgia, serif",
               fontSize: "clamp(36px, 5vw, 48px)",
@@ -273,7 +273,7 @@ function EditorialCard({ card, index }: { card: typeof cards[0]; index: number }
             }}
           >
             {card.heading}
-          </h3>
+          </h2>
 
           {/* Sub */}
           <p
@@ -404,7 +404,6 @@ export default function Home() {
           <FadeUp delay={0.1}>
             <h1
               className="hero-title"
-              aria-label="NIXTUDIO — Pala's #1 Bridal Makeup Studio & Luxury Hair Salon. Premium bridal artistry & advanced hair care in Pala, Kerala. Bridal makeup done exclusively by Nikita — Pala's most trusted name in bridal beauty."
               style={{
                 fontFamily: "var(--font-display), Georgia, serif",
                 fontStyle: "italic",
@@ -765,19 +764,19 @@ export default function Home() {
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 border-y border-[rgba(61,21,32,0.1)] mb-16">
             <FadeUp>
-              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Advanced Skin Prep</h4>
+              <h3 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Advanced Skin Prep</h3>
               <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
                 Our proprietary 7-step hydration protocol ensures your base remains flawless and luminous through 16+ hours of Kerala's intensity and humidity.
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Facial Architecture</h4>
+              <h3 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Facial Architecture</h3>
               <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
                 We use high-definition contouring and highlight placement to naturally refine facial structure, specifically optimized for multi-angle cinematic wedding photography.
               </p>
             </FadeUp>
             <FadeUp delay={0.2}>
-              <h4 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Pigment Sync</h4>
+              <h3 style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", color: "#B76E79", textTransform: "uppercase", marginBottom: "16px" }}>Pigment Sync</h3>
               <p style={{ fontFamily: "var(--font-body), serif", fontSize: "14px", color: "#3D1520", lineHeight: "1.6" }}>
                 Scientific color theory mapping ensures your makeup undertones harmonize perfectly with specific gold temple jewelry and varied ceremonial lighting.
               </p>
