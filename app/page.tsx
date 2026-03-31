@@ -699,42 +699,6 @@ export default function Home() {
             <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings. With over 6 years of professional experience and having personally styled more than 500 brides across Pala, Kottayam, Changanacherry, and greater Kerala, Nikita Liby offers exclusive one-on-one bridal consultations and personalized makeup applications. Our comprehensive services include engagement makeup, wedding day bridal styling, reception makeup, party makeup for guests, advanced hair treatments, bleach-free hair coloring, gel nail extensions, and luxury spa services. The studio features state-of-the-art facilities including a private bridal prep suite, advanced skincare treatments like Vortex Fusion HydraFacial, and uses only premium, FDA-approved products. Located at Moozhayil House on Thodupuzha Road in Pala, our salon serves clients throughout Kerala with specialized expertise in traditional Kerala temple jewelry makeup, humidity-resistant techniques for tropical weather, and customized color matching for various skin tones and lighting conditions. Book your appointment with the most sought-after makeup artist in Central Kerala.
           </div>
 
-          <FadeUp delay={0.3}>
-            <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center px-4 md:px-0">
-              <Link href="/services" 
-                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
-                aria-label="Explore NIXTUDIO services including bridal makeup, hair styling, and nail services"
-                style={{
-                  background: "rgba(255,255,255,0.20)",
-                  backdropFilter: "blur(10px)",
-                  border: "1.5px solid rgba(255,255,255,0.50)",
-                  color: "#FFFFFF",
-                  borderRadius: "50px",
-                  padding: "0 20px",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                }}
-              >
-                Explore Services
-              </Link>
-              <Link href="/contact" 
-                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
-                aria-label="Check availability for bridal makeup appointments at NIXTUDIO Pala"
-                style={{
-                  border: "none",
-                  color: "#FFFFFF",
-                  borderRadius: "50px",
-                  padding: "0 20px",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                }}
-              >
-                Check Availability
-              </Link>
-            </div>
-          </FadeUp>
-        </div>
-
         {/* Scroll indicator */}
         <div style={{
           position: "absolute", bottom: "24px", left: "50%",
@@ -746,6 +710,7 @@ export default function Home() {
           }}>
             ↓
           </div>
+        </div>
         </div>
         </>
         )}

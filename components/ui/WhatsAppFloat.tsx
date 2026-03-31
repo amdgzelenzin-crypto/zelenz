@@ -13,7 +13,7 @@ export default function WhatsAppFloat() {
           }
         }
       `}} />
-      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
+      <div className="fixed bottom-20 right-20 z-50 lg:hidden">
         <a
           href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
           target="_blank"
