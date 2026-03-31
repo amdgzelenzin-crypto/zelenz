@@ -49,7 +49,7 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "Nixtudio | Best Bridal Makeup Studio & Salon in Pala, Kottayam, Kerala",
+  title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
   description:
     "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
   keywords: [
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: "https://nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
-    title: "Nixtudio | Best Bridal Makeup Studio & Salon in Pala, Kottayam, Kerala",
+    title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
     description:
       "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
     images: [
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Nixtudio | Best Bridal Makeup Studio & Salon in Pala, Kottayam, Kerala",
+    title: "Nixtudio | Premium Bridal Makeup & Salon in Pala",
     description: "Pala's #1 premium bridal makeup studio. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated salon in Pala, Kottayam, Kerala. Book now.",
     images: ['/og-image.jpg'],
   },
@@ -180,6 +180,9 @@ export default function RootLayout({
         {/* Preconnect to Google domains for Analytics */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        
+        {/* Defer non-critical scripts */}
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-R89TBWLTXG"></script>
       </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <LoadingProvider>

@@ -564,6 +564,7 @@ export default function Home() {
             <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center px-4 md:px-0">
               <Link href="/services" 
                 className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                aria-label="Explore NIXTUDIO services including bridal makeup, hair styling, and nail services"
                 style={{
                   background: "rgba(255,255,255,0.20)",
                   backdropFilter: "blur(10px)",
@@ -579,6 +580,7 @@ export default function Home() {
               </Link>
               <Link href="/contact" 
                 className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
+                aria-label="Check availability for bridal makeup appointments at NIXTUDIO Pala"
                 style={{
                   border: "none",
                   color: "#FFFFFF",
@@ -733,7 +735,7 @@ export default function Home() {
                 <StatCounters />
               </FadeUp>
               <FadeUp delay={0.4}>
-                <Link href="/bridal" className="btn-primary" style={{ marginTop: "40px", display: "inline-flex" }}>
+                <Link href="/bridal" className="btn-primary" aria-label="View bridal makeup services and packages at NIXTUDIO" style={{ marginTop: "40px", display: "inline-flex" }}>
                   The Bridal Edit
                 </Link>
               </FadeUp>
@@ -819,7 +821,7 @@ export default function Home() {
             ))}
           </div>
           <FadeUp>
-            <Link href="/gallery" className="btn-outline-gold">View Full Portfolio →</Link>
+            <Link href="/gallery" className="btn-outline-gold" aria-label="View full portfolio of bridal makeup and beauty work by NIXTUDIO">View Full Portfolio →</Link>
           </FadeUp>
         </div>
       </section>
@@ -950,6 +952,7 @@ export default function Home() {
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "16px" }}>
               <Link
                 href="/contact"
+                aria-label="Check bridal makeup availability and book appointment at NIXTUDIO Pala"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -971,6 +974,7 @@ export default function Home() {
                 href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup."
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Chat with NIXTUDIO on WhatsApp for bridal makeup enquiries"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
