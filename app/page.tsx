@@ -416,29 +416,12 @@ export default function Home() {
               maxWidth: "90vw",
               wordWrap: "break-word",
               hyphens: "auto",
-              opacity: 0,
-              transform: "translateY(30px)",
-              animation: "fadeInUp 0.8s ease-out 0.3s forwards"
             }}
           >
             Pala's #1 Bridal Makeup Studio
             <br />
             & Luxury Hair Salon
           </h1>
-
-          {/* Add CSS animation keyframes */}
-          <style jsx>{`
-            @keyframes fadeInUp {
-              from {
-                opacity: 0;
-                transform: translateY(30px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-          `}</style>
 
           <FadeUp delay={0.2}>
             <h2
