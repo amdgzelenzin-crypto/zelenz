@@ -489,13 +489,29 @@ body {
 
 .service-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
   padding: 16px 0;
   border-bottom: 1px solid rgba(183,110,121,0.12);
   font-family: var(--font-body), Georgia, serif;
   font-size: 15px;
   color: #3D1520;
+}
+
+@media (min-width: 640px) {
+  .service-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .service-row > div:first-child {
+    flex: 1;
+    min-width: 0;
+    padding-right: 16px;
+  }
 }
 
 .service-row .price, .service-row-price {

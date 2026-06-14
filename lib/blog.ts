@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 10, 2026",
     author: "Nikita Liby",
     category: "Salon Guide",
-    image: "/images/blog/hd-vs-airbrush.png",
+    image: "/images/blog/salon-guide.png",
     content: `
       <h3>Not every salon in Pala is built the same.</h3>
       <p>If you search "best salon Pala" or "beauty parlour near me," you'll find dozens of listings. The difference isn't always price — it's product quality, hygiene, staff training, and whether the salon understands Kerala's humidity.</p>
@@ -179,24 +179,23 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "gel-nails-hydrafacial-pala-guide",
-    title: "Gel Nails & HydraFacial in Pala: Prices, What to Expect & How to Book",
-    excerpt: "Everything you need to know about gel nail extensions and HydraFacial treatments at NIXTUDIO Pala — Kerala's premium nail lounge and skin spa.",
+    title: "Gel Nails in Pala: Prices, Extensions & How to Book",
+    excerpt: "Everything you need to know about gel polish, extensions and bridal nail art at NIXTUDIO Pala — Kerala's premium nail lounge.",
     date: "June 8, 2026",
     author: "Nikita Liby",
     category: "Salon Services",
-    image: "/images/blog/pre-wedding-skin-prep.png",
+    image: "/images/blog/gel-nails.jpg",
     content: `
-      <h3>Two services. One studio. Built for Kerala.</h3>
-      <p>Gel nails and HydraFacial are among the most searched salon services in Pala and Kottayam — but not every parlour offers them at studio grade. Here's what we offer at NIXTUDIO and what you should expect.</p>
+      <h3>Pala's premium nail lounge.</h3>
+      <p>Gel nails are among the most searched salon services in Pala and Kottayam — but not every parlour offers studio-grade extensions and art. Here's what we offer at NIXTUDIO and what you should expect.</p>
       <hr />
       <h3>Gel nails at NIXTUDIO Pala</h3>
       <p>Our nail lounge offers gel polish from ₹2,000, extensions and custom nail art from ₹2,500, and bridal nail packages coordinated with your wedding day look. We use premium gel systems chosen for chip-resistant, glossy results that last 2–3 weeks.</p>
       <p><a href="/nail-salon-pala" style="color: #C4903A; font-weight: 600;">View nail salon services →</a></p>
       <hr />
-      <h3>HydraFacial at NIXTUDIO Pala</h3>
-      <p>We offer FDA-approved Vortex-Fusion HydraFacial from ₹6,500 — deep cleanse, extract, hydrate and protect in a single session. Ideal for pre-bridal skin prep, acne-prone skin, and monthly maintenance in Kerala's humid climate.</p>
-      <p><a href="/facial-spa-pala" style="color: #C4903A; font-weight: 600;">View facial & spa services →</a></p>
-      <p><em>NIXTUDIO nail lounge and skin spa — Pala, Kerala. Call 70347 26402 to book.</em></p>
+      <h3>Bridal nail coordination</h3>
+      <p>Book your bridal nail session alongside your makeup consultation — we match tones to your lehenga, saree, or gown palette so everything photographs as one cohesive look.</p>
+      <p><em>NIXTUDIO nail lounge — Pala, Kerala. Call 70347 26402 to book.</em></p>
     `
   },
   {
@@ -206,7 +205,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 12, 2026",
     author: "Nikita Liby",
     category: "Hair Care",
-    image: "/images/blog/hd-vs-airbrush.png",
+    image: "/images/blog/haircare.png",
     content: `
       <h3>Kerala hair is a different problem.</h3>
       <p>If you've had keratin in Mumbai or Bangalore and expected the same result in Pala, you already know — humidity wins. Within weeks, frizz returns and the gloss fades.</p>
@@ -234,11 +233,11 @@ export const blogPosts: BlogPost[] = [
     date: "June 11, 2026",
     author: "Nikita Liby",
     category: "Skin Care",
-    image: "/images/blog/pre-wedding-skin-prep.png",
+    image: "/images/blog/salon-services.png",
     content: `
       <h3>HydraFacial is not a basic cleanup.</h3>
-      <p>Vortex-Fusion HydraFacial uses medical-grade technology to cleanse, extract, hydrate, and protect in one session — without the downtime of aggressive peels.</p>
-      <p>NIXTUDIO is among the few salons in Pala and Kottayam district offering genuine HydraFacial equipment, not a branded cleanup marketed under the same name.</p>
+      <p>Medical-grade HydraFacial uses advanced technology to cleanse, extract, hydrate, and protect in one session — without the downtime of aggressive peels.</p>
+      <p>NIXTUDIO is among the few salons in Pala and Kottayam district offering genuine HydraFacial treatments, not a branded cleanup marketed under the same name.</p>
       <hr />
       <h3>What happens in a session?</h3>
       <ol>
@@ -258,11 +257,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "salon-near-kottayam-pala-guide",
     title: "Best Salon Near Kottayam? Why Clients Drive to NIXTUDIO Pala",
-    excerpt: "Kottayam brides and salon clients choose NIXTUDIO in Pala for premium hair, nails, HydraFacial and bridal — 20 minutes from Kottayam town.",
+    excerpt: "Kottayam brides and salon clients choose NIXTUDIO in Pala for premium hair, nails, facials and bridal — 20 minutes from Kottayam town.",
     date: "June 9, 2026",
     author: "Nikita Liby",
     category: "Salon Guide",
-    image: "/images/blog/christian-bride.png",
+    image: "/images/blog/salon-guide-kottayam.png",
     content: `
       <h3>The best salon near Kottayam isn't always in Kottayam town.</h3>
       <p>Search "salon near Kottayam" and you'll see dozens of neighbourhood parlours. What brings discerning clients to Pala is consistency — premium products, medical-grade facials, and bridal expertise under one roof.</p>

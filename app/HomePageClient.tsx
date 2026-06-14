@@ -87,7 +87,7 @@ const cards = [
     sub: "Exclusively designed Christian, Hindu, and Muslim bridal aesthetics.",
     link: "/bridal",
     linkText: "The Bridal Edit →",
-    image: "/images/gallery/hd-christian-bridal-makeup-look-pala.webp",
+    image: "/images/bridal-editorial-card.jpg",
     placeholder: "#F9C8C8",
     offset: 0,
     gradient: "linear-gradient(to bottom, rgba(249,145,159,0.15) 0%, rgba(61,26,31,0.75) 100%)",
@@ -129,12 +129,6 @@ const HERO_H1_LINE1 = "Bridal Makeup & Luxury Salon";
 const HERO_H1_LINE2 = "in Pala, Kerala";
 const HERO_SUBTEXT =
   "HD & airbrush bridal artistry, premium hair, nails & spa — personally by Nikita Liby.";
-
-const HERO_TRUST_STATS = [
-  { stat: "500+", label: "Clients styled" },
-  { stat: "4.9★", label: "Google rating" },
-  { stat: "6+ yrs", label: "Experience" },
-] as const;
 
 const HERO_GEO_BLUF =
   "NIXTUDIO by Nikita Liby is a premium bridal makeup studio and luxury salon in Pala, Kerala, offering HD and airbrush bridal packages, hair styling, gel nails, HydraFacial, waxing, threading, and party makeup across Pala and Kottayam district.";
@@ -401,10 +395,8 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
         />
 
         <div className="relative z-10 h-full px-4 py-16 md:py-20">
-          <div className="max-w-[1200px] mx-auto h-full flex items-center">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left Column - Text Content */}
-              <div className="text-center lg:text-left lg:col-span-1">
+          <div className="max-w-[720px] mx-auto lg:mx-0 lg:max-w-[640px] h-full flex items-center">
+              <div className="text-center lg:text-left w-full">
           {/* Location Label */}
           <FadeUp>
             <p style={{
@@ -444,7 +436,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
 
           <FadeUp delay={0.2}>
             <p
-              className="hero-subtext"
+              className="hero-subtext mx-auto lg:mx-0"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
                 fontSize: "clamp(16px, 2.2vw, 19px)",
@@ -497,37 +489,6 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             </div>
           </FadeUp>
               </div>
-
-              <div className="hidden lg:flex lg:col-span-1 flex-col gap-8 justify-center pl-4">
-                {HERO_TRUST_STATS.map((item) => (
-                  <div key={item.label}>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-display), Georgia, serif",
-                        fontSize: "42px",
-                        fontWeight: 300,
-                        color: "#E8CC90",
-                        lineHeight: 1,
-                        marginBottom: "6px",
-                      }}
-                    >
-                      {item.stat}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-sans), sans-serif",
-                        fontSize: "11px",
-                        letterSpacing: "0.2em",
-                        textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.7)",
-                      }}
-                    >
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
         <div style={{

@@ -146,76 +146,95 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div
+          className="fixed inset-0 z-[9999] flex flex-col"
           style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 9999,
             background: "rgba(61,26,31,0.97)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "20px",
-            animation: "fadeIn 300ms ease-out"
           }}
         >
-          {/* Close Button */}
-          <button
-            onClick={() => setIsOpen(false)}
-            style={{
-              position: "absolute",
-              top: "20px",
-              right: "20px",
-              color: "#FDE8E8",
-              padding: "16px",
-              fontSize: "28px",
-              lineHeight: 1,
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-            aria-label="Close menu"
-          >
-            ✕
-          </button>
-
-          {/* Gold Script */}
+          {/* Fixed top bar — close always visible */}
           <div
-            style={{
-              fontFamily: "var(--font-script), Georgia, serif",
-              fontSize: "28px",
-              color: "#D4A055",
-              fontStyle: "italic",
-              marginBottom: "40px",
-              marginTop: "-40px",
-            }}
+            className="flex shrink-0 items-center justify-between px-5 pb-2"
+            style={{ paddingTop: "max(20px, env(safe-area-inset-top))" }}
           >
-            By Nikita Liby
+            <span
+              style={{
+                fontFamily: "var(--font-script), Georgia, serif",
+                fontSize: "22px",
+                color: "#D4A055",
+                fontStyle: "italic",
+              }}
+            >
+              By Nikita Liby
+            </span>
+            <button
+              onClick={() => setIsOpen(false)}
+              style={{
+                color: "#FDE8E8",
+                padding: "12px",
+                fontSize: "28px",
+                lineHeight: 1,
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
           </div>
 
-          {/* Links */}
-          <nav style={{ display: "flex", flexDirection: "column", gap: "0px", width: "100%" }}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                style={{
-                  fontFamily: "var(--font-display), Georgia, serif",
-                  fontStyle: "italic",
-                  fontSize: "36px",
-                  color: "#FDE8E8",
-                  textAlign: "center",
-                  padding: "20px 0",
-                  textDecoration: "none",
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Scrollable nav — all links reachable on small screens */}
+          <div
+            className="flex-1 overflow-y-auto overscroll-contain px-5"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              paddingBottom: "max(32px, env(safe-area-inset-bottom))",
+            }}
+          >
+            <nav className="flex flex-col w-full max-w-md mx-auto">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  style={{
+                    fontFamily: "var(--font-display), Georgia, serif",
+                    fontStyle: "italic",
+                    fontSize: "clamp(28px, 8vw, 36px)",
+                    color: "#FDE8E8",
+                    textAlign: "center",
+                    padding: "16px 0",
+                    textDecoration: "none",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block mx-auto mt-4 text-center"
+              style={{
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "11px",
+                fontWeight: 400,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#FFFFFF",
+                textDecoration: "none",
+                padding: "14px 28px",
+                borderRadius: "100px",
+                background: "#E8A890",
+                width: "fit-content",
+              }}
+            >
+              Check Availability
+            </Link>
+          </div>
         </div>
       )}
     </>

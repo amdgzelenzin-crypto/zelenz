@@ -27,7 +27,7 @@ const categories = [
 ];
 
 const makeupServices = [
-  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Standard from ₹27,500 · Premium ₹40,000", note: "Engagement, wedding & reception. HD (₹27,500) or Airbrush Standard (₹32,500) or Premium Airbrush (₹40,000). By Nikita Liby. Ask for Party/Guest catalogue for family." },
+  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "From ₹27,500", note: "Engagement, wedding & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium Airbrush (₹40,000). By Nikita Liby. Ask for Party/Guest catalogue for family." },
   { name: "Engagement / Reception Styling", price: "₹27,500 - ₹40,000", note: "Same bridal packages apply to engagement & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium (₹40,000). Optimized for", link: { href: '/bridal', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
   { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
   { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
@@ -128,7 +128,6 @@ const premiumFacials = [
 ];
 
 const luxuryFacials = [
-  { name: "Vortex-Fusion HydraFacial", price: "₹7,500+", note: "FDA-approved clinical skin resurfacing optimized for humidity-prone Kerala skin." },
   { name: "Save the Date — Bridal Facial + Detan", price: "₹4,500" },
   { name: "Pigmentation & Even Tone", price: "₹3,750" },
   { name: "Acne Treatment & Oil Control", price: "₹3,250" },
@@ -630,7 +629,7 @@ export default function SalonPage() {
               {/* ──────── GEO BLUF (Generative Engine Optimization) ──────── */}
               <FadeUp>
                 <p className="font-sans text-sm text-espresso/80 mt-6 max-w-lg leading-relaxed">
-                  <strong>NIXTUDIO is <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala&rsquo;s</Link> premier high-end unisex salon</strong>, specializing in FDA-approved Vortex-Fusion HydraFacial, humidity-resistant Hair Botox, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
+                  <strong>NIXTUDIO is <Link href='/bridal-makeup-pala' className='text-[#B76E79] underline decoration-[#B76E79]/50 hover:decoration-[#B76E79] transition-colors'>Pala&rsquo;s</Link> premier high-end unisex salon</strong>, specializing in humidity-resistant Hair Botox, premium bridal makeup, and bleach-free ammonia-free hair coloring with a &lsquo;Supermodel&rsquo; low-maintenance gloss finish. The leader in medical-grade beauty in the Kottayam district.
                 </p>
               </FadeUp>
               
@@ -1187,7 +1186,7 @@ export default function SalonPage() {
               {[
                 { title: "Standard Bridal (HD)", price: "₹27,500", desc: "Standard package — HD makeup for engagement, wedding or reception." },
                 { title: "Premium Bridal (Airbrush)", price: "₹40,000", desc: "Signature subtle airbrush glam with luxury international brands." },
-                { title: "Clinical Aesthetics", price: "₹7,500", desc: "Starting price for FDA-approved Vortex-Fusion HydraFacial treatments." }
+                { title: "Luxury Facials", price: "₹4,500", desc: "Starting price for bridal facials, pigmentation treatments, and clinical skin resurfacing." }
               ].map((tier, i) => (
                 <FadeUp key={tier.title} delay={i * 0.1}>
                   <div className="p-8 border border-taupe/15 rounded-2xl hover:border-taupe/30 transition-colors">
