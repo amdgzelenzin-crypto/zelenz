@@ -336,7 +336,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
       
       {/* ──── 1. HERO — full screen ──── */}
       <section
-        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))] max-md:pb-24"
+        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(88px,calc(env(safe-area-inset-top)+68px))] max-md:pb-28"
       >
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes bounceHero {
@@ -349,9 +349,42 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             .hero-buttons { justify-content: flex-start !important; }
           }
           @media (max-width: 1023px) {
-            .hero-title { text-align: center !important; }
-            .hero-subtext { text-align: center !important; }
-            .hero-buttons { justify-content: center !important; }
+            .hero-title {
+              text-align: center !important;
+              font-size: clamp(30px, 8.5vw, 44px) !important;
+              letter-spacing: -0.02em !important;
+              margin-bottom: 28px !important;
+              line-height: 1.15 !important;
+            }
+            .hero-eyebrow {
+              margin-bottom: 22px !important;
+              letter-spacing: 0.34em !important;
+            }
+            .hero-subtext {
+              text-align: center !important;
+              font-size: 15px !important;
+              line-height: 1.65 !important;
+              margin-top: 8px !important;
+              margin-bottom: 40px !important;
+              color: rgba(255,255,255,0.86) !important;
+              max-width: 320px !important;
+            }
+            .hero-buttons {
+              justify-content: center !important;
+              gap: 12px !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+            .hero-buttons .hero-button {
+              width: auto !important;
+              min-width: 0 !important;
+              max-width: 260px !important;
+              height: 44px !important;
+              padding: 0 28px !important;
+              font-size: 13px !important;
+              letter-spacing: 0.08em !important;
+              text-transform: uppercase !important;
+            }
           }
         `}} />
 
@@ -366,18 +399,20 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
           }}
         />
 
-        <div className="relative z-10 h-full px-4 py-16 md:py-20">
-          <div className="max-w-[720px] mx-auto lg:mx-0 lg:max-w-[640px] h-full flex items-center">
-              <div className="text-center lg:text-left w-full">
+        <div className="relative z-10 h-full px-5 py-16 md:px-4 md:py-20">
+          <div className="max-w-[720px] mx-auto lg:mx-0 lg:max-w-[640px] h-full flex items-center max-md:items-start max-md:pt-6">
+              <div className="text-center lg:text-left w-full flex flex-col gap-1 max-md:gap-0">
           {/* Location Label */}
           <FadeUp>
-            <p style={{
+            <p
+              className="hero-eyebrow"
+              style={{
               fontFamily: "var(--font-sans), sans-serif",
               fontSize: "11px",
               letterSpacing: "0.30em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.75)",
-              marginBottom: "16px",
+              color: "rgba(255,255,255,0.70)",
+              marginBottom: "20px",
             }}
             >
               Premium Makeup Studio · Pala, Kerala
@@ -393,7 +428,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
               fontSize: "clamp(36px, 6.5vw, 68px)",
               fontWeight: 300,
               lineHeight: 1.1,
-              marginBottom: "24px",
+              marginBottom: "28px",
               color: "#FFFFFF",
               textAlign: "left",
               maxWidth: "90vw",
@@ -410,14 +445,15 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             <p
               className="hero-subtext mx-auto lg:mx-0"
               style={{
-                fontFamily: "var(--font-body), Georgia, serif",
-                fontSize: "clamp(16px, 2.2vw, 19px)",
-                fontStyle: "italic",
-                color: "rgba(255,255,255,0.92)",
-                lineHeight: 1.5,
-                marginTop: "20px",
-                marginBottom: "36px",
-                maxWidth: "520px",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "clamp(15px, 2vw, 18px)",
+                fontWeight: 300,
+                color: "rgba(255,255,255,0.88)",
+                lineHeight: 1.6,
+                marginTop: "12px",
+                marginBottom: "40px",
+                maxWidth: "480px",
+                letterSpacing: "0.02em",
               }}
             >
               {HERO_SUBTEXT}
@@ -429,33 +465,40 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
           </div>
 
           <FadeUp delay={0.3}>
-            <div className="hero-buttons flex flex-col sm:flex-row gap-4 md:gap-6 items-center lg:items-start px-4 lg:px-0">
+            <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-6 items-center lg:items-start lg:px-0">
               <Link href="/services" 
-                className="hero-button w-full sm:w-fit min-w-[180px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                className="hero-button w-auto max-w-[260px] sm:w-fit min-w-[180px] h-[44px] md:h-[52px] flex items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 aria-label="Explore NIXTUDIO salon and bridal services"
                 style={{
-                  background: "rgba(61,26,31,0.72)",
-                  backdropFilter: "blur(10px)",
-                  border: "1.5px solid rgba(255,255,255,0.35)",
+                  background: "rgba(0,0,0,0.42)",
+                  backdropFilter: "blur(12px)",
+                  border: "1px solid rgba(255,255,255,0.55)",
                   color: "#FFFFFF",
-                  borderRadius: "50px",
-                  padding: "0 24px",
-                  fontSize: "16px",
+                  borderRadius: "999px",
+                  padding: "0 28px",
+                  fontSize: "14px",
                   fontWeight: 500,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
                 }}
               >
                 Explore Services
               </Link>
               <Link href="/bridal" 
-                className="hero-button w-full sm:w-fit min-w-[180px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
+                className="hero-button w-auto max-w-[260px] sm:w-fit min-w-[180px] h-[44px] md:h-[52px] flex items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 aria-label="View NIXTUDIO bridal packages and pricing"
                 style={{
-                  border: "none",
-                  color: "#FFFFFF",
-                  borderRadius: "50px",
-                  padding: "0 24px",
-                  fontSize: "16px",
+                  background: "rgba(61,21,32,0.92)",
+                  backdropFilter: "blur(12px)",
+                  border: "1px solid rgba(212,160,85,0.55)",
+                  color: "#F5E6C8",
+                  borderRadius: "999px",
+                  padding: "0 28px",
+                  fontSize: "14px",
                   fontWeight: 500,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
                 }}
               >
                 View Bridal Packages

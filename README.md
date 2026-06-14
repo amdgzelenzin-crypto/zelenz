@@ -1,48 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NIX-STUDIO
 
-## Vercel DNS Configuration
+Marketing site for **NIXTUDIO by Nikita Liby** — bridal makeup and luxury salon in Pala & Kottayam, Kerala.
 
-To point your domain `nixtudio.in` to this site on Vercel, update your DNS records in your registrar to match these exactly:
+Live: [nixtudio.in](https://nixtudio.in)
 
-| Type | Name | Value | TTL |
-| :--- | :--- | :--- | :--- |
-| **A** | `@` | **`76.76.21.21`** (Change from `216.198.79.1`) | 14400 |
-| **CNAME** | `www` | **`cname.vercel-dns.com`** (Or the specific one from Vercel) | 14400 |
-| **TXT** | `@` | `google-site-verification=LAajSHtWnZO6fup_YAS_H67VWoEW_VOvJJnWG9fmqp4` | 70 |
+## Stack
 
-*Note: Your current A record points to `216.198.79.1` (Bluehost). You **must** change it to `76.76.21.21` for the sitemap and site to work.*
+- [Next.js](https://nextjs.org) (App Router)
+- React 19, TypeScript, Tailwind CSS 4
+- Deployed on [Vercel](https://vercel.com)
 
-## Getting Started
-
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Local development server |
+| `npm run build` | Production build (runs sitemap generation via `postbuild`) |
+| `npm run start` | Serve production build |
+| `npm run lint` | ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` — routes and pages (homepage, services, bridal, blog, SEO landing pages)
+- `components/` — UI, SEO, and layout components
+- `lib/` — content, SEO configs, blog data
+- `public/` — static assets and gallery images
+- `next-sitemap.config.js` — sitemap generation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site is deployed on Vercel. Domain and DNS are managed in the Vercel project dashboard and your domain registrar — do not commit DNS records or verification tokens to this repo.
 
-## Deploy on Vercel
+## SEO notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Server-rendered content is always present for crawlers (homepage H1, schema, crawlable copy).
+- JSON-LD (`Organization`, `BeautySalon`, `WebSite`) is injected in the root layout.
+- Sitemaps are generated on build via `next-sitemap`.

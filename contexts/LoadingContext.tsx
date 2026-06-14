@@ -27,15 +27,24 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   const [isReady] = useState(true)
 
   useLayoutEffect(() => {
+    const clearFirstVisit = () => {
+      document.documentElement.classList.remove('nix-first-visit')
+    }
+
     try {
-      if (sessionStorage.getItem('nix-loaded')) return
+      if (sessionStorage.getItem('nix-loaded')) {
+        clearFirstVisit()
+        return
+      }
     } catch {
+      clearFirstVisit()
       return
     }
 
     setIsLoading(true)
     const timer = setTimeout(() => {
       setIsLoading(false)
+      clearFirstVisit()
       try {
         sessionStorage.setItem('nix-loaded', 'true')
       } catch {

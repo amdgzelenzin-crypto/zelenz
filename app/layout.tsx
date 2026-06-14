@@ -162,8 +162,22 @@ export default function RootLayout({
             body { font-family: Georgia, serif; }
             .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
             @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+            html.nix-first-visit { background: #3D1520; }
+            html.nix-first-visit::before {
+              content: '';
+              position: fixed;
+              inset: 0;
+              background: #3D1520;
+              z-index: 99999;
+            }
+            html.nix-first-visit #nix-app-shell { visibility: hidden; }
           `
         }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(!sessionStorage.getItem('nix-loaded')){document.documentElement.classList.add('nix-first-visit')}}catch(e){}`,
+          }}
+        />
         
         {/* Preconnect to font domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -192,7 +206,7 @@ export default function RootLayout({
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <LoadingProvider>
           <ClientComponents />
-          <div className="flex flex-col min-h-screen">
+          <div id="nix-app-shell" className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
