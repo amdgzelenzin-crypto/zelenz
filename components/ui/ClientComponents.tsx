@@ -2,11 +2,6 @@
 
 import dynamic from 'next/dynamic'
 
-const SiteLoader = dynamic(() => import('./SiteLoader'), {
-  ssr: false,
-  loading: () => null,
-})
-
 const FloatingAmbience = dynamic(() => import('./FloatingAmbience'), {
   ssr: false,
   loading: () => null,
@@ -30,7 +25,6 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
 export default function ClientComponents() {
   return (
     <>
-      <SiteLoader />
       <FloatingAmbience />
       <ScrollToTop />
       <AccessibilityFixes />

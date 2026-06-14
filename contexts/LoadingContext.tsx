@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import { createContext, useContext, useLayoutEffect, useState, ReactNode } from 'react'
 import LoadingScreen from '@/components/ui/SiteLoader'
 
 interface LoadingContextType {
@@ -10,7 +10,7 @@ interface LoadingContextType {
 
 const LoadingContext = createContext<LoadingContextType>({
   isLoading: false,
-  isReady: false
+  isReady: true,
 })
 
 export function useLoading() {
@@ -22,31 +22,25 @@ interface LoadingProviderProps {
 }
 
 export function LoadingProvider({ children }: LoadingProviderProps) {
-  const [isLoading, setIsLoading] = useState(true)
-  const [isReady, setIsReady] = useState(false)
+  // SSR defaults: full HTML for crawlers. First-visit overlay uses layout effect to avoid content flash.
+  const [isLoading, setIsLoading] = useState(false)
+  const [isReady] = useState(true)
 
-  useEffect(() => {
-    // Check if user has already seen loader
+  useLayoutEffect(() => {
     try {
-      const seen = sessionStorage.getItem('nix-loaded')
-      if (seen) {
-        // If already seen, show content immediately without loader
-        setIsLoading(false)
-        setIsReady(true)
-        return
-      }
-    } catch (e) {
-      // If sessionStorage fails, proceed with loader
+      if (sessionStorage.getItem('nix-loaded')) return
+    } catch {
+      return
     }
 
-    // For first-time visitors, ensure loader shows immediately
-    // Don't allow content to render until loader animation completes
+    setIsLoading(true)
     const timer = setTimeout(() => {
       setIsLoading(false)
-      setIsReady(true)
       try {
         sessionStorage.setItem('nix-loaded', 'true')
-      } catch (e) {}
+      } catch {
+        /* ignore */
+      }
     }, 1200)
 
     return () => clearTimeout(timer)
@@ -54,8 +48,12 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
 
   return (
     <LoadingContext.Provider value={{ isLoading, isReady }}>
-      {isLoading && <LoadingScreen />}
-      {isReady && children}
+      {children}
+      {isLoading && (
+        <div className="fixed inset-0 z-[10000]" aria-hidden="true">
+          <LoadingScreen controlled />
+        </div>
+      )}
     </LoadingContext.Provider>
   )
 }

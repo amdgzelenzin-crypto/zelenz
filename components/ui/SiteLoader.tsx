@@ -1,20 +1,32 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 
-export default function SiteLoader() {
-  const [visible, setVisible] = useState(false)
+type SiteLoaderProps = {
+  /** When true, parent (LoadingProvider) controls visibility — no duplicate sessionStorage logic */
+  controlled?: boolean
+}
+
+export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
+  const [visible, setVisible] = useState(controlled)
   const [leaving, setLeaving] = useState(false)
 
+  useLayoutEffect(() => {
+    if (!controlled) return
+    setVisible(true)
+    const exitTimer = setTimeout(() => setLeaving(true), 800)
+    return () => clearTimeout(exitTimer)
+  }, [controlled])
+
   useEffect(() => {
+    if (controlled) return
+
     try {
-      const seen = sessionStorage.getItem('nix-loaded')
-      if (seen) return
-    } catch (e) {
+      if (sessionStorage.getItem('nix-loaded')) return
+    } catch {
       return
     }
 
-    // Show loader immediately on mount
     requestAnimationFrame(() => {
       setVisible(true)
     })
@@ -27,14 +39,16 @@ export default function SiteLoader() {
       setVisible(false)
       try {
         sessionStorage.setItem('nix-loaded', 'true')
-      } catch (e) {}
+      } catch {
+        /* ignore */
+      }
     }, 1200)
 
     return () => {
       clearTimeout(exitTimer)
       clearTimeout(removeTimer)
     }
-  }, [])
+  }, [controlled])
 
   if (!visible) return null
 

@@ -187,10 +187,10 @@ export default function RootLayout({
         
         {/* Defer non-critical scripts */}
         <script defer src="https://www.googletagmanager.com/gtag/js?id=G-R89TBWLTXG"></script>
+        <JsonLd />
       </head>
       <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
         <LoadingProvider>
-          <JsonLd />
           <ClientComponents />
           <div className="flex flex-col min-h-screen">
             <Header />

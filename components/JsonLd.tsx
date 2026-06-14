@@ -34,6 +34,47 @@ export default function JsonLd({ data }: JsonLdProps) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://nixtudio.in/#organization",
+        "name": "NIXTUDIO",
+        "alternateName": "NIXTUDIO by Nikita Liby",
+        "url": "https://nixtudio.in",
+        "logo": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+        "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+        "telephone": "+917034726402",
+        "description": "Premium salon and bridal makeup studio in Pala and Kottayam district, Kerala.",
+        "founder": { "@id": "https://nixtudio.in/#person-nikita-liby" },
+        "sameAs": [
+          "https://www.facebook.com/nixtudio_-100648048221705/",
+          "https://www.instagram.com/nixtudio_/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+          "addressLocality": "Pala",
+          "addressRegion": "Kerala",
+          "postalCode": "686575",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://nixtudio.in/#person-nikita-liby",
+        "name": "Nikita Liby",
+        "jobTitle": "Bridal Makeup Artist & Salon Owner",
+        "worksFor": { "@id": "https://nixtudio.in/#organization" },
+        "knowsAbout": ["Bridal Makeup", "HD Makeup", "Airbrush Makeup", "Hair Styling", "Salon Management"],
+        "url": "https://nixtudio.in/about"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nixtudio.in/#website",
+        "url": "https://nixtudio.in",
+        "name": "NIXTUDIO by Nikita Liby",
+        "publisher": { "@id": "https://nixtudio.in/#organization" },
+        "inLanguage": "en-IN"
+      },
+      {
         "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
         "@id": "https://nixtudio.in/#business",
         "name": "Nixtudio - #1 Best Salon & Bridal Makeup in Pala & Kottayam, Kerala",
@@ -41,6 +82,7 @@ export default function JsonLd({ data }: JsonLdProps) {
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
+        "parentOrganization": { "@id": "https://nixtudio.in/#organization" },
         "description": "Nixtudio is #1 in Pala and Kottayam district for premium salon and bridal makeup. Expert hair styling, gel nails, spa, waxing, threading & bridal artistry exclusively by Nikita Liby. Top-rated in Pala, Kottayam, Ettumanoor & Central Travancore.",
         "address": {
           "@type": "PostalAddress",

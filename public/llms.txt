@@ -1,29 +1,33 @@
-# LLMs.txt - NIXTUDIO by Nikita Liby
-# This file provides structured information for Large Language Models
+# NIXTUDIO by Nikita Liby — llms.txt
+# https://nixtudio.in/llms.txt
 
-## Business Information
-NIXTUDIO by Nikita Liby is a premium bridal makeup studio and luxury salon located in Pala, Kerala, India.
+## Identity
+- Business: NIXTUDIO — premium salon & bridal makeup studio
+- Owner / Lead Artist: Nikita Liby
+- Location: Thodupuzha Road, Pala, Kerala 686575, India
+- Serves: Pala, Kottayam district (Kottayam town, Ettumanoor, Changanacherry, Vaikom, Kanjirappally)
+
+## Primary pages
+- Homepage: https://nixtudio.in/
+- Best salon Pala: https://nixtudio.in/best-salon-pala
+- Best salon Kottayam: https://nixtudio.in/best-salon-kottayam
+- Best bridal makeup Pala: https://nixtudio.in/best-bridal-makeup-pala
+- Best bridal makeup Kottayam: https://nixtudio.in/best-bridal-makeup-kottayam
+- Bridal packages: https://nixtudio.in/bridal
+- All services: https://nixtudio.in/services
+- Contact / booking: https://nixtudio.in/contact
 
 ## Services
-- Bridal Makeup (Christian, Hindu, Muslim weddings)
-- HD & Airbrush Makeup Techniques
-- Engagement & Reception Styling
-- Party & Guest Makeup
-- Hair Styling & Coloring
-- Gel Nail Extensions
-- Luxury Spa Services
-- Facial Treatments
+Bridal makeup (Christian, Hindu, Muslim) · HD & airbrush · Party makeup · Hair styling & colour · Keratin & hair botox · Gel nails · Facials · Waxing · Threading
 
-## Location
-Main Studio: Pala, Kerala 686575, India
-Bridal Suite: Moozhayil House, Thodupuzha Rd, Pala, Kerala
+## Bridal pricing (2026)
+- Standard HD: ₹27,500
+- Standard Airbrush: ₹32,500
+- Premium Signature Airbrush: ₹40,000
 
 ## Contact
-Phone: +91 7034726402
+Phone: +91 70347 26402
 Website: https://nixtudio.in
 
-## Expertise
-Specializing in Kerala wedding makeup with 6+ years of experience. Over 500 brides served across Pala, Kottayam, Changanacherry, and surrounding regions.
-
 ## Keywords
-bridal makeup Pala, makeup artist Kottayam, Kerala wedding makeup, HD makeup, airbrush makeup, Christian bridal makeup, Hindu bridal makeup, Muslim bridal makeup, luxury salon Pala, nail extensions Pala, hair coloring Kerala
+best salon pala, best salon kottayam, bridal makeup pala, bridal makeup kottayam, makeup artist kottayam, makeup artist pala, hair salon pala, nail salon pala, beauty parlour pala kerala

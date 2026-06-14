@@ -6,7 +6,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { blogPosts } from "@/lib/blog";
 import { FadeUp } from "@/components/ui/AnimationWrapper";
-import { useLoading } from "@/contexts/LoadingContext";
 
 // Dynamic imports for heavy components
 const ReviewMarquee = dynamic(
@@ -328,7 +327,6 @@ type HomePageClientProps = {
 };
 
 export default function HomePageClient({ galleryPreview, bridalCardImage }: HomePageClientProps) {
-  const { isLoading, isReady } = useLoading();
   const editorialCards = cards.map((card, i) =>
     i === 0 ? { ...card, image: bridalCardImage } : card
   );
@@ -340,32 +338,6 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
       <section
         className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))] max-md:pb-24"
       >
-        {/* Don't render interactive content until ready, but keep basic structure */}
-        {!isReady ? (
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 py-16 md:py-20">
-            <h1
-              className="hero-title"
-              style={{
-                fontFamily: "var(--font-display), Georgia, serif",
-                fontStyle: "italic",
-                fontSize: "clamp(36px, 6.5vw, 68px)",
-                fontWeight: 300,
-                lineHeight: 1.1,
-                marginBottom: "24px",
-                color: "#FFFFFF",
-                textAlign: "left",
-                maxWidth: "90vw",
-                wordWrap: "break-word",
-                hyphens: "auto",
-              }}
-            >
-              {HERO_H1_LINE1}
-              <br />
-              <span style={{ color: "#E8CC90" }}>{HERO_H1_LINE2}</span>
-            </h1>
-          </div>
-        ) : (
-        <>
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes bounceHero {
             0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -452,7 +424,9 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             </p>
           </FadeUp>
 
-          <div className="sr-only">{HERO_GEO_BLUF}</div>
+          <div className="sr-only">
+            <p>{HERO_GEO_BLUF}</p>
+          </div>
 
           <FadeUp delay={0.3}>
             <div className="hero-buttons flex flex-col sm:flex-row gap-4 md:gap-6 items-center lg:items-start px-4 lg:px-0">
@@ -490,6 +464,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
           </FadeUp>
               </div>
           </div>
+        </div>
 
         <div style={{
           position: "absolute", bottom: "24px", left: "50%",
@@ -502,9 +477,6 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             ↓
           </div>
         </div>
-        </div>
-        </>
-        )}
       </section>
 
       {/* ──── 2. EDITORIAL SERVICE CARDS ──── */}
