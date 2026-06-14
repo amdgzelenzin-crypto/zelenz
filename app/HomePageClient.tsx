@@ -345,9 +345,9 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             50% { transform: translateX(-50%) translateY(8px); }
           }
           @media (min-width: 1024px) {
-            .hero-title { font-size: 56px !important; text-align: left !important; }
-            .hero-subtext { font-size: 19px !important; text-align: left !important; margin-bottom: 32px !important; }
-            .hero-buttons { justify-content: flex-start !important; }
+            .hero-title { font-size: 56px !important; text-align: center !important; }
+            .hero-subtext { font-size: 19px !important; text-align: center !important; margin-bottom: 32px !important; max-width: 560px !important; }
+            .hero-buttons { justify-content: center !important; }
           }
           @media (max-width: 1023px) {
             .hero-title {
@@ -396,13 +396,13 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.25) 100%), linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(61,26,31,0.55) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.52) 55%, rgba(61,26,31,0.72) 100%)",
           }}
         />
 
-        <div className="relative z-10 h-full px-5 py-16 md:px-4 md:py-20">
-          <div className="max-w-[720px] mx-auto lg:mx-0 lg:max-w-[640px] h-full flex items-center max-md:items-start max-md:pt-6">
-              <div className="text-center lg:text-left w-full flex flex-col gap-1 max-md:gap-0">
+        <div className="relative z-10 h-full px-5 py-16 md:px-4 md:py-20 flex items-center justify-center">
+          <div className="max-w-[720px] mx-auto w-full h-full flex items-center justify-center max-md:items-start max-md:pt-6">
+              <div className="text-center w-full flex flex-col items-center gap-1 max-md:gap-0">
           {/* Location Label */}
           <FadeUp>
             <p
@@ -431,7 +431,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
               lineHeight: 1.1,
               marginBottom: "28px",
               color: "#FFFFFF",
-              textAlign: "left",
+              textAlign: "center",
               maxWidth: "90vw",
               wordWrap: "break-word",
               hyphens: "auto",
@@ -444,7 +444,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
 
           <FadeUp delay={0.2}>
             <p
-              className="hero-subtext mx-auto lg:mx-0"
+              className="hero-subtext mx-auto"
               style={{
                 fontFamily: "var(--font-sans), sans-serif",
                 fontSize: "clamp(15px, 2vw, 18px)",
@@ -466,7 +466,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
           </div>
 
           <FadeUp delay={0.3}>
-            <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-6 items-center lg:items-start lg:px-0">
+            <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-6 items-center justify-center">
               <Link href="/services" 
                 className="hero-button w-auto max-w-[260px] sm:w-fit min-w-[180px] h-[44px] md:h-[52px] flex items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 aria-label="Explore NIXTUDIO salon and bridal services"
