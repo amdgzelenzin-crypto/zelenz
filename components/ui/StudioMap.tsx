@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { IconBadge, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export default function StudioMap() {
   return (
@@ -28,9 +29,11 @@ export default function StudioMap() {
               <div style={{ textAlign: 'center' }}>
                 <div style={{
                   fontFamily: 'var(--font-display, serif)', fontSize: '24px',
-                  color: '#3D1520', marginBottom: '8px'
+                  color: '#3D1520', marginBottom: '8px',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 }}>
-                  📍 Pala, Kerala
+                  <PremiumIcon name="map-pin" size={22} className="text-[#B76E79]" />
+                  Pala, Kerala
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-body, serif)', fontSize: '14px',
@@ -95,9 +98,11 @@ export default function StudioMap() {
               <div style={{ textAlign: 'center' }}>
                 <div style={{
                   fontFamily: 'var(--font-display, serif)', fontSize: '24px',
-                  color: '#3D1520', marginBottom: '8px'
+                  color: '#3D1520', marginBottom: '8px',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 }}>
-                  🏛️ Bridal Suite
+                  <PremiumIcon name="landmark" size={22} className="text-[#B76E79]" />
+                  Bridal Suite
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-body, serif)', fontSize: '14px',

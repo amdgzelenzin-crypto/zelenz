@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Bridal Makeup Before After Portfolio | Real Transformations | NIXTUDIO',
@@ -134,22 +135,22 @@ export default function BridalMakeupPortfolioPage() {
             {/* Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">📸</div>
+                <IconBadge name="camera" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-pink-600">500+</div>
                 <div className="text-gray-600">Happy Brides</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">⭐</div>
+                <IconBadge name="star" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-pink-600">4.9/5</div>
                 <div className="text-gray-600">Average Rating</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">🎨</div>
+                <IconBadge name="palette" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-pink-600">100%</div>
                 <div className="text-gray-600">Real Photos</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">💕</div>
+                <IconBadge name="heart" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-pink-600">16+ hrs</div>
                 <div className="text-gray-600">Makeup Lasting</div>
               </div>
@@ -219,7 +220,7 @@ export default function BridalMakeupPortfolioPage() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{transformation.brideName}</h3>
                     <div className="flex items-center text-gray-600 mb-3">
-                      <span className="text-pink-600 mr-2">📍</span>
+                      <PremiumIcon name="map-pin" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span className="text-sm">{transformation.location}</span>
                     </div>
                     
@@ -261,7 +262,7 @@ export default function BridalMakeupPortfolioPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Why Our Transformations Stand Out</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">🎯</div>
+                <IconBadge name="target" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Personalized Approach</h3>
                 <p className="text-gray-600">
                   Every bride gets a customized look based on their features, outfit, and wedding theme. 
@@ -269,7 +270,7 @@ export default function BridalMakeupPortfolioPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">💪</div>
+                <IconBadge name="award" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Kerala Weather Proof</h3>
                 <p className="text-gray-600">
                   Specialized techniques and products that last through Kerala's humidity and heat. 
@@ -277,7 +278,7 @@ export default function BridalMakeupPortfolioPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">📸</div>
+                <IconBadge name="camera" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Photography Ready</h3>
                 <p className="text-gray-600">
                   Makeup designed to look stunning in photos and videos. 
@@ -354,7 +355,7 @@ export default function BridalMakeupPortfolioPage() {
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
-                <strong>🎁 Limited Time Offer:</strong> Book this month and get a free pre-bridal skincare treatment worth ₹5,000!
+                <strong><IconLabel icon="gift">Limited Time Offer:</IconLabel></strong> Book this month and get a free pre-bridal skincare treatment worth ₹5,000!
               </p>
             </div>
           </div>

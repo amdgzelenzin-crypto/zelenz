@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import BridalCalculator from '@/components/BridalCalculator'
+import { IconBadge } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Bridal Makeup Calculator | Kerala Wedding Cost Estimator | NIXTUDIO',
@@ -73,17 +74,17 @@ export default function BridalCalculatorPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="bg-white/80 backdrop-blur p-6 rounded-xl border border-rose/20">
-                <div className="text-2xl mb-2">📅</div>
+                <IconBadge name="clock" size="md" className="mb-2 mx-auto" />
                 <h3 className="font-semibold text-espresso mb-1">Instant Results</h3>
                 <p className="text-sm text-taupe">Get personalized recommendations in 60 seconds</p>
               </div>
               <div className="bg-white/80 backdrop-blur p-6 rounded-xl border border-rose/20">
-                <div className="text-2xl mb-2">🎯</div>
+                <IconBadge name="target" size="md" className="mb-2 mx-auto" />
                 <h3 className="font-semibold text-espresso mb-1">Climate-Smart</h3>
                 <p className="text-sm text-taupe">Optimized for Kerala's humidity and weather</p>
               </div>
               <div className="bg-white/80 backdrop-blur p-6 rounded-xl border border-rose/20">
-                <div className="text-2xl mb-2">💎</div>
+                <IconBadge name="gem" size="md" className="mb-2 mx-auto" />
                 <h3 className="font-semibold text-espresso mb-1">Expert-Backed</h3>
                 <p className="text-sm text-taupe">Based on 500+ Kerala bridal experiences</p>
               </div>

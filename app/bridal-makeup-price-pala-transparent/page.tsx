@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Bridal Makeup Price Pala 2026 | Complete Transparent Pricing | NIXTUDIO',
@@ -104,28 +105,28 @@ export default function BridalMakeupPricePage() {
             {/* Price Overview Cards */}
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-200">
-                <div className="text-4xl mb-4">💕</div>
+                <IconBadge name="heart" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Standard — HD</h3>
                 <p className="text-sm text-gray-500 mb-2">Engagement · Wedding · Reception</p>
                 <div className="text-3xl font-bold text-pink-600 mb-4">₹27,500</div>
                 <ul className="text-left text-gray-600 space-y-2">
-                  <li>✓ Makeup & hairstyling</li>
-                  <li>✓ Lashes, lens, outfit styling</li>
-                  <li>✓ Hair extensions if needed</li>
-                  <li>✓ Saree draping extra (₹1,500–2,000)</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Makeup & hairstyling</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Lashes, lens, outfit styling</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Hair extensions if needed</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Saree draping extra (₹1,500–2,000)</li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-300 transform scale-105">
-                <div className="text-4xl mb-4">👰</div>
+                <IconBadge name="crown" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Standard — Airbrush</h3>
                 <p className="text-sm text-gray-500 mb-2">Engagement · Wedding · Reception</p>
                 <div className="text-3xl font-bold text-pink-600 mb-4">₹32,500</div>
                 <ul className="text-left text-gray-600 space-y-2">
-                  <li>✓ Humidity-resistant airbrush</li>
-                  <li>✓ Same inclusions as HD Standard</li>
-                  <li>✓ No makeup or hair trials</li>
-                  <li>✓ By Nikita Liby</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Humidity-resistant airbrush</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Same inclusions as HD Standard</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> No makeup or hair trials</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> By Nikita Liby</li>
                 </ul>
                 <div className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold mt-4">
                   MOST POPULAR
@@ -133,26 +134,26 @@ export default function BridalMakeupPricePage() {
               </div>
               
               <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-200">
-                <div className="text-4xl mb-4">👑</div>
+                <IconBadge name="crown" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Premium — Airbrush</h3>
                 <p className="text-sm text-gray-500 mb-2">Signature subtle airbrush glam</p>
                 <div className="text-3xl font-bold text-pink-600 mb-4">₹40,000</div>
                 <ul className="text-left text-gray-600 space-y-2">
-                  <li>✓ Luxury international brands</li>
-                  <li>✓ Saree draping included</li>
-                  <li>✓ All Standard inclusions</li>
-                  <li>✓ Engagement, wedding or reception</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Luxury international brands</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Saree draping included</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> All Standard inclusions</li>
+                  <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Engagement, wedding or reception</li>
                 </ul>
               </div>
             </div>
             
             <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-6 max-w-4xl mx-auto">
-              <h4 className="text-xl font-bold mb-3">🔥 Why Our Pricing is Transparent:</h4>
+              <h4 className="text-xl font-bold mb-3"><IconLabel icon="sparkles">Why Our Pricing is Transparent:</IconLabel></h4>
               <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div>✅ <strong>No Hidden Costs</strong> - What you see is what you pay</div>
-                <div>✅ <strong>Premium Products</strong> - MAC, Bobbi Brown, Charlotte Tilbury</div>
-                <div>✅ <strong>6+ Years Experience</strong> - 500+ Happy Brides</div>
-                <div>✅ <strong>Satisfaction Guarantee</strong> - Perfection or Redo</div>
+                <div className="flex items-center gap-2"><PremiumIcon name="check-circle" size={18} className="text-green-600 shrink-0" /> <strong>No Hidden Costs</strong> - What you see is what you pay</div>
+                <div className="flex items-center gap-2"><PremiumIcon name="check-circle" size={18} className="text-green-600 shrink-0" /> <strong>Premium Products</strong> - MAC, Bobbi Brown, Charlotte Tilbury</div>
+                <div className="flex items-center gap-2"><PremiumIcon name="check-circle" size={18} className="text-green-600 shrink-0" /> <strong>6+ Years Experience</strong> - 500+ Happy Brides</div>
+                <div className="flex items-center gap-2"><PremiumIcon name="check-circle" size={18} className="text-green-600 shrink-0" /> <strong>Satisfaction Guarantee</strong> - Perfection or Redo</div>
               </div>
             </div>
           </div>
@@ -197,23 +198,23 @@ export default function BridalMakeupPricePage() {
                 <div className="bg-pink-50 rounded-xl p-6">
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
+                      <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span><strong>Pre-Makeup Consultation</strong> - Skin analysis & look planning</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
+                      <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span><strong>Premium Products</strong> - International brands only</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
+                      <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span><strong>Waterproof Formula</strong> - Perfect for Kerala humidity</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
+                      <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span><strong>Touch-up Kit</strong> - Emergency essentials</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
+                      <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
                       <span><strong>Photography Testing</strong> - Looks perfect in photos</span>
                     </li>
                   </ul>
@@ -239,28 +240,28 @@ export default function BridalMakeupPricePage() {
                 <tbody>
                   <tr className="border-b">
                     <td className="p-4">Experienced Artist</td>
-                    <td className="p-4 text-center text-green-600 font-bold">✓ 6+ Years</td>
+                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> 6+ Years</span></td>
                     <td className="p-4 text-center text-gray-500">Variable</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4">Transparent Pricing</td>
-                    <td className="p-4 text-center text-green-600 font-bold">✓ Yes</td>
-                    <td className="p-4 text-center text-red-600 font-bold">✗ Hidden Costs</td>
+                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> Yes</span></td>
+                    <td className="p-4 text-center text-red-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="x" size={16} className="text-red-600" /> Hidden Costs</span></td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4">Premium Products</td>
-                    <td className="p-4 text-center text-green-600 font-bold">✓ International</td>
+                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> International</span></td>
                     <td className="p-4 text-center text-gray-500">Standard</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4">Satisfaction Guarantee</td>
-                    <td className="p-4 text-center text-green-600 font-bold">✓ Yes</td>
+                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> Yes</span></td>
                     <td className="p-4 text-center text-gray-500">Rare</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4">Trial Sessions</td>
-                    <td className="p-4 text-center text-green-600 font-bold">✓ 2 Included</td>
-                    <td className="p-4 text-center text-red-600 font-bold">✗ Extra Cost</td>
+                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> 2 Included</span></td>
+                    <td className="p-4 text-center text-red-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="x" size={16} className="text-red-600" /> Extra Cost</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -288,7 +289,7 @@ export default function BridalMakeupPricePage() {
               </Link>
             </div>
             <div className="mt-8 flex items-center justify-center gap-2">
-              <span>📞</span>
+              <PremiumIcon name="phone" size={20} className="text-white" />
               <span className="text-lg">Call: +91 70347 26402</span>
             </div>
           </div>

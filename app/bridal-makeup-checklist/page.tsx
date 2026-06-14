@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { PremiumIconName } from '@/components/ui/PremiumIcon'
+import { IconBadge, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Free Kerala Bridal Makeup Checklist 2026 | Wedding Planning Guide | NIXTUDIO',
@@ -51,7 +53,7 @@ const structuredData = {
 }
 
 export default function BridalMakeupChecklistPage() {
-  const checklistCategories = [
+  const checklistCategories: { title: string; icon?: PremiumIconName; items: string[] }[] = [
     {
       title: "6 Months Before Wedding",
       items: [
@@ -104,7 +106,8 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "💄 Essential Makeup Items",
+      icon: "brush" as const,
+      title: "Essential Makeup Items",
       items: [
         "Lipstick and lip liner (extra)",
         "Compact powder for touch-ups",
@@ -116,7 +119,8 @@ export default function BridalMakeupChecklistPage() {
       ]
     },
     {
-      title: "🌟 Kerala Wedding Specific Tips",
+      icon: "sparkles" as const,
+      title: "Kerala Wedding Specific Tips",
       items: [
         "Choose waterproof/humidity-proof makeup",
         "Opt for airbrush in outdoor venues",
@@ -153,22 +157,22 @@ export default function BridalMakeupChecklistPage() {
             {/* Download Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">📋</div>
+                <IconBadge name="check" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-green-600">50+</div>
                 <div className="text-gray-600">Checklist Items</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">⏰</div>
+                <IconBadge name="clock" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-green-600">6 Month</div>
                 <div className="text-gray-600">Timeline</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">•</div>
+                <IconBadge name="landmark" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-green-600">100%</div>
                 <div className="text-gray-600">Kerala Specific</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">⭐</div>
+                <IconBadge name="star" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-green-600">Expert</div>
                 <div className="text-gray-600">Verified</div>
               </div>
@@ -176,7 +180,7 @@ export default function BridalMakeupChecklistPage() {
             
             {/* Download CTA */}
             <div className="bg-green-600 text-white rounded-2xl p-8 mb-12 max-w-2xl mx-auto">
-              <div className="text-2xl font-bold mb-4">🎁 Download Your FREE Checklist</div>
+              <div className="text-2xl font-bold mb-4"><IconLabel icon="gift" iconClassName="text-white">Download Your FREE Checklist</IconLabel></div>
               <p className="text-lg mb-6">
                 Get the complete bridal makeup preparation guide used by 500+ Kerala brides
               </p>
@@ -191,7 +195,7 @@ export default function BridalMakeupChecklistPage() {
                 Download Free Checklist
               </button>
               <p className="text-sm mt-4">
-                ✓ No spam • ✓ Unsubscribe anytime • ✓ Instant download
+                <span className="inline-flex items-center gap-1"><PremiumIcon name="check" size={14} className="text-white" /> No spam</span> • <span className="inline-flex items-center gap-1"><PremiumIcon name="check" size={14} className="text-white" /> Unsubscribe anytime</span> • <span className="inline-flex items-center gap-1"><PremiumIcon name="check" size={14} className="text-white" /> Instant download</span>
               </p>
             </div>
           </div>
@@ -204,11 +208,17 @@ export default function BridalMakeupChecklistPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {checklistCategories.map((category, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-lg font-bold mb-4 text-green-600">{category.title}</h3>
+                  <h3 className="text-lg font-bold mb-4 text-green-600">
+                    {category.icon ? (
+                      <IconLabel icon={category.icon}>{category.title}</IconLabel>
+                    ) : (
+                      category.title
+                    )}
+                  </h3>
                   <ul className="space-y-2">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start text-sm text-gray-700">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={14} className="text-green-600 mr-2 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -225,7 +235,7 @@ export default function BridalMakeupChecklistPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Why This Checklist Works</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">•</div>
+                <IconBadge name="clock" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Proven Timeline</h3>
                 <p className="text-gray-600">
                   Based on 500+ Kerala weddings. 
@@ -233,7 +243,7 @@ export default function BridalMakeupChecklistPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">•</div>
+                <IconBadge name="landmark" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Kerala Specific</h3>
                 <p className="text-gray-600">
                   Designed for Kerala's climate, venues, 
@@ -241,7 +251,7 @@ export default function BridalMakeupChecklistPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">•</div>
+                <IconBadge name="award" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Expert Verified</h3>
                 <p className="text-gray-600">
                   Created by Nikita Liby with 6+ years 
@@ -291,7 +301,7 @@ export default function BridalMakeupChecklistPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Additional Wedding Resources</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold mb-4">📚 Related Guides</h3>
+                <h3 className="text-xl font-bold mb-4"><IconLabel icon="lightbulb">Related Guides</IconLabel></h3>
                 <ul className="space-y-3">
                   <li>
                     <Link href="/kerala-wedding-makeup-guide" className="text-green-600 hover:underline">
@@ -311,7 +321,7 @@ export default function BridalMakeupChecklistPage() {
                 </ul>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold mb-4">🎨 Services</h3>
+                <h3 className="text-xl font-bold mb-4"><IconLabel icon="palette">Services</IconLabel></h3>
                 <ul className="space-y-3">
                   <li>
                     <Link href="/bridal" className="text-green-600 hover:underline">
@@ -355,7 +365,7 @@ export default function BridalMakeupChecklistPage() {
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
-                <strong>🎉 Special Bonus:</strong> Book this month and get the checklist PLUS a free skincare consultation worth ₹3,000!
+                <strong><IconLabel icon="sparkles" iconClassName="text-white">Special Bonus:</IconLabel></strong> Book this month and get the checklist PLUS a free skincare consultation worth ₹3,000!
               </p>
             </div>
           </div>

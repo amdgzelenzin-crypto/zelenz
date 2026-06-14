@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import BridalCalculator from '@/components/BridalCalculator'
+import { IconBadge } from '@/components/ui/PremiumIcon'
 import JsonLd from '@/components/JsonLd'
 import { FadeIn, PremiumBox, StaggerContainer, StaggerItem } from '@/components/ui/PremiumAnimations'
 
@@ -182,7 +183,7 @@ export default function MonsoonBridalPackage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <StaggerItem>
                   <PremiumBox className="bg-white p-8 rounded-2xl shadow-lg">
-                    <div className="text-4xl mb-4">💨</div>
+                    <IconBadge name="wind" size="md" className="mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Airbrush Technology</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• Micro-fine mist application</li>
@@ -195,7 +196,7 @@ export default function MonsoonBridalPackage() {
                 </StaggerItem>
                 <StaggerItem>
                   <PremiumBox className="bg-white p-8 rounded-2xl shadow-lg">
-                    <div className="text-4xl mb-4">🛡️</div>
+                    <IconBadge name="shield" size="md" className="mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Seal</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• Industrial-grade setting spray</li>
@@ -208,7 +209,7 @@ export default function MonsoonBridalPackage() {
                 </StaggerItem>
                 <StaggerItem>
                   <PremiumBox className="bg-white p-8 rounded-2xl shadow-lg">
-                    <div className="text-4xl mb-4">🧪</div>
+                    <IconBadge name="droplets" size="md" className="mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Climate-Adapted Products</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• Silicone-based foundations</li>

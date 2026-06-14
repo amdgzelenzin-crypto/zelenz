@@ -3,6 +3,7 @@
 import JsonLd from '@/components/JsonLd'
 import GuideDownloadForm from '@/components/GuideDownloadForm'
 import ScrollToFormButton from '@/components/ScrollToFormButton'
+import { IconLabel, StarRating } from '@/components/ui/PremiumIcon'
 import { FadeIn, PremiumBox, StaggerContainer, StaggerItem } from '@/components/ui/PremiumAnimations'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -246,7 +247,7 @@ export default function BridalSkinPrepGuide() {
               </div>
               
               <div className="bg-yellow/10 p-4 rounded-lg">
-                <h4 className="font-semibold text-espresso mb-2">💡 Kerala Climate Tip</h4>
+                <h4 className="font-semibold text-espresso mb-2"><IconLabel icon="lightbulb">Kerala Climate Tip</IconLabel></h4>
                 <p className="text-taupe text-sm">
                   Most brides over-moisturize in Kerala humidity, thinking it helps. It actually creates a barrier that prevents makeup adhesion. 
                   The key is lightweight hydration that sinks in completely.
@@ -273,9 +274,7 @@ export default function BridalSkinPrepGuide() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-rose/5 p-6 rounded-xl">
                 <div className="flex items-center gap-1 mb-3">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className="text-yellow-500">⭐</span>
-                  ))}
+                  <StarRating count={5} size={14} />
                 </div>
                 <p className="text-taupe text-sm mb-3 italic">
                   "Followed the guide exactly for my July monsoon wedding. My skin was perfect and the makeup lasted 16 hours without any touch-ups!"
@@ -285,9 +284,7 @@ export default function BridalSkinPrepGuide() {
               
               <div className="bg-blue/5 p-6 rounded-xl">
                 <div className="flex items-center gap-1 mb-3">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className="text-yellow-500">⭐</span>
-                  ))}
+                  <StarRating count={5} size={14} />
                 </div>
                 <p className="text-taupe text-sm mb-3 italic">
                   "The day-by-day approach was so easy to follow. My skin has never looked better. Nikita really understands Kerala skin!"
@@ -297,9 +294,7 @@ export default function BridalSkinPrepGuide() {
               
               <div className="bg-green/5 p-6 rounded-xl">
                 <div className="flex items-center gap-1 mb-3">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className="text-yellow-500">⭐</span>
-                  ))}
+                  <StarRating count={5} size={14} />
                 </div>
                 <p className="text-taupe text-sm mb-3 italic">
                   "Worth downloading just for the emergency pimple treatment! Saved my sister's wedding day. Thank you Nikita!"

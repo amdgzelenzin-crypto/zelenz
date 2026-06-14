@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Best Bridal Makeup Pala Kottayam Comparison 2026 | Top Artists Compared | NIXTUDIO',
@@ -278,7 +279,7 @@ export default function BridalMakeupComparisonPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Why NIXTUDIO Ranks #1</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-4">•</div>
+                <IconBadge name="crown" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Personal Expert</h3>
                 <p className="text-gray-600 mb-4">
                   Nikita Liby personally handles every bride with 6+ years of dedicated bridal makeup experience.
@@ -288,7 +289,7 @@ export default function BridalMakeupComparisonPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-4">•</div>
+                <IconBadge name="gem" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
                 <p className="text-gray-600 mb-4">
                   Only uses international premium brands like MAC, Bobbi Brown, Charlotte Tilbury.
@@ -298,7 +299,7 @@ export default function BridalMakeupComparisonPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-4">🏆</div>
+                <IconBadge name="trophy" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-xl font-bold mb-3">Proven Results</h3>
                 <p className="text-gray-600 mb-4">
                   500+ happy brides, 4.9/5 rating, and satisfaction guarantee on all services.
@@ -317,7 +318,7 @@ export default function BridalMakeupComparisonPage() {
             <h2 className="text-4xl font-bold text-center mb-12">How to Choose Your Makeup Artist</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-purple-600">✅ What to Prioritize</h3>
+                <h3 className="text-2xl font-bold mb-6 text-purple-600"><IconLabel icon="check-circle">What to Prioritize</IconLabel></h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <span className="text-green-600 mr-3 text-xl">1</span>
@@ -350,7 +351,7 @@ export default function BridalMakeupComparisonPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-red-600">❌ Red Flags to Avoid</h3>
+                <h3 className="text-2xl font-bold mb-6 text-red-600"><IconLabel icon="x-circle" iconClassName="text-red-600">Red Flags to Avoid</IconLabel></h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <span className="text-red-600 mr-3 text-xl">1</span>
@@ -397,7 +398,7 @@ export default function BridalMakeupComparisonPage() {
             {/* Winner Badge */}
             <div className="bg-white/10 backdrop-blur rounded-2xl p-8 mb-8">
               <div className="bg-white text-purple-600 rounded-xl p-6 inline-block">
-                <div className="text-3xl font-bold mb-2">🏆 NIXTUDIO</div>
+                <div className="text-3xl font-bold mb-2 flex items-center justify-center gap-2"><PremiumIcon name="trophy" size={28} /> NIXTUDIO</div>
                 <div className="text-lg font-semibold">Best Overall Choice</div>
                 <div className="text-sm text-gray-600">98/100 Score</div>
               </div>
@@ -420,7 +421,7 @@ export default function BridalMakeupComparisonPage() {
             
             <div className="mt-8 grid md:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/10 rounded-lg p-4">
-                <div className="font-bold mb-2">🎁 Limited Time</div>
+                <div className="font-bold mb-2"><IconLabel icon="gift" className="justify-center" iconClassName="text-white">Limited Time</IconLabel></div>
                 <div>Book this month and get free skincare worth ₹3,000</div>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
@@ -428,7 +429,7 @@ export default function BridalMakeupComparisonPage() {
                 <div>Premium service at competitive pricing</div>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
-                <div className="font-bold mb-2">⭐ Satisfaction</div>
+                <div className="font-bold mb-2"><IconLabel icon="star" className="justify-center" iconClassName="text-white">Satisfaction</IconLabel></div>
                 <div>Guanteed results or we'll fix it</div>
               </div>
             </div>

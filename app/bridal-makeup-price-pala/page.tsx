@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PremiumIcon, StarRating } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Bridal Makeup Price Pala | NIXTUDIO Transparent Pricing 2026',
@@ -283,7 +284,7 @@ export default function BridalMakeupPricePala() {
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="text-green-500 mr-2 mt-1">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-500 mr-2 mt-1 shrink-0" />
                         <span 
                           className="text-gray-700 text-base"
                           style={{ fontFamily: "var(--font-body), Georgia, serif" }}
@@ -339,35 +340,35 @@ export default function BridalMakeupPricePala() {
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">💎</span>
+                    <PremiumIcon name="gem" size={20} className="text-green-500 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-bold text-gray-900">Premium International Products</h3>
                       <p className="text-gray-700">MAC, NARS, Huda Beauty, Fenty - no compromises on quality</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">⏰</span>
+                    <PremiumIcon name="clock" size={20} className="text-green-500 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-bold text-gray-900">16+ Hour Lasting Guarantee</h3>
                       <p className="text-gray-700">Lasts from morning rituals to late-night receptions</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">🎨</span>
+                    <PremiumIcon name="palette" size={20} className="text-green-500 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-bold text-gray-900">Advanced HD & Airbrush Technology</h3>
                       <p className="text-gray-700">Flawless finish perfect for photography and videos</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">💝</span>
+                    <PremiumIcon name="heart" size={20} className="text-green-500 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-bold text-gray-900">Complete Service Package</h3>
                       <p className="text-gray-700">Makeup, hair styling, draping, and touch-up kit included</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">🏆</span>
+                    <PremiumIcon name="trophy" size={20} className="text-green-500 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-bold text-gray-900">Satisfaction Guarantee</h3>
                       <p className="text-gray-700">Not satisfied? We'll fix it until you're happy</p>
@@ -430,9 +431,7 @@ export default function BridalMakeupPricePala() {
                     </div>
                   </div>
                   <div className="flex mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
+                    <StarRating count={testimonial.rating} size={14} />
                   </div>
                   <p className="text-gray-700 italic">"{testimonial.text}"</p>
                 </div>

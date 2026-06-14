@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { PremiumIconName } from '@/components/ui/PremiumIcon'
+import { IconBadge, StarRating, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Luxury Bridal Makeup Kerala | NIXTUDIO Premium Studio Experience',
@@ -172,36 +174,36 @@ const faqs = [
   }
 ]
 
-const luxuryFeatures = [
+const luxuryFeatures: { title: string; description: string; icon: PremiumIconName }[] = [
   {
     title: "Premium International Products",
     description: "Exclusive access to luxury brands like Charlotte Tilbury, Tom Ford, Dior, and limited edition collections not available elsewhere in Kerala.",
-    icon: "💎"
+    icon: "gem"
   },
   {
     title: "Advanced HD & Airbrush Technology",
     description: "Cutting-edge techniques for flawless, long-lasting luxury bridal makeup kerala that looks perfect in 4K photography and videos.",
-    icon: "🎨"
+    icon: "palette"
   },
   {
     title: "Pre-Bridal Skincare Package",
     description: "Luxury pre-bridal treatments including facials, peels, and skincare routines to prepare your skin for the perfect canvas.",
-    icon: "✨"
+    icon: "sparkles"
   },
   {
     title: "Personalized Color Analysis",
     description: "Professional color analysis and custom-blended foundations to match your exact skin tone and undertones.",
-    icon: "🎯"
+    icon: "target"
   },
   {
     title: "Celebrity-Inspired Techniques",
     description: "Latest techniques inspired by international celebrity makeup artists and red carpet trends adapted for Kerala brides.",
-    icon: "👑"
+    icon: "crown"
   },
   {
     title: "18+ Hour Lasting Guarantee",
     description: "Premium formulations and techniques ensure your luxury bridal makeup kerala lasts from morning rituals to late-night receptions.",
-    icon: "⏰"
+    icon: "clock"
   }
 ]
 
@@ -272,7 +274,7 @@ export default function LuxuryBridalMakeupKerala() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {luxuryFeatures.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <IconBadge name={feature.icon} size="md" className="mb-4" />
                   <h3 className="text-xl font-bold mb-3 text-amber-600">{feature.title}</h3>
                   <p className="text-gray-700">{feature.description}</p>
                 </div>
@@ -297,7 +299,7 @@ export default function LuxuryBridalMakeupKerala() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center">
-                    <span className="text-amber-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-amber-600 mr-2 shrink-0" />
                     <span className="text-gray-700">{area}</span>
                   </div>
                 ))}
@@ -405,7 +407,7 @@ export default function LuxuryBridalMakeupKerala() {
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="text-center">
                 <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🏆</span>
+                  <PremiumIcon name="trophy" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Award-Winning Excellence</h3>
                 <p className="text-gray-700">
@@ -415,7 +417,7 @@ export default function LuxuryBridalMakeupKerala() {
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🌟</span>
+                  <PremiumIcon name="sparkles" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Exclusive Product Access</h3>
                 <p className="text-gray-700">
@@ -425,7 +427,7 @@ export default function LuxuryBridalMakeupKerala() {
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">💝</span>
+                  <PremiumIcon name="heart" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Personalized Luxury</h3>
                 <p className="text-gray-700">
@@ -459,9 +461,7 @@ export default function LuxuryBridalMakeupKerala() {
                     </div>
                   </div>
                   <div className="flex mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
+                    <StarRating count={testimonial.rating} size={14} />
                   </div>
                   <p className="text-gray-700 italic">"{testimonial.text}"</p>
                 </div>

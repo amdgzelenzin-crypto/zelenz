@@ -5,7 +5,7 @@ import { BRIDAL_PACKAGES } from '@/lib/bridal-packages'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Church, Building, Trees, Building2, Wind, Calendar, Gift, Diamond, Award, Quote } from 'lucide-react'
+import { Church, Building, Trees, Building2, Wind, Calendar, Gift, Diamond, Award, Quote, Check, ArrowRight } from 'lucide-react'
 
 interface CalculatorData {
   weddingDate: string
@@ -123,7 +123,7 @@ export default function BridalCalculator() {
 
       if (monthsUntil < 3) {
         urgencyLevel = 'high'
-        whyRecommended += ' ⚠️ Book ASAP - Limited dates available!'
+        whyRecommended += ' Book ASAP - Limited dates available!'
       } else if (monthsUntil > 6) {
         urgencyLevel = 'low'
       }
@@ -159,7 +159,7 @@ export default function BridalCalculator() {
               disabled={!data.weddingDate}
               className="mt-6 w-full bg-rose text-white py-4 rounded-lg font-semibold disabled:bg-gray-300 hover:bg-rose/90 transition-colors"
             >
-              Next →
+              <span className="inline-flex items-center justify-center gap-2">Next <ArrowRight size={16} aria-hidden="true" /></span>
             </button>
           </div>
         )
@@ -200,7 +200,7 @@ export default function BridalCalculator() {
                 disabled={!data.venueType}
                 className="flex-1 bg-rose text-white py-3 rounded-lg font-semibold disabled:bg-gray-300 hover:bg-rose/90"
               >
-                Next →
+                <span className="inline-flex items-center justify-center gap-2">Next <ArrowRight size={16} aria-hidden="true" /></span>
               </button>
             </div>
           </div>
@@ -323,8 +323,8 @@ export default function BridalCalculator() {
                   <h4 className="font-semibold text-espresso mb-3">What's Included:</h4>
                   <ul className="space-y-2">
                     {recommendation.includes.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-rose mr-2">✓</span>
+                      <li key={index} className="flex items-start gap-2">
+                        <Check size={16} className="text-rose shrink-0 mt-0.5" strokeWidth={2} aria-hidden="true" />
                         <span className="text-taupe">{item}</span>
                       </li>
                     ))}
@@ -360,7 +360,7 @@ export default function BridalCalculator() {
                   }}
                   className="w-full text-center text-taupe hover:text-espresso transition-colors"
                 >
-                  Calculate Again →
+                  <span className="inline-flex items-center justify-center gap-2">Calculate Again <ArrowRight size={16} aria-hidden="true" /></span>
                 </button>
               </div>
             )}

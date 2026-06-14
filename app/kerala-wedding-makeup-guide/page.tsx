@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Ultimate Kerala Wedding Makeup Guide 2026 | Complete Bridal Makeup | NIXTUDIO',
@@ -78,22 +79,22 @@ export default function KeralaWeddingMakeupGuide() {
             {/* Quick Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">📚</div>
+                <IconBadge name="lightbulb" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-purple-600">5000+</div>
                 <div className="text-gray-600">Words of Expert Advice</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">🎨</div>
+                <IconBadge name="palette" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-purple-600">15+</div>
                 <div className="text-gray-600">Makeup Techniques Covered</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">•</div>
+                <IconBadge name="gem" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-purple-600">₹14K-45K</div>
                 <div className="text-gray-600">Price Range Guide</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="text-3xl mb-2">⭐</div>
+                <IconBadge name="star" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-purple-600">6+ Years</div>
                 <div className="text-gray-600">Experience Shared</div>
               </div>
@@ -107,7 +108,7 @@ export default function KeralaWeddingMakeupGuide() {
             <h2 className="text-4xl font-bold text-center mb-12">Complete Guide Contents</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-bold mb-4 text-purple-600">📖 Essential Knowledge</h3>
+                <h3 className="text-xl font-bold mb-4 text-purple-600"><IconLabel icon="lightbulb">Essential Knowledge</IconLabel></h3>
                 <div className="space-y-3">
                   <div className="flex items-center p-3 bg-purple-50 rounded-lg">
                     <span className="text-purple-600 mr-3">1.</span>
@@ -128,7 +129,7 @@ export default function KeralaWeddingMakeupGuide() {
                 </div>
               </div>
               <div className="space-y-4">
-                <h3 className="text-xl font-bold mb-4 text-purple-600">💄 Practical Tips</h3>
+                <h3 className="text-xl font-bold mb-4 text-purple-600"><IconLabel icon="brush">Practical Tips</IconLabel></h3>
                 <div className="space-y-3">
                   <div className="flex items-center p-3 bg-purple-50 rounded-lg">
                     <span className="text-purple-600 mr-3">5.</span>
@@ -209,7 +210,7 @@ export default function KeralaWeddingMakeupGuide() {
 
             {/* Section 2: HD vs Airbrush */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">🎨 HD vs Airbrush Makeup: Complete Comparison</h2>
+              <h2 className="text-3xl font-bold mb-6"><IconLabel icon="palette">HD vs Airbrush Makeup: Complete Comparison</IconLabel></h2>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="overflow-x-auto">
                   <table className="w-full">
@@ -267,11 +268,11 @@ export default function KeralaWeddingMakeupGuide() {
 
             {/* Section 3: 2026 Trends */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">✨ Kerala Wedding Makeup Trends 2026</h2>
+              <h2 className="text-3xl font-bold mb-6"><IconLabel icon="sparkles">Kerala Wedding Makeup Trends 2026</IconLabel></h2>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg p-6">
-                    <h3 className="text-lg font-bold mb-3">🌸 Natural Glow</h3>
+                    <h3 className="text-lg font-bold mb-3"><IconLabel icon="sparkles">Natural Glow</IconLabel></h3>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li>• Dewy skin finish</li>
                       <li>• Minimal contouring</li>
@@ -280,7 +281,7 @@ export default function KeralaWeddingMakeupGuide() {
                     </ul>
                   </div>
                   <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
-                    <h3 className="text-lg font-bold mb-3">👑 Bold Statements</h3>
+                    <h3 className="text-lg font-bold mb-3"><IconLabel icon="crown">Bold Statements</IconLabel></h3>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li>• Dramatic eyes</li>
                       <li>• Bold lip colors</li>
@@ -289,7 +290,7 @@ export default function KeralaWeddingMakeupGuide() {
                     </ul>
                   </div>
                   <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg p-6">
-                    <h3 className="text-lg font-bold mb-3">🎭 Fusion Looks</h3>
+                    <h3 className="text-lg font-bold mb-3"><IconLabel icon="palette">Fusion Looks</IconLabel></h3>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li>• Traditional + modern</li>
                       <li>• Cultural elements</li>
@@ -307,51 +308,51 @@ export default function KeralaWeddingMakeupGuide() {
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">✅ What to Look For</h3>
+                    <h3 className="text-xl font-bold mb-4"><IconLabel icon="check-circle">What to Look For</IconLabel></h3>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                         <span><strong>Portfolio Quality:</strong> Consistent, high-quality work</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                         <span><strong>Experience:</strong> 5+ years with weddings</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                         <span><strong>Reviews:</strong> 4.5+ rating, 50+ reviews</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                         <span><strong>Professional Products:</strong> Premium brands only</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                         <span><strong>Trial Sessions:</strong> Offered and recommended</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-4">❌ Red Flags to Avoid</h3>
+                    <h3 className="text-xl font-bold mb-4"><IconLabel icon="x-circle" iconClassName="text-red-600">Red Flags to Avoid</IconLabel></h3>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
-                        <span className="text-red-600 mr-2">✗</span>
+                        <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
                         <span><strong>No Portfolio:</strong> Can't verify quality</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-red-600 mr-2">✗</span>
+                        <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
                         <span><strong>Hidden Costs:</strong> Unclear pricing</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-red-600 mr-2">✗</span>
+                        <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
                         <span><strong>Poor Reviews:</strong> Under 4.0 rating</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-red-600 mr-2">✗</span>
+                        <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
                         <span><strong>No Experience:</strong> New to bridal makeup</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-red-600 mr-2">✗</span>
+                        <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
                         <span><strong>No Trial:</strong> Refuses test sessions</span>
                       </li>
                     </ul>
@@ -384,7 +385,7 @@ export default function KeralaWeddingMakeupGuide() {
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
-                <strong>🎁 Special Offer:</strong> Book this month and get a free skincare consultation worth ₹3,000!
+                <strong><IconLabel icon="gift">Special Offer:</IconLabel></strong> Book this month and get a free skincare consultation worth ₹3,000!
               </p>
             </div>
           </div>

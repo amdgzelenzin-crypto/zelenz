@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { StarRating, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: '#1 Bridal Makeup Kottayam | Best Artist | NIXTUDIO by Nikita Liby',
@@ -256,7 +257,7 @@ export default function BridalMakeupKottayam() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center">
-                    <span className="text-purple-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-purple-600 mr-2 shrink-0" />
                     <span className="text-gray-700">{area}</span>
                   </div>
                 ))}
@@ -350,7 +351,7 @@ export default function BridalMakeupKottayam() {
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="text-center">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">📍</span>
+                  <PremiumIcon name="map-pin" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Kottayam District Expertise</h3>
                 <p className="text-gray-700">
@@ -360,7 +361,7 @@ export default function BridalMakeupKottayam() {
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🎨</span>
+                  <PremiumIcon name="palette" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Advanced Techniques</h3>
                 <p className="text-gray-700">
@@ -370,7 +371,7 @@ export default function BridalMakeupKottayam() {
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">⏰</span>
+                  <PremiumIcon name="clock" size={28} className="text-[#D4A055]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">16+ Hour Guarantee</h3>
                 <p className="text-gray-700">
@@ -404,9 +405,7 @@ export default function BridalMakeupKottayam() {
                     </div>
                   </div>
                   <div className="flex mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
+                    <StarRating count={testimonial.rating} size={14} />
                   </div>
                   <p className="text-gray-700 italic">"{testimonial.text}"</p>
                 </div>

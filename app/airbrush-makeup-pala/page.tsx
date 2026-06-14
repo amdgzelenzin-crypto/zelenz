@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { PremiumIconName } from '@/components/ui/PremiumIcon'
+import { IconBadge, PremiumIcon, StarRating } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Airbrush Makeup Pala | NIXTUDIO Advanced Airbrush Studio',
@@ -168,36 +170,36 @@ const faqs = [
   }
 ]
 
-const airbrushBenefits = [
+const airbrushBenefits: { title: string; description: string; icon: PremiumIconName }[] = [
   {
     title: "Flawless Finish",
     description: "Airbrush makeup creates a perfect, poreless finish that looks natural in person and photographs flawlessly.",
-    icon: "✨"
+    icon: "sparkles"
   },
   {
     title: "16+ Hour Lasting",
     description: "Professional airbrush makeup lasts 16-18 hours without touch-ups, perfect for long wedding days.",
-    icon: "⏰"
+    icon: "clock"
   },
   {
     title: "Waterproof & Sweat-Proof",
     description: "Resistant to water, sweat, and tears - ideal for outdoor weddings and Kerala's humid climate.",
-    icon: "💧"
+    icon: "droplets"
   },
   {
     title: "Lightweight Feel",
     description: "Feels like wearing nothing at all while providing full coverage. Breathable and comfortable.",
-    icon: "🌬️"
+    icon: "wind"
   },
   {
     title: "Buildable Coverage",
     description: "From sheer to full coverage, customize your look without looking cakey or heavy.",
-    icon: "🎨"
+    icon: "palette"
   },
   {
     title: "Hygienic Application",
     description: "No brushes or sponges touch your face - completely sanitary and perfect for sensitive skin.",
-    icon: "🦠"
+    icon: "shield-check"
   }
 ]
 
@@ -285,7 +287,7 @@ export default function AirbrushMakeupPala() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {airbrushBenefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <IconBadge name={benefit.icon} size="md" className="mb-4" />
                   <h3 className="text-xl font-bold mb-3 text-blue-600">{benefit.title}</h3>
                   <p className="text-gray-700">{benefit.description}</p>
                 </div>
@@ -335,23 +337,23 @@ export default function AirbrushMakeupPala() {
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-center">
-                    <span className="text-blue-600 mr-3">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-blue-600 mr-3 shrink-0" />
                     Professional airbrush compressors and guns
                   </li>
                   <li className="flex items-center">
-                    <span className="text-blue-600 mr-3">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-blue-600 mr-3 shrink-0" />
                     Premium airbrush-specific makeup formulas
                   </li>
                   <li className="flex items-center">
-                    <span className="text-blue-600 mr-3">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-blue-600 mr-3 shrink-0" />
                     Sanitary single-use nozzle systems
                   </li>
                   <li className="flex items-center">
-                    <span className="text-blue-600 mr-3">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-blue-600 mr-3 shrink-0" />
                     Expert airbrush makeup artist training
                   </li>
                   <li className="flex items-center">
-                    <span className="text-blue-600 mr-3">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-blue-600 mr-3 shrink-0" />
                     Custom color matching and blending
                   </li>
                 </ul>
@@ -390,9 +392,7 @@ export default function AirbrushMakeupPala() {
                     </div>
                   </div>
                   <div className="flex mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
+                    <StarRating count={testimonial.rating} size={14} />
                   </div>
                   <p className="text-gray-700 italic">"{testimonial.text}"</p>
                 </div>

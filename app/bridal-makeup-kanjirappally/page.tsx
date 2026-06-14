@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, StarRating, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 export const metadata: Metadata = {
   title: 'Bridal Makeup Kanjirappally | Premium Wedding Makeup Artist | NIXTUDIO',
@@ -145,7 +146,7 @@ export default function BridalMakeupKanjirappally() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-rose/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-rose text-sm">⛪</span>
+                      <PremiumIcon name="landmark" size={16} className="text-rose" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-espresso mb-1">Christian Church Wedding Experts</h3>
@@ -155,7 +156,7 @@ export default function BridalMakeupKanjirappally() {
                   
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-rose/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-rose text-sm">🌡️</span>
+                      <PremiumIcon name="thermometer" size={16} className="text-rose" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-espresso mb-1">Kanjirappally Climate Knowledge</h3>
@@ -165,7 +166,7 @@ export default function BridalMakeupKanjirappally() {
                   
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-rose/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-rose text-sm">🚗</span>
+                      <PremiumIcon name="map-pin" size={16} className="text-rose" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-espresso mb-1">Convenient Location Access</h3>
@@ -217,7 +218,7 @@ export default function BridalMakeupKanjirappally() {
                   "Christ the King Church"
                 ].map((church, index) => (
                   <div key={index} className="bg-white border border-rose/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl mb-2">⛪</div>
+                    <IconBadge name="landmark" size="sm" className="mb-2 mx-auto" />
                     <div className="font-medium text-espresso text-sm">{church}</div>
                     <div className="text-xs text-taupe mt-1">Specialized lighting techniques</div>
                   </div>
@@ -233,9 +234,7 @@ export default function BridalMakeupKanjirappally() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-rose/5 p-6 rounded-xl">
                   <div className="flex items-center gap-1 mb-3">
-                    {[1,2,3,4,5].map(i => (
-                      <span key={i} className="text-yellow-500">⭐</span>
-                    ))}
+                    <StarRating count={5} size={14} />
                   </div>
                   <p className="text-taupe text-sm mb-3 italic">
                     "Best decision for my Kanjirappally church wedding! Nikita understood exactly how the lighting in St. Mary's Church would affect the makeup. The humidity-resistant technique was perfect for the June weather."
@@ -245,9 +244,7 @@ export default function BridalMakeupKanjirappally() {
                 
                 <div className="bg-blue/5 p-6 rounded-xl">
                   <div className="flex items-center gap-1 mb-3">
-                    {[1,2,3,4,5].map(i => (
-                      <span key={i} className="text-yellow-500">⭐</span>
-                    ))}
+                    <StarRating count={5} size={14} />
                   </div>
                   <p className="text-taupe text-sm mb-3 italic">
                     "Nikita traveled to our venue in Kanjirappally and created magic. Her airbrush makeup lasted through 16 hours of celebrations. Highly recommend for Kanjirappally brides!"

@@ -6,6 +6,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { blogPosts } from "@/lib/blog";
 import { FadeUp } from "@/components/ui/AnimationWrapper";
+import { Heart } from "lucide-react";
 
 // Dynamic imports for heavy components
 const ReviewMarquee = dynamic(
@@ -601,11 +602,10 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
                 `}} />
                 <div style={{
                   position: "absolute", top: "-10px", right: "16px",
-                  fontSize: "28px", color: "#F9919F",
                   animation: "heartPulseNikita 2s ease-in-out infinite",
                   zIndex: 20
                 }}>
-                  ♥
+                  <Heart size={22} className="text-[#F9919F]" fill="#F9919F" strokeWidth={1.5} aria-hidden="true" />
                 </div>
               </div>
             </FadeUp>

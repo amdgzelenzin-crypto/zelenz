@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconBadge, StarRating, IconLabel, PremiumIcon } from '@/components/ui/PremiumIcon'
 
 // DEPLOYMENT TRIGGER: Pages are built and ready - Vercel should deploy these
 
@@ -157,22 +158,22 @@ export default function BridalMakeupPalaPage() {
             {/* Quick Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-2">👰</div>
+                <IconBadge name="crown" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-[#D4A055]">500+</div>
                 <div className="text-gray-600">Happy Brides</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-2">⭐</div>
+                <IconBadge name="star" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-[#D4A055]">4.9/5</div>
                 <div className="text-gray-600">Google Rating</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-2">🎨</div>
+                <IconBadge name="palette" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-[#D4A055]">HD &</div>
                 <div className="text-gray-600">Airbrush Expert</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-2">•</div>
+                <IconBadge name="map-pin" size="lg" className="mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-[#D4A055]">Pala</div>
                 <div className="text-gray-600">Based</div>
               </div>
@@ -188,7 +189,7 @@ export default function BridalMakeupPalaPage() {
                   href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
                   className="bg-[#D4A055] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#B8944A] transition flex items-center justify-center gap-2"
                 >
-                  <span>💬</span> Check Availability on WhatsApp
+                  <PremiumIcon name="phone" size={20} className="text-white" /> Check Availability on WhatsApp
                 </a>
                 <Link 
                   href="/contact"
@@ -208,7 +209,7 @@ export default function BridalMakeupPalaPage() {
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200">
-                <div className="text-3xl mb-4">🎨</div>
+                <IconBadge name="palette" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-4 text-[#B76E79]">HD Bridal Makeup</h3>
                 <p className="text-gray-700 mb-6">
                   High-definition makeup designed for Kerala wedding photography. 
@@ -216,15 +217,15 @@ export default function BridalMakeupPalaPage() {
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">12-14 hours lasting</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Camera-ready finish</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Traditional & modern looks</span>
                   </div>
                 </div>
@@ -238,7 +239,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               
               <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 border border-pink-200">
-                <div className="text-3xl mb-4">💨</div>
+                <IconBadge name="wind" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-4 text-[#B76E79]">Airbrush Bridal Makeup</h3>
                 <p className="text-gray-700 mb-6">
                   Advanced airbrush technology perfect for Kerala's humid climate and outdoor weddings. 
@@ -246,15 +247,15 @@ export default function BridalMakeupPalaPage() {
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">16+ hours lasting</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Humidity-proof</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Perfect for outdoor venues</span>
                   </div>
                 </div>
@@ -268,7 +269,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200">
-                <div className="text-3xl mb-4">👑</div>
+                <IconBadge name="crown" size="lg" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-4 text-[#B76E79]">Premium Bridal Package</h3>
                 <p className="text-gray-700 mb-6">
                   Signature subtle airbrush glam with luxury international brands. 
@@ -276,15 +277,15 @@ export default function BridalMakeupPalaPage() {
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Luxury brand products</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">Saree draping included</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-600 mr-2">✓</span>
+                    <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
                     <span className="text-sm">By Nikita Liby</span>
                   </div>
                 </div>
@@ -303,7 +304,7 @@ export default function BridalMakeupPalaPage() {
               <h3 className="text-2xl font-bold mb-6 text-center" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>What's Included in Every Package</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="font-bold mb-3 text-[#B76E79]">📋 Before Your Day</h4>
+                  <h4 className="font-bold mb-3 text-[#B76E79]"><IconLabel icon="check">Before Your Day</IconLabel></h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Pre-bridal guide on booking</li>
                     <li>• No makeup or hair trials</li>
@@ -312,7 +313,7 @@ export default function BridalMakeupPalaPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-3 text-[#B76E79]">💍 Wedding Day</h4>
+                  <h4 className="font-bold mb-3 text-[#B76E79]"><IconLabel icon="crown">Wedding Day</IconLabel></h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Professional makeup application</li>
                     <li>• Hair styling & setting</li>
@@ -321,7 +322,7 @@ export default function BridalMakeupPalaPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-3 text-[#B76E79]">🎁 Post-Wedding</h4>
+                  <h4 className="font-bold mb-3 text-[#B76E79]"><IconLabel icon="gift">Post-Wedding</IconLabel></h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Touch-up kit provided</li>
                     <li>• Emergency availability</li>
@@ -464,7 +465,7 @@ export default function BridalMakeupPalaPage() {
             
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">🏆 Proven Results</h3>
+                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]"><IconLabel icon="trophy">Proven Results</IconLabel></h3>
                 <p className="text-gray-700 mb-4">
                   500+ happy brides across Kerala, 4.9/5 Google rating, and consistent quality work. 
                   Every bride gets the same careful process: skin analysis, product testing, and practice sessions 
@@ -487,7 +488,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">🤝 Personal Process</h3>
+                <h3 className="text-2xl font-bold mb-6 text-[#B76E79]"><IconLabel icon="award">Personal Process</IconLabel></h3>
                 <p className="text-gray-700 mb-4">
                   We start with a thorough consultation on your function day about your outfit, venue, and preferences. 
                   No separate trials — your look is planned and perfected in person before any product is applied. 
@@ -520,9 +521,7 @@ export default function BridalMakeupPalaPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="text-yellow-500">
-                    ⭐⭐⭐⭐⭐
-                  </div>
+                  <StarRating count={5} size={16} />
                 </div>
                 <p className="text-gray-700 mb-4 italic">
                   "Nikita transformed me completely! The airbrush makeup lasted through my entire outdoor wedding 
@@ -541,9 +540,7 @@ export default function BridalMakeupPalaPage() {
               
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="text-yellow-500">
-                    ⭐⭐⭐⭐⭐
-                  </div>
+                  <StarRating count={5} size={16} />
                 </div>
                 <p className="text-gray-700 mb-4 italic">
                   "Best decision for my Kerala wedding! The HD makeup looked stunning in photos and lasted 
@@ -562,9 +559,7 @@ export default function BridalMakeupPalaPage() {
               
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="text-yellow-500">
-                    ⭐⭐⭐⭐⭐
-                  </div>
+                  <StarRating count={5} size={16} />
                 </div>
                 <p className="text-gray-700 mb-4 italic">
                   "Professional, punctual, and detail-oriented! The day-of consultation was thorough and I felt completely confident. 
@@ -684,7 +679,7 @@ export default function BridalMakeupPalaPage() {
                 href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition flex items-center justify-center gap-2"
               >
-                <span>💬</span> Check Availability on WhatsApp
+                <PremiumIcon name="phone" size={20} className="text-white" /> Check Availability on WhatsApp
               </a>
               <Link 
                 href="/contact"
@@ -696,7 +691,7 @@ export default function BridalMakeupPalaPage() {
             
             <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="font-bold mb-2">🎁 Free Consultation</div>
+                <div className="font-bold mb-2"><IconLabel icon="gift" className="justify-center">Free Consultation</IconLabel></div>
                 <div>Discuss your wedding look with no obligation</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
@@ -704,7 +699,7 @@ export default function BridalMakeupPalaPage() {
                 <div>No hidden costs - clear package details</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="font-bold mb-2">⭐ Quality Guaranteed</div>
+                <div className="font-bold mb-2"><IconLabel icon="star" className="justify-center" iconClassName="text-white">Quality Guaranteed</IconLabel></div>
                 <div>Professional service you can trust</div>
               </div>
             </div>
@@ -722,7 +717,7 @@ export default function BridalMakeupPalaPage() {
             href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding."
             className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-all hover:scale-110"
           >
-            <span className="text-2xl">💬</span>
+            <PremiumIcon name="phone" size={28} className="text-white" />
           </a>
         </div>
       </div>

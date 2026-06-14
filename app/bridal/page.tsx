@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
+import { PremiumIcon } from "@/components/ui/PremiumIcon";
 import {
   BRIDAL_PACKAGES,
   BRIDAL_EXTRAS,
@@ -287,7 +288,7 @@ export default function BridalPage() {
                     <ul className="space-y-0 flex-1">
                       {pkg.included.map((item, j, arr) => (
                         <li key={item} className="flex items-start gap-3 py-2.5 w-full" style={{ borderBottom: j < arr.length - 1 ? "1px solid #FFE4E8" : "none" }}>
-                          <span style={{ color: "#F9919F", fontSize: "12px", marginTop: "2px" }}>✓</span>
+                          <PremiumIcon name="check" size={14} className="text-[#F9919F] mt-0.5 shrink-0" />
                           <span className="font-sans text-[14px]" style={{ color: "#3D1520" }}>{item}</span>
                         </li>
                       ))}
