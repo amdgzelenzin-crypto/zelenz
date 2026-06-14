@@ -68,7 +68,7 @@ const faqSchema = {
       "name": "How much does bridal makeup cost in Pala?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bridal makeup in Pala ranges from ₹14,500 to ₹45,000 depending on the package. HD makeup starts at ₹22,000, while airbrush makeup starts at ₹25,000. Luxury packages with full services can go up to ₹45,000."
+        "text": "Bridal packages at NIXTUDIO Pala: Standard HD at ₹27,500, Standard Airbrush at ₹32,500, and Premium Signature Airbrush at ₹40,000 — for engagement, wedding, or reception."
       }
     },
     {
@@ -92,7 +92,7 @@ const faqSchema = {
       "name": "Do you provide makeup trials before the wedding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we provide 2 complimentary trial sessions with all bridal packages. The first trial helps finalize the look, and the second ensures perfection with the actual wedding outfit and jewelry."
+        "text": "No makeup or hair trials are offered. Your consultation happens on the day of your function — thorough, personal, and unhurried before any product is applied."
       }
     },
     {
@@ -116,7 +116,7 @@ const faqSchema = {
       "name": "What is included in a typical bridal makeup package?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A standard bridal package includes pre-makeup consultation, 2 trial sessions, wedding day makeup, hair styling, draping assistance, touch-up kit, and emergency availability. Premium packages include additional services."
+        "text": "Standard packages include makeup, hairstyling, lashes, lens, outfit styling (saree not included), and hair extensions if needed. Premium (₹40,000) adds saree draping with/without pre-pleats. Guest makeup is available separately — ask for our Party/Guest catalogue."
       }
     },
     {
@@ -227,7 +227,7 @@ export default function BridalMakeupPalaPage() {
                     <span className="text-sm">Traditional & modern looks</span>
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹22,000 - ₹27,500</div>
+                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹27,500</div>
                 <Link 
                   href="/contact"
                   className="block w-full bg-[#D4A055] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#B8944A] transition text-center"
@@ -257,7 +257,7 @@ export default function BridalMakeupPalaPage() {
                     <span className="text-sm">Perfect for outdoor venues</span>
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹25,000 - ₹32,000</div>
+                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹32,500</div>
                 <Link 
                   href="/contact"
                   className="block w-full bg-[#D4A055] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#B8944A] transition text-center"
@@ -268,26 +268,26 @@ export default function BridalMakeupPalaPage() {
               
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200">
                 <div className="text-3xl mb-4">👑</div>
-                <h3 className="text-2xl font-bold mb-4 text-[#B76E79]">Luxury Bridal Package</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[#B76E79]">Premium Bridal Package</h3>
                 <p className="text-gray-700 mb-6">
-                  Complete wedding day transformation with premium services. 
-                  Includes engagement makeup, reception makeup, and family makeup services.
+                  Signature subtle airbrush glam with luxury international brands. 
+                  Includes saree draping with or without pre-pleats for engagement, wedding, or reception.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center">
                     <span className="text-green-600 mr-2">✓</span>
-                    <span className="text-sm">3-day coverage</span>
+                    <span className="text-sm">Luxury brand products</span>
                   </div>
                   <div className="flex items-center">
                     <span className="text-green-600 mr-2">✓</span>
-                    <span className="text-sm">Family makeup included</span>
+                    <span className="text-sm">Saree draping included</span>
                   </div>
                   <div className="flex items-center">
                     <span className="text-green-600 mr-2">✓</span>
-                    <span className="text-sm">VIP treatment</span>
+                    <span className="text-sm">By Nikita Liby</span>
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹35,000 - ₹45,000</div>
+                <div className="text-2xl font-bold text-[#D4A055] mb-2">₹40,000</div>
                 <Link 
                   href="/contact"
                   className="block w-full bg-[#D4A055] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#B8944A] transition text-center"
@@ -302,12 +302,12 @@ export default function BridalMakeupPalaPage() {
               <h3 className="text-2xl font-bold mb-6 text-center" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>What's Included in Every Package</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="font-bold mb-3 text-[#B76E79]">🎨 Pre-Wedding</h4>
+                  <h4 className="font-bold mb-3 text-[#B76E79]">📋 Before Your Day</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li>• 2 Complimentary trial sessions</li>
-                    <li>• Skin analysis & consultation</li>
+                    <li>• Pre-bridal guide on booking</li>
+                    <li>• No makeup or hair trials</li>
                     <li>• Skincare routine guidance</li>
-                    <li>• Look planning & mood board</li>
+                    <li>• Look planning on the day</li>
                   </ul>
                 </div>
                 <div>
@@ -315,7 +315,7 @@ export default function BridalMakeupPalaPage() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Professional makeup application</li>
                     <li>• Hair styling & setting</li>
-                    <li>• Saree draping assistance</li>
+                    <li>• Saree draping (Premium package)</li>
                     <li>• Jewelry coordination</li>
                   </ul>
                 </div>
@@ -388,8 +388,8 @@ export default function BridalMakeupPalaPage() {
                     </tr>
                     <tr className="border-b">
                       <td className="p-4 font-semibold">Price Range</td>
-                      <td className="p-4 text-center font-bold">₹22,000-27,500</td>
-                      <td className="p-4 text-center font-bold">₹25,000-32,000</td>
+                      <td className="p-4 text-center font-bold">₹27,500</td>
+                      <td className="p-4 text-center font-bold">₹32,500</td>
                       <td className="p-4 text-center text-sm">Value for money</td>
                     </tr>
                   </tbody>
@@ -488,14 +488,14 @@ export default function BridalMakeupPalaPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-[#B76E79]">🤝 Personal Process</h3>
                 <p className="text-gray-700 mb-4">
-                  We start with a consultation about your outfit, venue, and preferences. 
-                  First trial session tests the basic look, second trial perfects it with your actual jewelry. 
-                  I'm available by phone for any questions leading up to your wedding day.
+                  We start with a thorough consultation on your function day about your outfit, venue, and preferences. 
+                  No separate trials — your look is planned and perfected in person before any product is applied. 
+                  You receive a pre-bridal guide when you book.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <span className="text-[#B76E79] mr-3">•</span>
-                    <span>2 complimentary trial sessions</span>
+                    <span>Day-of consultation (no trials)</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-[#B76E79] mr-3">•</span>
@@ -566,7 +566,7 @@ export default function BridalMakeupPalaPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Professional, punctual, and detail-oriented! The trial sessions helped me feel confident. 
+                  "Professional, punctual, and detail-oriented! The day-of consultation was thorough and I felt completely confident. 
                   The makeup was perfect for my temple wedding in Pala. Highly recommend!"
                 </p>
                 <div className="flex items-center">
@@ -601,9 +601,7 @@ export default function BridalMakeupPalaPage() {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-3">How much does bridal makeup cost in Pala?</h3>
                 <p className="text-gray-700">
-                  Bridal makeup in Pala ranges from ₹14,500 to ₹45,000 depending on the package and services included. 
-                  HD makeup starts at ₹22,000, while airbrush makeup starts at ₹25,000. Luxury packages with full services 
-                  can go up to ₹45,000. All packages include 2 trial sessions and touch-up kit.
+                  Bridal packages at NIXTUDIO: Standard HD at ₹27,500, Standard Airbrush at ₹32,500, and Premium Signature Airbrush at ₹40,000 — for engagement, wedding, or reception. Guest makeup is available separately.
                 </p>
               </div>
               
@@ -628,9 +626,7 @@ export default function BridalMakeupPalaPage() {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-3">Do you provide makeup trials before the wedding?</h3>
                 <p className="text-gray-700">
-                  Yes, we provide 2 complimentary trial sessions with all bridal packages. The first trial helps 
-                  finalize the look, and the second ensures perfection with the actual wedding outfit and jewelry. 
-                  Additional trials can be arranged if needed.
+                  No makeup or hair trials are offered. Your consultation happens on the day — thorough, personal, and unhurried. A pre-bridal guide is shared when you book.
                 </p>
               </div>
               
@@ -655,9 +651,7 @@ export default function BridalMakeupPalaPage() {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-3">What is included in a typical bridal makeup package?</h3>
                 <p className="text-gray-700">
-                  A standard bridal package includes pre-makeup consultation, 2 trial sessions, wedding day makeup, 
-                  hair styling, draping assistance, touch-up kit, and emergency availability. Premium packages 
-                  include additional services like engagement makeup, reception makeup, and family makeup.
+                  Standard packages include makeup, hairstyling, lashes, lens, outfit styling (saree not included), and hair extensions if needed. Premium (₹40,000) adds saree draping with/without pre-pleats. Ask for our Party/Guest catalogue for family makeup.
                 </p>
               </div>
               

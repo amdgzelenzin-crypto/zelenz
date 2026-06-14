@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Bridal Makeup in Pala by Nikita Liby | NIXTUDIO",
   description:
-    "Bridal makeup in Pala by Nikita Liby. HD & airbrush packages from ₹27,500. Engagement, wedding & reception. Book now.",
+    "Bridal makeup in Pala by Nikita Liby. HD from ₹27,500 · Airbrush ₹32,500 · Premium ₹40,000. Engagement, wedding & reception. Book now.",
   openGraph: {
     title: "Bridal Makeup in Pala by Nikita Liby | NIXTUDIO",
     description:

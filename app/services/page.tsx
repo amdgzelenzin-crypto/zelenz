@@ -27,8 +27,8 @@ const categories = [
 ];
 
 const makeupServices = [
-  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Starting at ₹27,500", note: "By Nikita Liby. Specialized long-wear HD and Humidity-resistant Airbrush 'Manavatty' aesthetics. Ask about our 'Happy Bride Story' sessions." },
-  { name: "Engagement / Reception Styling", price: "₹27,500 - ₹32,500", note: "HD Makeup (₹27,500) or Airbrush (₹32,500). Nuanced 'Azhagu' looks optimized for", link: { href: '/bridal-makeup-pala', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
+  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "Standard from ₹27,500 · Premium ₹40,000", note: "Engagement, wedding & reception. HD (₹27,500) or Airbrush Standard (₹32,500) or Premium Airbrush (₹40,000). By Nikita Liby. Ask for Party/Guest catalogue for family." },
+  { name: "Engagement / Reception Styling", price: "₹27,500 - ₹40,000", note: "Same bridal packages apply to engagement & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium (₹40,000). Optimized for", link: { href: '/bridal', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
   { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
   { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
   { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
@@ -1185,8 +1185,8 @@ export default function SalonPage() {
             </FadeUp>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "Premium Bridal", price: "₹27,500", desc: "Starting price for HD/Airbrush packages including styling and draping." },
-                { title: "Engagement Styling", price: "₹14,500", desc: "Sophisticated 'Azhagu' looks for your first ceremony." },
+                { title: "Standard Bridal (HD)", price: "₹27,500", desc: "Standard package — HD makeup for engagement, wedding or reception." },
+                { title: "Premium Bridal (Airbrush)", price: "₹40,000", desc: "Signature subtle airbrush glam with luxury international brands." },
                 { title: "Clinical Aesthetics", price: "₹7,500", desc: "Starting price for FDA-approved Vortex-Fusion HydraFacial treatments." }
               ].map((tier, i) => (
                 <FadeUp key={tier.title} delay={i * 0.1}>

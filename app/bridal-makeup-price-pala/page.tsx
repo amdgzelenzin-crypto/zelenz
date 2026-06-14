@@ -1,3 +1,4 @@
+import { BRIDAL_PACKAGES, BRIDAL_EXTRAS } from '@/lib/bridal-packages'
 import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 import Image from 'next/image'
@@ -47,109 +48,33 @@ const structuredData = {
     }
   },
   "serviceType": "Bridal Makeup Services",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Premium Bridal Makeup Package",
-      "price": "27,500",
-      "priceCurrency": "INR",
-      "description": "Complete bridal makeup transformation with HD techniques"
-    },
-    {
-      "@type": "Offer",
-      "name": "Luxury Airbrush Bridal Package",
-      "price": "35,000",
-      "priceCurrency": "INR",
-      "description": "Advanced airbrush bridal makeup with premium products"
-    },
-    {
-      "@type": "Offer",
-      "name": "Royal Luxury Bridal Experience",
-      "price": "45,000",
-      "priceCurrency": "INR",
-      "description": "Ultimate luxury bridal experience with all premium services"
-    }
-  ]
+  "offers": BRIDAL_PACKAGES.map((pkg) => ({
+    "@type": "Offer",
+    "name": `${pkg.name} — ${pkg.subtitle}`,
+    "price": String(pkg.price),
+    "priceCurrency": "INR",
+    "description": pkg.technique,
+  })),
 }
 
-const packages = [
-  {
-    name: "Premium Bridal Makeup",
-    price: "₹27,500",
-    originalPrice: "₹35,000",
-    description: "Perfect for brides who want professional quality at the best bridal makeup price pala offers.",
-    features: [
-      "HD foundation application",
-      "Professional contouring & highlighting",
-      "Eye makeup with false lashes",
-      "Lip color application",
-      "Basic hair styling",
-      "Saree draping assistance",
-      "Touch-up kit included",
-      "12-hour lasting guarantee"
-    ],
-    popular: true
-  },
-  {
-    name: "Luxury Airbrush Bridal",
-    price: "₹35,000",
-    originalPrice: "₹45,000",
-    description: "Advanced airbrush technology for flawless, long-lasting bridal makeup pala kerala brides love.",
-    features: [
-      "Airbrush foundation application",
-      "Airbrush contouring & highlighting",
-      "Advanced eye makeup techniques",
-      "Premium false lashes",
-      "Professional hair styling",
-      "Expert saree draping",
-      "Premium touch-up kit",
-      "16-hour lasting guarantee",
-      "Waterproof & sweat-proof"
-    ],
-    popular: false
-  },
-  {
-    name: "Royal Luxury Experience",
-    price: "₹45,000",
-    originalPrice: "₹60,000",
-    description: "The ultimate luxury bridal makeup price pala premium package with exclusive services.",
-    features: [
-      "Pre-bridal skincare session",
-      "Custom-blended foundation",
-      "Airbrush & HD combination",
-      "Celebrity-inspired eye makeup",
-      "Luxury false lashes",
-      "Advanced hair styling",
-      "Jewelry styling consultation",
-      "Premium touch-up kit",
-      "18-hour lasting guarantee",
-      "On-call support team",
-      "Emergency touch-up service"
-    ],
-    popular: false
-  }
-]
+const packages = BRIDAL_PACKAGES.map((pkg) => ({
+  name: `${pkg.name} — ${pkg.subtitle}`,
+  price: pkg.priceDisplay,
+  description: pkg.technique,
+  features: [...pkg.included],
+  popular: pkg.badge === 'MOST POPULAR',
+}))
 
 const additionalServices = [
+  ...BRIDAL_EXTRAS.map((extra) => ({
+    name: extra.service,
+    price: extra.price,
+    description: 'Add-on for Standard packages; included in Premium',
+  })),
   {
-    name: "Bridal Party Makeup",
-    price: "₹8,000 - ₹15,000",
-    description: "Makeup for mother, bridesmaids, sisters, and close relatives"
-  },
-  {
-    name: "Reception Makeup",
-    price: "₹12,000 - ₹18,000",
-    description: "Second look for evening reception and party"
-  },
-  {
-    name: "Pre-Wedding Events",
-    price: "₹6,000 - ₹10,000",
-    description: "Mehndi, engagement, sangeet makeup"
-  },
-  {
-    name: "Trial Session",
-    price: "₹5,000",
-    description: "Full makeup trial with consultation (adjustable against booking)"
+    name: "Guest / Party Makeup",
+    price: "See catalogue",
+    description: "Family and guest makeup — ask for our Party/Guest makeup catalogue at booking"
   },
   {
     name: "Home Service",
@@ -205,64 +130,36 @@ const testimonials = [
 const faqs = [
   {
     question: "What's included in your bridal makeup price pala packages?",
-    answer: "Our bridal makeup price pala packages include professional makeup application, premium products, hair styling, saree draping assistance, touch-up kit, and lasting guarantee. Specific inclusions vary by package - Premium includes basic services, Luxury adds airbrush technology, and Royal includes pre-bridal skincare and on-call support."
+    answer: "Official packages: Standard HD (₹27,500) and Standard Airbrush (₹32,500) include makeup, hairstyling, lashes, lens, outfit styling (saree not included), and hair extensions if needed. Premium (₹40,000) adds saree draping with/without pre-pleats. Same tiers for engagement, wedding, or reception."
   },
   {
     question: "Are there any hidden costs in your bridal makeup price pala?",
-    answer: "No! We believe in transparent bridal makeup price pala listings. All prices are inclusive of taxes, products, and services mentioned. Additional charges only apply for home service (₹3,000-5,000), outstation travel, or if you request extra services not included in your package."
+    answer: "No hidden costs on listed package prices. Saree draping is extra on Standard packages (₹1,500–2,000). Guest/family makeup is separate — ask for our Party/Guest catalogue. Balance after advance is due on the event day."
   },
   {
     question: "Do you offer affordable bridal makeup pala packages?",
-    answer: "Yes! Our Premium package at ₹27,500 is the most affordable bridal makeup pala option without compromising quality. We also offer EMI options and seasonal discounts. We believe every bride deserves professional makeup regardless of budget."
-  },
-  {
-    question: "How does your bridal makeup price pala compare to other studios?",
-    answer: "Our bridal makeup price pala is 20-30% more affordable than comparable studios in Kerala while using premium international products. We offer better value with longer lasting makeup (16-18 hours vs 8-12 hours elsewhere), premium products, and satisfaction guarantee."
+    answer: "Standard HD at ₹27,500 is our entry bridal package — professional makeup by Nikita Liby with premium products. Airbrush Standard at ₹32,500 is most popular for Kerala humidity."
   },
   {
     question: "What's the difference between your bridal makeup packages pala?",
-    answer: "Our bridal makeup packages pala differ in technology and services: Premium uses traditional HD techniques, Luxury adds airbrush technology for flawless finish, and Royal includes pre-bridal skincare, custom-blended foundation, and on-call support. All packages use premium products and include hair styling."
+    answer: "Standard HD uses high-definition techniques (₹27,500). Standard Airbrush uses humidity-resistant airbrush (₹32,500). Premium Signature Airbrush (₹40,000) uses luxury international brands and includes saree draping."
   },
   {
     question: "Is trial session included in bridal makeup price pala?",
-    answer: "Trial session costs ₹5,000 separately but is fully adjustable against your final booking. We recommend trials for all brides to test products and perfect your look. The trial fee is waived when you book any of our bridal makeup packages pala."
-  },
-  {
-    question: "Do you offer payment plans for bridal makeup price pala?",
-    answer: "Yes! We offer flexible payment plans for all bridal makeup price pala packages. Pay 40% at booking, 30% one month before, and 30% on the wedding day. We also accept credit card EMI options for your convenience."
-  },
-  {
-    question: "What's your cancellation policy for bridal makeup packages pala?",
-    answer: "For bridal makeup packages pala bookings: 30+ days notice - 80% refund; 15-29 days - 50% refund; 7-14 days - 25% refund; less than 7 days - no refund. We offer one free date rescheduling up to 30 days before your wedding."
-  },
-  {
-    question: "Are products included in bridal makeup price pala?",
-    answer: "Yes! All premium products are included in our bridal makeup price pala packages. We use international brands like MAC, NARS, Huda Beauty, Fenty, and airbrush-specific products. No additional charges for any products used during your makeup application."
-  },
-  {
-    question: "Do you charge extra for bridal makeup price pala home service?",
-    answer: "Home service within 30km of Pala costs an additional ₹3,000-5,000 depending on distance. For locations beyond 30km, custom quotes apply. Our bridal makeup price pala studio service is included in all packages without additional charges."
+    answer: "No makeup or hair trials are offered. Consultation happens on the day of your function. A pre-bridal guide is shared when you book."
   },
   {
     question: "What's the best value bridal makeup price pala package?",
-    answer: "Our Premium package at ₹27,500 offers the best value bridal makeup price pala with professional HD makeup, hair styling, and 12-hour lasting guarantee. For brides wanting extra features, the Luxury airbrush package at ₹35,000 provides excellent value for advanced technology."
+    answer: "Standard Airbrush at ₹32,500 offers the best balance for Kerala weddings — humidity-resistant finish with full Standard inclusions. Premium at ₹40,000 is ideal if you want saree draping and luxury brands included."
   },
   {
-    question: "Do you offer discounts for bridal makeup price pala advance booking?",
-    answer: "Yes! Book 6+ months in advance and get 10% off any bridal makeup price pala package. Book 9+ months ahead and get 15% off. We also offer seasonal discounts during off-peak months (March-May, July-September)."
+    question: "Are products included in bridal makeup price pala?",
+    answer: "Yes — all products are included. Standard packages use Bobbi Brown, Huda Beauty, MAC, Urban Decay, and more. Premium adds Chanel, Dior, Gucci, YSL, Givenchy, NARS, Pat McGrath, and other luxury brands."
   },
   {
-    question: "Is luxury bridal makeup price pala worth the extra cost?",
-    answer: "Absolutely! Our luxury bridal makeup price pala package includes airbrush technology, premium products, pre-bridal skincare, and on-call support. The flawless finish, 18-hour lasting guarantee, and celebrity-inspired techniques make it worth every penny for your once-in-a-lifetime day."
+    question: "Do you charge extra for bridal makeup price pala home service?",
+    answer: "On-location service may incur travel charges depending on venue distance from Pala. Guest makeup and extras are quoted from our Party/Guest catalogue at booking."
   },
-  {
-    question: "What payment methods do you accept for bridal makeup price pala?",
-    answer: "We accept cash, bank transfer, credit/debit cards, UPI, and digital wallets for all bridal makeup price pala payments. For international clients, we accept PayPal and wire transfers. All payment methods are secure and receipt is provided immediately."
-  },
-  {
-    question: "Do you offer group discounts for bridal makeup price pala?",
-    answer: "Yes! Book bridal makeup for 3+ family members and get 15% off total bridal makeup price pala. Book 5+ and get 20% off. This applies to mother, sisters, bridesmaids, and close relatives booking together with the bride's package."
-  }
 ]
 
 export default function BridalMakeupPricePala() {
@@ -376,12 +273,6 @@ export default function BridalMakeupPricePala() {
                     >
                       {pkg.price}
                     </span>
-                    <span 
-                      className="text-lg text-gray-500 line-through ml-2"
-                      style={{ fontFamily: "var(--font-sans), sans-serif" }}
-                    >
-                      {pkg.originalPrice}
-                    </span>
                   </div>
                   <p 
                     className="text-lg text-gray-700 mb-6 leading-relaxed"
@@ -488,12 +379,20 @@ export default function BridalMakeupPricePala() {
                 <h3 className="text-2xl font-bold mb-6 text-green-600">Price Comparison</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-3 border-b">
-                    <span className="font-bold text-gray-900">NIXTUDIO Premium</span>
+                    <span className="font-bold text-gray-900">NIXTUDIO Standard HD</span>
                     <span className="text-green-600 font-bold">₹27,500</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b">
+                    <span className="font-bold text-gray-900">NIXTUDIO Standard Airbrush</span>
+                    <span className="text-green-600 font-bold">₹32,500</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b">
+                    <span className="font-bold text-gray-900">NIXTUDIO Premium</span>
+                    <span className="text-green-600 font-bold">₹40,000</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b">
                     <span className="text-gray-700">Other Studios Similar</span>
-                    <span className="text-gray-900">₹35,000-45,000</span>
+                    <span className="text-gray-900">₹35,000–50,000</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b">
                     <span className="text-gray-700">5-Star Hotel Salons</span>

@@ -53,7 +53,7 @@ const structuredData = {
   "serviceType": "Luxury Bridal Makeup Services",
   "offers": {
     "@type": "Offer",
-    "priceRange": "₹35,000 - ₹75,000",
+    "priceRange": "₹27,500 - ₹40,000",
     "priceCurrency": "INR"
   }
 }
@@ -124,7 +124,7 @@ const faqs = [
   },
   {
     question: "How much does luxury wedding makeup kerala cost?",
-    answer: "Our luxury wedding makeup kerala packages range from ₹35,000 to ₹75,000 depending on services, location, and customization. Premium bridal makeup kerala pricing includes all products, services, travel within Kerala, and our satisfaction guarantee."
+    answer: "Bridal packages: Standard HD ₹27,500, Standard Airbrush ₹32,500, Premium Signature Airbrush ₹40,000 — for engagement, wedding, or reception. All bridal work by Nikita Liby."
   },
   {
     question: "Are you available for luxury makeup artist kerala services across all districts?",
@@ -136,7 +136,7 @@ const faqs = [
   },
   {
     question: "Do you offer trial sessions for luxury bridal makeup kerala?",
-    answer: "Yes! We offer comprehensive trial sessions for luxury bridal makeup kerala services. Trials include product testing, look customization, skincare assessment, and detailed consultation to ensure your luxury wedding makeup kerala experience exceeds expectations."
+    answer: "No makeup or hair trials are offered. Consultation happens on the day — thorough and personal. Premium Signature Airbrush package is ₹40,000 for engagement, wedding, or reception."
   },
   {
     question: "How far in advance should I book exclusive bridal makeup kerala services?",

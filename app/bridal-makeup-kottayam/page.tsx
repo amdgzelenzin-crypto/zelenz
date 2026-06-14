@@ -47,7 +47,7 @@ const structuredData = {
   "serviceType": "Bridal Makeup Services",
   "offers": {
     "@type": "Offer",
-    "priceRange": "₹25,000 - ₹45,000",
+    "priceRange": "₹27,500 - ₹40,000",
     "priceCurrency": "INR"
   }
 }
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     question: "How much does luxury bridal makeup kottayam cost?",
-    answer: "Our luxury bridal makeup kottayam packages range from ₹30,000 to ₹45,000. This includes pre-bridal skincare, HD/airbrush makeup, hair styling, draping assistance, and touch-up kit. Bridal makeup packages kottayam pricing varies based on services."
+    answer: "Bridal packages at NIXTUDIO: Standard HD ₹27,500, Standard Airbrush ₹32,500, Premium Signature Airbrush ₹40,000 — for engagement, wedding, or reception. Premium includes saree draping; guest makeup is separate."
   },
   {
     question: "Do you offer airbrush makeup kottayam for all skin types?",
@@ -130,7 +130,7 @@ const faqs = [
   },
   {
     question: "Do you offer trial sessions for bridal makeup kottayam?",
-    answer: "Yes! We offer trial sessions for all bridal makeup kottayam services. Trials help us perfect your look, test products on your skin, and ensure you're 100% confident with your bridal makeup choice."
+    answer: "No makeup or hair trials are offered. Consultation happens on the day — thorough and personal. A pre-bridal guide is shared when you book."
   },
   {
     question: "What's included in wedding makeup kottayam kerala packages?",

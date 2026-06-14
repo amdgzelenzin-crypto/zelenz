@@ -129,7 +129,7 @@ const faqs = [
   },
   {
     question: "How much does bridal makeup pala kottayam cost at NIXTUDIO?",
-    answer: "Our bridal makeup packages range from ₹27,500 to ₹45,000. The best bridal makeup pala package includes HD foundation, airbrush finishing, and unlimited touch-ups."
+    answer: "Our official bridal packages: Standard HD at ₹27,500, Standard Airbrush at ₹32,500, and Premium Signature Airbrush at ₹40,000 — for engagement, wedding, or reception. All work by Nikita Liby with trained team assistance."
   },
   {
     question: "Do you offer natural glowing bridal makeup kerala style?",
@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     question: "What's included in your luxury bridal studio kerala package?",
-    answer: "Our luxury bridal studio kerala package includes pre-bridal skincare, HD makeup application, airbrush finishing, false lashes, hair styling, draping assistance, and a touch-up kit."
+    answer: "Our Premium package includes signature subtle airbrush glam, luxury international brands, saree draping with/without pre-pleats, and all Standard inclusions — ₹40,000 for engagement, wedding, or reception."
   },
   {
     question: "How far in advance should I book the best bridal makeup pala service?",
@@ -165,7 +165,7 @@ const faqs = [
   },
   {
     question: "Do you offer trial sessions for best bridal makeup pala?",
-    answer: "Yes, we offer trial sessions for the best bridal makeup pala experience. Trials help us perfect your look and ensure you're 100% confident on your wedding day."
+    answer: "No makeup or hair trials are offered. Consultation happens on the day of your function — thorough and personal. You receive a pre-bridal guide when you book."
   },
   {
     question: "How long does bridal makeup pala kottayam application take?",

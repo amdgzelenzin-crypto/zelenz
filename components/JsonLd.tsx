@@ -20,7 +20,7 @@ export default function JsonLd({ data }: JsonLdProps) {
     "founder": "Nikita Liby",
     "url": "https://nixtudio.in",
     "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-    "description": "Premium bridal makeup studio and luxury salon in Pala, Kerala",
+    "description": "Best salon and premium bridal makeup studio in Pala, Kerala — hair, nails, HydraFacial, spa & bridal services",
     "priceRange": "₹₹₹",
     "openingHours": "Mo-Sa 10:00-19:00, Su 11:00-18:00",
     "geo": {
@@ -36,12 +36,12 @@ export default function JsonLd({ data }: JsonLdProps) {
       {
         "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
         "@id": "https://nixtudio.in/#business",
-        "name": "Nixtudio - Best Bridal Makeup Studio in Pala, Kerala",
+        "name": "Nixtudio - Best Salon & Bridal Makeup Studio in Pala, Kerala",
         "url": "https://nixtudio.in",
         "telephone": "+917034726402",
         "priceRange": "₹₹₹",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "description": "Nixtudio is Pala's #1 premium bridal makeup studio and salon. Expert bridal artistry & advanced hair care exclusively by Nikita. Top-rated bridal makeup studio & luxury hair salon in Pala, Kottayam, Kerala. Book your appointment today.",
+        "description": "Nixtudio is Pala's #1 premium salon and bridal makeup studio. Expert hair styling, gel nails, HydraFacial, spa, waxing, threading & bridal artistry exclusively by Nikita Liby. Top-rated salon & bridal studio in Pala, Kottayam, Kerala.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
@@ -69,10 +69,10 @@ export default function JsonLd({ data }: JsonLdProps) {
             "closes": "18:00"
           }
         ],
-        "areaServed": ["Pala", "Kottayam", "Ettumanoor", "Central Travancore"],
-        "servesCuisine": ["Kerala Bridal Makeup", "Traditional Bridal Artistry"],
+        "areaServed": ["Pala", "Kottayam", "Ettumanoor", "Changanacherry", "Kanjirappally", "Central Travancore"],
+        "knowsAbout": ["Bridal Makeup", "Hair Styling", "Gel Nails", "HydraFacial", "Beauty Salon Services", "Waxing", "Threading"],
         "hasMap": "https://maps.google.com/maps?q=Nixtudio+Pala+Kerala",
-        "keywords": "bridal studio Pala, salon Pala, bridal makeup Kerala, makeup studio Pala Kerala, best bridal makeup Pala, luxury bridal salon Pala",
+        "keywords": "best salon pala, salon pala kerala, hair salon pala, nail salon pala, beauty parlour pala, bridal studio Pala, best bridal makeup Pala, hydrafacial pala",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Beauty Services",
@@ -131,6 +131,42 @@ export default function JsonLd({ data }: JsonLdProps) {
                 "@type": "Service",
                 "name": "Vortex Fusion HydraFacial",
                 "description": "Medical-grade HydraFacial treatment for deep cleansing and hydration. Advanced skincare technology available at Nixtudio Pala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Keratin & Hair Botox Treatment",
+                "description": "Humidity-proof keratin and hair botox treatments for frizz-free hair in Kerala's tropical climate. Best hair salon in Pala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Waxing & Threading",
+                "description": "Professional waxing and threading services at Nixtudio beauty parlour in Pala, Kerala.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "Nixtudio"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Party & Guest Makeup",
+                "description": "Party makeup and guest styling for engagements, receptions and celebrations in Pala and Kottayam.",
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "Nixtudio"
@@ -230,7 +266,14 @@ export default function JsonLd({ data }: JsonLdProps) {
           "Engagement Makeup",
           "Party Makeup",
           "Hair Styling",
+          "Hair Coloring",
+          "Keratin Treatment",
           "Nail Services",
+          "Gel Nail Extensions",
+          "HydraFacial",
+          "Facials",
+          "Waxing",
+          "Threading",
           "Skin Care"
         ],
         "areaServed": [
@@ -277,18 +320,28 @@ export default function JsonLd({ data }: JsonLdProps) {
               "priceCurrency": "INR",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Wedding Day Bridal Makeup",
-                "description": "HD and Airbrush bridal makeup with 16-hour humidity resistance."
+                "name": "Standard Bridal Package — HD",
+                "description": "HD bridal makeup for engagement, wedding or reception. Includes makeup, hairstyling, lashes, lens, outfit styling."
               }
             },
             {
               "@type": "Offer",
-              "price": "14500",
+              "price": "32500",
               "priceCurrency": "INR",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Engagement Styling",
-                "description": "Sophisticated party and engagement makeup for church and hall events."
+                "name": "Standard Bridal Package — Airbrush",
+                "description": "Airbrush bridal makeup for engagement, wedding or reception. Humidity-resistant finish."
+              }
+            },
+            {
+              "@type": "Offer",
+              "price": "40000",
+              "priceCurrency": "INR",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Premium Bridal Package — Signature Subtle Airbrush",
+                "description": "Luxury airbrush bridal package with saree draping, international luxury brands."
               }
             }
           ]
@@ -431,7 +484,7 @@ export default function JsonLd({ data }: JsonLdProps) {
             "name": "How does Nixtudio's pricing compare to other premium bridal artists in Kottayam district?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nixtudio's bridal packages start at ₹27,500, which is premium but justified by Nikita's personal attention, 6+ years expertise, and specialized humidity-resistant techniques. Unlike chain salons, you get individualized service with medical-grade products specifically chosen for Kerala's climate, providing better value and results."
+              "text": "Nixtudio's bridal packages: Standard HD at ₹27,500, Standard Airbrush at ₹32,500, and Premium Signature Airbrush at ₹40,000 — for engagement, wedding, or reception. All work is done by Nikita Liby with trained team assistance."
             }
           },
           {
@@ -460,10 +513,10 @@ export default function JsonLd({ data }: JsonLdProps) {
           },
           {
             "@type": "Question",
-            "name": "Does Nixtudio offer bridal makeup trials specifically for Kerala climate testing?",
+            "name": "Does Nixtudio offer bridal makeup trials?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, Nikita conducts climate-specific trials where she tests makeup durability in simulated humidity conditions. Trials include 8-hour wear tests, sweat resistance testing, and photography sessions to ensure the makeup performs perfectly in actual Kerala wedding conditions."
+              "text": "Nixtudio does not offer separate makeup or hair trials. Consultation happens on the day of your function — thorough and personal. A pre-bridal guide is shared when you book."
             }
           },
           {
@@ -472,6 +525,46 @@ export default function JsonLd({ data }: JsonLdProps) {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Nixtudio requires 50% advance booking confirmation, 25% one month before, and remaining 25% on the wedding day. Cancellations made 60+ days before receive 75% refund, 30-59 days receive 50% refund. Less than 30 days cancellations are non-refundable due to Nikita's personalized commitment and limited availability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best salon in Pala, Kerala?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NIXTUDIO is rated the best salon in Pala, Kerala for hair styling, gel nails, HydraFacial, waxing, threading, facials, and bridal makeup. Led by Nikita Liby with 500+ satisfied clients across Pala and Kottayam district."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does NIXTUDIO offer HydraFacial and spa services in Pala?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. NIXTUDIO offers FDA-approved Vortex-Fusion HydraFacial, glass skin facials, deep cleansing, and pre-bridal skin prep at our Pala salon. HydraFacial starts from ₹6,500 with personalised skin consultations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do gel nails cost at the best nail salon in Pala?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gel nail services at NIXTUDIO Pala start from ₹2,000 for gel polish, with extensions and custom nail art from ₹2,500. Bridal nail packages are available as part of wedding day styling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is NIXTUDIO a full beauty parlour in Pala or only bridal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NIXTUDIO is a full-service beauty parlour and premium salon in Pala offering haircuts, colour, keratin, gel nails, HydraFacial, waxing, threading, party makeup, and bridal packages — not bridal-only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best hair salon in Pala for keratin and colour?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NIXTUDIO is Pala's top hair salon for ammonia-free colour, keratin, hair botox, and humidity-proof styling. Hair services start from ₹3,500 with premium salon-grade products suited to Kerala's climate."
             }
           }
         ]

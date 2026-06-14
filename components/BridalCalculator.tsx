@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { BRIDAL_PACKAGES } from '@/lib/bridal-packages'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -72,35 +73,35 @@ export default function BridalCalculator() {
     
     // Simulate AI processing
     setTimeout(() => {
-      let packageType = 'Premium'
-      let price = '₹27,500'
-      let includes = []
+      const premiumPkg = BRIDAL_PACKAGES.find((p) => p.id === 'premium-airbrush')!
+      const standardAirbrush = BRIDAL_PACKAGES.find((p) => p.id === 'standard-airbrush')!
+      const standardHd = BRIDAL_PACKAGES.find((p) => p.id === 'standard-hd')!
+
+      let packageType = standardHd.name
+      let price = standardHd.priceDisplay
+      let includes: string[] = []
       let whyRecommended = ''
       let urgencyLevel: 'low' | 'medium' | 'high' = 'medium'
 
-      // AI Logic based on inputs
       const weddingDate = new Date(data.weddingDate)
       const monthsUntil = Math.ceil((weddingDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24 * 30))
-      
-      if (data.functions.length >= 3) {
-        packageType = 'Luxury'
-        price = '₹45,000'
+
+      if (data.functions.length >= 3 || data.venueType === 'outdoor') {
+        packageType = `${premiumPkg.name} — ${premiumPkg.subtitle}`
+        price = premiumPkg.priceDisplay
+        includes = [...premiumPkg.included]
         urgencyLevel = monthsUntil < 3 ? 'high' : 'medium'
-      } else if (data.functions.length === 2) {
-        packageType = 'Premium'
-        price = '₹32,500'
+      } else if (data.skinType === 'oily' || data.venueType === 'outdoor' || data.concerns.includes('acne')) {
+        packageType = `${standardAirbrush.name} — ${standardAirbrush.subtitle}`
+        price = standardAirbrush.priceDisplay
+        includes = [...standardAirbrush.included]
       } else {
-        packageType = 'Classic'
-        price = '₹27,500'
+        packageType = `${standardHd.name} — ${standardHd.subtitle}`
+        price = standardHd.priceDisplay
+        includes = [...standardHd.included]
       }
 
-      includes = [
-        'Nikita Liby - Personal Attention (No Delegation)',
-        'HD & Airbrush Makeup',
-        'Humidity-Resistant Finish (16+ Hours)',
-        'Pre-Wedding Skin Preparation',
-        'Hair Styling & Draping'
-      ]
+      includes.unshift('Nikita Liby — personal attention (assisted by trained team)')
 
       if (data.functions.length > 1) {
         includes.push('Multiple Function Coordination')

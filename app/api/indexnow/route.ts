@@ -15,6 +15,16 @@ const urls = [
   `https://${HOST}/blog/hd-vs-airbrush-makeup-kerala-weddings`,
   `https://${HOST}/blog/christian-bridal-makeup-trends-2025`,
   `https://${HOST}/blog/pre-wedding-skin-prep-humid-kerala`,
+  `https://${HOST}/blog/best-salon-pala-2026-guide`,
+  `https://${HOST}/blog/gel-nails-hydrafacial-pala-guide`,
+  `https://${HOST}/best-salon-pala`,
+  `https://${HOST}/best-salon-kottayam`,
+  `https://${HOST}/hair-salon-pala`,
+  `https://${HOST}/nail-salon-pala`,
+  `https://${HOST}/facial-spa-pala`,
+  `https://${HOST}/beauty-parlour-pala`,
+  `https://${HOST}/bridal-makeup-pala`,
+  `https://${HOST}/best-bridal-makeup-pala`,
 ];
 
 export async function POST() {

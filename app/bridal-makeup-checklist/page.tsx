@@ -66,8 +66,8 @@ export default function BridalMakeupChecklistPage() {
       title: "3 Months Before Wedding",
       items: [
         "Book your makeup artist",
-        "Schedule first trial session",
-        "Decide on final makeup look",
+        "Receive NIXTUDIO pre-bridal guide",
+        "Decide on preferred package (HD / Airbrush / Premium)",
         "Order wedding accessories and jewelry",
         "Begin regular facials if needed"
       ]
@@ -75,8 +75,8 @@ export default function BridalMakeupChecklistPage() {
     {
       title: "1 Month Before Wedding",
       items: [
-        "Schedule second trial session",
-        "Finalize makeup look with artist",
+        "Confirm package and event date",
+        "Share outfit and jewellery references with artist",
         "Get any skincare treatments done",
         "Test allergy patches for new products",
         "Confirm wedding day timeline"
@@ -85,8 +85,8 @@ export default function BridalMakeupChecklistPage() {
     {
       title: "1 Week Before Wedding",
       items: [
-        "Final trial session with full outfit",
-        "Take photos of approved look",
+        "Review pre-bridal guide checklist",
+        "Prepare outfit and accessories for function day",
         "Get emergency touch-up kit ready",
         "Confirm artist arrival time",
         "Prepare skincare products"

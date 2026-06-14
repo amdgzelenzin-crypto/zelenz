@@ -54,15 +54,15 @@ const faqs = [
   },
   {
     q: "Does NIXTUDIO offer bridal trials?",
-    a: "Yes. We strongly recommend a trial session 2–4 weeks before your wedding date. This allows us to perfect your look, test products on your skin, and ensure everything photographs beautifully.",
+    a: "No makeup or hair trials are offered. Your consultation happens on the day of your function — it is thorough, detailed, and unhurried. You receive a personalized pre-bridal guide when you book.",
   },
   {
     q: "What brands and products does Nikita use?",
-    a: "We use a curated selection of premium, dermatologist-tested brands including MAC, Bobbi Brown, Charlotte Tilbury, and Kryolan Airbrush systems — chosen specifically for Kerala's humid climate.",
+    a: "Standard packages use Bobbi Brown, Huda Beauty, Anastasia, MAC, Urban Decay, Too Faced, and Makeup Forever. Premium packages add Chanel, Dior, Gucci, YSL, Givenchy, Rare Beauty, NARS, Pat McGrath, and more — chosen for Kerala's humid climate.",
   },
   {
     q: "Can I book Nikita for engagement, reception, and wedding day?",
-    a: "Absolutely. Most brides book the complete package — engagement, wedding, and reception — to maintain a consistent aesthetic across all events. Package pricing starts at ₹14,500+.",
+    a: "Yes. The same bridal packages apply to engagement, wedding, and reception: Standard HD (₹27,500), Standard Airbrush (₹32,500), or Premium Signature Airbrush (₹40,000). Guest and family makeup is available separately.",
   },
 ];
 

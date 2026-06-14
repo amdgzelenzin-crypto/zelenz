@@ -248,8 +248,8 @@ export default function KeralaWeddingMakeupGuide() {
                       </tr>
                       <tr className="border-b">
                         <td className="p-4"><strong>Price Range</strong></td>
-                        <td className="p-4 text-center">₹22,000-27,500</td>
-                        <td className="p-4 text-center">₹25,000-32,000</td>
+                        <td className="p-4 text-center">₹27,500</td>
+                        <td className="p-4 text-center">₹32,500</td>
                       </tr>
                     </tbody>
                   </table>

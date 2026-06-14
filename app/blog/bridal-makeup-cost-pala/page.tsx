@@ -100,19 +100,19 @@ export default function BridalMakeupCostPalaBlog() {
               <h2 className="text-2xl font-bold mb-4" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>Quick Price Overview</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-[#D4A055] mb-2">Basic Package</div>
-                  <div className="text-2xl font-bold mb-1">₹14,500</div>
-                  <div className="text-sm text-gray-600">Essential makeup services</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">Standard — HD</div>
+                  <div className="text-2xl font-bold mb-1">₹27,500</div>
+                  <div className="text-sm text-gray-600">Engagement, wedding or reception</div>
                 </div>
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-[#D4A055] mb-2">HD Makeup</div>
-                  <div className="text-2xl font-bold mb-1">₹22,000-27,500</div>
-                  <div className="text-sm text-gray-600">Premium HD application</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">Standard — Airbrush</div>
+                  <div className="text-2xl font-bold mb-1">₹32,500</div>
+                  <div className="text-sm text-gray-600">Humidity-resistant finish</div>
                 </div>
                 <div className="bg-white rounded-lg p-4">
-                  <div className="text-lg font-bold text-[#D4A055] mb-2">Airbrush Makeup</div>
-                  <div className="text-2xl font-bold mb-1">₹25,000-32,000</div>
-                  <div className="text-sm text-gray-600">Advanced airbrush system</div>
+                  <div className="text-lg font-bold text-[#D4A055] mb-2">Premium — Airbrush</div>
+                  <div className="text-2xl font-bold mb-1">₹40,000</div>
+                  <div className="text-sm text-gray-600">Saree draping + luxury brands</div>
                 </div>
               </div>
             </div>
@@ -157,34 +157,28 @@ export default function BridalMakeupCostPalaBlog() {
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="p-4 font-semibold">Basic Bridal Makeup</td>
-                      <td className="p-4 text-center">₹14,500 - ₹18,000</td>
-                      <td className="p-4 text-center">8-10 hours</td>
-                      <td className="p-4 text-center text-sm">Simple ceremonies</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-4 font-semibold">HD Bridal Makeup</td>
-                      <td className="p-4 text-center">₹22,000 - ₹27,500</td>
+                      <td className="p-4 font-semibold">Standard — HD</td>
+                      <td className="p-4 text-center">₹27,500</td>
                       <td className="p-4 text-center">12-14 hours</td>
                       <td className="p-4 text-center text-sm">Indoor weddings</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="p-4 font-semibold">Airbrush Bridal Makeup</td>
-                      <td className="p-4 text-center">₹25,000 - ₹32,000</td>
+                      <td className="p-4 font-semibold">Standard — Airbrush</td>
+                      <td className="p-4 text-center">₹32,500</td>
                       <td className="p-4 text-center">16+ hours</td>
                       <td className="p-4 text-center text-sm">Outdoor/humid venues</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="p-4 font-semibold">Luxury Bridal Package</td>
-                      <td className="p-4 text-center">₹35,000 - ₹45,000</td>
-                      <td className="p-4 text-center">3-day coverage</td>
-                      <td className="p-4 text-center text-sm">Complete wedding experience</td>
+                      <td className="p-4 font-semibold">Premium — Airbrush</td>
+                      <td className="p-4 text-center">₹40,000</td>
+                      <td className="p-4 text-center">16+ hours</td>
+                      <td className="p-4 text-center text-sm">Luxury brands + draping</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="p-4 font-semibold">Destination Wedding Package</td>
-                      <td className="p-4 text-center">₹45,000 - ₹65,000</td>
-                      <td className="p-4 text-center">Multi-day</td>
-                      <td className="p-4 text-center text-sm">Outstation weddings</td>
+                      <td className="p-4 font-semibold">Guest / Party Makeup</td>
+                      <td className="p-4 text-center">See catalogue</td>
+                      <td className="p-4 text-center">Per person</td>
+                      <td className="p-4 text-center text-sm">Family & guests</td>
                     </tr>
                   </tbody>
                 </table>
@@ -195,54 +189,35 @@ export default function BridalMakeupCostPalaBlog() {
             
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Basic Package (₹14,500 - ₹18,000)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Standard — HD (₹27,500)</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Pre-makeup consultation (1 session)</li>
-                  <li>• Wedding day makeup application</li>
-                  <li>• Basic hair styling</li>
-                  <li>• Touch-up kit</li>
-                  <li>• Standard makeup products</li>
+                  <li>• Makeup, hairstyling, lashes, lens</li>
+                  <li>• Outfit styling (saree not included)</li>
+                  <li>• Hair extensions if needed</li>
+                  <li>• Day-of consultation (no trials)</li>
+                  <li>• Engagement, wedding or reception</li>
                 </ul>
               </div>
               
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">HD Makeup Package (₹22,000 - ₹27,500)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Standard — Airbrush (₹32,500)</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• 2 Pre-makeup trial sessions</li>
-                  <li>• HD makeup application</li>
-                  <li>• Professional hair styling</li>
-                  <li>• Saree draping assistance</li>
-                  <li>• Premium makeup products (MAC, Bobbi Brown)</li>
-                  <li>• Emergency availability</li>
-                  <li>• Touch-up kit with premium products</li>
+                  <li>• Humidity-resistant airbrush finish</li>
+                  <li>• Same inclusions as HD Standard</li>
+                  <li>• Saree draping extra (₹1,500–2,000)</li>
+                  <li>• By Nikita Liby with trained team</li>
+                  <li>• Pre-bridal guide on booking</li>
                 </ul>
               </div>
               
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Airbrush Package (₹25,000 - ₹32,000)</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Premium — Airbrush (₹40,000)</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• 2 Pre-makeup trial sessions</li>
-                  <li>• Airbrush makeup application</li>
-                  <li>• Advanced hair styling</li>
-                  <li>• Jewelry coordination</li>
-                  <li>• Luxury makeup products (Charlotte Tilbury, NARS)</li>
-                  <li>• Climate-proof application</li>
-                  <li>• 24/7 emergency support</li>
-                  <li>• Professional touch-up kit</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold mb-3 text-[#B76E79]">Luxury Package (₹35,000 - ₹45,000)</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• 3 Pre-makeup trial sessions</li>
-                  <li>• Engagement + Wedding + Reception makeup</li>
-                  <li>• Airbrush & HD combination</li>
-                  <li>• Family makeup (mother, sister, bridesmaids)</li>
-                  <li>• VIP treatment (private studio access)</li>
-                  <li>• Skincare consultation</li>
-                  <li>• Professional photography coordination</li>
-                  <li>• Luxury gift hamper</li>
+                  <li>• Signature subtle airbrush glam</li>
+                  <li>• Luxury international brands</li>
+                  <li>• Saree draping with/without pre-pleats</li>
+                  <li>• All Standard inclusions</li>
+                  <li>• Guest makeup — separate catalogue</li>
                 </ul>
               </div>
             </div>
@@ -258,10 +233,9 @@ export default function BridalMakeupCostPalaBlog() {
                 <div>
                   <h4 className="font-bold mb-3">Additional Services</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Trial sessions: ₹2,000 - ₹5,000 each (if not included)</li>
-                    <li>• Engagement makeup: ₹8,000 - ₹15,000</li>
-                    <li>• Reception makeup: ₹10,000 - ₹20,000</li>
-                    <li>• Family makeup: ₹3,000 - ₹8,000 per person</li>
+                    <li>• Saree draping (Standard): ₹1,500–2,000</li>
+                    <li>• Hair accessories: ₹750 / ₹1,000 / ₹1,500</li>
+                    <li>• Guest / party makeup: see Party/Guest catalogue</li>
                   </ul>
                 </div>
                 <div>
@@ -287,7 +261,7 @@ export default function BridalMakeupCostPalaBlog() {
               <div className="flex items-start">
                 <span className="text-green-600 mr-3">•</span>
                 <div>
-                  <strong>Ask About Trial Sessions:</strong> Clarify how many trial sessions are included and the cost for additional ones.
+                  <strong>No Trials Policy:</strong> NIXTUDIO does not offer separate makeup or hair trials — consultation happens on the day of your function.
                 </div>
               </div>
               <div className="flex items-start">
@@ -320,7 +294,8 @@ export default function BridalMakeupCostPalaBlog() {
                 <ul className="space-y-2 text-gray-700">
                   <li>• Premium, authentic products</li>
                   <li>• Experienced artist (5+ years)</li>
-                  <li>• Multiple trial sessions</li>
+                  <li>• Clear, transparent package pricing</li>
+                  <li>• Day-of consultation included</li>
                   <li>• Emergency availability</li>
                   <li>• Strong portfolio and reviews</li>
                   <li>• Professional studio setup</li>
@@ -332,7 +307,7 @@ export default function BridalMakeupCostPalaBlog() {
                 <h3 className="text-xl font-bold mb-4 text-red-800">Red Flags</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Suspiciously low prices</li>
-                  <li>• No trial sessions offered</li>
+                  <li>• Hidden extra charges at booking</li>
                   <li>• Poor quality products</li>
                   <li>• No portfolio or reviews</li>
                   <li>• Vague service descriptions</li>
@@ -367,17 +342,17 @@ export default function BridalMakeupCostPalaBlog() {
                 <div>
                   <h4 className="font-bold mb-3">For ₹20-30 Lakh Wedding Budget:</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Bridal Makeup: ₹25,000 - ₹35,000 (1-1.5% of total)</li>
-                    <li>• Family Makeup: ₹8,000 - ₹15,000</li>
-                    <li>• Total Makeup Budget: ₹33,000 - ₹50,000</li>
+                    <li>• Bridal Makeup: ₹27,500 - ₹40,000 (NIXTUDIO packages)</li>
+                    <li>• Guest / family makeup: see Party/Guest catalogue</li>
+                    <li>• Total Makeup Budget: ₹30,000 - ₹55,000</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-bold mb-3">For ₹10-20 Lakh Wedding Budget:</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Bridal Makeup: ₹18,000 - ₹25,000 (1.8-2.5% of total)</li>
-                    <li>• Family Makeup: ₹5,000 - ₹10,000</li>
-                    <li>• Total Makeup Budget: ₹23,000 - ₹35,000</li>
+                    <li>• Bridal Makeup: ₹27,500 - ₹32,500 (Standard HD or Airbrush)</li>
+                    <li>• Guest makeup: separate catalogue</li>
+                    <li>• Total Makeup Budget: ₹27,500 - ₹45,000</li>
                   </ul>
                 </div>
               </div>
@@ -521,7 +496,7 @@ export default function BridalMakeupCostPalaBlog() {
                 <li><strong>Book 6-8 months in advance</strong> for peak season dates</li>
                 <li><strong>Choose HD or Airbrush makeup</strong> for best results in Kerala climate</li>
                 <li><strong>Allocate 1.5-2.5% of your total wedding budget</strong> to makeup</li>
-                <li><strong>Always insist on trial sessions</strong> to test the look and products</li>
+                <li><strong>Confirm package inclusions</strong> — Standard vs Premium (saree draping differs)</li>
                 <li><strong>Get everything in writing</strong> to avoid hidden costs</li>
                 <li><strong>Check recent reviews and portfolio</strong> before booking</li>
               </ol>

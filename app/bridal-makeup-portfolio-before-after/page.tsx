@@ -55,7 +55,7 @@ export default function BridalMakeupPortfolioPage() {
       before: "/images/portfolio/anna-before.jpg",
       after: "/images/portfolio/anna-after.jpg",
       services: ["HD Makeup", "Hair Styling", "Jewelry Coordination"],
-      package: "Luxury Bridal Package",
+      package: "Premium Bridal Package",
       testimonial: "Nikita transformed me completely! The makeup lasted 16+ hours through the entire wedding ceremony and reception."
     },
     {
@@ -95,7 +95,7 @@ export default function BridalMakeupPortfolioPage() {
       before: "/images/portfolio/rebecca-before.jpg",
       after: "/images/portfolio/rebecca-after.jpg",
       services: ["HD Makeup", "Dramatic Eyes", "Bold Lip"],
-      package: "Luxury Bridal Package",
+      package: "Premium Bridal Package",
       testimonial: "Absolutely stunning! Nikita created the exact look I wanted. Felt like a princess on my wedding day."
     },
     {

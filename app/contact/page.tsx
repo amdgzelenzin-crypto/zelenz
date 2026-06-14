@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "What does the bridal package include?",
-    a: "Makeup with detailed skin preparation, hairstyling, saree draping with or without pre-pleat, lashes, contact lenses, outfit setting, and hair extensions if needed. Hair flowers are not included but accessories such as pins, nets, and bands are provided.",
+    a: "Standard Package (HD ₹27,500 / Airbrush ₹32,500) includes makeup, hairstyling, lashes, lens, outfit styling (saree not included), and hair extensions if needed. Premium Package (Airbrush ₹40,000) includes saree draping with/without pre-pleats plus all Standard inclusions. See our Party/Guest catalogue for family makeup.",
   },
 ];
 

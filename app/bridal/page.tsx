@@ -5,6 +5,13 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
+import {
+  BRIDAL_PACKAGES,
+  BRIDAL_EXTRAS,
+  BRIDAL_GOOD_TO_KNOW,
+  BRIDAL_PACKAGE_EVENTS,
+  BRIDAL_PHILOSOPHY_BRANDS,
+} from "@/lib/bridal-packages";
 
 const processSteps = [
   {
@@ -25,7 +32,7 @@ const processSteps = [
   {
     num: "04",
     title: "Hair, Finalized Together",
-    desc: "Multiple options shown, final look decided collaboratively. Extensions, accessories, and draping — all included.",
+    desc: "Multiple options shown, final look decided collaboratively. Premium includes saree draping; Standard draping available as add-on.",
   },
 ];
 
@@ -129,6 +136,9 @@ export default function BridalPage() {
               </p>
               <p>
                 All bridal work is done exclusively by Nikita, assisted by her trained team. On the day of your function, we begin with a detailed consultation to understand your preferences, demonstrating every step of the makeup process to ensure you feel confident and comfortable. For hair styling, we show multiple options and finalize the perfect look based on your outfit, features, and our suggestions.
+              </p>
+              <p>
+                We take pride in using only high-end international brands including {BRIDAL_PHILOSOPHY_BRANDS.slice(0, 8).join(', ')}, and more — with advanced techniques and a deep understanding of modern bridal aesthetics.
               </p>
             </div>
           </FadeUp>
@@ -251,73 +261,55 @@ export default function BridalPage() {
       <section className="section-padding section-cream">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="label-caps mb-4">Investment Tiers</p>
-            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-12">The Bridal Package</h2>
+            <p className="label-caps mb-4">The Bridal Edit</p>
+            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-4">Packages & Price</h2>
             <p className="font-sans text-white/80 text-sm mb-12 max-w-lg">
-              Transparent pricing for premium 'Manavatty' aesthetics. We offer specialized tiers for your wedding and pre-wedding functions.
+              {BRIDAL_PACKAGE_EVENTS}. Two thoughtfully designed packages — Standard and Premium — tailored to different preferences and budgets.
             </p>
           </FadeUp>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 border-b border-espresso/5 pb-16">
-            {[
-              { title: "Engagement / Reception", price: "₹14,500", desc: "Sophisticated styling for your first look." },
-              { title: "Premium Bridal (HD)", price: "₹27,500", desc: "Our signature high-definition bridal package." },
-              { title: "Luxury Bridal (Airbrush)", price: "₹32,500", desc: "Humidity-resistant finish for max durability." }
-            ].map((tier, i) => (
-              <FadeUp key={tier.title} delay={i * 0.1}>
-                <div className="p-8 border border-espresso/5 rounded-2xl bg-white/50">
-                  <h3 className="font-sans text-[10px] tracking-[0.2em] text-[#B76E79] mb-2 uppercase">{tier.title}</h3>
-                  <div className="text-2xl font-serif text-white mb-3">{tier.price}<span className="text-xs font-sans text-white/70 ml-1">+</span></div>
-                  <p className="font-sans text-[13px] text-white/80">{tier.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {BRIDAL_PACKAGES.map((pkg, i) => (
+              <FadeUp key={pkg.id} delay={i * 0.1}>
+                <div className="pricing-card w-full card-glow rosegold-shimmer relative" style={{ padding: "clamp(28px, 3vw, 36px)", borderRadius: "16px" }}>
+                  {pkg.badge && (
+                    <div style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", background: "linear-gradient(135deg, #C4903A, #E8CC90)", color: "#FFFFFF", fontSize: "10px", letterSpacing: "0.15em", padding: "4px 20px", borderRadius: "100px", whiteSpace: "nowrap", zIndex: 10 }}>
+                      {pkg.badge}
+                    </div>
+                  )}
+                  <div className="bg-white h-full w-full rounded-[14px] p-6 lg:p-8 flex flex-col">
+                    <p className="label-caps mb-1" style={{ color: "#A86070" }}>{pkg.name}</p>
+                    <p className="font-sans text-[11px] text-[#B76E79] mb-3 uppercase tracking-wider">{pkg.subtitle}</p>
+                    <div className="price-display mb-1 max-md:text-[48px] gold-foil-text">
+                      <span className="price-rupee">₹</span>{pkg.priceDisplay.replace('₹', '').replace(',', '')}
+                    </div>
+                    <p className="text-[11px] font-sans text-taupe/70 mb-4">{pkg.technique}</p>
+                    <div style={{ width: "40px", height: "1px", margin: "12px 0 16px" }} className="rosegold-shimmer" />
+                    <ul className="space-y-0 flex-1">
+                      {pkg.included.map((item, j, arr) => (
+                        <li key={item} className="flex items-start gap-3 py-2.5 w-full" style={{ borderBottom: j < arr.length - 1 ? "1px solid #FFE4E8" : "none" }}>
+                          <span style={{ color: "#F9919F", fontSize: "12px", marginTop: "2px" }}>✓</span>
+                          <span className="font-sans text-[14px]" style={{ color: "#3D1520" }}>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </FadeUp>
             ))}
           </div>
-          <div className="flex flex-col md:flex-row gap-8 max-w-3xl">
-
-            {/* HD Card */}
-            <div className="pricing-card flex-1 w-full max-md:p-[32px_24px] card-glow rosegold-shimmer" style={{ padding: "clamp(32px, 4vw, 40px)", borderRadius: "16px" }}>
-              <div className="bg-white h-full w-full rounded-[14px] p-6 lg:p-10 flex flex-col items-center">
-              <p className="label-caps mb-4" style={{ color: "#A86070" }}>HD Makeup</p>
-              <div className="price-display mb-2 max-md:text-[56px] gold-foil-text">
-                <span className="price-rupee">₹</span>27,500
-              </div>
-              <div style={{ width: "40px", height: "1px", margin: "20px 0" }} className="rosegold-shimmer" />
-              <ul className="space-y-0">
-                {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
-                  <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
-                    <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
+          <FadeUp>
+            <div className="max-w-2xl mx-auto p-6 rounded-2xl border border-espresso/10 bg-white/40">
+              <p className="label-caps mb-4">Extra Charges (Standard Package)</p>
+              <ul className="space-y-2">
+                {BRIDAL_EXTRAS.map((extra) => (
+                  <li key={extra.service} className="font-sans text-sm text-espresso/80 flex justify-between gap-4">
+                    <span>{extra.service}</span>
+                    <span className="font-medium text-[#B76E79] shrink-0">{extra.price}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "rgba(255,255,255,0.8)" }}>Inclusive of 5% GST</p>
-              </div>
             </div>
-
-            {/* Airbrush Card — MOST POPULAR */}
-            <div className="pricing-card flex-1 w-full max-md:p-[32px_24px] card-glow rosegold-shimmer" style={{ position: "relative", padding: "clamp(32px, 4vw, 40px)", borderRadius: "16px" }}>
-              <div style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", background: "linear-gradient(135deg, #C4903A, #E8CC90)", color: "#FFFFFF", fontSize: "10px", letterSpacing: "0.15em", padding: "4px 20px", borderRadius: "100px", whiteSpace: "nowrap", zIndex: 10 }}>
-                MOST POPULAR
-              </div>
-              <div className="bg-white h-full w-full rounded-[14px] p-6 lg:p-10 flex flex-col items-center relative">
-              <p className="label-caps mb-4" style={{ color: "#A86070" }}>Airbrush Makeup</p>
-              <div className="price-display mb-2 max-md:text-[56px] gold-foil-text">
-                <span className="price-rupee">₹</span>32,500
-              </div>
-              <p className="text-[11px] font-sans text-[#B76E79] mb-4 uppercase tracking-wider">Humidity-Resistant Finish</p>
-              <div style={{ width: "40px", height: "1px", margin: "20px 0" }} className="rosegold-shimmer" />
-              <ul className="space-y-0">
-                {["Makeup with detailed skin prep","Hairstyling","Saree draping","Lashes","Contact lenses","Outfit setting","Hair extensions if needed"].map((item, i, arr) => (
-                  <li key={i} className="flex items-center gap-3 py-3 w-full" style={{ borderBottom: i < arr.length-1 ? "1px solid #FFE4E8" : "none" }}>
-                    <span style={{ color: "#F9919F", fontSize: "12px" }}>✓</span>
-                    <span className="font-sans text-[15px]" style={{ color: "#3D1520" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-center mt-auto pt-6 text-xs font-sans" style={{ color: "rgba(255,255,255,0.8)" }}>Inclusive of 5% GST</p>
-              </div>
-            </div>
-          </div>
+          </FadeUp>
         </div>
       </section>
 
@@ -328,12 +320,7 @@ export default function BridalPage() {
             <p className="label-caps mb-12">Good to Know</p>
           </FadeUp>
           <StaggerContainer className="space-y-8 max-w-2xl" staggerDelay={0.1}>
-            {[
-              "There are no makeup or hair trials. Your consultation happens on the day — it is thorough, it is personal, and it is enough.",
-              "Guest and family makeup is available separately. Please inform us at the time of booking so we can schedule correctly.",
-              "Hair accessories — extensions, lashes, lenses, slides, pins, nets — are provided. Flowers for hair are not included.",
-              "Once booked, date changes are subject to availability only.",
-            ].map((text, i) => (
+            {BRIDAL_GOOD_TO_KNOW.map((text, i) => (
               <StaggerItem key={i}>
                 <p className="font-sans text-white/90 leading-relaxed">
                   {text}

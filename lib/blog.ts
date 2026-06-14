@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
       <p>You're likely starting at 5 or 6 in the morning. By the time the Muhurtham or church service begins, the temperature is already climbing. If it's summer — April, May — you're dealing with humidity levels that make even the best makeup work hard to stay in place. And the reception in the evening often happens outdoors, or in a hall where the AC is fighting a losing battle against 300 guests.</p>
       <p>This is why Airbrush has become increasingly popular for Kerala brides. That sweat-resistance isn't a marketing claim — it's something we've watched hold up through eight-hour ceremonies in Kottayam's summer heat. For brides who know they run warm, or who are getting married outdoors or during the day, Airbrush gives you one less thing to worry about.</p>
       <p>That said — HD makeup, applied with the right primer and set correctly, holds up far better than most people assume. The key is in the preparation, not just the product.</p>
-      <p><strong>Concerned about Kerala humidity affecting your makeup?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Schedule a trial</a> to test both techniques in our climate-controlled studio.</p>
+      <p><strong>Concerned about Kerala humidity affecting your makeup?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Book a consultation</a> — Standard Airbrush (₹32,500) is our most popular choice for humid Kerala weddings.</p>
       <hr />
       <h3>The honest breakdown</h3>
       <p><strong>Choose HD if:</strong></p>
@@ -151,6 +151,52 @@ export const blogPosts: BlogPost[] = [
       <p>Come to the studio with a clean, moisturised face. No makeup. No SPF applied — we'll handle the barrier. Eat something. This sounds obvious, but we've had brides arrive having skipped breakfast because they were nervous, and a drop in blood sugar shows on the face.</p>
       <p>We handle the rest. The base, the barrier, the prep before a single drop of foundation goes on. This is where the 30 days of preparation meet the two hours of application — and when both are done right, the result holds all day.</p>
       <p><em>NIXTUDIO is a bridal and beauty studio in Pala, Kerala. All consultations and applications are handled exclusively by Nikita Liby.</em></p>
+    `
+  },
+  {
+    slug: "best-salon-pala-2026-guide",
+    title: "Best Salon in Pala 2026: How to Choose (And Why NIXTUDIO Stands Out)",
+    excerpt: "Looking for the best salon in Pala or Kottayam? A practical guide to what separates a neighbourhood parlour from a premium salon — and what to expect at NIXTUDIO.",
+    date: "June 10, 2026",
+    author: "Nikita Liby",
+    category: "Salon Guide",
+    image: "/images/blog/blog-2-image.jpg",
+    content: `
+      <h3>Not every salon in Pala is built the same.</h3>
+      <p>If you search "best salon Pala" or "beauty parlour near me," you'll find dozens of listings. The difference isn't always price — it's product quality, hygiene, staff training, and whether the salon understands Kerala's humidity.</p>
+      <p>At NIXTUDIO, we've built our reputation on bridal makeup first — but our everyday salon services follow the same standard: premium products, personalised consultations, and results that hold up in real Kerala conditions.</p>
+      <hr />
+      <h3>What to look for in a premium salon</h3>
+      <ul>
+        <li><strong>Product transparency</strong> — ammonia-free colour, medical-grade facials, premium gel systems</li>
+        <li><strong>Climate-aware treatments</strong> — keratin and hair botox formulated for humidity</li>
+        <li><strong>Full-service menu</strong> — hair, nails, skin, waxing, threading, and makeup under one roof</li>
+        <li><strong>Consistent artist</strong> — not a different junior stylist every visit</li>
+      </ul>
+      <p><strong>Ready to visit Pala's top-rated salon?</strong> <a href="/best-salon-pala" style="color: #C4903A; font-weight: 600;">Explore NIXTUDIO salon services</a> or <a href="/contact" style="color: #C4903A; font-weight: 600;">book an appointment</a>.</p>
+      <p><em>NIXTUDIO — best salon and bridal studio in Pala, Kerala. Hair · Nails · Spa · Bridal.</em></p>
+    `
+  },
+  {
+    slug: "gel-nails-hydrafacial-pala-guide",
+    title: "Gel Nails & HydraFacial in Pala: Prices, What to Expect & How to Book",
+    excerpt: "Everything you need to know about gel nail extensions and HydraFacial treatments at NIXTUDIO Pala — Kerala's premium nail lounge and skin spa.",
+    date: "June 8, 2026",
+    author: "Nikita Liby",
+    category: "Salon Services",
+    image: "/images/blog/blog-3-image.jpg",
+    content: `
+      <h3>Two services. One studio. Built for Kerala.</h3>
+      <p>Gel nails and HydraFacial are among the most searched salon services in Pala and Kottayam — but not every parlour offers them at studio grade. Here's what we offer at NIXTUDIO and what you should expect.</p>
+      <hr />
+      <h3>Gel nails at NIXTUDIO Pala</h3>
+      <p>Our nail lounge offers gel polish from ₹2,000, extensions and custom nail art from ₹2,500, and bridal nail packages coordinated with your wedding day look. We use premium gel systems chosen for chip-resistant, glossy results that last 2–3 weeks.</p>
+      <p><a href="/nail-salon-pala" style="color: #C4903A; font-weight: 600;">View nail salon services →</a></p>
+      <hr />
+      <h3>HydraFacial at NIXTUDIO Pala</h3>
+      <p>We offer FDA-approved Vortex-Fusion HydraFacial from ₹6,500 — deep cleanse, extract, hydrate and protect in a single session. Ideal for pre-bridal skin prep, acne-prone skin, and monthly maintenance in Kerala's humid climate.</p>
+      <p><a href="/facial-spa-pala" style="color: #C4903A; font-weight: 600;">View facial & spa services →</a></p>
+      <p><em>NIXTUDIO nail lounge and skin spa — Pala, Kerala. Call 70347 26402 to book.</em></p>
     `
   }
 ];

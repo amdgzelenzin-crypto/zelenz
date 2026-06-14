@@ -264,13 +264,13 @@ export default function BridalMakeupKanjirappally() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white border border-rose/20 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-espresso mb-2">Classic</h3>
+                  <h3 className="text-lg font-semibold text-espresso mb-2">Standard — HD</h3>
                   <div className="text-2xl font-bold text-rose mb-4">₹27,500</div>
                   <ul className="space-y-2 text-sm text-taupe mb-4">
-                    <li>• Bridal makeup & hair</li>
-                    <li>• Humidity-resistant finish</li>
-                    <li>• 1 function coverage</li>
-                    <li>• Trial session included</li>
+                    <li>• Makeup, hair, lashes, lens</li>
+                    <li>• Outfit styling (saree extra)</li>
+                    <li>• Engagement, wedding or reception</li>
+                    <li>• No trials — day-of consultation</li>
                   </ul>
                   <Link href="/contact" className="w-full block text-center border border-rose text-rose py-2 rounded-lg text-sm font-semibold hover:bg-rose/5">
                     Inquire
@@ -279,13 +279,13 @@ export default function BridalMakeupKanjirappally() {
                 
                 <div className="bg-gradient-to-br from-rose/10 to-pink/10 border-2 border-rose rounded-xl p-6">
                   <div className="bg-rose text-white text-xs px-2 py-1 rounded-full inline-block mb-2">Most Popular</div>
-                  <h3 className="text-lg font-semibold text-espresso mb-2">Premium</h3>
+                  <h3 className="text-lg font-semibold text-espresso mb-2">Standard — Airbrush</h3>
                   <div className="text-2xl font-bold text-rose mb-4">₹32,500</div>
                   <ul className="space-y-2 text-sm text-taupe mb-4">
-                    <li>• Airbrush makeup & hair</li>
-                    <li>• Advanced humidity protection</li>
-                    <li>• 2 functions covered</li>
-                    <li>• Pre-bridal skin prep</li>
+                    <li>• Humidity-resistant airbrush</li>
+                    <li>• Same inclusions as HD Standard</li>
+                    <li>• By Nikita Liby</li>
+                    <li>• Pre-bridal guide on booking</li>
                   </ul>
                   <Link href="/contact" className="w-full block text-center bg-rose text-white py-2 rounded-lg text-sm font-semibold hover:bg-rose/90">
                     Book Now
@@ -293,13 +293,13 @@ export default function BridalMakeupKanjirappally() {
                 </div>
                 
                 <div className="bg-white border border-rose/20 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-espresso mb-2">Luxury</h3>
-                  <div className="text-2xl font-bold text-rose mb-4">₹45,000</div>
+                  <h3 className="text-lg font-semibold text-espresso mb-2">Premium — Airbrush</h3>
+                  <div className="text-2xl font-bold text-rose mb-4">₹40,000</div>
                   <ul className="space-y-2 text-sm text-taupe mb-4">
-                    <li>• Complete bridal package</li>
-                    <li>• Maximum humidity defense</li>
-                    <li>• 3+ functions coverage</li>
-                    <li>• On-site service available</li>
+                    <li>• Luxury international brands</li>
+                    <li>• Saree draping included</li>
+                    <li>• Signature subtle airbrush glam</li>
+                    <li>• Guest makeup — separate catalogue</li>
                   </ul>
                   <Link href="/contact" className="w-full block text-center border border-rose text-rose py-2 rounded-lg text-sm font-semibold hover:bg-rose/5">
                     Inquire

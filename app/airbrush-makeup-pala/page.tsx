@@ -136,7 +136,7 @@ const faqs = [
   },
   {
     question: "Do you offer trial sessions for airbrush makeup pala?",
-    answer: "Yes! We offer comprehensive trial sessions for airbrush makeup pala services. Trials include airbrush foundation testing, color matching, technique demonstration, and customization to ensure you're confident with your airbrush bridal makeup pala look."
+    answer: "No makeup or hair trials are offered. Consultation happens on the day of your function. Standard Airbrush bridal is ₹32,500; Premium Signature Airbrush is ₹40,000 with saree draping included."
   },
   {
     question: "Can airbrush makeup pala cover acne and scars?",
@@ -205,7 +205,7 @@ const airbrushServices = [
   {
     title: "Airbrush Bridal Makeup",
     description: "Complete bridal transformation using advanced airbrush techniques for flawless, long-lasting beauty.",
-    price: "₹35,000"
+    price: "₹32,500"
   },
   {
     title: "Airbrush HD Makeup",

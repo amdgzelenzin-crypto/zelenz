@@ -34,6 +34,13 @@ module.exports = {
     if (['/bridal', '/services'].includes(path)) {
       return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() }
     }
+    // Salon SEO money pages
+    if (['/best-salon-pala', '/best-salon-kottayam', '/hair-salon-pala', '/nail-salon-pala'].includes(path)) {
+      return { loc: path, changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }
+    }
+    if (['/facial-spa-pala', '/beauty-parlour-pala'].includes(path)) {
+      return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() }
+    }
     // About, Gallery, Party — high value
     if (['/about', '/gallery', '/party'].includes(path)) {
       return { loc: path, changefreq: 'weekly', priority: 0.8, lastmod: new Date().toISOString() }
@@ -59,6 +66,8 @@ module.exports = {
       'hd-vs-airbrush-makeup-kerala-weddings',
       'christian-bridal-makeup-trends-2025',
       'pre-wedding-skin-prep-humid-kerala',
+      'best-salon-pala-2026-guide',
+      'gel-nails-hydrafacial-pala-guide',
     ]
     
     // Add SEO landing pages for search domination
@@ -121,6 +130,42 @@ module.exports = {
         loc: '/bridal-makeup-price-pala',
         changefreq: 'weekly',
         priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/best-salon-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/best-salon-kottayam',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/hair-salon-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/nail-salon-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/facial-spa-pala',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/beauty-parlour-pala',
+        changefreq: 'weekly',
+        priority: 0.9,
         lastmod: new Date().toISOString(),
       },
     ]

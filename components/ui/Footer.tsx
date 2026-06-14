@@ -479,10 +479,20 @@ export default function Footer() {
               color: "rgba(245,210,200,0.40)",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              lineHeight: 1.4,
+              lineHeight: 1.6,
             }}
           >
-            Also providing premium woman's salon services and bespoke skin treatments in Pala & Kottayam.
+            <Link href="/best-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Best Salon Pala</Link>
+            {" · "}
+            <Link href="/best-salon-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Salon Kottayam</Link>
+            {" · "}
+            <Link href="/hair-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Hair Salon</Link>
+            {" · "}
+            <Link href="/nail-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Nail Salon</Link>
+            {" · "}
+            <Link href="/facial-spa-pala" style={{ color: "inherit", textDecoration: "none" }}>Facial & Spa</Link>
+            {" · "}
+            <Link href="/beauty-parlour-pala" style={{ color: "inherit", textDecoration: "none" }}>Beauty Parlour</Link>
           </p>
         </div>
       </div>
