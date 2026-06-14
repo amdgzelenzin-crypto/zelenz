@@ -219,32 +219,42 @@ export default function SalonSeoLanding({ config }: Props) {
 
       <section className="py-20 px-6" style={{ background: '#3D1520' }}>
         <div className="max-w-3xl mx-auto">
-          <FadeUp>
-            <h2
-              className="text-3xl font-light italic text-center text-[#FDE8E8] mb-12"
-              style={{ fontFamily: 'var(--font-display), Georgia, serif' }}
-            >
-              Frequently Asked Questions
-            </h2>
-          </FadeUp>
+          <h2
+            className="text-3xl font-light italic text-center mb-12"
+            style={{ fontFamily: 'var(--font-display), Georgia, serif', color: '#FDE8E8' }}
+          >
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
-            {config.faqs.map((faq, index) => (
-              <FadeUp key={faq.question} delay={index * 0.04}>
-                <div className="bg-[#4A2230]/90 border border-[#E8CC90]/25 rounded-xl p-6 md:p-7 shadow-lg">
-                  <h3
-                    className="text-[#F5E6C8] mb-4 text-lg md:text-xl font-normal"
-                    style={{ fontFamily: 'var(--font-display), Georgia, serif', lineHeight: 1.35 }}
-                  >
-                    {faq.question}
-                  </h3>
-                  <p
-                    className="text-[#FFF5F7] leading-relaxed text-base"
-                    style={{ fontFamily: 'var(--font-sans), sans-serif', fontWeight: 400 }}
-                  >
-                    {faq.answer}
-                  </p>
-                </div>
-              </FadeUp>
+            {config.faqs.map((faq) => (
+              <div
+                key={faq.question}
+                className="rounded-xl p-6 md:p-7 shadow-lg"
+                style={{ background: '#FFF5F7', border: '1px solid rgba(232, 204, 144, 0.45)' }}
+              >
+                <h3
+                  className="mb-3 text-lg md:text-xl font-medium"
+                  style={{
+                    fontFamily: 'var(--font-display), Georgia, serif',
+                    color: '#3D1520',
+                    lineHeight: 1.35,
+                    fontSize: '1.125rem',
+                  }}
+                >
+                  {faq.question}
+                </h3>
+                <p
+                  className="leading-relaxed text-base"
+                  style={{
+                    fontFamily: 'var(--font-sans), sans-serif',
+                    fontWeight: 400,
+                    color: '#4E4247',
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {faq.answer}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -252,30 +262,40 @@ export default function SalonSeoLanding({ config }: Props) {
 
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <FadeUp>
-            <h2
-              className="text-2xl font-light italic text-center text-[#3D1520] mb-10"
-              style={{ fontFamily: 'var(--font-display), Georgia, serif' }}
-            >
-              Explore NIXTUDIO
-            </h2>
-          </FadeUp>
+          <h2
+            className="text-2xl font-light italic text-center mb-10"
+            style={{ fontFamily: 'var(--font-display), Georgia, serif', color: '#3D1520' }}
+          >
+            Explore NIXTUDIO
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {config.relatedLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block p-5 rounded-xl border border-[#3D1520]/10 hover:border-[#B76E79]/40 hover:shadow-md transition-all"
+                className="block p-5 rounded-xl hover:shadow-md transition-all"
+                style={{
+                  background: '#FFF9F5',
+                  border: '1px solid rgba(61, 21, 32, 0.12)',
+                }}
               >
                 <h3
-                  className="text-[#B76E79] mb-2 text-base font-light italic"
-                  style={{ fontFamily: 'var(--font-display), Georgia, serif' }}
+                  className="mb-2 text-base font-medium"
+                  style={{
+                    fontFamily: 'var(--font-display), Georgia, serif',
+                    color: '#3D1520',
+                    fontSize: '1rem',
+                  }}
                 >
                   {link.title}
                 </h3>
                 <p
-                  className="text-[#3D1520]/65 text-sm"
-                  style={{ fontFamily: 'var(--font-body), Georgia, serif' }}
+                  className="text-sm leading-relaxed"
+                  style={{
+                    fontFamily: 'var(--font-sans), sans-serif',
+                    color: '#4E4247',
+                    fontWeight: 400,
+                  }}
                 >
                   {link.desc}
                 </p>
