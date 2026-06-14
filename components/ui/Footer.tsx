@@ -492,7 +492,15 @@ export default function Footer() {
             {" · "}
             <Link href="/facial-spa-pala" style={{ color: "inherit", textDecoration: "none" }}>Facial & Spa</Link>
             {" · "}
+            <Link href="/hydrafacial-pala" style={{ color: "inherit", textDecoration: "none" }}>HydraFacial</Link>
+            {" · "}
+            <Link href="/keratin-treatment-pala" style={{ color: "inherit", textDecoration: "none" }}>Keratin</Link>
+            {" · "}
+            <Link href="/waxing-threading-pala" style={{ color: "inherit", textDecoration: "none" }}>Waxing</Link>
+            {" · "}
             <Link href="/beauty-parlour-pala" style={{ color: "inherit", textDecoration: "none" }}>Beauty Parlour</Link>
+            {" · "}
+            <Link href="/press" style={{ color: "inherit", textDecoration: "none" }}>Press</Link>
           </p>
         </div>
       </div>

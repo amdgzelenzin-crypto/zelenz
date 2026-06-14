@@ -198,6 +198,86 @@ export const blogPosts: BlogPost[] = [
       <p><a href="/facial-spa-pala" style="color: #C4903A; font-weight: 600;">View facial & spa services →</a></p>
       <p><em>NIXTUDIO nail lounge and skin spa — Pala, Kerala. Call 70347 26402 to book.</em></p>
     `
+  },
+  {
+    slug: "keratin-treatment-pala-humidity-guide",
+    title: "Keratin & Hair Botox in Pala: What Actually Works in Kerala Humidity",
+    excerpt: "Frizz, humidity, hard water — why standard keratin fails in Pala and what NIXTUDIO does differently for 3–6 month results.",
+    date: "June 12, 2026",
+    author: "Nikita Liby",
+    category: "Hair Care",
+    image: "/images/blog/blog-1-image.jpg",
+    content: `
+      <h3>Kerala hair is a different problem.</h3>
+      <p>If you've had keratin in Mumbai or Bangalore and expected the same result in Pala, you already know — humidity wins. Within weeks, frizz returns and the gloss fades.</p>
+      <p>At NIXTUDIO we use premium keratin and hair botox systems chosen specifically for tropical climates, with application protocols that account for Kerala's daily humidity cycles.</p>
+      <hr />
+      <h3>Keratin vs hair botox — which do you need?</h3>
+      <p><strong>Keratin smoothening</strong> is ideal if you want straighter, frizz-free hair for 3–6 months. Best for wavy or curly hair that fights humidity daily.</p>
+      <p><strong>Hair botox</strong> repairs damage and adds smoothness without heavy straightening — better for coloured, brittle, or fine hair that needs volume and shine.</p>
+      <p><a href="/keratin-treatment-pala" style="color: #C4903A; font-weight: 600;">View keratin treatment in Pala →</a></p>
+      <hr />
+      <h3>Aftercare that actually matters</h3>
+      <ul>
+        <li>Sulphate-free shampoo for the first 72 hours — non-negotiable</li>
+        <li>No tight clips or ponytails for 48 hours</li>
+        <li>Monthly salon maintenance trim keeps ends healthy</li>
+      </ul>
+      <p><strong>Ready for frizz-free hair?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Book a hair consultation</a> at NIXTUDIO Pala.</p>
+      <p><em>NIXTUDIO — best hair salon in Pala. Keratin from ₹8,000 · Hair botox from ₹9,500.</em></p>
+    `
+  },
+  {
+    slug: "hydrafacial-pala-what-to-expect",
+    title: "HydraFacial in Pala: Price, Process & Who It's For (2026 Guide)",
+    excerpt: "Everything about getting HydraFacial at NIXTUDIO Pala — from ₹6,500 signature sessions to pre-bridal skin prep timelines.",
+    date: "June 11, 2026",
+    author: "Nikita Liby",
+    category: "Skin Care",
+    image: "/images/blog/blog-3-image.jpg",
+    content: `
+      <h3>HydraFacial is not a basic cleanup.</h3>
+      <p>Vortex-Fusion HydraFacial uses medical-grade technology to cleanse, extract, hydrate, and protect in one session — without the downtime of aggressive peels.</p>
+      <p>NIXTUDIO is among the few salons in Pala and Kottayam district offering genuine HydraFacial equipment, not a branded cleanup marketed under the same name.</p>
+      <hr />
+      <h3>What happens in a session?</h3>
+      <ol>
+        <li>Deep cleanse and gentle exfoliation</li>
+        <li>Painless extraction of congestion</li>
+        <li>Hydrating serum infusion</li>
+        <li>Antioxidant protection finish</li>
+      </ol>
+      <p>Sessions take 45–60 minutes. Skin looks immediately plumper and more even — ideal before events when timed correctly.</p>
+      <p><a href="/hydrafacial-pala" style="color: #C4903A; font-weight: 600;">HydraFacial in Pala — full details →</a></p>
+      <hr />
+      <h3>Pre-bridal timing</h3>
+      <p>Book HydraFacial 2–4 weeks before your wedding — never the day before. Pair with our <a href="/bridal" style="color: #C4903A;">bridal packages</a> for makeup-ready skin.</p>
+      <p><em>NIXTUDIO HydraFacial Pala — from ₹6,500. Call 70347 26402.</em></p>
+    `
+  },
+  {
+    slug: "salon-near-kottayam-pala-guide",
+    title: "Best Salon Near Kottayam? Why Clients Drive to NIXTUDIO Pala",
+    excerpt: "Kottayam brides and salon clients choose NIXTUDIO in Pala for premium hair, nails, HydraFacial and bridal — 20 minutes from Kottayam town.",
+    date: "June 9, 2026",
+    author: "Nikita Liby",
+    category: "Salon Guide",
+    image: "/images/blog/blog-2-image.jpg",
+    content: `
+      <h3>The best salon near Kottayam isn't always in Kottayam town.</h3>
+      <p>Search "salon near Kottayam" and you'll see dozens of neighbourhood parlours. What brings discerning clients to Pala is consistency — premium products, medical-grade facials, and bridal expertise under one roof.</p>
+      <p>NIXTUDIO is 20–25 minutes from Kottayam via Thodupuzha Road. Clients from Ettumanoor, Changanacherry, and Vaikom visit weekly for hair, nails, and skin.</p>
+      <hr />
+      <h3>What Kottayam clients book most</h3>
+      <ul>
+        <li><a href="/keratin-treatment-pala" style="color: #C4903A;">Keratin & hair botox</a> — humidity-proof smoothing</li>
+        <li><a href="/hydrafacial-pala" style="color: #C4903A;">HydraFacial</a> — medical-grade skin</li>
+        <li><a href="/nail-salon-pala" style="color: #C4903A;">Gel nails</a> — extensions & bridal nail art</li>
+        <li><a href="/bridal-makeup-pala" style="color: #C4903A;">Bridal makeup</a> — HD & airbrush by Nikita Liby</li>
+      </ul>
+      <p><a href="/best-salon-kottayam" style="color: #C4903A; font-weight: 600;">Best salon for Kottayam district →</a></p>
+      <p><em>NIXTUDIO — best salon Pala, serving all of Kottayam district.</em></p>
+    `
   }
 ];
 

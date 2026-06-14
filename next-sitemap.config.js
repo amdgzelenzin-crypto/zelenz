@@ -35,10 +35,10 @@ module.exports = {
       return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() }
     }
     // Salon SEO money pages
-    if (['/best-salon-pala', '/best-salon-kottayam', '/hair-salon-pala', '/nail-salon-pala'].includes(path)) {
+    if (['/best-salon-pala', '/best-salon-kottayam', '/hair-salon-pala', '/nail-salon-pala', '/hydrafacial-pala', '/keratin-treatment-pala'].includes(path)) {
       return { loc: path, changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }
     }
-    if (['/facial-spa-pala', '/beauty-parlour-pala'].includes(path)) {
+    if (['/facial-spa-pala', '/beauty-parlour-pala', '/waxing-threading-pala', '/press'].includes(path)) {
       return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() }
     }
     // About, Gallery, Party — high value
@@ -68,6 +68,9 @@ module.exports = {
       'pre-wedding-skin-prep-humid-kerala',
       'best-salon-pala-2026-guide',
       'gel-nails-hydrafacial-pala-guide',
+      'keratin-treatment-pala-humidity-guide',
+      'hydrafacial-pala-what-to-expect',
+      'salon-near-kottayam-pala-guide',
     ]
     
     // Add SEO landing pages for search domination
@@ -166,6 +169,30 @@ module.exports = {
         loc: '/beauty-parlour-pala',
         changefreq: 'weekly',
         priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/hydrafacial-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/keratin-treatment-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/waxing-threading-pala',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/press',
+        changefreq: 'monthly',
+        priority: 0.6,
         lastmod: new Date().toISOString(),
       },
     ]

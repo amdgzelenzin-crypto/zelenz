@@ -7,6 +7,9 @@ const SALON_LINKS = [
   { href: '/hair-salon-pala', title: 'Hair Salon Pala', desc: 'Cuts, colour, styling & treatments' },
   { href: '/nail-salon-pala', title: 'Nail Salon Pala', desc: 'Gel nails, extensions & nail art' },
   { href: '/facial-spa-pala', title: 'Facial & Spa Pala', desc: 'HydraFacial, facials & skin therapies' },
+  { href: '/hydrafacial-pala', title: 'HydraFacial Pala', desc: 'Medical-grade HydraFacial treatments' },
+  { href: '/keratin-treatment-pala', title: 'Keratin Pala', desc: 'Humidity-proof keratin & hair botox' },
+  { href: '/waxing-threading-pala', title: 'Waxing & Threading Pala', desc: 'Eyebrow threading & body waxing' },
   { href: '/beauty-parlour-pala', title: 'Beauty Parlour Pala', desc: 'Full-service beauty parlour in Pala' },
 ];
 
@@ -223,11 +226,108 @@ export const beautyParlourPalaConfig: SalonSeoPageConfig = {
   schemaDescription: 'Best beauty parlour in Pala — hair, nails, waxing, threading, facials and makeup.',
 };
 
+export const hydrafacialPalaConfig: SalonSeoPageConfig = {
+  slug: 'hydrafacial-pala',
+  title: 'HydraFacial in Pala Kerala | Medical-Grade Skin Treatment | NIXTUDIO',
+  description: 'HydraFacial in Pala at NIXTUDIO. FDA-approved Vortex-Fusion technology from ₹6,500. Pre-bridal skin prep, acne & glass skin. Book: 70347 26402.',
+  keywords: ['hydrafacial pala', 'hydrafacial kottayam', 'hydrafacial pala kerala', 'best hydrafacial pala', 'hydrafacial near me', 'hydrafacial price pala', 'skin treatment pala'],
+  h1Line1: 'HydraFacial in',
+  h1Accent: 'Pala, Kerala',
+  heroSubtitle: 'Medical-grade Vortex-Fusion HydraFacial — deep cleanse, extract, hydrate & protect in one session.',
+  heroImage: '/images/studio/premium-makeup-studio-interior-kerala.webp',
+  heroImageAlt: 'HydraFacial treatment in Pala - NIXTUDIO skin spa',
+  introTitle: 'Pala\'s Medical-Grade HydraFacial Studio',
+  introParagraphs: [
+    'HydraFacial is one of the most searched skin treatments in Pala and Kottayam — but few local parlours offer genuine Vortex-Fusion technology. NIXTUDIO uses FDA-approved HydraFacial systems for deep cleansing, painless extraction, and intense hydration suited to Kerala\'s humid climate.',
+    'Ideal for pre-bridal glow, monthly maintenance, acne-prone skin, and dullness from sun exposure. Clients travel from Kottayam town, Ettumanoor, and Changanacherry for our studio-grade facial experience.',
+  ],
+  services: [
+    { title: 'Signature HydraFacial', description: 'Cleanse, extract, hydrate & antioxidant protection.', price: 'From ₹6,500' },
+    { title: 'HydraFacial + Booster', description: 'Targeted boosters for brightening, anti-ageing or clarifying.', price: 'From ₹8,500' },
+    { title: 'Pre-Bridal HydraFacial', description: 'Multi-session protocol 30–60 days before wedding.', price: 'From ₹6,500' },
+    { title: 'Glass Skin Facial', description: 'Korean-inspired luminous finish add-on.', price: 'From ₹4,500' },
+  ],
+  faqs: [
+    { question: 'Where can I get HydraFacial in Pala?', answer: 'NIXTUDIO on Thodupuzha Road, Pala offers FDA-approved Vortex-Fusion HydraFacial. We are among the few premium salons in Central Travancore with medical-grade HydraFacial equipment.' },
+    { question: 'How much does HydraFacial cost in Pala?', answer: 'HydraFacial at NIXTUDIO starts from ₹6,500 for the signature treatment. Booster add-ons and pre-bridal packages are quoted after a brief skin consultation.' },
+    { question: 'Is HydraFacial good for bridal skin prep?', answer: 'Yes — we recommend HydraFacial 2–4 weeks before your wedding (not the day before) as part of our pre-bridal skin protocol for smooth, hydrated makeup application.' },
+  ],
+  relatedLinks: [...SALON_LINKS.filter((l) => l.href !== '/hydrafacial-pala'), ...BRIDAL_LINKS],
+  schemaServiceName: 'NIXTUDIO HydraFacial Pala',
+  schemaDescription: 'HydraFacial in Pala Kerala — medical-grade Vortex-Fusion skin treatments.',
+};
+
+export const keratinTreatmentPalaConfig: SalonSeoPageConfig = {
+  slug: 'keratin-treatment-pala',
+  title: 'Keratin Treatment in Pala | Hair Botox & Smoothening | NIXTUDIO',
+  description: 'Best keratin treatment in Pala, Kerala. Humidity-proof keratin & hair botox from ₹8,000. Frizz-free hair for 3–6 months. NIXTUDIO hair salon. Book now.',
+  keywords: ['keratin treatment pala', 'keratin pala kerala', 'hair botox pala', 'keratin treatment kottayam', 'smoothening pala', 'frizz treatment pala', 'best keratin pala'],
+  h1Line1: 'Keratin Treatment in',
+  h1Accent: 'Pala, Kerala',
+  heroSubtitle: 'Humidity-proof keratin & hair botox — engineered for frizzy Kerala hair.',
+  heroImage: '/images/studio/luxury-hair-spa-station-pala.webp',
+  heroImageAlt: 'Keratin treatment in Pala - NIXTUDIO hair salon',
+  introTitle: 'Kerala-Ready Keratin & Hair Botox',
+  introParagraphs: [
+    'Standard keratin treatments often fail in Pala\'s humidity within weeks. NIXTUDIO uses premium keratin and hair botox systems formulated for tropical climates — delivering 3–6 months of manageable, glossy, frizz-resistant hair.',
+    'Whether you are preparing for a wedding, recovering from colour damage, or simply tired of daily blow-dry battles, our hair team customises treatment strength to your hair type and lifestyle.',
+  ],
+  services: [
+    { title: 'Keratin Smoothening', description: 'Full-length frizz control & shine for medium to long hair.', price: 'From ₹8,000' },
+    { title: 'Hair Botox', description: 'Deep repair, volume & smoothness without heavy straightening.', price: 'From ₹9,500' },
+    { title: 'Keratin + Cut Package', description: 'Post-treatment precision cut for best shape.', price: 'From ₹10,500' },
+    { title: 'Bridal Hair Prep', description: 'Keratin or botox before wedding-week styling.', price: 'Custom quote' },
+  ],
+  faqs: [
+    { question: 'What is the best keratin treatment in Pala?', answer: 'NIXTUDIO is Pala\'s top choice for keratin and hair botox, using premium products and climate-aware application for long-lasting frizz control in Kerala humidity.' },
+    { question: 'How much does keratin cost in Pala?', answer: 'Keratin treatments at NIXTUDIO start from ₹8,000 depending on hair length and product. Hair botox from ₹9,500. A consultation determines the right treatment.' },
+    { question: 'How long does keratin last in Kerala humidity?', answer: 'With proper aftercare and sulphate-free products, our keratin and botox treatments typically last 3–6 months in Kerala conditions — significantly longer than basic smoothening at neighbourhood parlours.' },
+  ],
+  galleryCategory: 'hair',
+  relatedLinks: [...SALON_LINKS.filter((l) => l.href !== '/keratin-treatment-pala'), ...BRIDAL_LINKS],
+  schemaServiceName: 'NIXTUDIO Keratin Treatment Pala',
+  schemaDescription: 'Keratin treatment and hair botox in Pala — humidity-proof smoothening.',
+};
+
+export const waxingThreadingPalaConfig: SalonSeoPageConfig = {
+  slug: 'waxing-threading-pala',
+  title: 'Waxing & Threading in Pala | Eyebrow & Body Wax | NIXTUDIO',
+  description: 'Best waxing & threading in Pala, Kerala. Eyebrow shaping, full face threading, body waxing from ₹150. Hygienic beauty parlour at NIXTUDIO.',
+  keywords: ['threading pala', 'waxing pala', 'eyebrow threading pala', 'beauty parlour threading pala', 'waxing kottayam', 'ladies parlour pala', 'threading near me pala'],
+  h1Line1: 'Waxing & Threading in',
+  h1Accent: 'Pala, Kerala',
+  heroSubtitle: 'Precision eyebrow threading, full-face threading & hygienic body waxing — walk-ins welcome.',
+  heroImage: '/images/studio/luxury-salon-interior-pala.webp',
+  heroImageAlt: 'Waxing and threading in Pala - NIXTUDIO beauty parlour',
+  introTitle: 'Pala\'s Trusted Threading & Waxing Parlour',
+  introParagraphs: [
+    'Threading and waxing are everyday essentials — but hygiene and technique matter. NIXTUDIO offers studio-grade threading for eyebrows and full face, plus body waxing using premium wax systems in a clean, private environment.',
+    'Walk in for eyebrow shaping before a function, or book bridal threading as part of your wedding prep. We serve clients from Pala, Kottayam, Ettumanoor, and Kanjirappally daily.',
+  ],
+  services: [
+    { title: 'Eyebrow Threading', description: 'Precision shaping & arch definition.', price: 'From ₹150' },
+    { title: 'Full Face Threading', description: 'Upper lip, chin, forehead & sideburns.', price: 'From ₹350' },
+    { title: 'Body Waxing', description: 'Arms, legs, underarms & full body options.', price: 'From ₹500' },
+    { title: 'Bridal Threading', description: 'Pre-wedding face threading & grooming.', price: 'From ₹500' },
+  ],
+  faqs: [
+    { question: 'Where is the best threading in Pala?', answer: 'NIXTUDIO on Thodupuzha Road is trusted for precise eyebrow threading and full-face threading with hygienic single-use thread and studio cleanliness standards.' },
+    { question: 'How much does waxing cost in Pala at NIXTUDIO?', answer: 'Eyebrow threading from ₹150, full face from ₹350, body waxing from ₹500. Full price list at nixtudio.in/services.' },
+    { question: 'Do you offer walk-in threading in Pala?', answer: 'Yes — walk-ins are welcome for threading and basic waxing. Weekends can be busy; WhatsApp 70347 26402 to check wait times.' },
+  ],
+  relatedLinks: [...SALON_LINKS.filter((l) => l.href !== '/waxing-threading-pala'), ...BRIDAL_LINKS],
+  schemaServiceName: 'NIXTUDIO Waxing & Threading Pala',
+  schemaDescription: 'Waxing and threading in Pala — eyebrow shaping, face threading and body waxing.',
+};
+
 export const ALL_SALON_SEO_PAGES: SalonSeoPageConfig[] = [
   bestSalonPalaConfig,
   bestSalonKottayamConfig,
   hairSalonPalaConfig,
   nailSalonPalaConfig,
   facialSpaPalaConfig,
+  hydrafacialPalaConfig,
+  keratinTreatmentPalaConfig,
+  waxingThreadingPalaConfig,
   beautyParlourPalaConfig,
 ];
