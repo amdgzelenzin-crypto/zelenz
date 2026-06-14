@@ -13,14 +13,8 @@ module.exports = {
         disallow: ['/api/'],
       },
       {
-        // Allow ChatGPT search bot for real-time visibility
-        userAgent: ['OAI-SearchBot', 'Google-Extended'],
+        userAgent: ['GPTBot', 'OAI-SearchBot', 'Google-Extended'],
         allow: '/',
-      },
-      {
-        // Disallow large foundational models from scraping without attribution
-        userAgent: ['GPTBot'],
-        disallow: '/',
       },
     ],
     additionalSitemaps: [],

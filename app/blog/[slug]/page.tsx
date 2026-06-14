@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import { getBlogPost, blogPosts } from "@/lib/blog";
 
 interface Props {
@@ -15,10 +16,14 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${post.title} | NIXTUDIO Blog`,
     description: post.excerpt,
+    authors: [{ name: post.author, url: 'https://nixtudio.in/about' }],
     openGraph: {
       title: post.title,
       description: post.excerpt,
       images: [post.image],
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: [post.author],
     },
   };
 }
@@ -33,28 +38,58 @@ export default async function BlogPostPage({ params }: Props) {
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://nixtudio.in${post.image}`,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      url: 'https://nixtudio.in/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NIXTUDIO',
+      url: 'https://nixtudio.in',
+    },
+    mainEntityOfPage: `https://nixtudio.in/blog/${post.slug}`,
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-20 bg-white">
-      <article className="mx-auto max-w-[1440px] px-6 lg:px-12">
+      <JsonLd data={articleSchema} />
+      <article className="mx-auto max-w-[1440px] px-6 lg:px-12" itemScope itemType="https://schema.org/Article">
         {/* Post Header */}
         <header className="max-w-4xl mx-auto mb-16 text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className="font-sans text-[10px] tracking-widest text-[#B76E79] bg-[#FFF5F7] px-4 py-1 rounded-full uppercase">
               {post.category}
             </span>
-            <span className="font-sans text-[10px] tracking-widest text-espresso/40 uppercase">
+            <time
+              className="font-sans text-[10px] tracking-widest text-espresso/40 uppercase"
+              dateTime={post.publishedAt}
+              itemProp="datePublished"
+            >
               {post.date}
-            </span>
+            </time>
           </div>
-          <h1 className="font-serif font-light text-4xl lg:text-6xl text-espresso mb-10 leading-snug lg:leading-[1.1]">
+          <h1 className="font-serif font-light text-4xl lg:text-6xl text-espresso mb-10 leading-snug lg:leading-[1.1]" itemProp="headline">
             {post.title}
           </h1>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3" itemProp="author" itemScope itemType="https://schema.org/Person">
             <div className="w-8 h-8 rounded-full bg-rose-gold/20 flex items-center justify-center text-[10px] font-sans text-espresso/80">
               NL
             </div>
-            <p className="font-sans text-[11px] tracking-wider text-espresso/60 uppercase">
-              Written by <span className="text-espresso">{post.author}</span>
+            <p className="font-sans text-[12px] tracking-wider text-espresso/60 uppercase">
+              Written by{' '}
+              <Link href="/about" className="text-espresso hover:text-[#B76E79]" itemProp="url">
+                <span itemProp="name">{post.author}</span>
+              </Link>
+              , Lead Artist at NIXTUDIO
             </p>
           </div>
         </header>

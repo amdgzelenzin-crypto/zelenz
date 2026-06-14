@@ -3,6 +3,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   date: string;
+  publishedAt: string;
   author: string;
   category: string;
   content: string;
@@ -15,6 +16,7 @@ export const blogPosts: BlogPost[] = [
     title: "HD vs Airbrush Makeup for Kerala Weddings: The Honest Guide",
     excerpt: "Choosing between HD and Airbrush makeup for the specific humidity of Pala and Kottayam. Featuring 'Happy Bride Story' comparisons and technical durability tips.",
     date: "March 28, 2026",
+    publishedAt: "2026-03-28",
     author: "Nikita Liby",
     category: "Bridal Tips",
     image: "/images/blog/hd-vs-airbrush.png",
@@ -67,6 +69,7 @@ export const blogPosts: BlogPost[] = [
     title: "Christian Bridal Makeup Looks for 2025: From Pala to Changanacherry",
     excerpt: "Discover the 2025 'Azhagu' aesthetic for Christian brides. Specialized church ceremony styling for the humid Kerala climate.",
     date: "March 27, 2026",
+    publishedAt: "2026-03-27",
     author: "Nikita Liby",
     category: "Trends",
     image: "/images/blog/christian-bride.png",
@@ -111,6 +114,7 @@ export const blogPosts: BlogPost[] = [
     title: "Pre-Wedding Skin Prep: Dominating Humid Kerala Weather",
     excerpt: "Your 'Manavatty' glow starts 30 days before. Discover NIXTUDIO proprietary skin prep protocol for brides in Pala and Kottayam.",
     date: "March 25, 2026",
+    publishedAt: "2026-03-25",
     author: "Nikita Liby",
     category: "Skin Prep",
     image: "/images/blog/pre-wedding-skin-prep.png",
@@ -158,6 +162,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Salon in Pala 2026: How to Choose (And Why NIXTUDIO Stands Out)",
     excerpt: "Looking for the best salon in Pala or Kottayam? A practical guide to what separates a neighbourhood parlour from a premium salon — and what to expect at NIXTUDIO.",
     date: "June 10, 2026",
+    publishedAt: "2026-06-10",
     author: "Nikita Liby",
     category: "Salon Guide",
     image: "/images/blog/salon-guide.png",
@@ -182,6 +187,7 @@ export const blogPosts: BlogPost[] = [
     title: "Gel Nails in Pala: Prices, Extensions & How to Book",
     excerpt: "Everything you need to know about gel polish, extensions and bridal nail art at NIXTUDIO Pala — Kerala's premium nail lounge.",
     date: "June 8, 2026",
+    publishedAt: "2026-06-08",
     author: "Nikita Liby",
     category: "Salon Services",
     image: "/images/blog/gel-nails.jpg",
@@ -203,6 +209,7 @@ export const blogPosts: BlogPost[] = [
     title: "Keratin & Hair Botox in Pala: What Actually Works in Kerala Humidity",
     excerpt: "Frizz, humidity, hard water — why standard keratin fails in Pala and what NIXTUDIO does differently for 3–6 month results.",
     date: "June 12, 2026",
+    publishedAt: "2026-06-12",
     author: "Nikita Liby",
     category: "Hair Care",
     image: "/images/blog/haircare.png",
@@ -231,6 +238,7 @@ export const blogPosts: BlogPost[] = [
     title: "HydraFacial in Pala: Price, Process & Who It's For (2026 Guide)",
     excerpt: "Everything about getting HydraFacial at NIXTUDIO Pala — from ₹6,500 signature sessions to pre-bridal skin prep timelines.",
     date: "June 11, 2026",
+    publishedAt: "2026-06-11",
     author: "Nikita Liby",
     category: "Skin Care",
     image: "/images/blog/salon-services.png",
@@ -259,6 +267,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Salon Near Kottayam? Why Clients Drive to NIXTUDIO Pala",
     excerpt: "Kottayam brides and salon clients choose NIXTUDIO in Pala for premium hair, nails, facials and bridal — 20 minutes from Kottayam town.",
     date: "June 9, 2026",
+    publishedAt: "2026-06-09",
     author: "Nikita Liby",
     category: "Salon Guide",
     image: "/images/blog/salon-guide-kottayam.png",

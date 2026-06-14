@@ -20,7 +20,7 @@ export default function JsonLd({ data }: JsonLdProps) {
     "founder": "Nikita Liby",
     "url": "https://nixtudio.in",
     "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-    "description": "Best salon and premium bridal makeup studio in Pala, Kerala — hair, nails, HydraFacial, spa & bridal services",
+    "description": "Luxury salon and premium bridal makeup studio in Pala, Kerala — hair, nails, HydraFacial, spa & bridal services",
     "priceRange": "₹₹₹",
     "openingHours": "Mo-Sa 10:00-19:00, Su 11:00-18:00",
     "geo": {
@@ -42,7 +42,7 @@ export default function JsonLd({ data }: JsonLdProps) {
         "logo": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
         "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
         "telephone": "+917034726402",
-        "description": "Premium salon and bridal makeup studio in Pala and Kottayam district, Kerala.",
+        "description": "Premium bridal makeup studio and luxury salon in Pala and Kottayam district, Kerala.",
         "founder": { "@id": "https://nixtudio.in/#person-nikita-liby" },
         "sameAs": [
           "https://www.facebook.com/nixtudio_-100648048221705/",

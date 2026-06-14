@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 100002;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #3D1520;
+  color: #FFF5F7;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 16px;
+  outline: 2px solid #D4A055;
+  outline-offset: 2px;
+}
+
 /* ════════════════════════════════════════
    NIXTUDIO — Macaron Pink × Gold System
    Light, warm, feminine — editorial luxury

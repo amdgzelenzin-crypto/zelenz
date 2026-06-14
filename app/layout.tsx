@@ -49,85 +49,39 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: '#1 Best Salon & Bridal Makeup in Pala & Kottayam | NIXTUDIO',
+  title: '#1 Premium Bridal Makeup Studio & Luxury Salon in Pala & Kottayam | NIXTUDIO',
   description:
-    '#1 salon and bridal makeup studio in Pala & Kottayam district. Premium hair, nails, spa & HD/airbrush bridal by Nikita Liby. Thodupuzha Road, Pala. Book now.',
-  keywords: [
-    "best salon pala",
-    "salon pala kerala",
-    "best salon kottayam",
-    "hair salon pala",
-    "nail salon pala",
-    "beauty parlour pala",
-    "hydrafacial pala",
-    "facial spa pala",
-    "bridal studio Pala",
-    "bridal studio Kottayam",
-    "salon Pala", 
-    "salon Kottayam",
-    "bridal makeup Kerala",
-    "makeup studio Pala Kerala",
-    "best bridal makeup Pala",
-    "best bridal makeup Kottayam",
-    "luxury bridal salon Pala",
-    "luxury bridal salon Kottayam",
-    "bridal makeup artist Pala",
-    "bridal makeup artist Kottayam",
-    "top rated salon Pala Kerala",
-    "premium bridal studio Pala",
-    "bridal artistry Pala",
-    "hair salon Pala",
-    "hair salon Kottayam",
-    "bridal makeup near me Pala",
-    "bridal makeup near me Kottayam",
-    "Nikita bridal makeup Pala",
-    "Nikita bridal makeup Kottayam",
-    "bridal makeup studio Kerala",
-    "luxury salon Pala",
-    "bridal makeup Pala Kerala",
-    "bridal artist Pala",
-    "bridal artist Kottayam",
-    "bridal beauty salon Pala",
-    "bridal beauty salon Kottayam",
-    "bridal makeup services Pala",
-    "bridal makeup services Kottayam",
-    "best salon in Pala",
-    "best salon in Kottayam",
-    "bridal makeup expert Pala",
-    "bridal makeup expert Kottayam",
-    "Pala bridal studio",
-    "Kottayam bridal studio",
-    "Kerala bridal makeup",
-    "bridal makeup artist Kerala",
-    "luxury bridal Kerala",
-  ],
-  authors: [{ name: 'NIXTUDIO' }],
-  creator: 'NIXTUDIO',
+    '#1 premium bridal makeup studio & luxury salon in Pala & Kottayam. HD & airbrush bridal, hair, nails, spa by Nikita Liby. Thodupuzha Rd, Pala.',
+  authors: [{ name: 'Nikita Liby', url: 'https://nixtudio.in/about' }],
+  creator: 'NIXTUDIO by Nikita Liby',
   metadataBase: new URL('https://nixtudio.in'),
   alternates: {
     canonical: 'https://nixtudio.in',
+    types: {
+      'text/plain': [{ url: '/llms.txt', title: 'LLMs.txt' }],
+    },
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: "https://nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
-    title: "#1 Best Salon & Bridal Makeup in Pala & Kottayam | NIXTUDIO",
+    title: "#1 Premium Bridal Makeup Studio & Luxury Salon in Pala & Kottayam | NIXTUDIO",
     description:
-      "#1 salon and bridal makeup studio in Pala & Kottayam district. Premium hair, nails, spa & bridal makeup by Nikita Liby. Book now.",
+      "#1 premium bridal makeup studio & luxury salon in Pala & Kottayam. HD & airbrush bridal, hair, nails, spa by Nikita Liby. Book now.",
     images: [
       {
         url: '/images/studio/nixtudio-studio-signage-pala-kerala.webp',
         width: 1200,
         height: 630,
-        alt: 'NIXTUDIO Bridal Makeup Pala Kerala',
+        alt: 'NIXTUDIO premium bridal makeup studio and luxury salon in Pala Kerala',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Best Bridal Makeup Studio Pala Kerala | Luxury Hair Salon Kottayam | NIXTUDIO",
-    description: "Best bridal makeup studio in Pala, Kerala. Premium bridal makeup artist & luxury hair salon in Kottayam. Expert bridal artistry by Nikita. Top-rated salon. Book now.",
+    title: "Premium Bridal Makeup Studio & Luxury Salon Pala | NIXTUDIO",
+    description: "Pala & Kottayam's premium bridal makeup studio & luxury salon by Nikita Liby. HD & airbrush from ₹27,500.",
     images: ['/images/studio/nixtudio-studio-signage-pala-kerala.webp'],
   },
   robots: {
@@ -180,36 +134,34 @@ export default function RootLayout({
           }}
         />
         
-        {/* Preconnect to font domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Preload hero image for LCP - WebP format */}
+        <link rel="alternate" type="text/plain" href="https://nixtudio.in/llms.txt" title="LLMs.txt" />
         <link
           rel="preload"
           as="image"
           href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
           type="image/webp"
+          fetchPriority="high"
         />
         
         {/* DNS prefetch for external resources */}
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
         {/* Preconnect to Google domains for Analytics */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         
-        {/* Defer non-critical scripts */}
-        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-R89TBWLTXG"></script>
         <JsonLd />
       </head>
-      <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased" style={{ background: "#FDE8E8", color: "#3D1520" }}>
+      <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased overflow-x-hidden" style={{ background: "#FDE8E8", color: "#3D1520" }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <LoadingProvider>
           <ClientComponents />
           <div id="nix-app-shell" className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </div>
           <WhatsAppFloat />

@@ -2,7 +2,7 @@
 # https://nixtudio.in/llms.txt
 
 ## Identity
-- Business: NIXTUDIO — premium salon & bridal makeup studio
+- Business: NIXTUDIO — premium bridal makeup studio & luxury salon
 - Owner / Lead Artist: Nikita Liby
 - Location: Thodupuzha Road, Pala, Kerala 686575, India
 - Serves: Pala, Kottayam district (Kottayam town, Ettumanoor, Changanacherry, Vaikom, Kanjirappally)

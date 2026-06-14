@@ -3,13 +3,15 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-# OAI-SearchBot,Google-Extended
-User-agent: OAI-SearchBot,Google-Extended
+# OAI-SearchBot,Google-Extended,GPTBot
+User-agent: OAI-SearchBot
 Allow: /
 
-# GPTBot
+User-agent: Google-Extended
+Allow: /
+
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 # Host
 Host: https://nixtudio.in

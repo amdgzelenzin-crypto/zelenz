@@ -8,8 +8,8 @@ export default function WhatsAppFloat() {
       rel="noopener noreferrer"
       className="fixed z-50 flex items-center justify-center rounded-full text-white transition-all duration-300 hover:opacity-100 hover:scale-105"
       style={{
-        width: "40px",
-        height: "40px",
+        width: "44px",
+        height: "44px",
         bottom: "max(16px, env(safe-area-inset-bottom))",
         right: "max(16px, env(safe-area-inset-right))",
         background: "rgba(37, 211, 102, 0.72)",

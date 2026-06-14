@@ -74,7 +74,7 @@ export default function Footer() {
                 maxWidth: "240px",
               }}
             >
-              Premium makeup studio in <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span>. Every face. Carefully considered.
+              Premium bridal makeup studio and luxury salon in <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span>. Every face. Carefully considered.
             </p>
           </div>
 
@@ -414,6 +414,20 @@ export default function Footer() {
             gap: "12px",
           }}
         >
+          <p
+            style={{
+              fontFamily: "var(--font-sans), sans-serif",
+              fontSize: "12px",
+              color: "rgba(245,210,200,0.50)",
+              letterSpacing: "0.05em",
+            }}
+          >
+            <Link href="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy</Link>
+            {" · "}
+            <Link href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</Link>
+            {" · "}
+            500+ verified client reviews · Kerala
+          </p>
           <p
             style={{
               fontFamily: "var(--font-sans), sans-serif",

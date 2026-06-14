@@ -128,10 +128,10 @@ const heroImages = [
 const HERO_H1_LINE1 = "Bridal Makeup & Luxury Salon";
 const HERO_H1_LINE2 = "in Pala & Kottayam";
 const HERO_SUBTEXT =
-  "Pala & Kottayam's #1 bridal makeup studio and luxury salon — HD & airbrush bridal, hair, nails & spa by Nikita Liby.";
+  "Pala & Kottayam's #1 premium bridal makeup studio & luxury salon — HD & airbrush bridal, hair, nails & spa by Nikita Liby.";
 
 const HERO_GEO_BLUF =
-  "NIXTUDIO by Nikita Liby is the #1 premium bridal makeup studio and luxury salon in Pala and Kottayam district — HD & airbrush bridal from ₹27,500, hair, gel nails, facials, waxing & party makeup. Studio on Thodupuzha Road, Pala; home bridal service across Kottayam.";
+  "NIXTUDIO by Nikita Liby is Pala and Kottayam district's leading premium bridal makeup studio and luxury salon — HD & airbrush bridal from ₹27,500, hair styling, gel nails, facials, waxing & party makeup. Studio on Thodupuzha Road, Pala; home bridal service across Kottayam.";
 
 function HeroSlideshow() {
   const [current, setCurrent] = useState(0);
@@ -162,7 +162,7 @@ function HeroSlideshow() {
               alt={
                 i === 0 ? "NIXTUDIO bridal makeup studio interior in Pala Kerala" :
                 i === 1 ? "Traditional Kerala bridal styling at NIXTUDIO Pala" :
-                i === 2 ? "Premium makeup studio interior at NIXTUDIO Pala" :
+                i === 2 ? "Premium bridal makeup studio interior at NIXTUDIO Pala" :
                 i === 3 ? "Luxury salon interior at NIXTUDIO Pala Kerala" :
                 i === 4 ? "Private bridal prep suite at NIXTUDIO Pala" :
                 "Luxury hair spa station at NIXTUDIO Pala"
@@ -337,7 +337,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
       
       {/* ──── 1. HERO — full screen ──── */}
       <section
-        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(88px,calc(env(safe-area-inset-top)+68px))] max-md:pb-28"
+        className="relative w-full max-w-[100vw] h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(88px,calc(env(safe-area-inset-top)+68px))] max-md:pb-28"
       >
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes bounceHero {
