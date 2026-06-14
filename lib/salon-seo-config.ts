@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import type { SalonSeoPageConfig } from './salon-seo-types';
+import { KOTTAYAM_DISTRICT_AREAS, KOTTAYAM_SEO_PAGES } from './kottayam-seo-config';
+import { PALA_LOCAL_AREAS, PALA_SEO_PAGES } from './pala-seo-config';
 
 const SALON_LINKS = [
-  { href: '/best-salon-pala', title: 'Best Salon Pala', desc: 'Premium salon in Pala, Kerala' },
-  { href: '/best-salon-kottayam', title: 'Best Salon Kottayam', desc: 'Top-rated salon serving Kottayam district' },
+  { href: '/best-salon-pala', title: 'Best Salon Pala', desc: '#1 salon in Pala, Kerala' },
+  { href: '/best-salon-kottayam', title: 'Best Salon Kottayam', desc: '#1 salon serving Kottayam district' },
   { href: '/hair-salon-pala', title: 'Hair Salon Pala', desc: 'Cuts, colour, styling & treatments' },
+  { href: '/hair-salon-kottayam', title: 'Hair Salon Kottayam', desc: 'Cuts, colour & keratin for Kottayam' },
   { href: '/nail-salon-pala', title: 'Nail Salon Pala', desc: 'Gel nails, extensions & nail art' },
   { href: '/facial-spa-pala', title: 'Facial & Spa Pala', desc: 'HydraFacial, facials & skin therapies' },
   { href: '/hydrafacial-pala', title: 'HydraFacial Pala', desc: 'Medical-grade HydraFacial treatments' },
@@ -14,8 +17,10 @@ const SALON_LINKS = [
 ];
 
 const BRIDAL_LINKS = [
+  { href: '/best-bridal-makeup-pala', title: 'Best Bridal Makeup Pala', desc: '#1 bridal artist in Pala' },
+  { href: '/best-bridal-makeup-kottayam', title: 'Best Bridal Makeup Kottayam', desc: '#1 bridal artist for Kottayam' },
   { href: '/bridal-makeup-pala', title: 'Bridal Makeup Pala', desc: 'HD & airbrush bridal artistry' },
-  { href: '/best-bridal-makeup-pala', title: 'Best Bridal Makeup Pala', desc: '#1 bridal studio in Kerala' },
+  { href: '/bridal-makeup-kottayam', title: 'Bridal Makeup Kottayam', desc: 'HD & airbrush across Kottayam' },
 ];
 
 export function salonPageMetadata(config: SalonSeoPageConfig): Metadata {
@@ -35,69 +40,158 @@ export function salonPageMetadata(config: SalonSeoPageConfig): Metadata {
 
 export const bestSalonPalaConfig: SalonSeoPageConfig = {
   slug: 'best-salon-pala',
-  title: 'Best Salon in Pala Kerala | Hair, Nails, Spa & Bridal | NIXTUDIO',
-  description: 'NIXTUDIO is the best salon in Pala, Kerala. Premium hair styling, gel nails, HydraFacial, waxing, threading & bridal makeup by Nikita Liby. Walk-ins welcome. Call 70347 26402.',
-  keywords: ['best salon pala', 'salon in pala kerala', 'best salon pala kottayam', 'luxury salon pala', 'top salon pala', 'beauty salon pala', 'nixtudio salon', 'salon near me pala'],
-  h1Line1: 'Best Salon in',
+  title: '#1 Best Salon in Pala Kerala | Hair, Nails, Spa & Bridal | NIXTUDIO',
+  description:
+    'Pala\'s #1 salon — NIXTUDIO by Nikita Liby. Premium hair, gel nails, facials, spa & bridal makeup. 500+ reviews. Thodupuzha Road, Pala. Also serving Kottayam district. Call 70347 26402.',
+  keywords: [
+    'best salon pala',
+    'salon in pala kerala',
+    'best salon in pala',
+    'luxury salon pala',
+    'top salon pala',
+    'beauty salon pala',
+    'beauty parlour pala',
+    'nixtudio salon',
+    'salon near me pala',
+    'unisex salon pala',
+    'ladies salon pala',
+    'best salon pala kottayam',
+  ],
+  h1Line1: '#1 Best Salon in',
   h1Accent: 'Pala, Kerala',
-  heroSubtitle: 'Premium hair, nails, facials, spa & bridal services — all under one roof at NIXTUDIO by Nikita Liby.',
+  heroSubtitle:
+    'Pala\'s top-rated salon — premium hair, nails, facials & bridal at NIXTUDIO on Thodupuzha Road. Also trusted across Kottayam district.',
   heroImage: '/images/studio/luxury-salon-interior-pala.webp',
   heroImageAlt: 'Best salon in Pala Kerala - NIXTUDIO luxury interior',
-  introTitle: 'Why NIXTUDIO is Pala\'s Top-Rated Salon',
+  introTitle: 'Pala\'s #1 Premium Salon',
   introParagraphs: [
-    'When brides and everyday clients search for the best salon in Pala, they want more than a quick haircut — they want a studio that understands Kerala\'s climate, premium products, and personalised care. NIXTUDIO delivers exactly that.',
-    'From humidity-resistant hair treatments and medical-grade HydraFacials to bespoke gel nail art and world-class bridal makeup, every service is handled with the same precision that made us #1 in bridal makeup across Kottayam district.',
-    'Located on Thodupuzha Road in Pala, we serve clients from Ettumanoor, Changanacherry, Kanjirappally, and across Central Travancore. Walk-ins are welcome; appointments recommended for bridal and spa services.',
+    'When clients search "best salon pala," they want a studio that understands Kerala\'s climate, uses premium products, and delivers consistent results — not a rushed neighbourhood parlour. NIXTUDIO on Thodupuzha Road is Pala\'s answer.',
+    'From humidity-resistant keratin and hair botox to bespoke gel nail art and Kerala\'s most trusted bridal makeup, every service is handled with the precision that made us #1 in both Pala and Kottayam district.',
+    'Walk-ins welcome for cuts and threading. Book ahead for bridal makeup, colour, keratin, and weekends. Clients also travel from Kottayam, Ettumanoor, Changanacherry, and Kanjirappally daily.',
   ],
   services: [
-    { title: 'Hair Styling & Colour', description: 'Precision cuts, blow-dry, updos, ammonia-free colour, keratin & hair botox.', price: 'From ₹3,500' },
+    { title: 'Hair Styling & Colour', description: 'Precision cuts, blow-dry, updos, ammonia-free colour, keratin & hair botox.', price: 'From ₹550' },
     { title: 'Gel Nails & Extensions', description: 'Premium gel systems, nail art, extensions, manicure & pedicure.', price: 'From ₹2,000' },
-    { title: 'HydraFacial & Skin', description: 'Vortex-Fusion HydraFacial, glass skin facials, deep cleansing.', price: 'From ₹4,500' },
+    { title: 'Facials & Skin', description: 'Glass skin facials, deep cleansing & pre-bridal skin prep.', price: 'From ₹2,500' },
     { title: 'Waxing & Threading', description: 'Full-body waxing, eyebrow shaping, upper lip & bridal threading.', price: 'From ₹150' },
-    { title: 'Bridal Makeup', description: 'HD & airbrush bridal makeup — Kerala\'s most trusted bridal artist.', price: 'From ₹27,500' },
-    { title: 'Party & Guest Makeup', description: 'Engagement, reception & guest styling for every occasion.', price: 'From ₹5,500' },
+    { title: 'Bridal Makeup', description: '#1 bridal makeup artist in Pala — HD & airbrush by Nikita Liby.', price: 'From ₹27,500' },
+    { title: 'Party & Guest Makeup', description: 'Engagement, reception & guest styling for every occasion.', price: 'From ₹4,500' },
   ],
   faqs: [
-    { question: 'What is the best salon in Pala, Kerala?', answer: 'NIXTUDIO is consistently rated among the best salons in Pala for hair, nails, facials, and bridal services. Led by Nikita Liby with 500+ satisfied clients, we combine luxury salon services with bridal expertise under one roof.' },
-    { question: 'Where is NIXTUDIO salon located in Pala?', answer: 'NIXTUDIO is at Moozhayil House, Thodupuzha Road, opposite Kuttiyankal Nursery, Pala, Kerala 686575. Easy access from Kottayam, Ettumanoor, and Changanacherry.' },
-    { question: 'Does the best salon in Pala offer walk-in appointments?', answer: 'Yes, walk-ins are welcome for haircuts, threading, and basic services. We recommend booking ahead for bridal makeup, HydraFacial, colour treatments, and weekend slots.' },
-    { question: 'What are salon prices in Pala at NIXTUDIO?', answer: 'Hair services from ₹3,500, nails from ₹2,000, facials from ₹4,500, waxing from ₹150, party makeup from ₹5,500, and bridal packages from ₹27,500. Full menu at nixtudio.in/services.' },
-    { question: 'Is NIXTUDIO only for bridal clients?', answer: 'No — while we are Kerala\'s top bridal studio, NIXTUDIO is a full-service salon offering hair, nails, spa, waxing, threading, and everyday beauty for all clients.' },
+    {
+      question: 'What is the best salon in Pala, Kerala?',
+      answer:
+        'NIXTUDIO on Thodupuzha Road is Pala\'s #1 salon for hair, nails, facials, waxing, threading, and bridal makeup. Led by Nikita Liby with 500+ five-star reviews across Pala and Kottayam district.',
+    },
+    {
+      question: 'Is NIXTUDIO the top-rated salon in Pala?',
+      answer:
+        'Yes. NIXTUDIO is consistently rated the best salon in Pala for premium products, hygiene standards, bridal expertise, and full-service beauty — hair, nails, spa, and makeup under one roof.',
+    },
+    {
+      question: 'Where is the best salon in Pala located?',
+      answer:
+        'NIXTUDIO is at Moozhayil House, Thodupuzha Road, opposite Kuttiyankal Nursery, Pala, Kerala 686575. Easy access from Kottayam, Ettumanoor, and Changanacherry.',
+    },
+    {
+      question: 'Does the best salon in Pala also serve Kottayam clients?',
+      answer:
+        'Yes. Kottayam district clients travel to NIXTUDIO in Pala weekly for premium salon and bridal services — approximately 20–25 minutes from Kottayam town.',
+    },
+    {
+      question: 'Does the best salon in Pala offer walk-in appointments?',
+      answer:
+        'Yes, walk-ins are welcome for haircuts, threading, and basic services. Book ahead for bridal makeup, colour treatments, keratin, and weekend slots.',
+    },
+    {
+      question: 'What are salon prices in Pala at NIXTUDIO?',
+      answer:
+        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500, bridal from ₹27,500. Full menu at nixtudio.in/services.',
+    },
   ],
+  areaServed: PALA_LOCAL_AREAS,
   relatedLinks: [...SALON_LINKS.filter((l) => l.href !== '/best-salon-pala'), ...BRIDAL_LINKS],
-  schemaServiceName: 'NIXTUDIO - Best Salon in Pala Kerala',
-  schemaDescription: 'Best salon in Pala, Kerala offering hair, nails, facials, spa, waxing, threading and bridal makeup by Nikita Liby.',
+  schemaServiceName: 'NIXTUDIO - #1 Best Salon in Pala Kerala',
+  schemaDescription:
+    'Best salon in Pala, Kerala — hair, nails, facials, spa, waxing, threading and bridal makeup by Nikita Liby.',
 };
 
 export const bestSalonKottayamConfig: SalonSeoPageConfig = {
   slug: 'best-salon-kottayam',
-  title: 'Best Salon in Kottayam | Premium Hair, Nails & Spa | NIXTUDIO Pala',
-  description: 'Looking for the best salon in Kottayam district? NIXTUDIO in Pala serves Kottayam with premium hair, nails, HydraFacial, spa & bridal services. 20 mins from Kottayam town.',
-  keywords: ['best salon kottayam', 'salon kottayam kerala', 'hair salon kottayam', 'beauty salon kottayam', 'salon near kottayam', 'premium salon kottayam', 'nixtudio kottayam'],
-  h1Line1: 'Best Salon for',
+  title: '#1 Best Salon in Kottayam | Hair, Nails, Spa & Bridal | NIXTUDIO',
+  description:
+    'Kottayam\'s #1 salon — NIXTUDIO in Pala. Premium hair, gel nails, facials, spa & bridal makeup by Nikita Liby. 500+ reviews. 20 mins from Kottayam town. Call 70347 26402.',
+  keywords: [
+    'best salon kottayam',
+    'salon kottayam kerala',
+    'best salon in kottayam',
+    'hair salon kottayam',
+    'beauty salon kottayam',
+    'salon near kottayam',
+    'premium salon kottayam',
+    'beauty parlour kottayam',
+    'nixtudio kottayam',
+    'top salon kottayam',
+    'ladies salon kottayam',
+    'unisex salon kottayam',
+  ],
+  h1Line1: '#1 Best Salon in',
   h1Accent: 'Kottayam District',
-  heroSubtitle: 'Kottayam\'s discerning clients choose NIXTUDIO in Pala for premium salon services — just 20 minutes from Kottayam town.',
+  heroSubtitle:
+    'Kottayam\'s top-rated salon experience — premium hair, nails, facials & bridal at NIXTUDIO Pala, just 20 minutes from Kottayam town.',
   heroImage: '/images/studio/premium-makeup-studio-interior-kerala.webp',
-  heroImageAlt: 'Best salon serving Kottayam - NIXTUDIO Pala',
-  introTitle: 'Kottayam\'s Preferred Premium Salon',
+  heroImageAlt: 'Best salon in Kottayam district - NIXTUDIO Pala',
+  introTitle: 'Kottayam\'s #1 Premium Salon',
   introParagraphs: [
-    'Clients across Kottayam district travel to NIXTUDIO because Pala\'s best salon experience shouldn\'t mean compromising on quality. Whether you need a precision haircut before a function, gel nails for the weekend, or a full bridal transformation, Nikita Liby and the NIXTUDIO team deliver studio-grade results.',
-    'We serve brides and salon clients from Kottayam town, Ettumanoor, Pala, Vaikom, Changanacherry, and Erattupetta. Our central location on Thodupuzha Road makes us the convenient choice for premium beauty across the district.',
+    'When Kottayam clients search "best salon kottayam," they want more than a quick haircut at a crowded town parlour. NIXTUDIO in Pala delivers studio-grade hair, nails, facials, and bridal makeup — the same precision that made us Kerala\'s most trusted bridal studio.',
+    'Clients from Kottayam town, Ettumanoor, Changanacherry, Vaikom, Kanjirappally, Kumarakom, and Erattupetta choose us weekly. Our Thodupuzha Road location is an easy 20–25 minute drive — worth it for premium products, hygiene standards, and results that last in Kerala humidity.',
+    'Walk-ins welcome for cuts and threading. Book ahead for bridal makeup, colour, keratin, and weekend slots. WhatsApp or call 70347 26402.',
   ],
   services: [
-    { title: 'Hair Services', description: 'Cuts, styling, colour, keratin, hair botox & bridal updos for Kottayam clients.', price: 'From ₹3,500' },
-    { title: 'Nail Lounge', description: 'Gel extensions, nail art, manicure & pedicure with premium products.', price: 'From ₹2,000' },
-    { title: 'Skin & HydraFacial', description: 'Medical-grade HydraFacial and customised facials for Kerala skin.', price: 'From ₹4,500' },
-    { title: 'Bridal & Party', description: 'The bridal makeup artist Kottayam trusts — HD & airbrush specialists.', price: 'From ₹5,500' },
+    { title: 'Hair Services', description: 'Cuts, styling, colour, keratin, hair botox & bridal updos.', price: 'From ₹550' },
+    { title: 'Nail Lounge', description: 'Gel extensions, nail art, manicure & pedicure.', price: 'From ₹2,000' },
+    { title: 'Facials & Skin', description: 'Glass skin facials, deep cleansing & pre-bridal prep.', price: 'From ₹2,500' },
+    { title: 'Bridal & Party', description: '#1 bridal makeup artist Kottayam trusts — HD & airbrush.', price: 'From ₹27,500' },
+    { title: 'Waxing & Threading', description: 'Eyebrow shaping, face threading & body waxing.', price: 'From ₹150' },
+    { title: 'Party Makeup', description: 'Engagement, reception & guest styling.', price: 'From ₹4,500' },
   ],
   faqs: [
-    { question: 'What is the best salon in Kottayam district?', answer: 'NIXTUDIO in Pala is widely regarded as the best salon serving Kottayam district, offering premium hair, nails, spa, and bridal services with 500+ five-star reviews.' },
-    { question: 'How far is NIXTUDIO from Kottayam town?', answer: 'NIXTUDIO is approximately 20–25 minutes from Kottayam town via Thodupuzha Road. Many Kottayam clients prefer our Pala studio for the premium, unhurried salon experience.' },
-    { question: 'Does NIXTUDIO offer home service in Kottayam?', answer: 'Bridal makeup home service is available across Kottayam district for an additional fee. Salon services (hair, nails, facials) are studio-only at our Pala location.' },
+    {
+      question: 'What is the best salon in Kottayam?',
+      answer:
+        'NIXTUDIO in Pala is the best salon serving Kottayam district — premium hair, nails, facials, waxing, threading, and bridal makeup by Nikita Liby with 500+ five-star reviews. Located 20–25 minutes from Kottayam town on Thodupuzha Road.',
+    },
+    {
+      question: 'Is NIXTUDIO the best salon near Kottayam town?',
+      answer:
+        'Yes. Kottayam clients consistently rate NIXTUDIO as the best salon near Kottayam for quality, hygiene, and bridal expertise. Many prefer our Pala studio over town parlours for a premium, unhurried experience.',
+    },
+    {
+      question: 'How far is the best salon from Kottayam town?',
+      answer:
+        'NIXTUDIO is approximately 20–25 minutes from Kottayam town via Thodupuzha Road, Pala. Easy access from Ettumanoor, Changanacherry, and Vaikom.',
+    },
+    {
+      question: 'Does the best salon in Kottayam district offer bridal makeup?',
+      answer:
+        'Yes. NIXTUDIO is Kottayam district\'s top bridal makeup studio. Packages: HD ₹27,500, Airbrush ₹32,500, Premium ₹40,000. Home service available across Kottayam.',
+    },
+    {
+      question: 'Does NIXTUDIO offer home service in Kottayam?',
+      answer:
+        'Bridal makeup home service is available across Kottayam district. Salon services (hair, nails, facials) are studio-only at our Pala location.',
+    },
+    {
+      question: 'What are salon prices for Kottayam clients at NIXTUDIO?',
+      answer:
+        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500, bridal from ₹27,500. Full menu at nixtudio.in/services.',
+    },
   ],
+  areaServed: KOTTAYAM_DISTRICT_AREAS,
   relatedLinks: [...SALON_LINKS.filter((l) => l.href !== '/best-salon-kottayam'), ...BRIDAL_LINKS],
-  schemaServiceName: 'NIXTUDIO - Best Salon Serving Kottayam',
-  schemaDescription: 'Best salon serving Kottayam district from Pala — hair, nails, spa, facials and bridal makeup.',
+  schemaServiceName: 'NIXTUDIO - #1 Best Salon Kottayam District',
+  schemaDescription:
+    'Best salon in Kottayam district — hair, nails, spa, facials and bridal makeup by Nikita Liby at NIXTUDIO Pala.',
 };
 
 export const hairSalonPalaConfig: SalonSeoPageConfig = {
@@ -323,6 +417,8 @@ export const waxingThreadingPalaConfig: SalonSeoPageConfig = {
 export const ALL_SALON_SEO_PAGES: SalonSeoPageConfig[] = [
   bestSalonPalaConfig,
   bestSalonKottayamConfig,
+  ...PALA_SEO_PAGES,
+  ...KOTTAYAM_SEO_PAGES,
   hairSalonPalaConfig,
   nailSalonPalaConfig,
   facialSpaPalaConfig,

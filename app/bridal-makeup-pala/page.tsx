@@ -6,8 +6,9 @@ import Link from 'next/link'
 // DEPLOYMENT TRIGGER: Pages are built and ready - Vercel should deploy these
 
 export const metadata: Metadata = {
-  title: 'Bridal Makeup Pala | Expert HD & Airbrush Wedding Makeup | NIXTUDIO',
-  description: 'Professional bridal makeup artist in Pala, Kerala. Specializing in HD & airbrush makeup for Kerala weddings. 6+ years experience • Transparent pricing • Local expertise.',
+  title: '#1 Bridal Makeup Pala | Best Artist | NIXTUDIO by Nikita Liby',
+  description:
+    'Pala\'s #1 bridal makeup artist — NIXTUDIO. HD from ₹27,500, airbrush from ₹32,500, premium ₹40,000. Christian, Hindu & Muslim bridal on Thodupuzha Road. Also serving Kottayam.',
   keywords: [
     'bridal makeup pala',
     'bridal makeup artist pala',

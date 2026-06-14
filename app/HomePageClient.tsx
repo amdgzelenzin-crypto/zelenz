@@ -87,7 +87,7 @@ const cards = [
     sub: "Exclusively designed Christian, Hindu, and Muslim bridal aesthetics.",
     link: "/bridal",
     linkText: "The Bridal Edit →",
-    image: "/images/bridal-editorial-card.jpg",
+    image: "/images/bridal-editorial-card.png",
     placeholder: "#F9C8C8",
     offset: 0,
     gradient: "linear-gradient(to bottom, rgba(249,145,159,0.15) 0%, rgba(61,26,31,0.75) 100%)",
@@ -126,12 +126,12 @@ const heroImages = [
 ];
 
 const HERO_H1_LINE1 = "Bridal Makeup & Luxury Salon";
-const HERO_H1_LINE2 = "in Pala, Kerala";
+const HERO_H1_LINE2 = "in Pala & Kottayam";
 const HERO_SUBTEXT =
-  "HD & airbrush bridal artistry, premium hair, nails & spa — personally by Nikita Liby.";
+  "Pala & Kottayam's #1 bridal makeup studio and luxury salon — HD & airbrush bridal, hair, nails & spa by Nikita Liby.";
 
 const HERO_GEO_BLUF =
-  "NIXTUDIO by Nikita Liby is a premium bridal makeup studio and luxury salon in Pala, Kerala, offering HD and airbrush bridal packages, hair styling, gel nails, HydraFacial, waxing, threading, and party makeup across Pala and Kottayam district.";
+  "NIXTUDIO by Nikita Liby is the #1 premium bridal makeup studio and luxury salon in Pala and Kottayam district — HD & airbrush bridal from ₹27,500, hair, gel nails, facials, waxing & party makeup. Studio on Thodupuzha Road, Pala; home bridal service across Kottayam.";
 
 function HeroSlideshow() {
   const [current, setCurrent] = useState(0);

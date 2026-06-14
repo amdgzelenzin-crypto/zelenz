@@ -43,6 +43,9 @@ export default function SalonSeoLanding({ config }: Props) {
           reviewCount: '500',
           bestRating: '5',
         },
+        ...(config.areaServed
+          ? { areaServed: config.areaServed.map((name) => ({ '@type': 'City', name })) }
+          : {}),
       },
       {
         '@type': 'FAQPage',

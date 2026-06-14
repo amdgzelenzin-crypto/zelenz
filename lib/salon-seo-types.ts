@@ -18,4 +18,6 @@ export type SalonSeoPageConfig = {
   relatedLinks: { href: string; title: string; desc: string }[];
   schemaServiceName: string;
   schemaDescription: string;
+  /** Towns served — surfaced in LocalBusiness schema for geo SEO */
+  areaServed?: string[];
 };

@@ -49,9 +49,9 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: "Best Salon & Bridal Makeup Studio Pala Kerala | NIXTUDIO",
+  title: '#1 Best Salon & Bridal Makeup in Pala & Kottayam | NIXTUDIO',
   description:
-    "Best salon and bridal makeup studio in Pala, Kerala. Premium hair salon, nail lounge, HydraFacial, spa & bridal makeup by Nikita Liby in Kottayam district. Book now.",
+    '#1 salon and bridal makeup studio in Pala & Kottayam district. Premium hair, nails, spa & HD/airbrush bridal by Nikita Liby. Thodupuzha Road, Pala. Book now.',
   keywords: [
     "best salon pala",
     "salon pala kerala",
@@ -112,9 +112,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: "https://nixtudio.in",
     siteName: "NIXTUDIO by Nikita Liby",
-    title: "Best Salon & Bridal Makeup Studio Pala Kerala | NIXTUDIO",
+    title: "#1 Best Salon & Bridal Makeup in Pala & Kottayam | NIXTUDIO",
     description:
-      "Best salon and bridal makeup studio in Pala, Kerala. Premium hair salon, nail lounge, HydraFacial, spa & bridal makeup by Nikita Liby in Kottayam district. Book now.",
+      "#1 salon and bridal makeup studio in Pala & Kottayam district. Premium hair, nails, spa & bridal makeup by Nikita Liby. Book now.",
     images: [
       {
         url: '/images/studio/nixtudio-studio-signage-pala-kerala.webp',

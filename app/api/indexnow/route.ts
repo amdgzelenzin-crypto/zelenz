@@ -22,6 +22,9 @@ const urls = [
   `https://${HOST}/blog/salon-near-kottayam-pala-guide`,
   `https://${HOST}/best-salon-pala`,
   `https://${HOST}/best-salon-kottayam`,
+  `https://${HOST}/best-bridal-makeup-kottayam`,
+  `https://${HOST}/bridal-makeup-kottayam`,
+  `https://${HOST}/hair-salon-kottayam`,
   `https://${HOST}/hair-salon-pala`,
   `https://${HOST}/nail-salon-pala`,
   `https://${HOST}/facial-spa-pala`,
@@ -30,8 +33,9 @@ const urls = [
   `https://${HOST}/keratin-treatment-pala`,
   `https://${HOST}/waxing-threading-pala`,
   `https://${HOST}/press`,
-  `https://${HOST}/bridal-makeup-pala`,
   `https://${HOST}/best-bridal-makeup-pala`,
+  `https://${HOST}/bridal-makeup-pala`,
+  `https://${HOST}/best-bridal-makeup-kottayam`,
 ];
 
 export async function POST() {

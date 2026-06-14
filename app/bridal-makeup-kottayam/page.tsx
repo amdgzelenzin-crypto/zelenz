@@ -4,22 +4,25 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Bridal Makeup Kottayam | NIXTUDIO Premium Makeup Studio',
-  description: 'Top bridal makeup artist in Kottayam, Kerala. NIXTUDIO offers luxury HD & airbrush bridal makeup, natural looks, and professional service across Kottayam district.',
+  title: '#1 Bridal Makeup Kottayam | Best Artist | NIXTUDIO by Nikita Liby',
+  description:
+    'Kottayam\'s #1 bridal makeup artist — NIXTUDIO. HD from ₹27,500, airbrush from ₹32,500, premium ₹40,000. Home service across Kottayam district. Christian, Hindu & Muslim bridal.',
   keywords: [
     'bridal makeup kottayam',
+    'best bridal makeup kottayam',
     'bridal makeup artist kottayam',
     'luxury bridal makeup kottayam',
-    'best bridal makeup kottayam',
-    'nixtudio kottayam',
+    'makeup artist kottayam',
     'hd bridal makeup kottayam',
     'airbrush makeup kottayam',
     'wedding makeup kottayam kerala',
-    'bridal makeup packages kottayam'
+    'bridal makeup packages kottayam',
+    'bridal makeup near kottayam',
   ],
+  alternates: { canonical: 'https://nixtudio.in/bridal-makeup-kottayam' },
   openGraph: {
-    title: 'Bridal Makeup Kottayam | NIXTUDIO Premium Studio',
-    description: 'Premium bridal makeup services across Kottayam district. HD, airbrush, and natural looks by Nixtudio.',
+    title: '#1 Bridal Makeup Kottayam | NIXTUDIO by Nikita Liby',
+    description: 'Best bridal makeup across Kottayam district. HD, airbrush & traditional Kerala bridal by Nikita Liby.',
     url: 'https://nixtudio.in/bridal-makeup-kottayam',
     images: [{
       url: '/images/bridal-makeup-kottayam-nixtudio.jpg',
@@ -27,28 +30,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Bridal Makeup Kottayam - NIXTUDIO Studio'
     }]
-  }
-}
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Bridal Makeup Kottayam - NIXTUDIO",
-  "description": "Premium bridal makeup services across Kottayam district, Kerala. Specializing in HD, airbrush, and natural bridal makeup.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "NIXTUDIO",
-    "url": "https://nixtudio.in"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Kottayam District, Kerala"
-  },
-  "serviceType": "Bridal Makeup Services",
-  "offers": {
-    "@type": "Offer",
-    "priceRange": "₹27,500 - ₹40,000",
-    "priceCurrency": "INR"
   }
 }
 
@@ -171,6 +152,46 @@ const serviceAreas = [
   "Pala", "Erattupetta", "Kuravilangad", "Kaduthuruthy", "Aymanam",
   "Kumarakom", "Vijayapuram", "Manarcad", "Athirampuzha", "Nadakkavu"
 ]
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Bridal Makeup Kottayam - NIXTUDIO",
+      "description": "Kottayam district's #1 bridal makeup service. HD, airbrush, and traditional bridal makeup by Nikita Liby.",
+      "provider": {
+        "@type": "BeautySalon",
+        "name": "NIXTUDIO",
+        "url": "https://nixtudio.in",
+        "telephone": "+917034726402",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+          "addressLocality": "Pala",
+          "addressRegion": "Kerala",
+          "postalCode": "686575",
+          "addressCountry": "IN"
+        }
+      },
+      "areaServed": { "@type": "AdministrativeArea", "name": "Kottayam District, Kerala" },
+      "serviceType": "Bridal Makeup Services",
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "₹27,500 - ₹40,000",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.slice(0, 8).map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
+    }
+  ]
+}
 
 export default function BridalMakeupKottayam() {
   return (
@@ -445,6 +466,10 @@ export default function BridalMakeupKottayam() {
               Explore Our Bridal Makeup Services
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <Link href="/best-bridal-makeup-kottayam" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold mb-2 text-purple-600">Best Bridal Makeup Kottayam</h3>
+                <p className="text-gray-700">#1 bridal artist serving Kottayam district</p>
+              </Link>
               <Link href="/best-bridal-makeup-pala" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold mb-2 text-purple-600">Best Bridal Makeup Pala</h3>
                 <p className="text-gray-700">Premium bridal makeup services in Pala</p>

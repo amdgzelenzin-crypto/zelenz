@@ -35,7 +35,7 @@ module.exports = {
       return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() }
     }
     // Salon SEO money pages
-    if (['/best-salon-pala', '/best-salon-kottayam', '/hair-salon-pala', '/nail-salon-pala', '/hydrafacial-pala', '/keratin-treatment-pala'].includes(path)) {
+    if (['/best-salon-pala', '/best-salon-kottayam', '/hair-salon-pala', '/hair-salon-kottayam', '/nail-salon-pala', '/hydrafacial-pala', '/keratin-treatment-pala', '/best-bridal-makeup-pala', '/best-bridal-makeup-kottayam', '/bridal-makeup-pala', '/bridal-makeup-kottayam'].includes(path)) {
       return { loc: path, changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }
     }
     if (['/facial-spa-pala', '/beauty-parlour-pala', '/waxing-threading-pala', '/press'].includes(path)) {
@@ -106,6 +106,18 @@ module.exports = {
         lastmod: new Date().toISOString(),
       },
       {
+        loc: '/best-bridal-makeup-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/bridal-makeup-pala',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
         loc: '/best-bridal-makeup-pala-kottayam-comparison',
         changefreq: 'weekly',
         priority: 0.9,
@@ -114,7 +126,7 @@ module.exports = {
       {
         loc: '/bridal-makeup-kottayam',
         changefreq: 'daily',
-        priority: 0.9,
+        priority: 1.0,
         lastmod: new Date().toISOString(),
       },
       {
@@ -143,6 +155,18 @@ module.exports = {
       },
       {
         loc: '/best-salon-kottayam',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/best-bridal-makeup-kottayam',
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/hair-salon-kottayam',
         changefreq: 'daily',
         priority: 1.0,
         lastmod: new Date().toISOString(),

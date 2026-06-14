@@ -482,9 +482,15 @@ export default function Footer() {
               lineHeight: 1.6,
             }}
           >
-            <Link href="/best-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Best Salon Pala</Link>
+            <Link href="/best-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Salon Pala</Link>
+            {" · "}
+            <Link href="/best-bridal-makeup-pala" style={{ color: "inherit", textDecoration: "none" }}>Bridal Pala</Link>
             {" · "}
             <Link href="/best-salon-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Salon Kottayam</Link>
+            {" · "}
+            <Link href="/best-bridal-makeup-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Bridal Kottayam</Link>
+            {" · "}
+            <Link href="/hair-salon-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Hair Kottayam</Link>
             {" · "}
             <Link href="/hair-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Hair Salon</Link>
             {" · "}
