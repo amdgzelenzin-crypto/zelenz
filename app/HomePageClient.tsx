@@ -115,15 +115,29 @@ const cards = [
     gradient: "linear-gradient(to bottom, rgba(183,110,121,0.20) 0%, rgba(61,26,31,0.75) 100%)",
   },
 ];
+/** Studio & bridal slides only — avoids busy product-swatch backgrounds */
 const heroImages = [
   "/images/premium-bridal-makeup-studio-pala-kerala-hero.webp",
-  "/images/hd-bridal-makeup-artist-pala-kottayam.webp",
   "/images/traditional-kerala-bridal-styling-pala.webp",
   "/images/studio/premium-makeup-studio-interior-kerala.webp",
   "/images/studio/nixtudio-luxury-salon-interior-pala.webp",
   "/images/studio/bridal-prep-suite-pala-kottayam.webp",
   "/images/studio/luxury-hair-spa-station-pala.webp",
 ];
+
+const HERO_H1_LINE1 = "Bridal Makeup & Luxury Salon";
+const HERO_H1_LINE2 = "in Pala, Kerala";
+const HERO_SUBTEXT =
+  "HD & airbrush bridal artistry, premium hair, nails & spa — personally by Nikita Liby.";
+
+const HERO_TRUST_STATS = [
+  { stat: "500+", label: "Clients styled" },
+  { stat: "4.9★", label: "Google rating" },
+  { stat: "6+ yrs", label: "Experience" },
+] as const;
+
+const HERO_GEO_BLUF =
+  "NIXTUDIO by Nikita Liby is a premium bridal makeup studio and luxury salon in Pala, Kerala, offering HD and airbrush bridal packages, hair styling, gel nails, HydraFacial, waxing, threading, and party makeup across Pala and Kottayam district.";
 
 function HeroSlideshow() {
   const [current, setCurrent] = useState(0);
@@ -152,13 +166,12 @@ function HeroSlideshow() {
             <Image
               src={src}
               alt={
-                i === 0 ? "NIXTUDIO Pala luxury bridal makeup studio interior - Best makeup artist in Kottayam Kerala" :
-                i === 1 ? "Christian bridal makeup by Nikita Liby at NIXTUDIO Pala - HD makeup artist Kottayam" :
-                i === 2 ? "Traditional Hindu wedding makeup at NIXTUDIO - Temple bridal makeup Pala Kerala" :
-                i === 3 ? "Luxury salon spa services at NIXTUDIO Pala - Advanced facial and hair care Kottayam" :
-                i === 4 ? "Bleach-free hair coloring service at NIXTUDIO Pala - Professional hair salon Kottayam" :
-                i === 5 ? "Vortex Fusion HydraFacial treatment at NIXTUDIO Pala - Medical-grade skin care Kottayam Kerala" :
-                "Bridal prep suite at NIXTUDIO Pala - Exclusive private bridal dressing lounge Kottayam"
+                i === 0 ? "NIXTUDIO bridal makeup studio interior in Pala Kerala" :
+                i === 1 ? "Traditional Kerala bridal styling at NIXTUDIO Pala" :
+                i === 2 ? "Premium makeup studio interior at NIXTUDIO Pala" :
+                i === 3 ? "Luxury salon interior at NIXTUDIO Pala Kerala" :
+                i === 4 ? "Private bridal prep suite at NIXTUDIO Pala" :
+                "Luxury hair spa station at NIXTUDIO Pala"
               }
               fill
               priority={i === 0}
@@ -331,7 +344,7 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
       
       {/* ──── 1. HERO — full screen ──── */}
       <section
-        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))]"
+        className="relative w-screen h-[100svh] overflow-hidden texture-grain pink-depth max-md:pt-[max(80px,calc(env(safe-area-inset-top)+60px))] max-md:pb-24"
       >
         {/* Don't render interactive content until ready, but keep basic structure */}
         {!isReady ? (
@@ -352,63 +365,41 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
                 hyphens: "auto",
               }}
             >
-              Best Bridal Makeup Studio Pala
+              {HERO_H1_LINE1}
               <br />
-              Luxury Hair Salon Kerala
+              <span style={{ color: "#E8CC90" }}>{HERO_H1_LINE2}</span>
             </h1>
           </div>
         ) : (
         <>
         <style dangerouslySetInnerHTML={{__html: `
-          @keyframes petalSway {
-            0%, 100% { transform: rotate(var(--r)) translateY(0px); }
-            50% { transform: rotate(var(--r)) translateY(-12px); }
-          }
           @keyframes bounceHero {
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(8px); }
           }
+          @media (min-width: 1024px) {
+            .hero-title { font-size: 56px !important; text-align: left !important; }
+            .hero-subtext { font-size: 19px !important; text-align: left !important; margin-bottom: 32px !important; }
+            .hero-buttons { justify-content: flex-start !important; }
+          }
+          @media (max-width: 1023px) {
+            .hero-title { text-align: center !important; }
+            .hero-subtext { text-align: center !important; }
+            .hero-buttons { justify-content: center !important; }
+          }
         `}} />
 
-        {/* Gold Botanical Detail Line (Mobile Only) */}
-        <div className="absolute top-0 left-0 w-full h-1 z-50 md:hidden bg-[linear-gradient(90deg,transparent_0%,#D4A055_20%,#F9C8C8_50%,#D4A055_80%,transparent_100%)]" />
-
-        {/* Background image / placeholder */}
         <HeroSlideshow />
 
-
-        {/* Gradient overlay */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(61,26,31,0.5) 100%)",
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.25) 100%), linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(61,26,31,0.55) 100%)",
           }}
         />
 
-        {/* Floating Petals Mobile Only */}
-        <div className="absolute inset-0 z-0 pointer-events-none md:hidden overflow-hidden">
-          <div style={{
-            position: "absolute", top: "15%", right: "8%", width: "60px", height: "80px",
-            background: "rgba(249,200,200,0.25)", borderRadius: "50% 0 50% 0",
-            ["--r" as any]: "45deg", transform: "rotate(45deg)",
-            animation: "petalSway 6s ease-in-out infinite"
-          }} />
-          <div style={{
-            position: "absolute", top: "25%", left: "5%", width: "40px", height: "55px",
-            background: "rgba(212,160,85,0.20)", borderRadius: "50% 0 50% 0",
-            ["--r" as any]: "-30deg", transform: "rotate(-30deg)",
-            animation: "petalSway 8s ease-in-out infinite reverse"
-          }} />
-          <div style={{
-            position: "absolute", bottom: "25%", right: "10%", width: "50px", height: "65px",
-            background: "rgba(249,145,159,0.20)", borderRadius: "0 50% 0 50%",
-            ["--r" as any]: "120deg", transform: "rotate(120deg)",
-            animation: "petalSway 7s ease-in-out infinite 2s"
-          }} />
-        </div>
-
-        {/* Main Hero Content */}
         <div className="relative z-10 h-full px-4 py-16 md:py-20">
           <div className="max-w-[1200px] mx-auto h-full flex items-center">
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -446,274 +437,99 @@ export default function HomePageClient({ galleryPreview, bridalCardImage }: Home
               hyphens: "auto",
             }}
           >
-            Pala's #1 Choice for Bridal Makeup & Luxury Hair Salon
+            {HERO_H1_LINE1}
+            <br />
+            <span style={{ color: "#E8CC90" }}>{HERO_H1_LINE2}</span>
           </h1>
 
           <FadeUp delay={0.2}>
-            <h2
+            <p
               className="hero-subtext"
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
                 fontSize: "clamp(16px, 2.2vw, 19px)",
                 fontStyle: "italic",
-                color: "rgba(255,255,255,0.9)",
-                lineHeight: 1.4,
+                color: "rgba(255,255,255,0.92)",
+                lineHeight: 1.5,
                 marginTop: "20px",
-                marginBottom: "32px",
-                maxWidth: "600px",
+                marginBottom: "36px",
+                maxWidth: "520px",
               }}
             >
-              Kerala's most trusted name for HD Bridal Makeovers and Premium Hair Styling by Nikita Liby.
-            </h2>
-            <p
-              className="hero-tagline"
-              style={{
-                fontFamily: "var(--font-sans), sans-serif",
-                fontSize: "14px",
-                color: "rgba(255,255,255,0.8)",
-                marginBottom: "40px",
-                maxWidth: "500px",
-                lineHeight: 1.6,
-              }}
-            >
-              Pala's most trusted name in bridal beauty.
+              {HERO_SUBTEXT}
             </p>
           </FadeUp>
 
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              @media (min-width: 1024px) {
-                .hero-title {
-                  font-size: 64px !important;
-                  line-height: 1.1 !important;
-                  margin-bottom: 24px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 19px !important;
-                  text-align: center !important;
-                  margin-bottom: 16px !important;
-                }
-                .hero-tagline {
-                  font-size: 16px !important;
-                  text-align: center !important;
-                  margin-bottom: 32px !important;
-                }
-                .hero-buttons {
-                  padding: 0 0 !important;
-                  gap: 24px !important;
-                }
-                .hero-button {
-                  min-width: 200px !important;
-                  height: 56px !important;
-                  font-size: 18px !important;
-                  padding: 0 24px !important;
-                }
-              }
-              
-              @media (max-width: 768px) {
-                .hero-title {
-                  font-size: 36px !important;
-                  line-height: 1.1 !important;
-                  margin-bottom: 20px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 16px !important;
-                  text-align: center !important;
-                  margin-bottom: 12px !important;
-                }
-                .hero-tagline {
-                  font-size: 14px !important;
-                  text-align: center !important;
-                  margin-bottom: 24px !important;
-                }
-                .hero-buttons {
-                  padding: 0 20px !important;
-                  gap: 16px !important;
-                }
-                .hero-button {
-                  min-width: 150px !important;
-                  height: 48px !important;
-                  font-size: 15px !important;
-                  padding: 0 18px !important;
-                }
-              }
-              
-              @media (max-width: 480px) {
-                .hero-title {
-                  font-size: 28px !important;
-                  line-height: 1.0 !important;
-                  margin-bottom: 16px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 14px !important;
-                  text-align: center !important;
-                  margin-bottom: 10px !important;
-                }
-                .hero-tagline {
-                  font-size: 12px !important;
-                  text-align: center !important;
-                  margin-bottom: 20px !important;
-                }
-                .hero-buttons {
-                  padding: 0 16px !important;
-                  gap: 12px !important;
-                }
-                .hero-button {
-                  min-width: 140px !important;
-                  height: 44px !important;
-                  font-size: 14px !important;
-                  padding: 0 16px !important;
-                }
-              }
-            `
-          }} />
-
-          {/* ──────── GEO BLUF (Hidden for pure visual aesthetic) ──────── */}
-          <div className="sr-only">
-            <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings. With over 6 years of professional experience and having personally styled more than 500 brides across Pala, Kottayam, Changanacherry, and greater Kerala, Nikita Liby offers exclusive one-on-one bridal consultations and personalized makeup applications. Our comprehensive services include engagement makeup, wedding day bridal styling, reception makeup, party makeup for guests, advanced hair treatments, bleach-free hair coloring, gel nail extensions, and luxury spa services. The studio features state-of-the-art facilities including a private bridal prep suite, advanced skincare treatments like Vortex Fusion HydraFacial, and uses only premium, FDA-approved products. Located at Moozhayil House on Thodupuzha Road in Pala, our salon serves clients throughout Kerala with specialized expertise in traditional Kerala temple jewelry makeup, humidity-resistant techniques for tropical weather, and customized color matching for various skin tones and lighting conditions. Book your appointment with the most sought-after makeup artist in Central Kerala.
-          </div>
+          <div className="sr-only">{HERO_GEO_BLUF}</div>
 
           <FadeUp delay={0.3}>
-            <div className="hero-buttons flex flex-col md:flex-row gap-4 md:gap-6 justify-start items-center px-4 md:px-0">
+            <div className="hero-buttons flex flex-col sm:flex-row gap-4 md:gap-6 items-center lg:items-start px-4 lg:px-0">
               <Link href="/services" 
-                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
-                aria-label="Explore NIXTUDIO services including bridal makeup, hair styling, and nail services"
+                className="hero-button w-full sm:w-fit min-w-[180px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                aria-label="Explore NIXTUDIO salon and bridal services"
                 style={{
-                  background: "rgba(255,255,255,0.20)",
+                  background: "rgba(61,26,31,0.72)",
                   backdropFilter: "blur(10px)",
-                  border: "1.5px solid rgba(255,255,255,0.50)",
+                  border: "1.5px solid rgba(255,255,255,0.35)",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "0 20px",
+                  padding: "0 24px",
                   fontSize: "16px",
                   fontWeight: 500,
                 }}
               >
                 Explore Services
               </Link>
-              <Link href="/contact" 
-                className="hero-button w-full md:w-fit min-w-[160px] md:min-w-[200px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
-                aria-label="Check availability for bridal makeup appointments at NIXTUDIO Pala"
+              <Link href="/bridal" 
+                className="hero-button w-full sm:w-fit min-w-[180px] h-[48px] md:h-[56px] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 rosegold-shimmer"
+                aria-label="View NIXTUDIO bridal packages and pricing"
                 style={{
                   border: "none",
                   color: "#FFFFFF",
                   borderRadius: "50px",
-                  padding: "0 20px",
+                  padding: "0 24px",
                   fontSize: "16px",
                   fontWeight: 500,
                 }}
               >
-                Check Availability
+                View Bridal Packages
               </Link>
             </div>
           </FadeUp>
               </div>
 
-              {/* Right Column - Empty for visual balance */}
-              <div className="hidden lg:block lg:col-span-1"></div>
+              <div className="hidden lg:flex lg:col-span-1 flex-col gap-8 justify-center pl-4">
+                {HERO_TRUST_STATS.map((item) => (
+                  <div key={item.label}>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-display), Georgia, serif",
+                        fontSize: "42px",
+                        fontWeight: 300,
+                        color: "#E8CC90",
+                        lineHeight: 1,
+                        marginBottom: "6px",
+                      }}
+                    >
+                      {item.stat}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-sans), sans-serif",
+                        fontSize: "11px",
+                        letterSpacing: "0.2em",
+                        textTransform: "uppercase",
+                        color: "rgba(255,255,255,0.7)",
+                      }}
+                    >
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              @media (min-width: 1024px) {
-                .hero-title {
-                  font-size: 64px !important;
-                  line-height: 1.1 !important;
-                  margin-bottom: 24px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 19px !important;
-                  text-align: center !important;
-                  margin-bottom: 16px !important;
-                }
-                .hero-tagline {
-                  font-size: 16px !important;
-                  text-align: center !important;
-                  margin-bottom: 32px !important;
-                }
-                .hero-buttons {
-                  padding: 0 0 !important;
-                  gap: 24px !important;
-                }
-                .hero-button {
-                  min-width: 200px !important;
-                  height: 56px !important;
-                  font-size: 18px !important;
-                  padding: 0 24px !important;
-                }
-              }
-              
-              @media (max-width: 768px) {
-                .hero-title {
-                  font-size: 36px !important;
-                  line-height: 1.1 !important;
-                  margin-bottom: 20px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 16px !important;
-                  text-align: center !important;
-                  margin-bottom: 12px !important;
-                }
-                .hero-tagline {
-                  font-size: 14px !important;
-                  text-align: center !important;
-                  margin-bottom: 24px !important;
-                }
-                .hero-buttons {
-                  padding: 0 20px !important;
-                  gap: 16px !important;
-                }
-                .hero-button {
-                  min-width: 150px !important;
-                  height: 48px !important;
-                  font-size: 15px !important;
-                  padding: 0 18px !important;
-                }
-              }
-              
-              @media (max-width: 480px) {
-                .hero-title {
-                  font-size: 28px !important;
-                  line-height: 1.0 !important;
-                  margin-bottom: 16px !important;
-                  text-align: center !important;
-                }
-                .hero-subtext {
-                  font-size: 14px !important;
-                  text-align: center !important;
-                  margin-bottom: 10px !important;
-                }
-                .hero-tagline {
-                  font-size: 12px !important;
-                  text-align: center !important;
-                  margin-bottom: 20px !important;
-                }
-                .hero-buttons {
-                  padding: 0 16px !important;
-                  gap: 12px !important;
-                }
-                .hero-button {
-                  min-width: 140px !important;
-                  height: 44px !important;
-                  font-size: 14px !important;
-                  padding: 0 16px !important;
-                }
-              }
-            `
-          }} />
-
-          {/* ──────── GEO BLUF (Hidden for pure visual aesthetic) ──────── */}
-          <div className="sr-only">
-            <strong>NIXTUDIO by Nikita Liby</strong> is the premier bridal makeup studio and luxury salon in Pala, Kerala, specializing in international-standard HD and Airbrush bridal aesthetics for Christian, Hindu, and Muslim weddings. With over 6 years of professional experience and having personally styled more than 500 brides across Pala, Kottayam, Changanacherry, and greater Kerala, Nikita Liby offers exclusive one-on-one bridal consultations and personalized makeup applications. Our comprehensive services include engagement makeup, wedding day bridal styling, reception makeup, party makeup for guests, advanced hair treatments, bleach-free hair coloring, gel nail extensions, and luxury spa services. The studio features state-of-the-art facilities including a private bridal prep suite, advanced skincare treatments like Vortex Fusion HydraFacial, and uses only premium, FDA-approved products. Located at Moozhayil House on Thodupuzha Road in Pala, our salon serves clients throughout Kerala with specialized expertise in traditional Kerala temple jewelry makeup, humidity-resistant techniques for tropical weather, and customized color matching for various skin tones and lighting conditions. Book your appointment with the most sought-after makeup artist in Central Kerala.
-          </div>
-
-        {/* Scroll indicator */}
         <div style={{
           position: "absolute", bottom: "24px", left: "50%",
           transform: "translateX(-50%)", zIndex: 10,

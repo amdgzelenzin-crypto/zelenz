@@ -142,7 +142,7 @@ export default function BridalMakeupPalaPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold">
-                Pala's #1 Bridal Makeup Artist • 500+ Happy Brides • 4.9/5 Rating
+                HD & Airbrush Bridal Makeup · Pala, Kerala
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-center" style={{fontFamily: 'var(--font-display)', letterSpacing: '0.01em'}}>
