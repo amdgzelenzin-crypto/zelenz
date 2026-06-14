@@ -1,14 +1,11 @@
-# Blog Images - Local Storage
+# Blog Images
 
-These images were provided by user for blog posts. Save to /public/images/blog/
+Hero/thumbnail images for journal posts at `/blog`.
 
-## Blog Post Images:
-1. blog-1-image.jpg - Traditional Indian bridal makeup (left woman with pink flower)
-2. blog-2-image.jpg - Traditional Indian bridal makeup (right woman with white flower)  
-3. blog-3-image.jpg - Traditional Indian bridal makeup (both women together)
+| File | Post |
+|------|------|
+| `hd-vs-airbrush.png` | HD vs Airbrush guide · Best salon Pala · Keratin guide |
+| `christian-bride.png` | Christian bridal trends 2025 · Salon near Kottayam guide |
+| `pre-wedding-skin-prep.png` | Pre-wedding skin prep · Gel nails & HydraFacial · HydraFacial guide |
 
-## Notes:
-- Images provided by user on March 29, 2026
-- All images show traditional Indian bridal attire and makeup
-- High quality, culturally appropriate for Kerala bridal content
-- Watermarks visible in original images (KIRANDEEP photography, weddingbazaar)
+Paths are referenced from `lib/blog.ts`.

@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 28, 2026",
     author: "Nikita Liby",
     category: "Bridal Tips",
-    image: "/images/blog/blog-1-image.jpg",
+    image: "/images/blog/hd-vs-airbrush.png",
     content: `
       <h3>There's no universally right answer. But there is a right answer for you.</h3>
       <p>Every bride who walks into NIXTUDIO eventually asks the same question — <em>HD or Airbrush?</em> And honestly, the answer isn't something you can Google your way to. It depends on your skin, your event, your timeline, and sometimes even the time of day your photographs will be taken.</p>
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 27, 2026",
     author: "Nikita Liby",
     category: "Trends",
-    image: "/images/blog/blog-2-image.jpg",
+    image: "/images/blog/christian-bride.png",
     content: `
       <h3>The Christian bride in Kerala has always had her own aesthetic. 2025 is refining it beautifully.</h3>
       <p>There's a particular kind of grace to Christian bridal makeup in Kerala. It's not the bold drama of a South Indian temple wedding or the richness of a Muslim bridal look. It's quieter than that. More restrained. The kind of beauty that photographs softly and ages well in the albums your grandchildren will one day look through.</p>
@@ -113,7 +113,7 @@ export const blogPosts: BlogPost[] = [
     date: "March 25, 2026",
     author: "Nikita Liby",
     category: "Skin Prep",
-    image: "/images/blog/blog-3-image.jpg",
+    image: "/images/blog/pre-wedding-skin-prep.png",
     content: `
       <h3>Your makeup is only as good as the skin underneath it.</h3>
       <p>This isn't something most studios will say upfront, because it's not in their interest to tell you that the work happens before you arrive. But it's true, and it's especially true in Kerala.</p>
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 10, 2026",
     author: "Nikita Liby",
     category: "Salon Guide",
-    image: "/images/blog/blog-2-image.jpg",
+    image: "/images/blog/hd-vs-airbrush.png",
     content: `
       <h3>Not every salon in Pala is built the same.</h3>
       <p>If you search "best salon Pala" or "beauty parlour near me," you'll find dozens of listings. The difference isn't always price — it's product quality, hygiene, staff training, and whether the salon understands Kerala's humidity.</p>
@@ -184,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 8, 2026",
     author: "Nikita Liby",
     category: "Salon Services",
-    image: "/images/blog/blog-3-image.jpg",
+    image: "/images/blog/pre-wedding-skin-prep.png",
     content: `
       <h3>Two services. One studio. Built for Kerala.</h3>
       <p>Gel nails and HydraFacial are among the most searched salon services in Pala and Kottayam — but not every parlour offers them at studio grade. Here's what we offer at NIXTUDIO and what you should expect.</p>
@@ -206,7 +206,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 12, 2026",
     author: "Nikita Liby",
     category: "Hair Care",
-    image: "/images/blog/blog-1-image.jpg",
+    image: "/images/blog/hd-vs-airbrush.png",
     content: `
       <h3>Kerala hair is a different problem.</h3>
       <p>If you've had keratin in Mumbai or Bangalore and expected the same result in Pala, you already know — humidity wins. Within weeks, frizz returns and the gloss fades.</p>
@@ -234,7 +234,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 11, 2026",
     author: "Nikita Liby",
     category: "Skin Care",
-    image: "/images/blog/blog-3-image.jpg",
+    image: "/images/blog/pre-wedding-skin-prep.png",
     content: `
       <h3>HydraFacial is not a basic cleanup.</h3>
       <p>Vortex-Fusion HydraFacial uses medical-grade technology to cleanse, extract, hydrate, and protect in one session — without the downtime of aggressive peels.</p>
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
     date: "June 9, 2026",
     author: "Nikita Liby",
     category: "Salon Guide",
-    image: "/images/blog/blog-2-image.jpg",
+    image: "/images/blog/christian-bride.png",
     content: `
       <h3>The best salon near Kottayam isn't always in Kottayam town.</h3>
       <p>Search "salon near Kottayam" and you'll see dozens of neighbourhood parlours. What brings discerning clients to Pala is consistency — premium products, medical-grade facials, and bridal expertise under one roof.</p>
