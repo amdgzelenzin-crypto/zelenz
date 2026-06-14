@@ -131,24 +131,27 @@ export default function ContactPage() {
       <section className="pb-20 lg:pb-28">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-            {/* LEFT — WHATSAPP */}
+            {/* LEFT — WHATSAPP + STUDIO IMAGE */}
             <FadeUp>
-              <div className="relative h-full flex flex-col overflow-hidden min-h-[500px]">
-                {/* Background Image - full clean image */}
-                <div className="absolute inset-0 z-0">
+              <div className="relative h-full flex flex-col min-h-[520px]">
+                <div className="bridal-form-image-frame relative flex-1 min-h-[420px]">
                   <Image
-                    src="/images/nixtudio-bridal-makeup-appointment-booking.webp"
+                    src="/images/book-bridal-makeup-appointment-pala.webp"
                     alt="Book a premium bridal makeup consultation at NIXTUDIO Pala Kerala"
                     fill
-                    style={{
-                      objectFit: 'contain',
-                      objectPosition: 'center',
-                    }}
-                    loading="lazy"
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={85}
+                    priority
                   />
                 </div>
-                {/* Button at bottom */}
-                <div className="relative z-10 mt-auto p-8 lg:p-10">
+                <div className="mt-6 p-6 lg:p-8 rounded-2xl border border-[#FFE4E8] bg-white/80 backdrop-blur-sm">
+                  <p
+                    className="text-[11px] font-sans font-medium tracking-[0.15em] uppercase mb-3"
+                    style={{ color: "#A86070" }}
+                  >
+                    Quick contact
+                  </p>
                   <a
                     href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
@@ -158,14 +161,16 @@ export default function ContactPage() {
                   >
                     Open WhatsApp
                   </a>
-                  <p style={{
-                    fontFamily: 'var(--font-body, serif)',
-                    fontSize: '13px',
-                    fontStyle: 'italic',
-                    color: '#A86070',
-                    marginTop: '12px',
-                  }}>
-                    Or email us at{' '}
+                  <p
+                    style={{
+                      fontFamily: "var(--font-body, serif)",
+                      fontSize: "13px",
+                      fontStyle: "italic",
+                      color: "#A86070",
+                      marginTop: "12px",
+                    }}
+                  >
+                    Or email us at{" "}
                     <ProtectedEmail />
                   </p>
                 </div>
@@ -198,7 +203,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="text-espresso border-b border-espresso/40 hover:border-espresso transition-colors"
                       >
-                        WhatsApp us directly at +91 70347 26407
+                        WhatsApp us directly at +91 70347 26402
                       </a>
                       .
                     </p>
