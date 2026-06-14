@@ -87,7 +87,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
           position: fixed;
           inset: 0;
           background: #3D1520;
-          z-index: 99999;
+          z-index: 100001;
           display: flex;
           flex-direction: column;
           align-items: center;

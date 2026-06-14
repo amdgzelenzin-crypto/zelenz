@@ -29,6 +29,7 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   useLayoutEffect(() => {
     const clearFirstVisit = () => {
       document.documentElement.classList.remove('nix-first-visit')
+      document.documentElement.classList.remove('nix-has-loader')
     }
 
     try {
@@ -42,6 +43,7 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
     }
 
     setIsLoading(true)
+    document.documentElement.classList.add('nix-has-loader')
     const timer = setTimeout(() => {
       setIsLoading(false)
       clearFirstVisit()
@@ -59,7 +61,7 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
     <LoadingContext.Provider value={{ isLoading, isReady }}>
       {children}
       {isLoading && (
-        <div className="fixed inset-0 z-[10000]" aria-hidden="true">
+        <div className="fixed inset-0 z-[100001]" aria-hidden="true">
           <LoadingScreen controlled />
         </div>
       )}

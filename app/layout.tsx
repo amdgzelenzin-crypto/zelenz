@@ -168,9 +168,10 @@ export default function RootLayout({
               position: fixed;
               inset: 0;
               background: #3D1520;
-              z-index: 99999;
+              z-index: 9998;
             }
             html.nix-first-visit #nix-app-shell { visibility: hidden; }
+            html.nix-has-loader::before { display: none; }
           `
         }} />
         <script
