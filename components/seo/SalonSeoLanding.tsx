@@ -227,19 +227,19 @@ export default function SalonSeoLanding({ config }: Props) {
               Frequently Asked Questions
             </h2>
           </FadeUp>
-          <div className="space-y-4">
+          <div className="space-y-5">
             {config.faqs.map((faq, index) => (
               <FadeUp key={faq.question} delay={index * 0.04}>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div className="bg-[#4A2230]/90 border border-[#E8CC90]/25 rounded-xl p-6 md:p-7 shadow-lg">
                   <h3
-                    className="text-[#E8CC90] mb-3 text-lg font-light italic"
-                    style={{ fontFamily: 'var(--font-display), Georgia, serif' }}
+                    className="text-[#F5E6C8] mb-4 text-lg md:text-xl font-normal"
+                    style={{ fontFamily: 'var(--font-display), Georgia, serif', lineHeight: 1.35 }}
                   >
                     {faq.question}
                   </h3>
                   <p
-                    className="text-[#FDE8E8]/85 leading-relaxed text-sm"
-                    style={{ fontFamily: 'var(--font-body), Georgia, serif' }}
+                    className="text-[#FFF5F7] leading-relaxed text-base"
+                    style={{ fontFamily: 'var(--font-sans), sans-serif', fontWeight: 400 }}
                   >
                     {faq.answer}
                   </p>
