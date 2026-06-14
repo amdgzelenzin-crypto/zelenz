@@ -47,6 +47,8 @@ interface BridalFormData {
   referral: string;
 }
 
+const FORM_FIELD = "bridal-form-field";
+
 export default function BridalPage() {
   const [submitted, setSubmitted] = useState(false);
   const {
@@ -153,7 +155,7 @@ export default function BridalPage() {
             <FadeUp className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Christian Bridal Look</h3>
-                <p className="font-body text-white/90 text-sm leading-relaxed">
+                <p className="font-body text-[#3D1520]/85 text-sm leading-relaxed">
                   Specialized in the ethereal 'Glow-from-within' aesthetic for Christian church weddings in Pala and Kottayam. We focus on luminous skin and 'Azhagu' sophistication that complements the white bridal gown and delicate veil.
                 </p>
               </div>
@@ -161,7 +163,7 @@ export default function BridalPage() {
             <FadeUp delay={0.1} className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Traditional Hindu Muhurtham</h3>
-                <p className="font-body text-white/90 text-sm leading-relaxed">
+                <p className="font-body text-[#3D1520]/85 text-sm leading-relaxed">
                   Expert color theory mapping for traditional Hindu brides in Kottayam. We balance rich temple gold jewelry with bold, high-definition makeup that remains flawless through the warmth of the mandap.
                 </p>
               </div>
@@ -169,7 +171,7 @@ export default function BridalPage() {
             <FadeUp delay={0.2} className="h-full">
               <div className="p-8 lg:p-10 border border-espresso/5 rounded-2xl bg-[#FFF9FA] hover:bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgb(183,110,121,0.08)] h-full">
                 <h3 className="font-sans text-[11px] tracking-[0.2em] text-[#B76E79] mb-4 uppercase">Muslim Bridal Magnificence</h3>
-                <p className="font-body text-white/90 text-sm leading-relaxed">
+                <p className="font-body text-[#3D1520]/85 text-sm leading-relaxed">
                   Intricate artistry designed for Muslim brides, focusing on striking eye definitions and regal styling that commands attention during the Nikkah and grand reception ceremonies.
                 </p>
               </div>
@@ -177,10 +179,10 @@ export default function BridalPage() {
           </div>
           
           <FadeUp delay={0.3} className="mt-20 pt-16 border-t border-espresso/5">
-            <h2 className="font-serif font-light text-white text-3xl lg:text-5xl max-w-3xl leading-snug">
+            <h2 className="font-serif font-light text-[#3D1520] text-3xl lg:text-5xl max-w-3xl leading-snug">
               Specialized <em>Manavatty</em> Beauty Studio.
             </h2>
-            <p className="font-sans text-white text-sm mt-6 max-w-lg">
+            <p className="font-sans text-[#3D1520]/80 text-sm mt-6 max-w-lg">
               NIXTUDIO is the region's premier destination for high-intent 'Azhagu' makeup in Pala. Specializing in Christian bride church ceremony styling and 'Pala Bridal Edit' photography-focused technical excellence for elite brides in Kottayam.
             </p>
           </FadeUp>
@@ -197,15 +199,15 @@ export default function BridalPage() {
                 <p className="label-caps mb-4">The Commitment</p>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h2 className="font-serif font-light text-white mb-6">
+                <h2 className="font-serif font-light text-[#3D1520] mb-6">
                   One artist. Your day.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.2}>
-                <p className="font-sans text-white/80 max-w-lg mb-4">
+                <p className="font-sans text-[#3D1520]/85 max-w-lg mb-4">
                   Every bridal look at NIXTUDIO — from your engagement to your wedding reception — is created entirely by Nikita. Our 'Humidity-resistant Airbrush Finish' is specifically engineered to survive 16-hour Kerala wedding marathons without cakeing.
                 </p>
-                <p className="font-sans text-white/80 max-w-lg">
+                <p className="font-sans text-[#3D1520]/85 max-w-lg">
                   Ask about our 'Happy Bride Story' sessions to capture your transformation from first look to final 'Manavatty' elegance.
                 </p>
               </FadeUp>
@@ -243,10 +245,10 @@ export default function BridalPage() {
                 <span className="font-serif block mb-3" style={{ fontSize: "80px", fontWeight: 300, color: "#F9919F", lineHeight: 1 }}>
                   {step.num}
                 </span>
-                <h3 className="font-serif text-xl mb-3" style={{ color: "#FFFFFF" }}>
+                <h3 className="font-serif text-xl mb-3 text-[#3D1520]">
                   {step.title}
                 </h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.9)" }}>
+                <p className="font-sans text-sm leading-relaxed text-[#3D1520]/85">
                   {step.desc}
                 </p>
               </StaggerItem>
@@ -263,8 +265,8 @@ export default function BridalPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
             <p className="label-caps mb-4">The Bridal Edit</p>
-            <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-4">Packages & Price</h2>
-            <p className="font-sans text-white/80 text-sm mb-12 max-w-lg">
+            <h2 className="font-serif font-light text-[#3D1520] text-3xl lg:text-4xl mb-4">Packages & Price</h2>
+            <p className="font-sans text-[#3D1520]/80 text-sm mb-12 max-w-lg">
               {BRIDAL_PACKAGE_EVENTS}. Two thoughtfully designed packages — Standard and Premium — tailored to different preferences and budgets.
             </p>
           </FadeUp>
@@ -323,7 +325,7 @@ export default function BridalPage() {
           <StaggerContainer className="space-y-8 max-w-2xl" staggerDelay={0.1}>
             {BRIDAL_GOOD_TO_KNOW.map((text, i) => (
               <StaggerItem key={i}>
-                <p className="font-sans text-white/90 leading-relaxed">
+                <p className="font-sans text-[#3D1520]/88 leading-relaxed">
                   {text}
                 </p>
               </StaggerItem>
@@ -333,209 +335,214 @@ export default function BridalPage() {
       </section>
 
       {/* ──────── BOOKING FORM ──────── */}
-      <section className="section-padding section-white">
+      <section className="section-padding texture-grain" style={{ background: "#FFF5F7" }}>
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Form Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             <div className="lg:col-span-7">
               <FadeUp>
-                <h2 className="font-serif font-light text-white text-3xl lg:text-4xl mb-3">
-                  Let&rsquo;s begin.
-                </h2>
-              </FadeUp>
-              <FadeUp delay={0.1}>
-                <p className="font-sans text-white/80 mb-4 max-w-lg">
-                  Share your wedding details and we&rsquo;ll confirm your availability.
-                </p>
-              </FadeUp>
-              <FadeUp delay={0.15}>
-                <p className="font-sans text-sm text-white/90 mb-10 max-w-lg">
-                  NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
-                </p>
-              </FadeUp>
+                <div className="bridal-form-card p-8 lg:p-12">
+                  <p className="label-caps mb-3">Reserve Your Date</p>
+                  <h2 className="font-serif font-light text-espresso text-3xl lg:text-[2.75rem] mb-3 leading-tight">
+                    Let&rsquo;s begin.
+                  </h2>
+                  <p className="font-sans text-espresso/70 mb-6 max-w-lg leading-relaxed">
+                    Share your wedding details and we&rsquo;ll confirm your availability with Nikita Liby personally.
+                  </p>
 
-              {submitted ? (
-                <FadeUp>
-                  <div className="max-w-lg p-8 border border-taupe/15">
-                    <p className="font-serif text-2xl text-white mb-3">
-                      Thank you.
-                    </p>
-                    <p className="font-sans text-white/90 text-sm">
-                      We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
-                      <a
-                        href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white border-b border-white/40 hover:border-white transition-colors"
-                      >
-                        WhatsApp us directly at +91 70347 26402
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </FadeUp>
-              ) : (
-                <FadeUp delay={0.2}>
-                  <form
-                    onSubmit={handleSubmit(onSubmit)}
-                    className="max-w-2xl space-y-6"
-                  >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Name */}
-                  <div>
-                    <label className="label-caps block mb-2" htmlFor="bridal-name">
-                      Full Name
-                    </label>
-                    <input
-                      id="bridal-name"
-                      type="text"
-                      {...register("name", { required: "Name is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
-                    />
-                    {errors.name && (
-                      <span className="text-xs text-brass mt-1 block">
-                        {errors.name.message}
-                      </span>
-                    )}
+                  <div className="flex flex-wrap gap-2.5 mb-8">
+                    <span className="bridal-trust-pill">HD from ₹27,500</span>
+                    <span className="bridal-trust-pill">Personally by Nikita</span>
+                    <span className="bridal-trust-pill">Studio in Pala</span>
                   </div>
 
-                  {/* Phone */}
-                  <div>
-                    <label className="label-caps block mb-2" htmlFor="bridal-phone">
-                      Phone Number
-                    </label>
-                    <input
-                      id="bridal-phone"
-                      type="tel"
-                      {...register("phone", { required: "Phone is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
-                    />
-                    {errors.phone && (
-                      <span className="text-xs text-brass mt-1 block">
-                        {errors.phone.message}
-                      </span>
-                    )}
-                  </div>
+                  <p className="font-sans text-sm text-espresso/60 mb-8 max-w-lg leading-relaxed border-l-2 border-[#D4A055]/50 pl-4">
+                    NIXTUDIO is a studio-only experience. We are based in Pala and do not offer home or venue visits. All services are provided at the salon.
+                  </p>
 
-                  {/* Date */}
-                  <div>
-                    <label className="label-caps block mb-2" htmlFor="bridal-date">
-                      Date of Function
-                    </label>
-                    <input
-                      id="bridal-date"
-                      type="date"
-                      {...register("date", { required: "Date is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
-                    />
-                    {errors.date && (
-                      <span className="text-xs text-brass mt-1 block">
-                        {errors.date.message}
-                      </span>
-                    )}
-                  </div>
+                  {submitted ? (
+                    <div className="p-8 rounded-xl border border-[#FFE4E8] bg-[#FFF9FA]">
+                      <p className="font-serif text-2xl text-espresso mb-3">
+                        Thank you.
+                      </p>
+                      <p className="font-sans text-espresso/70 text-sm leading-relaxed">
+                        We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
+                        <a
+                          href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#B76E79] border-b border-[#B76E79]/40 hover:border-[#B76E79] transition-colors"
+                        >
+                          WhatsApp us directly at +91 70347 26402
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  ) : (
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="space-y-5"
+                    >
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                          <label className="label-caps block mb-2" htmlFor="bridal-name">
+                            Full Name
+                          </label>
+                          <input
+                            id="bridal-name"
+                            type="text"
+                            placeholder="Your full name"
+                            {...register("name", { required: "Name is required" })}
+                            className={FORM_FIELD}
+                          />
+                          {errors.name && (
+                            <span className="text-xs text-[#C4903A] mt-1.5 block">
+                              {errors.name.message}
+                            </span>
+                          )}
+                        </div>
 
-                  {/* Leave Time */}
-                  <div>
-                    <label className="label-caps block mb-2" htmlFor="bridal-time">
-                      Time You Need to Leave
-                    </label>
-                    <input
-                      id="bridal-time"
-                      type="time"
-                      {...register("leaveTime", { required: "Time is required" })}
-                      className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
-                    />
-                    {errors.leaveTime && (
-                      <span className="text-xs text-brass mt-1 block">
-                        {errors.leaveTime.message}
-                      </span>
-                    )}
-                  </div>
-                </div>
+                        <div>
+                          <label className="label-caps block mb-2" htmlFor="bridal-phone">
+                            Phone Number
+                          </label>
+                          <input
+                            id="bridal-phone"
+                            type="tel"
+                            placeholder="+91"
+                            {...register("phone", { required: "Phone is required" })}
+                            className={FORM_FIELD}
+                          />
+                          {errors.phone && (
+                            <span className="text-xs text-[#C4903A] mt-1.5 block">
+                              {errors.phone.message}
+                            </span>
+                          )}
+                        </div>
 
-                {/* Event Type */}
-                <div>
-                  <label className="label-caps block mb-2" htmlFor="bridal-event">
-                    Event Type
-                  </label>
-                  <select
-                    id="bridal-event"
-                    {...register("eventType", { required: "Please select event type" })}
-                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors appearance-none"
-                  >
-                    <option value="">Select event type</option>
-                    <option value="engagement">Engagement</option>
-                    <option value="wedding">Wedding</option>
-                    <option value="reception">Wedding Reception</option>
-                  </select>
-                  {errors.eventType && (
-                    <span className="text-xs text-brass mt-1 block">
-                      {errors.eventType.message}
-                    </span>
+                        <div>
+                          <label className="label-caps block mb-2" htmlFor="bridal-date">
+                            Date of Function
+                          </label>
+                          <input
+                            id="bridal-date"
+                            type="date"
+                            {...register("date", { required: "Date is required" })}
+                            className={FORM_FIELD}
+                          />
+                          {errors.date && (
+                            <span className="text-xs text-[#C4903A] mt-1.5 block">
+                              {errors.date.message}
+                            </span>
+                          )}
+                        </div>
+
+                        <div>
+                          <label className="label-caps block mb-2" htmlFor="bridal-time">
+                            Time You Need to Leave
+                          </label>
+                          <input
+                            id="bridal-time"
+                            type="time"
+                            {...register("leaveTime", { required: "Time is required" })}
+                            className={FORM_FIELD}
+                          />
+                          {errors.leaveTime && (
+                            <span className="text-xs text-[#C4903A] mt-1.5 block">
+                              {errors.leaveTime.message}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="label-caps block mb-2" htmlFor="bridal-event">
+                          Event Type
+                        </label>
+                        <select
+                          id="bridal-event"
+                          {...register("eventType", { required: "Please select event type" })}
+                          className={`${FORM_FIELD} appearance-none cursor-pointer`}
+                        >
+                          <option value="">Select event type</option>
+                          <option value="engagement">Engagement</option>
+                          <option value="wedding">Wedding</option>
+                          <option value="reception">Wedding Reception</option>
+                        </select>
+                        {errors.eventType && (
+                          <span className="text-xs text-[#C4903A] mt-1.5 block">
+                            {errors.eventType.message}
+                          </span>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="label-caps block mb-2" htmlFor="bridal-services">
+                          Services Required
+                          <span className="text-espresso/40 text-[10px] normal-case tracking-normal ml-2">
+                            Optional
+                          </span>
+                        </label>
+                        <textarea
+                          id="bridal-services"
+                          rows={3}
+                          placeholder="e.g. HD bridal, hair styling, guest makeup for 4"
+                          {...register("services")}
+                          className={`${FORM_FIELD} resize-none`}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="label-caps block mb-2" htmlFor="bridal-referral">
+                          How Did You Find Us?
+                          <span className="text-espresso/40 text-[10px] normal-case tracking-normal ml-2">
+                            Optional
+                          </span>
+                        </label>
+                        <input
+                          id="bridal-referral"
+                          type="text"
+                          placeholder="Instagram, friend, Google..."
+                          {...register("referral")}
+                          className={FORM_FIELD}
+                        />
+                      </div>
+
+                      <div className="pt-2">
+                        <button
+                          type="submit"
+                          className="btn-primary w-full sm:w-auto px-12 py-4"
+                        >
+                          Send Enquiry via WhatsApp
+                        </button>
+                        <p className="text-xs text-espresso/50 mt-3 font-sans">
+                          You will be redirected to WhatsApp to complete your enquiry.
+                        </p>
+                      </div>
+                    </form>
                   )}
                 </div>
-
-                {/* Services */}
-                <div>
-                  <label className="label-caps block mb-2" htmlFor="bridal-services">
-                    Services Required
-                    <span className="text-taupe/50 text-[10px] normal-case ml-2">
-                      Optional
-                    </span>
-                  </label>
-                  <textarea
-                    id="bridal-services"
-                    rows={3}
-                    {...register("services")}
-                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors resize-none"
-                  />
-                </div>
-
-                {/* Referral */}
-                <div>
-                  <label className="label-caps block mb-2" htmlFor="bridal-referral">
-                    How Did You Find Us?
-                    <span className="text-taupe/50 text-[10px] normal-case ml-2">
-                      Optional
-                    </span>
-                  </label>
-                  <input
-                    id="bridal-referral"
-                    type="text"
-                    {...register("referral")}
-                    className="w-full px-4 py-3 bg-transparent border border-white/25 text-white font-sans text-sm focus:border-white focus:outline-none transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    className="btn-primary w-full sm:w-auto px-10 py-4 mt-4"
-                  >
-                    Send Enquiry via WhatsApp
-                  </button>
-                  <p className="text-xs text-taupe/60 mt-3 font-sans">
-                    You will be redirected to WhatsApp to complete your enquiry.
-                  </p>
-                </div>
-              </form>
-            </FadeUp>
-          )}
+              </FadeUp>
             </div>
-            
-            {/* Image */}
+
             <div className="lg:col-span-5">
-              <FadeUp className="lg:col-start-9">
-                <div className="w-full aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
-                  <Image
-                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Book a premium bridal makeup consultation at NIXTUDIO Pala Kerala"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                    quality={80}
-                  />
+              <FadeUp delay={0.15}>
+                <div className="lg:sticky lg:top-28 space-y-5">
+                  <div className="bridal-form-image-frame aspect-[4/5] relative">
+                    <Image
+                      src="/images/studio/bridal-prep-suite-pala-kottayam.webp"
+                      alt="Private bridal prep suite at NIXTUDIO premium bridal makeup studio in Pala Kerala"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      quality={85}
+                    />
+                  </div>
+                  <p
+                    className="text-center text-sm italic leading-relaxed"
+                    style={{ fontFamily: "var(--font-body), Georgia, serif", color: "#6B4F55" }}
+                  >
+                    Every bridal booking is handled personally by Nikita Liby — from consultation to final touch-up.
+                  </p>
                 </div>
               </FadeUp>
             </div>
