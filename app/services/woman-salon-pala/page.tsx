@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FadeUp } from '@/components/ui/AnimationWrapper';
+import { getGalleryImages } from '@/lib/gallery-utils';
 
 export const metadata: Metadata = {
   title: 'Best Woman Salon in Pala | Premium Beauty Services by Nixtudio',
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function WomanSalonPage() {
+  const nailsImage =
+    getGalleryImages().find((img) => img.category === 'nails')?.src ??
+    '/images/studio/premium-makeup-studio-interior-kerala.webp';
+
   return (
     <>
       {/* Hero Section */}
@@ -112,7 +117,7 @@ export default function WomanSalonPage() {
               {
                 title: "Bespoke Nail Art",
                 description: "Custom nail designs and extensions using premium gel systems for lasting beauty and nail health.",
-                image: "/images/gallery/gel-nail-extensions-pala-kottayam.webp",
+                image: nailsImage,
                 price: "From ₹2,000"
               }
             ].map((service, index) => (
