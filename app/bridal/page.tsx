@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import { PremiumIcon } from "@/components/ui/PremiumIcon";
 import {
@@ -49,6 +49,51 @@ interface BridalFormData {
 
 const FORM_FIELD = "bridal-form-field";
 
+const BRIDAL_HERO_POSTER = "/images/premium-bridal-makeup-studio-pala-kerala-hero.webp";
+const BRIDAL_HERO_VIDEO = "/videos/bridal-hero.mp4";
+
+function BridalHeroMedia() {
+  const [reduceMotion, setReduceMotion] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReduceMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  if (reduceMotion !== false) {
+    return (
+      <Image
+        src={BRIDAL_HERO_POSTER}
+        alt="Nix-Studio-Pala-Christian-Manavatty-Bridal-Makeup-Artist-Kottayam — Professional 'Azhagu' makeup studio by Nikita Liby"
+        fill
+        className="object-cover"
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        quality={85}
+      />
+    );
+  }
+
+  return (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      poster={BRIDAL_HERO_POSTER}
+      aria-hidden
+      className="absolute inset-0 h-full w-full object-cover"
+    >
+      <source src={BRIDAL_HERO_VIDEO} type="video/mp4" />
+    </video>
+  );
+}
+
 export default function BridalPage() {
   const [submitted, setSubmitted] = useState(false);
   const {
@@ -79,17 +124,7 @@ export default function BridalPage() {
       {/* ──────── BRIDAL HERO ──────── */}
       <section className="relative h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0 skeleton">
-          <Image
-            src="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
-            alt="Nix-Studio-Pala-Christian-Manavatty-Bridal-Makeup-Artist-Kottayam — Professional 'Azhagu' makeup studio by Nikita Liby"
-            fill
-            className="object-cover"
-            priority
-            fetchPriority="high"
-            loading="eager"
-            sizes="100vw"
-            quality={85}
-          />
+          <BridalHeroMedia />
         </div>
         <div className="absolute inset-0 bg-espresso/55" />
         <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 lg:px-12 pb-16 lg:pb-24">
