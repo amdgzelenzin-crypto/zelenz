@@ -60,7 +60,7 @@ export default function BridalMakeupChecklistPage() {
         "Research and shortlist makeup artists",
         "Check artist availability for your date",
         "Read reviews and examine portfolios",
-        "Schedule initial consultations",
+        "Check artist availability and book your date",
         "Start skincare routine for glowing skin"
       ]
     },
@@ -335,7 +335,7 @@ export default function BridalMakeupChecklistPage() {
                   </li>
                   <li>
                     <Link href="/contact" className="text-green-600 hover:underline">
-                      Book Consultation →
+                      Check Availability →
                     </Link>
                   </li>
                 </ul>

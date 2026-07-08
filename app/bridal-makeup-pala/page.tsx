@@ -195,7 +195,7 @@ export default function BridalMakeupPalaPage() {
                   href="/contact"
                   className="bg-[#D4A055] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#B8944A] transition"
                 >
-                  Book Free Consultation
+                  Check Availability
                 </Link>
               </div>
             </div>
@@ -685,14 +685,14 @@ export default function BridalMakeupPalaPage() {
                 href="/contact"
                 className="bg-white text-[#D4A055] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
               >
-                Book Free Consultation
+                Check Availability
               </Link>
             </div>
             
             <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="font-bold mb-2"><IconLabel icon="gift" className="justify-center">Free Consultation</IconLabel></div>
-                <div>Discuss your wedding look with no obligation</div>
+                <div className="font-bold mb-2"><IconLabel icon="gift" className="justify-center">Day-of Consultation</IconLabel></div>
+                <div>Thorough look planning on your function day — no separate trials</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
                 <div className="font-bold mb-2">Transparent Pricing</div>

@@ -70,7 +70,7 @@ export const bestBridalMakeupKottayamConfig: SalonSeoPageConfig = {
     { title: 'Standard Airbrush', description: 'Humidity-resistant airbrush — ideal for outdoor Kottayam weddings.', price: '₹32,500' },
     { title: 'Premium Signature Airbrush', description: 'Luxury brands, saree draping included, signature subtle glam.', price: '₹40,000' },
     { title: 'Home Service Kottayam', description: 'On-location bridal makeup across Kottayam district.', price: 'On request' },
-    { title: 'Party & Guest Makeup', description: 'Bridesmaids, family & engagement guests.', price: 'From ₹4,500' },
+    { title: 'Party & Guest Makeup', description: 'Bridesmaids, family & engagement guests.', price: 'From ₹4,500+' },
     { title: 'Pre-Bridal Skin Prep', description: 'Facials & skin protocol 30 days before your wedding.', price: 'From ₹4,500' },
   ],
   faqs: [
@@ -82,7 +82,7 @@ export const bestBridalMakeupKottayamConfig: SalonSeoPageConfig = {
     {
       question: 'How much does bridal makeup cost in Kottayam at NIXTUDIO?',
       answer:
-        'Bridal packages: Standard HD ₹27,500, Standard Airbrush ₹32,500, Premium Signature Airbrush ₹40,000 — for engagement, wedding, or reception. Guest makeup from ₹4,500. Full pricing at nixtudio.in/bridal.',
+        'Bridal packages: Standard HD ₹27,500, Standard Airbrush ₹32,500, Premium Signature Airbrush ₹40,000 — for engagement, wedding, or reception. Guest makeup from ₹4,500+. Full pricing at nixtudio.in/bridal.',
     },
     {
       question: 'Does NIXTUDIO offer bridal makeup home service in Kottayam?',

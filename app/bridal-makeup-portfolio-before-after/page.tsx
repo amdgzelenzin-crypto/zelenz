@@ -293,23 +293,23 @@ export default function BridalMakeupPortfolioPage() {
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12">Your Transformation Process</h2>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="bg-pink-100 text-pink-600 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   1
                 </div>
-                <h3 className="text-lg font-bold mb-2">Consultation</h3>
+                <h3 className="text-lg font-bold mb-2">Book Your Date</h3>
                 <p className="text-gray-600 text-sm">
-                  Skin analysis, outfit discussion, and look planning
+                  Secure your slot and receive the NIXTUDIO pre-bridal guide
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-pink-100 text-pink-600 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   2
                 </div>
-                <h3 className="text-lg font-bold mb-2">Trial Session</h3>
+                <h3 className="text-lg font-bold mb-2">Day-of Consultation</h3>
                 <p className="text-gray-600 text-sm">
-                  Test the look, make adjustments, ensure perfection
+                  Skin analysis, outfit discussion, and look planning before makeup begins
                 </p>
               </div>
               <div className="text-center">
@@ -318,16 +318,7 @@ export default function BridalMakeupPortfolioPage() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">Wedding Day</h3>
                 <p className="text-gray-600 text-sm">
-                  Professional application with premium products
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-pink-100 text-pink-600 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  4
-                </div>
-                <h3 className="text-lg font-bold mb-2">Perfect Result</h3>
-                <p className="text-gray-600 text-sm">
-                  Stunning look that lasts 16+ hours
+                  Professional application with premium products — stunning look that lasts 16+ hours
                 </p>
               </div>
             </div>
@@ -355,7 +346,7 @@ export default function BridalMakeupPortfolioPage() {
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
-                <strong><IconLabel icon="gift">Limited Time Offer:</IconLabel></strong> Book this month and get a free pre-bridal skincare treatment worth ₹5,000!
+                <strong><IconLabel icon="gift">When you book:</IconLabel></strong> Receive the NIXTUDIO pre-bridal guide — skincare and prep notes for your big day.
               </p>
             </div>
           </div>

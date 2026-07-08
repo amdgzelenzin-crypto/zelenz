@@ -50,7 +50,6 @@ export default function BridalCalculator() {
     { value: 'mehndi', label: 'Mehndi/Haldi' },
     { value: 'sangeet', label: 'Sangeet/Reception' },
     { value: 'wedding', label: 'Wedding Day' },
-    { value: 'postwedding', label: 'Post-Wedding Shoot' }
   ]
 
   const skinTypes = [
@@ -338,7 +337,7 @@ export default function BridalCalculator() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Link href="/contact" className="bg-rose text-white py-4 rounded-lg font-semibold text-center hover:bg-rose/90 transition-colors">
-                    Book Free Consultation
+                    Check Availability
                   </Link>
                   <Link href="/bridal-makeup-pala" className="border border-rose text-rose py-4 rounded-lg font-semibold text-center hover:bg-rose/5 transition-colors">
                     View Full Portfolio

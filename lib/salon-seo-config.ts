@@ -75,7 +75,7 @@ export const bestSalonPalaConfig: SalonSeoPageConfig = {
     { title: 'Facials & Skin', description: 'Glass skin facials, deep cleansing & pre-bridal skin prep.', price: 'From ₹2,500' },
     { title: 'Waxing & Threading', description: 'Full-body waxing, eyebrow shaping, upper lip & bridal threading.', price: 'From ₹150' },
     { title: 'Bridal Makeup', description: '#1 bridal makeup artist in Pala — HD & airbrush by Nikita Liby.', price: 'From ₹27,500' },
-    { title: 'Party & Guest Makeup', description: 'Engagement, reception & guest styling for every occasion.', price: 'From ₹4,500' },
+    { title: 'Party & Guest Makeup', description: 'Engagement, reception & guest styling for every occasion.', price: 'From ₹4,500+' },
   ],
   faqs: [
     {
@@ -106,7 +106,7 @@ export const bestSalonPalaConfig: SalonSeoPageConfig = {
     {
       question: 'What are salon prices in Pala at NIXTUDIO?',
       answer:
-        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500, bridal from ₹27,500. Full menu at nixtudio.in/services.',
+        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500+, bridal from ₹27,500. Full menu at nixtudio.in/services.',
     },
   ],
   areaServed: PALA_LOCAL_AREAS,
@@ -153,7 +153,7 @@ export const bestSalonKottayamConfig: SalonSeoPageConfig = {
     { title: 'Facials & Skin', description: 'Glass skin facials, deep cleansing & pre-bridal prep.', price: 'From ₹2,500' },
     { title: 'Bridal & Party', description: '#1 bridal makeup artist Kottayam trusts — HD & airbrush.', price: 'From ₹27,500' },
     { title: 'Waxing & Threading', description: 'Eyebrow shaping, face threading & body waxing.', price: 'From ₹150' },
-    { title: 'Party Makeup', description: 'Engagement, reception & guest styling.', price: 'From ₹4,500' },
+    { title: 'Party Makeup', description: 'Engagement, reception & guest styling.', price: 'From ₹4,500+' },
   ],
   faqs: [
     {
@@ -184,7 +184,7 @@ export const bestSalonKottayamConfig: SalonSeoPageConfig = {
     {
       question: 'What are salon prices for Kottayam clients at NIXTUDIO?',
       answer:
-        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500, bridal from ₹27,500. Full menu at nixtudio.in/services.',
+        'Hair from ₹550, nails from ₹2,000, facials from ₹2,500, waxing from ₹150, party makeup from ₹4,500+, bridal from ₹27,500. Full menu at nixtudio.in/services.',
     },
   ],
   areaServed: KOTTAYAM_DISTRICT_AREAS,

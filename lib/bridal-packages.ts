@@ -91,7 +91,6 @@ export const BRIDAL_PACKAGES: BridalPackageTier[] = [
     technique: 'Humidity-resistant airbrush finish',
     products: STANDARD_PRODUCTS,
     included: STANDARD_INCLUDED,
-    badge: 'MOST POPULAR',
   },
   {
     id: 'premium-airbrush',
@@ -102,6 +101,7 @@ export const BRIDAL_PACKAGES: BridalPackageTier[] = [
     technique: 'Luxury subtle airbrush glam',
     products: PREMIUM_PRODUCTS,
     included: PREMIUM_INCLUDED,
+    badge: 'MOST POPULAR',
   },
 ];
 

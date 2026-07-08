@@ -23,7 +23,7 @@ const packages = [
 ];
 
 const individualServices = [
-  { name: "Makeup Only", price: "₹4,500" },
+  { name: "Makeup Only", price: "₹4,500+" },
   { name: "Kids Makeup Only (under 10)", price: "₹2,500" },
   { name: "Hair Basic–Intermediate", price: "₹1,500–₹2,500" },
   { name: "Hair Advanced", price: "₹3,500–₹4,500" },
@@ -59,7 +59,7 @@ export default function PartyPage() {
               <div className="w-full aspect-[4/3] relative overflow-hidden skeleton">
                 <Image
                   src="/images/party-makeup.jpg"
-                  alt="Party guest makeup by NIXTUDIO team, Pala Kerala"
+                  alt="Party and guest hair styling by NIXTUDIO, Pala Kerala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

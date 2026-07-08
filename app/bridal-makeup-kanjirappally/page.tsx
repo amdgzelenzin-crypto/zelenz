@@ -274,8 +274,7 @@ export default function BridalMakeupKanjirappally() {
                   </Link>
                 </div>
                 
-                <div className="bg-gradient-to-br from-rose/10 to-pink/10 border-2 border-rose rounded-xl p-6">
-                  <div className="bg-rose text-white text-xs px-2 py-1 rounded-full inline-block mb-2">Most Popular</div>
+                <div className="bg-white border border-rose/20 rounded-xl p-6">
                   <h3 className="text-lg font-semibold text-espresso mb-2">Standard — Airbrush</h3>
                   <div className="text-2xl font-bold text-rose mb-4">₹32,500</div>
                   <ul className="space-y-2 text-sm text-taupe mb-4">
@@ -284,12 +283,13 @@ export default function BridalMakeupKanjirappally() {
                     <li>• By Nikita Liby</li>
                     <li>• Pre-bridal guide on booking</li>
                   </ul>
-                  <Link href="/contact" className="w-full block text-center bg-rose text-white py-2 rounded-lg text-sm font-semibold hover:bg-rose/90">
-                    Book Now
+                  <Link href="/contact" className="w-full block text-center border border-rose text-rose py-2 rounded-lg text-sm font-semibold hover:bg-rose/5">
+                    Inquire
                   </Link>
                 </div>
                 
-                <div className="bg-white border border-rose/20 rounded-xl p-6">
+                <div className="bg-gradient-to-br from-rose/10 to-pink/10 border-2 border-rose rounded-xl p-6">
+                  <div className="bg-rose text-white text-xs px-2 py-1 rounded-full inline-block mb-2">Most Popular</div>
                   <h3 className="text-lg font-semibold text-espresso mb-2">Premium — Airbrush</h3>
                   <div className="text-2xl font-bold text-rose mb-4">₹40,000</div>
                   <ul className="space-y-2 text-sm text-taupe mb-4">
@@ -298,8 +298,8 @@ export default function BridalMakeupKanjirappally() {
                     <li>• Signature subtle airbrush glam</li>
                     <li>• Guest makeup — separate catalogue</li>
                   </ul>
-                  <Link href="/contact" className="w-full block text-center border border-rose text-rose py-2 rounded-lg text-sm font-semibold hover:bg-rose/5">
-                    Inquire
+                  <Link href="/contact" className="w-full block text-center bg-rose text-white py-2 rounded-lg text-sm font-semibold hover:bg-rose/90">
+                    Book Now
                   </Link>
                 </div>
               </div>

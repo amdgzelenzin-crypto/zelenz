@@ -141,7 +141,7 @@ export default function KeralaWeddingMakeupGuide() {
                   </div>
                   <div className="flex items-center p-3 bg-purple-50 rounded-lg">
                     <span className="text-purple-600 mr-3">7.</span>
-                    <span><strong>Trial Session Tips</strong></span>
+                    <span><strong>Booking & Prep Tips</strong></span>
                   </div>
                   <div className="flex items-center p-3 bg-purple-50 rounded-lg">
                     <span className="text-purple-600 mr-3">8.</span>
@@ -328,7 +328,7 @@ export default function KeralaWeddingMakeupGuide() {
                       </li>
                       <li className="flex items-start">
                         <PremiumIcon name="check" size={16} className="text-green-600 mr-2 shrink-0" />
-                        <span><strong>Trial Sessions:</strong> Offered and recommended</span>
+                        <span><strong>Day-of Consultation:</strong> Thorough and personal on your function day</span>
                       </li>
                     </ul>
                   </div>
@@ -353,7 +353,7 @@ export default function KeralaWeddingMakeupGuide() {
                       </li>
                       <li className="flex items-start">
                         <PremiumIcon name="x" size={16} className="text-red-600 mr-2 shrink-0" />
-                        <span><strong>No Trial:</strong> Refuses test sessions</span>
+                        <span><strong>No Separate Trials:</strong> Artists who skip day-of planning</span>
                       </li>
                     </ul>
                   </div>
@@ -368,13 +368,13 @@ export default function KeralaWeddingMakeupGuide() {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold mb-6">Ready for Your Perfect Kerala Wedding Look?</h2>
-            <p className="text-xl mb-8">Book your consultation with NIXTUDIO and get expert guidance for your special day</p>
+            <p className="text-xl mb-8">Check availability with NIXTUDIO for engagement, wedding, or reception in Pala & Kottayam</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
               >
-                Book Consultation
+                Check Availability
               </Link>
               <Link 
                 href="/bridal-makeup-price-pala-transparent" 
@@ -385,7 +385,7 @@ export default function KeralaWeddingMakeupGuide() {
             </div>
             <div className="mt-8 bg-white/10 rounded-lg p-4">
               <p className="text-lg">
-                <strong><IconLabel icon="gift">Special Offer:</IconLabel></strong> Book this month and get a free skincare consultation worth ₹3,000!
+                <strong><IconLabel icon="gift">At NIXTUDIO:</IconLabel></strong> No separate makeup or hair trials — consultation happens on the day of your function. Pre-bridal guide included when you book.
               </p>
             </div>
           </div>

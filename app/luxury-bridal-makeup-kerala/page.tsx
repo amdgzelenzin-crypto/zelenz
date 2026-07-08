@@ -348,8 +348,6 @@ export default function LuxuryBridalMakeupKerala() {
                   <li>• Complete professional setup</li>
                   <li>• Climate-adapted makeup techniques</li>
                   <li>• Multiple look changes</li>
-                  <li>• Pre-wedding event makeup</li>
-                  <li>• Post-wedding photoshoot makeup</li>
                   <li>• Assistant makeup artist</li>
                   <li>• Luxury accommodation for team</li>
                   <li>• 24/7 availability during wedding events</li>
@@ -502,7 +500,7 @@ export default function LuxuryBridalMakeupKerala() {
                 href="/contact"
                 className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
               >
-                Book Luxury Consultation
+                Check Availability
               </Link>
               <Link 
                 href="/bridal-makeup-price-pala"

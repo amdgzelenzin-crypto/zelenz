@@ -126,7 +126,7 @@ const faqs = [
   },
   {
     question: "What's included in your airbrush bridal makeup pala package?",
-    answer: "Our airbrush bridal makeup pala package includes: pre-makeup skincare consultation, airbrush foundation application, airbrush contouring and highlighting, eye makeup, lip color, false lashes, airbrush finishing spray, and a touch-up kit. Professional airbrush makeup kerala at its best!"
+    answer: "Our airbrush bridal makeup pala package includes: day-of look planning, airbrush foundation application, airbrush contouring and highlighting, eye makeup, lip color, false lashes, airbrush finishing spray, and a touch-up kit. Professional airbrush makeup kerala at its best!"
   },
   {
     question: "How much does airbrush makeup artist pala service cost?",
@@ -433,7 +433,7 @@ export default function AirbrushMakeupPala() {
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
               >
-                Book Airbrush Consultation
+                Check Availability
               </Link>
               <Link 
                 href="/bridal-makeup-price-pala"

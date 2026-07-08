@@ -139,7 +139,7 @@ const faqs = [
   },
   {
     question: "Do you offer affordable bridal makeup pala packages?",
-    answer: "Standard HD at ₹27,500 is our entry bridal package — professional makeup by Nikita Liby with premium products. Airbrush Standard at ₹32,500 is most popular for Kerala humidity."
+    answer: "Standard HD at ₹27,500 is our entry bridal package — professional makeup by Nikita Liby with premium products. Premium Airbrush at ₹40,000 is our most popular choice for luxury bridal."
   },
   {
     question: "What's the difference between your bridal makeup packages pala?",

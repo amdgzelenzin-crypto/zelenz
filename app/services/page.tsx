@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import FancyText from "@/components/ui/fancy-text";
 import { Gift, Sparkles, Heart, Star } from "lucide-react";
+import { BRIDAL_PHILOSOPHY_BRANDS } from "@/lib/bridal-packages";
 
 /* ────────────────────────────────────────
    DATA
@@ -27,11 +28,9 @@ const categories = [
 ];
 
 const makeupServices = [
-  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "From ₹27,500", note: "Engagement, wedding & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium Airbrush (₹40,000). By Nikita Liby. Ask for Party/Guest catalogue for family." },
-  { name: "Engagement / Reception Styling", price: "₹27,500 - ₹40,000", note: "Same bridal packages apply to engagement & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium (₹40,000). Optimized for", link: { href: '/bridal', text: 'Pala' }, noteSuffix: "& Kottayam church/hall lighting." },
-  { name: "Pre-Wedding / Post-Wedding Shoot", price: "₹12,000+", note: "Photography-focused 'Supermodel' aesthetics for outdoor and studio sessions." },
-  { name: "Party & Guest Makeup", price: "₹4,500", note: "Elegant, sophisticated styling for bridesmaids and family members." },
-  { name: "Trial Consultation", price: "Included", note: "Detailed technical skin and color analysis on day-of booking." },
+  { name: "Bridal Makeup — Christian / Hindu / Muslim", price: "From ₹27,500", note: "Engagement, wedding & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium Airbrush (₹40,000). By Nikita Liby. Day-of consultation included — no separate trials. Ask for Party/Guest catalogue for family." },
+  { name: "Engagement / Reception Styling", price: "₹27,500 - ₹40,000", note: "Same bridal packages apply to engagement & reception. HD (₹27,500), Airbrush Standard (₹32,500), or Premium (₹40,000)." },
+  { name: "Party & Guest Makeup", price: "₹4,500+", note: "Elegant, sophisticated styling for bridesmaids and family members." },
 ];
 
 /* ──── Category: Haircut ──── */
@@ -743,12 +742,7 @@ export default function SalonPage() {
                 <p className="label-caps mb-0">Premium Brands We Use</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm font-sans text-espresso/70">
-                {[
-                  "Gucci", "Chanel", "Dior", "Charlotte Tilbury",
-                  "Givenchy", "NARS", "Fenty Beauty", "Urban Decay",
-                  "Too Faced", "Huda Beauty", "Makeup by Mario", "Pat McGrath",
-                  "MAC", "Laura Mercier"
-                ].map((brand, index) => (
+                {BRIDAL_PHILOSOPHY_BRANDS.map((brand, index) => (
                   <motion.div
                     key={brand}
                     className="flex items-center gap-2 p-2 rounded-lg hover:bg-rose/5 transition-colors cursor-default"

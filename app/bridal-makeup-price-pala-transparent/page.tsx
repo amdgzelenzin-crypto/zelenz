@@ -117,7 +117,7 @@ export default function BridalMakeupPricePage() {
                 </ul>
               </div>
               
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-300 transform scale-105">
+              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-200">
                 <IconBadge name="crown" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Standard — Airbrush</h3>
                 <p className="text-sm text-gray-500 mb-2">Engagement · Wedding · Reception</p>
@@ -128,12 +128,9 @@ export default function BridalMakeupPricePage() {
                   <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> No makeup or hair trials</li>
                   <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> By Nikita Liby</li>
                 </ul>
-                <div className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold mt-4">
-                  MOST POPULAR
-                </div>
               </div>
               
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-200">
+              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-pink-300 transform scale-105">
                 <IconBadge name="crown" size="md" className="mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Premium — Airbrush</h3>
                 <p className="text-sm text-gray-500 mb-2">Signature subtle airbrush glam</p>
@@ -144,6 +141,9 @@ export default function BridalMakeupPricePage() {
                   <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> All Standard inclusions</li>
                   <li className="flex items-center gap-2"><PremiumIcon name="check" size={14} className="text-green-600 shrink-0" /> Engagement, wedding or reception</li>
                 </ul>
+                <div className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold mt-4">
+                  MOST POPULAR
+                </div>
               </div>
             </div>
             
@@ -199,7 +199,7 @@ export default function BridalMakeupPricePage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
-                      <span><strong>Pre-Makeup Consultation</strong> - Skin analysis & look planning</span>
+                      <span><strong>Day-of Consultation</strong> — Skin analysis & look planning on your function day</span>
                     </li>
                     <li className="flex items-start">
                       <PremiumIcon name="check" size={16} className="text-pink-600 mr-2 shrink-0" />
@@ -259,9 +259,9 @@ export default function BridalMakeupPricePage() {
                     <td className="p-4 text-center text-gray-500">Rare</td>
                   </tr>
                   <tr className="border-b">
-                    <td className="p-4">Trial Sessions</td>
-                    <td className="p-4 text-center text-green-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="check" size={16} className="text-green-600" /> 2 Included</span></td>
-                    <td className="p-4 text-center text-red-600 font-bold"><span className="inline-flex items-center justify-center gap-1"><PremiumIcon name="x" size={16} className="text-red-600" /> Extra Cost</span></td>
+                    <td className="p-4">Separate Trial Sessions</td>
+                    <td className="p-4 text-center text-gray-700 font-bold">Not offered — day-of consultation included</td>
+                    <td className="p-4 text-center text-gray-500">Often extra cost</td>
                   </tr>
                 </tbody>
               </table>
@@ -273,13 +273,13 @@ export default function BridalMakeupPricePage() {
         <section className="py-16 px-4 bg-gradient-to-r from-pink-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold mb-6">Ready for Your Perfect Bridal Look?</h2>
-            <p className="text-xl mb-8">Book your consultation today and lock in your wedding date</p>
+            <p className="text-xl mb-8">Check availability and lock in your wedding date with Nikita Liby</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="bg-white text-pink-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition"
               >
-                Book Consultation
+                Check Availability
               </Link>
               <Link 
                 href="/gallery" 

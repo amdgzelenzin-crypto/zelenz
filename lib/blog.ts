@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
       <h3>There's no universally right answer. But there is a right answer for you.</h3>
       <p>Every bride who walks into NIXTUDIO eventually asks the same question — <em>HD or Airbrush?</em> And honestly, the answer isn't something you can Google your way to. It depends on your skin, your event, your timeline, and sometimes even the time of day your photographs will be taken.</p>
       <p>This guide is our attempt to give you a real answer. Not a sales pitch for either technique. Just what we've learned from doing this, bride after bride, season after season, in the specific heat and humidity of central Kerala.</p>
-      <p><strong>Ready to discover your perfect match?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Book a consultation</a> and let's discuss your unique needs.</p>
+      <p><strong>Ready to discover your perfect match?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Check availability</a> and let's discuss your unique needs.</p>
       <hr />
       <h3>First — what actually is the difference?</h3>
       <p><strong>HD makeup</strong> is applied by hand, the traditional way, using brushes and sponges. The products themselves are what make it "HD" — they're ultra-fine, ultra-blendable, and formulated to be invisible under the kind of high-resolution cameras used at weddings today. Done well, HD makeup looks like your skin, but better. It has warmth. It has dimension. It photographs beautifully from every angle.</p>
@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
       <p>You're likely starting at 5 or 6 in the morning. By the time the Muhurtham or church service begins, the temperature is already climbing. If it's summer — April, May — you're dealing with humidity levels that make even the best makeup work hard to stay in place. And the reception in the evening often happens outdoors, or in a hall where the AC is fighting a losing battle against 300 guests.</p>
       <p>This is why Airbrush has become increasingly popular for Kerala brides. That sweat-resistance isn't a marketing claim — it's something we've watched hold up through eight-hour ceremonies in Kottayam's summer heat. For brides who know they run warm, or who are getting married outdoors or during the day, Airbrush gives you one less thing to worry about.</p>
       <p>That said — HD makeup, applied with the right primer and set correctly, holds up far better than most people assume. The key is in the preparation, not just the product.</p>
-      <p><strong>Concerned about Kerala humidity affecting your makeup?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Book a consultation</a> — Standard Airbrush (₹32,500) is our most popular choice for humid Kerala weddings.</p>
+      <p><strong>Concerned about Kerala humidity affecting your makeup?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Check availability</a> — Premium Airbrush (₹40,000) is our most popular choice for humid Kerala weddings.</p>
       <hr />
       <h3>The honest breakdown</h3>
       <p><strong>Choose HD if:</strong></p>
@@ -60,8 +60,8 @@ export const blogPosts: BlogPost[] = [
       <p>We offer both. And we've done enough of each to tell you honestly — the technique matters far less than the person applying it. A skilled artist will make either look exceptional. An inexperienced one will make both look wrong.</p>
       <p>What we always discuss with our brides before the day: your skin type, your event timing, whether you'll be indoors or outdoors, how long you need it to last, and what your photography style is. That conversation shapes the recommendation more than any rule of thumb.</p>
       <p>If you're genuinely unsure — come in. We'll look at your skin, talk through your day, and tell you exactly what we think. No upsell. Just the right answer for you.</p>
-      <p><strong>Ready to experience the NIXTUDIO difference?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Book your bridal consultation</a> or <a href="/services" style="color: #C4903A; font-weight: 600;">explore our services</a> to discover why brides across Pala and Kottayam trust us with their most important day.</p>
-      <p><em>NIXTUDIO is a premium bridal makeup studio in Pala, Kerala. All bridal bookings are handled exclusively by Nikita Liby.</em></p>
+      <p><strong>Ready to experience the NIXTUDIO difference?</strong> <a href="/contact" style="color: #C4903A; font-weight: 600;">Check availability</a> or <a href="/services" style="color: #C4903A; font-weight: 600;">explore our services</a> to discover why brides across Pala and Kottayam trust us with their most important day.</p>
+      <p><em>NIXTUDIO is a premium bridal makeup studio in Pala, Kerala. All bridal bookings are handled exclusively by Nikita Liby — day-of consultation, no separate trials.</em></p>
     `
   },
   {
@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
       <h3>On the day itself</h3>
       <p>Come to the studio with a clean, moisturised face. No makeup. No SPF applied — we'll handle the barrier. Eat something. This sounds obvious, but we've had brides arrive having skipped breakfast because they were nervous, and a drop in blood sugar shows on the face.</p>
       <p>We handle the rest. The base, the barrier, the prep before a single drop of foundation goes on. This is where the 30 days of preparation meet the two hours of application — and when both are done right, the result holds all day.</p>
-      <p><em>NIXTUDIO is a bridal and beauty studio in Pala, Kerala. All consultations and applications are handled exclusively by Nikita Liby.</em></p>
+      <p><em>NIXTUDIO is a bridal and beauty studio in Pala, Kerala. Bridal bookings are handled exclusively by Nikita Liby on the day of your function.</em></p>
     `
   },
   {
@@ -200,7 +200,7 @@ export const blogPosts: BlogPost[] = [
       <p><a href="/nail-salon-pala" style="color: #C4903A; font-weight: 600;">View nail salon services →</a></p>
       <hr />
       <h3>Bridal nail coordination</h3>
-      <p>Book your bridal nail session alongside your makeup consultation — we match tones to your lehenga, saree, or gown palette so everything photographs as one cohesive look.</p>
+      <p>Book your bridal nail session when you book makeup — we match tones to your lehenga, saree, or gown palette so everything photographs as one cohesive look.</p>
       <p><em>NIXTUDIO nail lounge — Pala, Kerala. Call 70347 26402 to book.</em></p>
     `
   },
