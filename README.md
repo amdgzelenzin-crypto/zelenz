@@ -1,4 +1,4 @@
-# NIX-STUDIO
+# zelenz
 
 Marketing site for **NIXTUDIO by Nikita Liby** — bridal makeup and luxury salon in Pala & Kottayam, Kerala.
 
