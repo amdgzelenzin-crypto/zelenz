@@ -323,9 +323,9 @@ export default function Footer() {
               letterSpacing: "0.05em",
             }}
           >
-            <Link href="/privacy-policy" style={{ color: "inherit", textDecoration: "none" }}>Privacy</Link>
+            <a href="#privacy" style={{ color: "inherit", textDecoration: "none" }}>Privacy</a>
             {" · "}
-            <Link href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</Link>
+            <a href="#terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</a>
             {" · "}
             500+ verified client reviews
           </p>

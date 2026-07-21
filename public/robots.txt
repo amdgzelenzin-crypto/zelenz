@@ -1,14 +1,9 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /api/
-
-# GPTBot,OAI-SearchBot,Google-Extended
-User-agent: GPTBot,OAI-SearchBot,Google-Extended
-Allow: /
 
 # Host
-Host: https://nixtudio.in
+Host: https://dummyzelenz.com
 
 # Sitemaps
-Sitemap: https://nixtudio.in/sitemap.xml
+Sitemap: https://dummyzelenz.com/sitemap.xml
