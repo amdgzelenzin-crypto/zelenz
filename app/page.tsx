@@ -1,16 +1,13 @@
 import HomePageClient from "./HomePageClient";
-import GalleryPreviewGrid from "@/components/GalleryPreviewGrid";
 import HomePageCrawlContent from "@/components/seo/HomePageCrawlContent";
+import { getGalleryImages } from "@/lib/gallery-utils";
 
 export default function HomePage() {
-  const bridalCardImage = "/images/bridal-editorial-card.png";
+  const galleryItems = getGalleryImages();
 
   return (
     <>
-      <HomePageClient
-        galleryPreview={<GalleryPreviewGrid />}
-        bridalCardImage={bridalCardImage}
-      />
+      <HomePageClient galleryItems={galleryItems} />
       <HomePageCrawlContent />
     </>
   );

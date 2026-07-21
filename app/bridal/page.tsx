@@ -68,7 +68,7 @@ export default function BridalPage() {
     if (data.referral) text += `*Found via:* ${data.referral}\n`;
 
     const encodedText = encodeURIComponent(text);
-    const waUrl = `https://wa.me/917034726402?text=${encodedText}`;
+    const waUrl = `https://wa.me/919876543210?text=${encodedText}`;
     
     window.open(waUrl, "_blank");
     setSubmitted(true);
@@ -364,7 +364,7 @@ export default function BridalPage() {
                       <p className="font-sans text-espresso/70 text-sm leading-relaxed">
                         We&rsquo;ll be in touch shortly. If you need a faster response,{" "}
                         <a
-                          href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
+                          href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bridal%20makeup.%0ADate%20of%20function%3A%20%0ATime%20I%20need%20to%20leave%3A%20%0AServices%20required%3A%20"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[#B76E79] border-b border-[#B76E79]/40 hover:border-[#B76E79] transition-colors"

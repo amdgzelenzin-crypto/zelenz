@@ -1,22 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import ProtectedEmail from "@/components/ui/ProtectedEmail";
 
 const footerNav = [
-  { href: "/bridal",  label: "Bridal"       },
-  { href: "/party",   label: "Party & Guests" },
-  { href: "/services",label: "Services"     },
-  { href: "/blog",    label: "Journal"      },
-  { href: "/gallery", label: "Gallery"      },
-  { href: "/about",   label: "About"        },
-  { href: "/contact", label: "Contact"      },
+  { href: "#home",          label: "Home" },
+  { href: "#our-story",     label: "Our Story" },
+  { href: "#services",      label: "Services" },
+  { href: "#why-choose",    label: "Why Choose Zelenz" },
+  { href: "#happy-clients", label: "Happy Clients" },
+  { href: "#gallery",       label: "Gallery" },
+  { href: "#contact",       label: "Contact Us" },
 ];
 
-const services = [
-  "Bridal Makeup", "Engagement Makeup", "Reception Makeup",
-  "Party & Guest Makeup", "Hairstyling", "Saree Draping",
-  "Gel Nails", "Nail Extensions", "Facials", "Hair Coloring",
+const simpleServices = [
+  "Hair Lounge",
+  "Skin & Facial Care",
+  "Nail & Hand Care",
+  "Premium Grooming"
 ];
 
 export default function Footer() {
@@ -37,7 +37,7 @@ export default function Footer() {
             marginBottom: "60px",
           }}
         >
-          {/* Brand col */}
+          {/* Brand Column */}
           <div>
             <p
               className="gold-foil-text"
@@ -50,19 +50,20 @@ export default function Footer() {
                 marginBottom: "4px",
               }}
             >
-              NIXTUDIO
+              ZELENZ
             </p>
             <p
               style={{
-                fontFamily: "var(--font-script), Georgia, serif",
-                fontSize: "14px",
-                fontWeight: 300,
-                fontStyle: "italic",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "10px",
+                fontWeight: 400,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
                 color: "#E8CC90",
                 marginBottom: "20px",
               }}
             >
-              By Nikita Liby
+              Unisex Saloon
             </p>
             <p
               style={{
@@ -74,11 +75,11 @@ export default function Footer() {
                 maxWidth: "240px",
               }}
             >
-              Premium bridal makeup studio and luxury salon in <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span>. Every face. Carefully considered.
+              Where luxury meets beauty. Pala & Kottayam's premier unisex salon offering exceptional styling, grooming, and makeup services.
             </p>
           </div>
 
-          {/* Navigate */}
+          {/* Navigate Column */}
           <div>
             <p
               style={{
@@ -96,7 +97,7 @@ export default function Footer() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
               {footerNav.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     style={{
                       fontFamily: "var(--font-body), Georgia, serif",
@@ -107,13 +108,13 @@ export default function Footer() {
                     }}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services Column */}
           <div>
             <p
               style={{
@@ -128,8 +129,8 @@ export default function Footer() {
             >
               Services
             </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
-              {services.slice(0, 6).map((s) => (
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
+              {simpleServices.map((s) => (
                 <li key={s}>
                   <span
                     style={{
@@ -145,7 +146,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Column */}
           <div>
             <p
               style={{
@@ -162,9 +163,9 @@ export default function Footer() {
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               <div>
-                <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", color: "#F9919F", marginBottom: "4px" }}>Salon</p>
+                <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", color: "#F9919F", marginBottom: "4px" }}>Pala Location</p>
                 <a
-                  href="tel:+917034726402"
+                  href="tel:+919876543210"
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontSize: "16px",
@@ -172,13 +173,13 @@ export default function Footer() {
                     textDecoration: "none",
                   }}
                 >
-                  +91 70347 26402
+                  +91 98765 43210
                 </a>
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", color: "#F9919F", marginBottom: "4px" }}>Bridal</p>
+                <p style={{ fontFamily: "var(--font-sans), sans-serif", fontSize: "10px", color: "#F9919F", marginBottom: "4px" }}>Kottayam Location</p>
                 <a
-                  href="tel:+917034726407"
+                  href="tel:+919876543211"
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontSize: "16px",
@@ -186,7 +187,7 @@ export default function Footer() {
                     textDecoration: "none",
                   }}
                 >
-                  +91 70347 26407
+                  +91 98765 43211
                 </a>
               </div>
               <div
@@ -199,7 +200,6 @@ export default function Footer() {
                   fontFamily: 'var(--font-body, serif)',
                   fontSize: '14px',
                   marginTop: '8px',
-                  cursor: 'pointer'
                 }}
               >
                 <svg
@@ -215,11 +215,9 @@ export default function Footer() {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-10 5L2 7" />
                 </svg>
-                <ProtectedEmail />
+                <a href="mailto:info@dummyzelenz.com" style={{ color: "inherit", textDecoration: "none" }}>info@dummyzelenz.com</a>
               </div>
               <p
-                itemScope
-                itemType="https://schema.org/PostalAddress"
                 style={{
                   fontFamily: "var(--font-body), Georgia, serif",
                   fontSize: "14px",
@@ -227,14 +225,12 @@ export default function Footer() {
                   lineHeight: 1.6,
                 }}
               >
-                <strong>Main Salon:</strong> <span itemProp="addressLocality">Pala</span>, <span itemProp="addressRegion">Kerala</span><br />
-                <strong>Bridal Suite:</strong> <span itemProp="streetAddress">Moozhayil House, Thodupuzha Rd</span><br />
-                <meta itemProp="addressCountry" content="IN" />
-                <span itemProp="postalCode">686575</span><br />
-                Mon – Sun, 10am – 7pm
+                <strong>Pala:</strong> Dummy Building, Near Civil Station, Pala, Kerala<br />
+                <strong>Kottayam:</strong> Dummy Complex, Kanjikuzhy, Kottayam, Kerala<br />
+                Mon – Sun, 9:30 AM – 7:30 PM
               </p>
               <a
-                href="https://wa.me/917034726402"
+                href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -257,7 +253,7 @@ export default function Footer() {
               </a>
               <div style={{ display: "flex", gap: "16px", marginTop: "16px" }}>
                 <a
-                  href="https://www.facebook.com/nixtudio_-100648048221705/"
+                  href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -272,16 +268,6 @@ export default function Footer() {
                     color: "#B78472",
                     textDecoration: "none",
                     transition: "all 300ms ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.color = "#D4AF37";
-                    e.currentTarget.style.borderColor = "#D4AF37";
-                    e.currentTarget.style.transform = "scale(1.1)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.color = "#B78472";
-                    e.currentTarget.style.borderColor = "#B78472";
-                    e.currentTarget.style.transform = "scale(1)";
                   }}
                   aria-label="Facebook"
                 >
@@ -290,7 +276,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/nixtudio_/"
+                  href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -305,96 +291,11 @@ export default function Footer() {
                     color: "#B78472",
                     textDecoration: "none",
                     transition: "all 300ms ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.color = "#D4AF37";
-                    e.currentTarget.style.borderColor = "#D4AF37";
-                    e.currentTarget.style.transform = "scale(1.1)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.color = "#B78472";
-                    e.currentTarget.style.borderColor = "#B78472";
-                    e.currentTarget.style.transform = "scale(1)";
                   }}
                   aria-label="Instagram"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" strokeWidth="0">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UC0U_0F2DXFeCwahTd4YI9YA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "50%",
-                    background: "transparent",
-                    border: "1.5px solid #B78472",
-                    color: "#B78472",
-                    textDecoration: "none",
-                    transition: "all 300ms ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.color = "#D4AF37";
-                    e.currentTarget.style.borderColor = "#D4AF37";
-                    e.currentTarget.style.transform = "scale(1.1)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.color = "#B78472";
-                    e.currentTarget.style.borderColor = "#B78472";
-                    e.currentTarget.style.transform = "scale(1)";
-                  }}
-                  aria-label="YouTube"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" strokeWidth="0">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://revol-q.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Revol-Q"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "50%",
-                    background: "transparent",
-                    border: "1.5px solid #B78472",
-                    color: "#B78472",
-                    textDecoration: "none",
-                    transition: "all 300ms ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.color = "#D4AF37";
-                    e.currentTarget.style.borderColor = "#D4AF37";
-                    e.currentTarget.style.transform = "scale(1.1)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.color = "#B78472";
-                    e.currentTarget.style.borderColor = "#B78472";
-                    e.currentTarget.style.transform = "scale(1)";
-                  }}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    style={{
-                      width: "20px",
-                      height: "20px",
-                      fill: "none",
-                      stroke: "#B78472",
-                      strokeWidth: "1.5",
-                    }}
-                  >
-                    <path d="M8 20V4h6a4 4 0 0 1 0 8H8m6 0l4 8" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
               </div>
@@ -402,7 +303,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
+        {/* Bottom Bar */}
         <div
           style={{
             borderTop: "1px solid rgba(245,210,200,0.15)",
@@ -426,7 +327,7 @@ export default function Footer() {
             {" · "}
             <Link href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</Link>
             {" · "}
-            500+ verified client reviews · Kerala
+            500+ verified client reviews
           </p>
           <p
             style={{
@@ -436,34 +337,7 @@ export default function Footer() {
               letterSpacing: "0.05em",
             }}
           >
-            © {new Date().getFullYear()} NIXTUDIO by Nikita Liby. All rights reserved.
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-sans), sans-serif",
-              fontSize: "11px",
-              color: "rgba(245,210,200,0.45)",
-              letterSpacing: "0.05em",
-            }}
-          >
-            <a 
-              href="https://revol-q.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "rgba(245,210,200,0.45)",
-                textDecoration: "none",
-                transition: "color 250ms ease",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.color = "#D4AF37";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.color = "rgba(245,210,200,0.45)";
-              }}
-            >
-              POWERED BY REVOL-Q
-            </a>
+            © {new Date().getFullYear()} Zelenz Unisex Saloon. All rights reserved.
           </p>
           <p
             style={{
@@ -474,53 +348,6 @@ export default function Footer() {
             }}
           >
             Pala, Kerala · India
-          </p>
-        </div>
-
-        {/* Stealth SEO Footer Anchor */}
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "20px",
-            paddingTop: "20px",
-            borderTop: "1px solid rgba(245,210,200,0.08)",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "var(--font-sans), sans-serif",
-              fontSize: "10px",
-              color: "rgba(245,210,200,0.40)",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              lineHeight: 1.6,
-            }}
-          >
-            <Link href="/best-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Salon Pala</Link>
-            {" · "}
-            <Link href="/best-bridal-makeup-pala" style={{ color: "inherit", textDecoration: "none" }}>Bridal Pala</Link>
-            {" · "}
-            <Link href="/best-salon-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Salon Kottayam</Link>
-            {" · "}
-            <Link href="/best-bridal-makeup-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Bridal Kottayam</Link>
-            {" · "}
-            <Link href="/hair-salon-kottayam" style={{ color: "inherit", textDecoration: "none" }}>Hair Kottayam</Link>
-            {" · "}
-            <Link href="/hair-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Hair Salon</Link>
-            {" · "}
-            <Link href="/nail-salon-pala" style={{ color: "inherit", textDecoration: "none" }}>Nail Salon</Link>
-            {" · "}
-            <Link href="/facial-spa-pala" style={{ color: "inherit", textDecoration: "none" }}>Facial & Spa</Link>
-            {" · "}
-            <Link href="/hydrafacial-pala" style={{ color: "inherit", textDecoration: "none" }}>HydraFacial</Link>
-            {" · "}
-            <Link href="/keratin-treatment-pala" style={{ color: "inherit", textDecoration: "none" }}>Keratin</Link>
-            {" · "}
-            <Link href="/waxing-threading-pala" style={{ color: "inherit", textDecoration: "none" }}>Waxing</Link>
-            {" · "}
-            <Link href="/beauty-parlour-pala" style={{ color: "inherit", textDecoration: "none" }}>Beauty Parlour</Link>
-            {" · "}
-            <Link href="/press" style={{ color: "inherit", textDecoration: "none" }}>Press</Link>
           </p>
         </div>
       </div>

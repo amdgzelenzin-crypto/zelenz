@@ -1276,7 +1276,7 @@ export default function SalonPage() {
           <FadeUp delay={0.1}>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
-                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20book%20a%20salon%20appointment."
+                href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20book%20a%20salon%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase"
@@ -1286,7 +1286,7 @@ export default function SalonPage() {
                 Book Appointment
               </a>
               <a
-                href="tel:+917034726402"
+                href="tel:+919876543210"
                 className="inline-flex items-center gap-2 text-sm font-sans border-b pb-1"
                 style={{ color: "rgba(255,255,255,0.80)", borderColor: "rgba(255,255,255,0.40)" }}
               >

@@ -21,12 +21,12 @@ export default function SalonSeoLanding({ config }: Props) {
         '@type': ['BeautySalon', 'HealthAndBeautyBusiness'],
         name: config.schemaServiceName,
         description: config.schemaDescription,
-        url: `https://nixtudio.in/${config.slug}`,
-        telephone: '+917034726402',
+        url: `https://dummyzelenz.com/${config.slug}`,
+        telephone: '+919876543210',
         priceRange: '₹₹₹',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery',
+          streetAddress: 'Dummy Building, Near Civil Station',
           addressLocality: 'Pala',
           addressRegion: 'Kerala',
           postalCode: '686575',
@@ -81,7 +81,7 @@ export default function SalonSeoLanding({ config }: Props) {
               className="text-sm tracking-widest uppercase text-[#B76E79] mb-6"
               style={{ fontFamily: 'var(--font-sans), sans-serif' }}
             >
-              NIXTUDIO · Pala, Kerala
+              ZELENZ SALON · Pala, Kerala
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>
@@ -266,7 +266,7 @@ export default function SalonSeoLanding({ config }: Props) {
             className="text-2xl font-light italic text-center mb-10"
             style={{ fontFamily: 'var(--font-display), Georgia, serif', color: '#3D1520' }}
           >
-            Explore NIXTUDIO
+            Explore Zelenz Unisex Saloon
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {config.relatedLinks.map((link) => (

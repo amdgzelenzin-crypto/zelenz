@@ -49,14 +49,14 @@ const cormorant = Cormorant({
 });
 
 export const metadata: Metadata = {
-  title: '#1 Premium Bridal Makeup Studio & Luxury Salon in Pala & Kottayam | NIXTUDIO',
+  title: 'Zelenz Unisex Saloon | Premium Beauty & Styling Salon in Pala & Kottayam',
   description:
-    '#1 premium bridal makeup studio & luxury salon in Pala & Kottayam. HD & airbrush bridal, hair, nails, spa by Nikita Liby. Thodupuzha Rd, Pala.',
-  authors: [{ name: 'Nikita Liby', url: 'https://nixtudio.in/about' }],
-  creator: 'NIXTUDIO by Nikita Liby',
-  metadataBase: new URL('https://nixtudio.in'),
+    'Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.',
+  authors: [{ name: 'Zelenz Unisex Saloon', url: 'https://zelenzsaloon.com' }],
+  creator: 'Zelenz Unisex Saloon',
+  metadataBase: new URL('https://zelenzsaloon.com'),
   alternates: {
-    canonical: 'https://nixtudio.in',
+    canonical: 'https://zelenzsaloon.com',
     types: {
       'text/plain': [{ url: '/llms.txt', title: 'LLMs.txt' }],
     },
@@ -64,24 +64,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: "https://nixtudio.in",
-    siteName: "NIXTUDIO by Nikita Liby",
-    title: "#1 Premium Bridal Makeup Studio & Luxury Salon in Pala & Kottayam | NIXTUDIO",
+    url: "https://zelenzsaloon.com",
+    siteName: "Zelenz Unisex Saloon",
+    title: "Zelenz Unisex Saloon | Premium Beauty & Styling Salon in Pala & Kottayam",
     description:
-      "#1 premium bridal makeup studio & luxury salon in Pala & Kottayam. HD & airbrush bridal, hair, nails, spa by Nikita Liby. Book now.",
+      "Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.",
     images: [
       {
         url: '/images/studio/nixtudio-studio-signage-pala-kerala.webp',
         width: 1200,
         height: 630,
-        alt: 'NIXTUDIO premium bridal makeup studio and luxury salon in Pala Kerala',
+        alt: 'Zelenz Unisex Saloon in Pala and Kottayam Kerala',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Premium Bridal Makeup Studio & Luxury Salon Pala | NIXTUDIO",
-    description: "Pala & Kottayam's premium bridal makeup studio & luxury salon by Nikita Liby. HD & airbrush from ₹27,500.",
+    title: "Zelenz Unisex Saloon | Premium Beauty & Styling Salon in Pala & Kottayam",
+    description: "Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.",
     images: ['/images/studio/nixtudio-studio-signage-pala-kerala.webp'],
   },
   robots: {
@@ -92,9 +92,6 @@ export const metadata: Metadata = {
       follow: true,
       'max-image-preview': 'large',
     },
-  },
-  verification: {
-    google: 'LAajSHtWnZO6fup_YAS_H67VWoEW_VOvJJnWG9fmqp4',
   },
 }
 

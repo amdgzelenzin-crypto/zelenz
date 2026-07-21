@@ -7,72 +7,68 @@ import Link from 'next/link';
 export default function HomePageCrawlContent() {
   return (
     <section
-      aria-label="About NIXTUDIO premium bridal makeup studio and luxury salon in Pala and Kottayam"
-      className="mx-auto max-w-3xl px-6 py-16 text-center"
+      aria-label="About Zelenz Unisex Saloon premium beauty salon in Pala and Kottayam"
+      className="mx-auto max-w-3xl px-6 py-16 text-center animate-fade-in"
       style={{ background: '#FFF9F5' }}
     >
       <h2
         className="mb-4 text-3xl font-light italic"
         style={{ fontFamily: 'var(--font-display), Georgia, serif', color: '#3D1520' }}
       >
-        #1 Premium Bridal Makeup Studio &amp; Luxury Salon — Pala &amp; Kottayam
+        #1 Premium Unisex Grooming &amp; Bridal Studio — Pala &amp; Kottayam
       </h2>
       <p
         className="mb-5 text-base leading-relaxed"
         style={{ fontFamily: 'var(--font-body), Georgia, serif', color: '#4E4247' }}
       >
-        NIXTUDIO by Nikita Liby is a top-rated premium bridal makeup studio and luxury salon on
-        Thodupuzha Road, Pala, serving clients across Kottayam district — from Kottayam town and
-        Ettumanoor to Changanacherry, Vaikom, and Kanjirappally. The studio is known for
-        humidity-resistant HD and airbrush bridal makeup, precision hair styling, gel nails,
-        facials, waxing, threading, and elegant party makeup for guests and family.
+        Zelenz Unisex Saloon is the district's leading luxury grooming destination, offering dual locations in Pala (near Civil Station) and Kottayam (Kanjikuzhy). We specialize in creative hair cuts and coloring, ammonia-free root touch-ups, premium hair botox, luxury hair spa treatments, advanced skin care cleanups, and organic facials.
       </p>
       <p
         className="mb-5 text-base leading-relaxed"
         style={{ fontFamily: 'var(--font-body), Georgia, serif', color: '#4E4247' }}
       >
-        Bridal packages begin at ₹27,500 for Standard HD, with airbrush options at ₹32,500 and premium
-        signature finishes at ₹40,000. Every bridal booking is handled personally by Nikita Liby, with a
-        trained team for multi-event days. The studio welcomes Christian, Hindu, and Muslim brides, and
-        offers on-location bridal service for venues across central Kerala.
+        Our nail studio offers solid gel polishes, dip powders, chrome nails, gel/acrylic extensions, and custom 3D nail art. We also cater to traditional and modern bridal makeup, groom makeup, kids styling, and custom beard grooming. All treatments are performed under medical-grade sterilization conditions in an elegant, cozy environment.
       </p>
       <p
         className="mb-8 text-base leading-relaxed"
         style={{ fontFamily: 'var(--font-body), Georgia, serif', color: '#4E4247' }}
       >
-        Beyond bridal makeup, NIXTUDIO is a full-service luxury salon: creative cuts and colour, keratin
-        and hair botox, HydraFacial and skin therapies, the nail lounge, and curated spa rituals — all in
-        a calm, editorial studio environment designed for discerning clients in Pala and Kottayam.
+        Zelenz brings international luxury brands and trained hair and makeup experts to central Kerala, creating a premium sanctuary for beauty and self-care.
       </p>
       <p
         className="mb-8 text-xs leading-relaxed"
         style={{ fontFamily: 'var(--font-sans), sans-serif', color: '#8A7878' }}
       >
-        Salon and beauty services are cosmetic in nature. Individual results vary. Please share allergies or
-        sensitivities when booking.
+        Individual results vary based on hair/skin profile. Please share details of any sensitivities with our coordinator during booking.
       </p>
       <h3
         className="mb-3 text-xl font-light italic"
         style={{ fontFamily: 'var(--font-display), Georgia, serif', color: '#B76E79' }}
       >
-        Explore
+        Explore Sections
       </h3>
       <nav
         className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm"
         style={{ fontFamily: 'var(--font-sans), sans-serif' }}
-        aria-label="Key service pages"
+        aria-label="Key sections"
       >
-        <Link href="/best-salon-pala" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
-          Best salon services in Pala
+        <Link href="#home" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Home
         </Link>
-        <Link href="/best-salon-kottayam" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
-          Salon for Kottayam district
+        <Link href="#our-story" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Our Story
         </Link>
-        <Link href="/bridal" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
-          Bridal packages &amp; pricing
+        <Link href="#services" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Services Catalog
         </Link>
-        <Link href="/contact" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
-          Book an appointment
+        <Link href="#why-choose" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Why Choose Zelenz
+        </Link>
+        <Link href="#gallery" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Photo &amp; Video Gallery
+        </Link>
+        <Link href="#contact" className="underline decoration-[#B76E79]/50 hover:decoration-[#B76E79]">
+          Book Appointment
         </Link>
       </nav>
     </section>

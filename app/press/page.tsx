@@ -24,10 +24,10 @@ const pressSchema = {
     postalCode: '686575',
     addressCountry: 'IN',
   },
-  telephone: '+917034726402',
+  telephone: '+919876543210',
   sameAs: [
     'https://www.instagram.com/nixtudio',
-    'https://wa.me/917034726402',
+    'https://wa.me/919876543210',
   ],
 };
 

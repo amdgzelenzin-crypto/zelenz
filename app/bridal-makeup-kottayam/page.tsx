@@ -165,7 +165,7 @@ const structuredData = {
         "@type": "BeautySalon",
         "name": "NIXTUDIO",
         "url": "https://nixtudio.in",
-        "telephone": "+917034726402",
+        "telephone": "+919876543210",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",

@@ -191,22 +191,22 @@ export default function PartyPage() {
       <section className="section-padding section-gradient-deep">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <FadeUp>
-            <p className="font-sans text-sm mb-6 max-w-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
-              NIXTUDIO is a studio-only experience. We are based in <Link href='/bridal-makeup-pala' className='text-white/90 underline decoration-white/30 hover:decoration-white/60 transition-colors'>Pala</Link> and do not offer home or venue visits.
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <div className="flex flex-col sm:flex-row items-start gap-4">
-              <a
-                href="https://wa.me/917034726402?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase transition-all duration-300"
-                style={{ background: "#25D366", color: "#FFFFFF" }}
-                id="party-whatsapp-btn"
-              >
-                WhatsApp to Book
-              </a>
+          <p className="font-sans text-sm mb-6 max-w-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
+            Zelenz Unisex Saloon is a studio-only experience. We are based in <Link href='/bridal-makeup-pala' className='text-white/90 underline decoration-white/30 hover:decoration-white/60 transition-colors'>Pala</Link> and do not offer home or venue visits.
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <a
+              href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20party%20makeup."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3.5 rounded-full text-[11px] font-sans font-medium tracking-[0.12em] uppercase transition-all duration-300"
+              style={{ background: "#25D366", color: "#FFFFFF" }}
+              id="party-whatsapp-btn"
+            >
+              WhatsApp to Book
+            </a>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 text-sm font-sans border-b pb-1 transition-colors duration-300"

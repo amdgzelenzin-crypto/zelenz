@@ -44,7 +44,7 @@ const localBusinessSchema = {
   "name": "NIXTUDIO Bridal Makeup",
   "description": "Professional bridal makeup artist in Pala, Kerala specializing in HD and airbrush makeup for weddings",
   "url": "https://nixtudio.in",
-  "telephone": "+917034726402",
+  "telephone": "+919876543210",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Pala",
@@ -186,7 +186,7 @@ export default function BridalMakeupPalaPage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
+                  href="https://wa.me/919876543210?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
                   className="bg-[#D4A055] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#B8944A] transition flex items-center justify-center gap-2"
                 >
                   <PremiumIcon name="phone" size={20} className="text-white" /> Check Availability on WhatsApp
@@ -676,7 +676,7 @@ export default function BridalMakeupPalaPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
-                href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
+                href="https://wa.me/919876543210?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding.%20When%20are%20you%20available?"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition flex items-center justify-center gap-2"
               >
                 <PremiumIcon name="phone" size={20} className="text-white" /> Check Availability on WhatsApp
@@ -714,7 +714,7 @@ export default function BridalMakeupPalaPage() {
         {/* Sticky WhatsApp Button */}
         <div className="fixed bottom-6 right-6 z-50">
           <a 
-            href="https://wa.me/917034726402?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding."
+            href="https://wa.me/919876543210?text=Hi%20Nikita!%20I'm%20interested%20in%20bridal%20makeup%20for%20my%20wedding."
             className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-all hover:scale-110"
           >
             <PremiumIcon name="phone" size={28} className="text-white" />

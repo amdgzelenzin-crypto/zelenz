@@ -7,22 +7,21 @@ export default function JsonLd({ data }: JsonLdProps) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "name": "Nixtudio",
+    "name": "Zelenz Unisex Saloon",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+      "streetAddress": "Dummy Building, Near Civil Station",
       "addressLocality": "Pala",
       "addressRegion": "Kerala",
       "postalCode": "686575",
       "addressCountry": "IN"
     },
-    "telephone": "+917034726402",
-    "founder": "Nikita Liby",
-    "url": "https://nixtudio.in",
-    "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-    "description": "Luxury salon and premium bridal makeup studio in Pala, Kerala — hair, nails, HydraFacial, spa & bridal services",
-    "priceRange": "₹₹₹",
-    "openingHours": "Mo-Sa 10:00-19:00, Su 11:00-18:00",
+    "telephone": "+919876543210",
+    "url": "https://dummyzelenz.com",
+    "image": "https://dummyzelenz.com/images/zelenz-logo.png",
+    "description": "Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Su 09:30-19:30",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "9.7115",
@@ -35,22 +34,17 @@ export default function JsonLd({ data }: JsonLdProps) {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://nixtudio.in/#organization",
-        "name": "NIXTUDIO",
-        "alternateName": "NIXTUDIO by Nikita Liby",
-        "url": "https://nixtudio.in",
-        "logo": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "telephone": "+917034726402",
-        "description": "Premium bridal makeup studio and luxury salon in Pala and Kottayam district, Kerala.",
-        "founder": { "@id": "https://nixtudio.in/#person-nikita-liby" },
-        "sameAs": [
-          "https://www.facebook.com/nixtudio_-100648048221705/",
-          "https://www.instagram.com/nixtudio_/"
-        ],
+        "@id": "https://dummyzelenz.com/#organization",
+        "name": "Zelenz Unisex Saloon",
+        "alternateName": "Zelenz Salon Pala & Kottayam",
+        "url": "https://dummyzelenz.com",
+        "logo": "https://dummyzelenz.com/images/zelenz-logo.png",
+        "image": "https://dummyzelenz.com/images/zelenz-logo.png",
+        "telephone": "+919876543210",
+        "description": "Premium unisex grooming, hair styling, coloring, skin treatments, nail lounge, and bridal/groom makeup at Zelenz Pala and Kottayam.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+          "streetAddress": "Dummy Building, Near Civil Station",
           "addressLocality": "Pala",
           "addressRegion": "Kerala",
           "postalCode": "686575",
@@ -58,35 +52,26 @@ export default function JsonLd({ data }: JsonLdProps) {
         }
       },
       {
-        "@type": "Person",
-        "@id": "https://nixtudio.in/#person-nikita-liby",
-        "name": "Nikita Liby",
-        "jobTitle": "Bridal Makeup Artist & Salon Owner",
-        "worksFor": { "@id": "https://nixtudio.in/#organization" },
-        "knowsAbout": ["Bridal Makeup", "HD Makeup", "Airbrush Makeup", "Hair Styling", "Salon Management"],
-        "url": "https://nixtudio.in/about"
-      },
-      {
         "@type": "WebSite",
-        "@id": "https://nixtudio.in/#website",
-        "url": "https://nixtudio.in",
-        "name": "NIXTUDIO by Nikita Liby",
-        "publisher": { "@id": "https://nixtudio.in/#organization" },
+        "@id": "https://dummyzelenz.com/#website",
+        "url": "https://dummyzelenz.com",
+        "name": "Zelenz Unisex Saloon",
+        "publisher": { "@id": "https://dummyzelenz.com/#organization" },
         "inLanguage": "en-IN"
       },
       {
         "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
-        "@id": "https://nixtudio.in/#business",
-        "name": "Nixtudio - #1 Best Salon & Bridal Makeup in Pala & Kottayam, Kerala",
-        "url": "https://nixtudio.in",
-        "telephone": "+917034726402",
-        "priceRange": "₹₹₹",
-        "image": "https://nixtudio.in/images/studio/nixtudio-studio-signage-pala-kerala.webp",
-        "parentOrganization": { "@id": "https://nixtudio.in/#organization" },
-        "description": "Nixtudio is #1 in Pala and Kottayam district for premium salon and bridal makeup. Expert hair styling, gel nails, spa, waxing, threading & bridal artistry exclusively by Nikita Liby. Top-rated in Pala, Kottayam, Ettumanoor & Central Travancore.",
+        "@id": "https://dummyzelenz.com/#business",
+        "name": "Zelenz Unisex Saloon - Best Salon & Bridal Makeup in Pala & Kottayam, Kerala",
+        "url": "https://dummyzelenz.com",
+        "telephone": "+919876543210",
+        "priceRange": "₹₹",
+        "image": "https://dummyzelenz.com/images/zelenz-logo.png",
+        "parentOrganization": { "@id": "https://dummyzelenz.com/#organization" },
+        "description": "Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+          "streetAddress": "Dummy Building, Near Civil Station",
           "addressLocality": "Pala",
           "addressRegion": "Kerala",
           "postalCode": "686575",
@@ -100,33 +85,20 @@ export default function JsonLd({ data }: JsonLdProps) {
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "19:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Sunday"],
-            "opens": "11:00",
-            "closes": "18:00"
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:30",
+            "closes": "19:30"
           }
         ],
         "areaServed": [
           { "@type": "City", "name": "Kottayam" },
           { "@type": "City", "name": "Pala" },
           { "@type": "City", "name": "Ettumanoor" },
-          { "@type": "City", "name": "Changanacherry" },
-          { "@type": "City", "name": "Vaikom" },
-          { "@type": "City", "name": "Kanjirappally" },
-          { "@type": "City", "name": "Erattupetta" },
-          { "@type": "City", "name": "Kumarakom" },
-          { "@type": "City", "name": "Kuravilangad" },
-          { "@type": "AdministrativeArea", "name": "Kottayam District" },
-          { "@type": "AdministrativeArea", "name": "Central Travancore" }
+          { "@type": "AdministrativeArea", "name": "Kottayam District" }
         ],
-        "knowsAbout": ["Bridal Makeup", "Hair Styling", "Gel Nails", "Beauty Salon Services", "Waxing", "Threading", "Keratin Treatment", "Facials"],
-        "hasMap": "https://maps.google.com/maps?q=Nixtudio+Pala+Kerala",
-        "keywords": "best salon pala, best salon kottayam, best bridal makeup pala, best bridal makeup kottayam, salon pala kerala, hair salon pala, hair salon kottayam, bridal makeup artist pala, bridal makeup artist kottayam, beauty parlour pala, makeup artist kottayam, nail salon pala",
+        "knowsAbout": ["Bridal Makeup", "Hair Styling", "Gel Nails", "Beauty Salon Services", "Facials"],
+        "hasMap": "https://maps.google.com/maps?q=Zelenz+Unisex+Saloon+Pala+Kerala",
+        "keywords": "best salon pala, best salon kottayam, best bridal makeup pala, best bridal makeup kottayam, salon pala kerala, hair salon pala, hair salon kottayam, beauty parlour pala, nail salon pala",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Beauty Services",
@@ -136,22 +108,10 @@ export default function JsonLd({ data }: JsonLdProps) {
               "itemOffered": {
                 "@type": "Service",
                 "name": "HD Bridal Makeup",
-                "description": "Traditional HD bridal makeup application by Nikita Liby. Perfect for church ceremonies and indoor venues in Pala, Kerala.",
+                "description": "Traditional HD bridal makeup application. Perfect for church ceremonies and indoor venues in Pala & Kottayam, Kerala.",
                 "provider": {
                   "@type": "LocalBusiness",
-                  "name": "Nixtudio"
-                }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Airbrush Bridal Makeup",
-                "description": "Advanced airbrush makeup technique for outdoor Kerala weddings. Sweat-resistant and long-lasting coverage for humid climates.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Nixtudio"
+                  "name": "Zelenz Unisex Saloon"
                 }
               }
             },
@@ -160,10 +120,10 @@ export default function JsonLd({ data }: JsonLdProps) {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Luxury Hair Styling",
-                "description": "Professional hair styling and updo services for weddings and special events in Pala, Kerala.",
+                "description": "Professional hair styling and updo services for weddings and special events in Pala & Kottayam, Kerala.",
                 "provider": {
                   "@type": "LocalBusiness",
-                  "name": "Nixtudio"
+                  "name": "Zelenz Unisex Saloon"
                 }
               }
             },
@@ -172,58 +132,10 @@ export default function JsonLd({ data }: JsonLdProps) {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Gel Nail Extensions",
-                "description": "Premium gel nail extensions and nail art services by expert technicians at Nixtudio salon in Pala.",
+                "description": "Premium gel nail extensions and nail art services by expert technicians at Zelenz salon.",
                 "provider": {
                   "@type": "LocalBusiness",
-                  "name": "Nixtudio"
-                }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Vortex Fusion HydraFacial",
-                "description": "Medical-grade HydraFacial treatment for deep cleansing and hydration. Advanced skincare technology available at Nixtudio Pala.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Nixtudio"
-                }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Keratin & Hair Botox Treatment",
-                "description": "Humidity-proof keratin and hair botox treatments for frizz-free hair in Kerala's tropical climate. Best hair salon in Pala.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Nixtudio"
-                }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Waxing & Threading",
-                "description": "Professional waxing and threading services at Nixtudio beauty parlour in Pala, Kerala.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Nixtudio"
-                }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Party & Guest Makeup",
-                "description": "Party makeup and guest styling for engagements, receptions and celebrations in Pala and Kottayam.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Nixtudio"
+                  "name": "Zelenz Unisex Saloon"
                 }
               }
             }
@@ -235,452 +147,10 @@ export default function JsonLd({ data }: JsonLdProps) {
           "reviewCount": 500,
           "bestRating": "5",
           "worstRating": "4"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Jessy Joseph"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 5
-            },
-            "reviewBody": "I was extremely happy and satisfied with makeup and hair for my wedding day. It turned out even better than I had imagined! She understood each and every request of mine and executed everything perfectly.",
-            "publisher": {
-              "@type": "LocalBusiness",
-              "name": "Nixtudio"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Stelly Tomy"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 5
-            },
-            "reviewBody": "I had my engagement and wedding makeup done by Nikita, and it was such a wonderful experience. She was very vocal and guided me clearly on what would suit me best, which I truly appreciated.",
-            "publisher": {
-              "@type": "LocalBusiness",
-              "name": "Nixtudio"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Jane Josy"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 5
-            },
-            "reviewBody": "Thank you so much Nikita for making me look my best on my BigDay. Your work played a huge role in making me so happy and confident on my wedding day. I looked exactly like what I expected ",
-            "publisher": {
-              "@type": "LocalBusiness",
-              "name": "Nixtudio"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Meenu Mathai"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 5
-            },
-            "reviewBody": "Nikita did my bridal makeup and I couldn't be happier with results. She understood exactly what look I wanted and made me feel so confident and beautiful on my big day.",
-            "publisher": {
-              "@type": "LocalBusiness",
-              "name": "Nixtudio"
-            }
-          }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/nixtudio.in",
-          "https://www.facebook.com/nixtudio.in"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://nixtudio.in/#professional-service",
-        "name": "Bridal Makeup Services",
-        "description": "Professional bridal makeup and beauty services by Nikita Liby",
-        "provider": {
-          "@id": "https://nixtudio.in/#business"
-        },
-        "serviceType": [
-          "Bridal Makeup",
-          "Engagement Makeup",
-          "Party Makeup",
-          "Hair Styling",
-          "Hair Coloring",
-          "Keratin Treatment",
-          "Nail Services",
-          "Gel Nail Extensions",
-          "HydraFacial",
-          "Facials",
-          "Waxing",
-          "Threading",
-          "Skin Care"
-        ],
-        "areaServed": [
-          {
-            "@type": "Place",
-            "name": "Pala, Kerala"
-          },
-          {
-            "@type": "Place",
-            "name": "Kottayam, Kerala"
-          },
-          {
-            "@type": "Place",
-            "name": "Changanacherry, Kerala"
-          }
-        ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://nixtudio.in/#person",
-        "name": "Nikita Liby",
-        "jobTitle": "Founder & Creative Director",
-        "description": "Professional makeup artist and hairstylist specializing in international luxury bridal aesthetics and precision hair treatments in Pala, Kerala.",
-        "image": "https://nixtudio.in/images/studio/nikita-liby-makeup-artist-pala.webp",
-        "url": "https://nixtudio.in/about"
-      },
-      {
-        "@type": "Service",
-        "name": "Bridal Makeup & Styling",
-        "provider": {
-          "@id": "https://nixtudio.in/#business"
-        },
-        "areaServed": {
-          "@type": "State",
-          "name": "Kerala"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Bridal Packages",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "price": "27500",
-              "priceCurrency": "INR",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Standard Bridal Package — HD",
-                "description": "HD bridal makeup for engagement, wedding or reception. Includes makeup, hairstyling, lashes, lens, outfit styling."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "32500",
-              "priceCurrency": "INR",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Standard Bridal Package — Airbrush",
-                "description": "Airbrush bridal makeup for engagement, wedding or reception. Humidity-resistant finish."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "40000",
-              "priceCurrency": "INR",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Premium Bridal Package — Signature Subtle Airbrush",
-                "description": "Luxury airbrush bridal package with saree draping, international luxury brands."
-              }
-            }
-          ]
         }
-      },
-      {
-        "@type": "AggregateRating",
-        "itemReviewed": {
-          "@type": "BeautySalon",
-          "name": "NIXTUDIO",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Pala",
-            "addressRegion": "Kerala",
-            "addressCountry": "IN"
-          }
-        },
-        "ratingValue": "4.9",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1",
-        "author": {
-          "@type": "Person",
-          "name": "Nikita Liby's Brides"
-        }
-      },
-      {
-        "@type": "Review",
-        "itemReviewed": {
-          "@type": "BeautySalon",
-          "name": "NIXTUDIO"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Anna Maria"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Nikita did my bridal makeup for my Christian church wedding in Pala. The humidity-resistant airbrush technique was incredible - my makeup looked fresh from 9 AM ceremony until midnight reception. Highly recommend for Kerala weddings!",
-        "datePublished": "2024-12-15"
-      },
-      {
-        "@type": "Review",
-        "itemReviewed": {
-          "@type": "BeautySalon",
-          "name": "NIXTUDIO"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Priya Nair"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Best bridal makeup artist in Kottayam district! Nikita personally handled my Hindu temple wedding makeup. The glow-from-within look was perfect for traditional gold jewelry and silk saree. Worth every rupee.",
-        "datePublished": "2024-11-28"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does Nixtudio's airbrush technique handle the 90% humidity of a July wedding in Kottayam?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita Liby uses specialized humidity-resistant airbrush formulas with polymer-based technology that creates a flexible, breathable barrier. This micro-misting technique withstands 90%+ humidity for 16+ hours without caking or separation, specifically engineered for Kerala's monsoon season conditions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why does Nikita Liby personally handle every bride instead of delegating to junior artists?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita's 'no-delegation' policy ensures technical precision for Kerala's challenging climate. With 6+ years experience and 500+ brides served, she understands how humidity affects different skin types and customizes airbrush pressure, product selection, and application techniques for each bride's unique needs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What makes Nixtudio's 'Glow-from-within' technique different for Christian church weddings in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our church wedding technique uses luminous, satin-finish airbrushing that photographs beautifully in natural church lighting. We avoid heavy contours that look harsh in daylight, instead using strategic highlighting that enhances the 'Azhagu' elegance while remaining sweat-proof for Kerala's tropical church conditions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Nixtudio's airbrush makeup perform during outdoor Kerala temple ceremonies?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For outdoor temple ceremonies, Nikita uses heat-activated airbrush formulas with vitamin E and silica that actually improve with warmth. The micro-particle technology creates a second-skin effect that won't transfer onto silk saris or gold jewelry, maintaining flawless appearance through 35°C+ temperatures."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What specific products does Nikita Liby use for humidity-resistant bridal makeup in Kerala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita uses medical-grade airbrush systems with silicone-based foundations (Kryolan, Mehron), waterproof sealers, and translucent HD powders. All products are specifically tested for Kerala's 80-95% humidity levels, containing ingredients like dimethicone, cyclomethicone, and nylon-12 for sweat-proof longevity."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How far in advance should brides book Nixtudio for peak wedding season in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For peak season (December-February), book 6-8 months in advance. Nikita personally handles maximum 2 brides per day to ensure quality. Off-season bookings (June-August) can be secured 2-3 months ahead. Early booking guarantees availability for your preferred date and allows for skin preparation sessions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between HD and Airbrush makeup for Kerala weddings?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "HD makeup uses high-definition techniques with traditional application, while airbrush uses compressed air for micro-particle application. For Kerala's humidity, airbrush is superior - it's 30% lighter, completely waterproof, and creates a breathable barrier that won't melt. Nikita combines both techniques for optimal results."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Nixtudio prepare skin for bridal makeup in Kerala's tropical climate?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita's 3-day skin prep includes oil-control cleansing, hyaluronic acid hydration, and silicone-based primers. She customizes prep based on whether it's monsoon (focus on oil control) or summer (focus on hydration). This ensures makeup adheres properly and lasts through humidity and sweat."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What emergency bridal makeup services does Nixtudio offer in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita provides 24/7 emergency bridal services within 30km of Pala. This includes last-minute touch-ups, makeup corrections from other artists, and emergency bridal party makeup. She carries a complete professional kit with humidity-resistant products specifically for Kerala wedding emergencies."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Nixtudio's pricing compare to other premium bridal artists in Kottayam district?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nixtudio's bridal packages: Standard HD at ₹27,500, Standard Airbrush at ₹32,500, and Premium Signature Airbrush at ₹40,000 — for engagement, wedding, or reception. All work is done by Nikita Liby with trained team assistance."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What makes Nixtudio the best choice for Muslim bridal makeup in Kerala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For Muslim brides, Nikita specializes in elegant, sophisticated looks that complement traditional attire while respecting cultural preferences. She uses long-wear, smudge-proof techniques that withstand multiple events and hijab styling. Her expertise with humidity ensures makeup remains flawless through lengthy ceremonies and celebrations."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Nixtudio handle bridal makeup for destination weddings in backwater locations?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita travels to backwater venues with a complete climate-controlled makeup kit. She uses extra-strength humidity sealers and waterproof formulations specifically for Kerala's backwater conditions. Portable lighting and mirror setups ensure professional results regardless of location challenges."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What post-bridal skincare does Nixtudio recommend for Kerala brides?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita provides personalized post-wedding skincare routines focusing on gentle makeup removal and skin recovery. She recommends oil-free cleansers, soothing masks with aloe vera, and lightweight moisturizers suitable for Kerala's humid climate to maintain the bridal glow beyond the wedding day."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does Nixtudio offer bridal makeup trials?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nixtudio does not offer separate makeup or hair trials. Consultation happens on the day of your function — thorough and personal. A pre-bridal guide is shared when you book."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are the payment terms and cancellation policies for Nixtudio bridal packages?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nixtudio requires 50% advance booking confirmation, 25% one month before, and remaining 25% on the wedding day. Cancellations made 60+ days before receive 75% refund, 30-59 days receive 50% refund. Less than 30 days cancellations are non-refundable due to Nikita's personalized commitment and limited availability."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the best salon in Pala, Kerala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO is rated the best salon in Pala, Kerala for hair styling, gel nails, HydraFacial, waxing, threading, facials, and bridal makeup. Led by Nikita Liby with 500+ satisfied clients across Pala and Kottayam district."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does NIXTUDIO offer HydraFacial and spa services in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. NIXTUDIO offers FDA-approved Vortex-Fusion HydraFacial, glass skin facials, deep cleansing, and pre-bridal skin prep at our Pala salon. HydraFacial starts from ₹6,500 with personalised skin consultations."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much do gel nails cost at the best nail salon in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Gel nail services at NIXTUDIO Pala start from ₹2,000 for gel polish, with extensions and custom nail art from ₹2,500. Bridal nail packages are available as part of wedding day styling."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is NIXTUDIO a full beauty parlour in Pala or only bridal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO is a full-service beauty parlour and premium salon in Pala offering haircuts, colour, keratin, gel nails, HydraFacial, waxing, threading, party makeup, and bridal packages — not bridal-only."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the best hair salon in Pala for keratin and colour?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO is Pala's top hair salon for ammonia-free colour, keratin, hair botox, and humidity-proof styling. Hair services start from ₹3,500 with premium salon-grade products suited to Kerala's climate."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the best salon in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO on Thodupuzha Road, Pala is the #1 best salon in Pala for hair, nails, facials, waxing, threading, and bridal makeup. Led by Nikita Liby with 500+ five-star reviews. Also serves Kottayam district clients daily."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who is the best bridal makeup artist in Pala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita Liby at NIXTUDIO is Pala's #1 bridal makeup artist, specialising in HD and airbrush bridal makeup from ₹27,500. Studio on Thodupuzha Road, Pala — also serving Kottayam district with home service."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is NIXTUDIO #1 in both Pala and Kottayam?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. NIXTUDIO is rated #1 for salon and bridal makeup in Pala (studio location) and across Kottayam district, with 500+ reviews for hair, nails, spa, and bridal services by Nikita Liby."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the best salon in Kottayam?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO in Pala is the #1 best salon serving Kottayam district for hair, nails, facials, waxing, threading, and bridal makeup. Led by Nikita Liby with 500+ five-star reviews. Studio is 20–25 minutes from Kottayam town on Thodupuzha Road."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who is the best bridal makeup artist in Kottayam?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nikita Liby at NIXTUDIO is Kottayam district's most trusted bridal makeup artist, specialising in HD and airbrush bridal makeup from ₹27,500. Home service available across Kottayam town, Ettumanoor, Changanacherry, Vaikom, and Kanjirappally."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does bridal makeup cost in Kottayam?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO bridal packages for Kottayam clients: Standard HD ₹27,500, Standard Airbrush ₹32,500, Premium Signature Airbrush ₹40,000. Party and guest makeup from ₹4,500. Book at nixtudio.in/bridal or call 70347 26402."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a premium hair salon near Kottayam town?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NIXTUDIO on Thodupuzha Road, Pala is the premium hair salon Kottayam clients choose for keratin, hair botox, ammonia-free colour, and bridal updos — 20–25 minutes from Kottayam town with studio-grade products and hygiene."
-            }
-          }
-        ]
       }
     ]
-  }
+  };
 
   const finalSchema = data || [localBusinessSchema, ...defaultSchema["@graph"]];
 

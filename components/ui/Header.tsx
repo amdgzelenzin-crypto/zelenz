@@ -4,14 +4,13 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { href: "/bridal",  label: "BRIDAL"       },
-  { href: "/bridal-makeup-calculator", label: "CALCULATOR"   },
-  { href: "/bridal-skin-prep-guide", label: "FREE GUIDE"   },
-  { href: "/party",   label: "PARTY & GUESTS" },
-  { href: "/services",label: "SERVICES"     },
-  { href: "/blog",    label: "JOURNAL"      },
-  { href: "/gallery", label: "Gallery"      },
-  { href: "/about",   label: "About"        },
+  { href: "#home",          label: "Home" },
+  { href: "#our-story",     label: "Our Story" },
+  { href: "#services",      label: "Services" },
+  { href: "#why-choose",    label: "Why Choose Zelenz" },
+  { href: "#happy-clients", label: "Happy Clients" },
+  { href: "#gallery",       label: "Gallery" },
+  { href: "#contact",       label: "Contact Us" },
 ];
 
 export default function Header() {
@@ -54,7 +53,7 @@ export default function Header() {
           <Link
             href="/"
             style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "1px" }}
-            aria-label="NIXTUDIO — Home"
+            aria-label="Zelenz Unisex Saloon — Home"
           >
             <span
               className="text-[16px] md:text-[18px] gold-foil-text"
@@ -68,26 +67,27 @@ export default function Header() {
                 transition: "color 400ms ease",
               }}
             >
-              NIXTUDIO
+              ZELENZ
             </span>
             <span
-              className="text-[12px] md:text-[13px]"
+              className="text-[9px] md:text-[10px]"
               style={{
-                fontFamily: "var(--font-script), Georgia, serif",
-                fontWeight: 300,
-                fontStyle: "italic",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontWeight: 400,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
                 color: "#D4A055",
                 lineHeight: 1,
               }}
             >
-              By Nikita Liby
+              Unisex Saloon
             </span>
           </Link>
 
           {/* Nav links — desktop */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 style={{
@@ -102,13 +102,13 @@ export default function Header() {
                 }}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
 
           {/* CTA - desktop */}
-          <Link
-            href="/contact"
+          <a
+            href="#contact"
             className="hidden md:flex"
             style={{
               fontFamily: "var(--font-sans), sans-serif",
@@ -125,8 +125,8 @@ export default function Header() {
               whiteSpace: "nowrap",
             }}
           >
-            Check Availability
-          </Link>
+            Book Appointment
+          </a>
 
           {/* Hamburger button - mobile */}
           <button
@@ -160,13 +160,15 @@ export default function Header() {
           >
             <span
               style={{
-                fontFamily: "var(--font-script), Georgia, serif",
-                fontSize: "22px",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: "16px",
+                fontWeight: 500,
+                letterSpacing: "0.2em",
                 color: "#D4A055",
-                fontStyle: "italic",
+                textTransform: "uppercase",
               }}
             >
-              By Nikita Liby
+              Zelenz Salon
             </span>
             <button
               onClick={() => setIsOpen(false)}
@@ -195,27 +197,27 @@ export default function Header() {
           >
             <nav className="flex flex-col w-full max-w-md mx-auto">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   style={{
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontStyle: "italic",
-                    fontSize: "clamp(28px, 8vw, 36px)",
+                    fontSize: "clamp(24px, 6vw, 32px)",
                     color: "#FDE8E8",
                     textAlign: "center",
-                    padding: "16px 0",
+                    padding: "12px 0",
                     textDecoration: "none",
                   }}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </nav>
 
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               onClick={() => setIsOpen(false)}
               className="block mx-auto mt-4 text-center"
               style={{
@@ -232,8 +234,8 @@ export default function Header() {
                 width: "fit-content",
               }}
             >
-              Check Availability
-            </Link>
+              Book Appointment
+            </a>
           </div>
         </div>
       )}

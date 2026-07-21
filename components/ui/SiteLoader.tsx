@@ -165,7 +165,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
         className={`nix-loader ${leaving ? 'leaving' : ''}`}
       >
         <div className="nix-letters">
-          {'NIXTUDIO'.split('').map((letter, i) => (
+          {'ZELENZ'.split('').map((letter, i) => (
             <span
               key={i}
               className="nix-letter"
@@ -177,12 +177,12 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
             </span>
           ))}
         </div>
-        <div className="nix-script">by Nikita Liby</div>
+        <div className="nix-script">Unisex Saloon</div>
         <div className="nix-bar-track">
           <div className="nix-bar-fill" />
         </div>
         <div className="nix-tagline">
-          every face. carefully considered.
+          where luxury meets beauty
         </div>
       </div>
     </>

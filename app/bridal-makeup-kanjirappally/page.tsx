@@ -39,7 +39,7 @@ const localBusinessSchema = {
   "name": "NIXTUDIO Bridal Makeup - Kanjirappally Service",
   "description": "Premium bridal makeup services for Kanjirappally brides. Specializing in humidity-resistant airbrush makeup for Christian church weddings and Kerala tropical climate.",
   "url": "https://nixtudio.in",
-  "telephone": "+917034726402",
+  "telephone": "+919876543210",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
@@ -319,10 +319,10 @@ export default function BridalMakeupKanjirappally() {
                   Calculate Your Package
                 </Link>
                 <Link 
-                  href="tel:+917034726402" 
+                  href="tel:+919876543210" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-rose transition-colors"
                 >
-                  Call Now: +91 7034726402
+                  Call Now: +91 9876543210
                 </Link>
               </div>
             </section>

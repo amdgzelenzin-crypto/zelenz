@@ -18,31 +18,30 @@ interface LocalSchemaProps {
     priceCurrency?: string;
   }>;
 }
-
 export default function LocalSchema({
-  businessName = "Nixtudio",
-  description = "Pala's premier beauty salon & bridal studio specializing in premium hair styling, glass skin treatments, and HD bridal makeup services.",
+  businessName = "Zelenz Unisex Saloon",
+  description = "Zelenz Unisex Saloon is the premier luxury beauty & styling destination in Pala & Kottayam. Offering professional hair cuts, styling, coloring, gel nails, facials, skin care, and custom bridal/groom makeovers.",
   address = {
-    streetAddress: "Moozhayil House, Thodupuzha Rd, opposite kuttiyankal nursery",
+    streetAddress: "Dummy Building, Near Civil Station",
     addressLocality: "Pala",
     addressRegion: "Kerala",
     postalCode: "686575",
     addressCountry: "IN"
   },
-  telephone = "+917034726402",
-  website = "https://nixtudio.in",
+  telephone = "+919876543210",
+  website = "https://dummyzelenz.com",
   areaServed = ["Pala", "Kottayam", "Ettumanoor"],
   services = [
     {
       name: "Premium Hair Styling",
       description: "Professional hair styling, cutting, and color treatments",
-      price: "3500",
+      price: "450",
       priceCurrency: "INR"
     },
     {
       name: "Glass Skin Treatments", 
       description: "Advanced facial treatments and skin care services",
-      price: "4500",
+      price: "1350",
       priceCurrency: "INR"
     },
     {
@@ -54,7 +53,7 @@ export default function LocalSchema({
     {
       name: "Premium Nail Services",
       description: "Gel nail extensions and nail art",
-      price: "2000",
+      price: "1100",
       priceCurrency: "INR"
     }
   ]
@@ -68,8 +67,8 @@ export default function LocalSchema({
         "name": businessName,
         "url": website,
         "telephone": telephone,
-        "priceRange": "₹₹₹",
-        "image": `${website}/images/studio/nixtudio-studio-signage-pala-kerala.webp`,
+        "priceRange": "₹₹",
+        "image": `${website}/images/zelenz-logo.png`,
         "description": description,
         "address": {
           "@type": "PostalAddress",
@@ -83,9 +82,9 @@ export default function LocalSchema({
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "19:00"
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:30",
+            "closes": "19:30"
           }
         ],
         "areaServed": areaServed,
@@ -104,12 +103,10 @@ export default function LocalSchema({
           }))
         },
         "founder": {
-          "@id": `${website}#person`
+          "@id": `${website}#organization`
         },
         "sameAs": [
-          "https://www.instagram.com/nixtudio.in",
-          "https://www.facebook.com/nixtudio.in",
-          "https://wa.me/917034726402"
+          "https://wa.me/919876543210"
         ]
       },
       {
@@ -131,15 +128,6 @@ export default function LocalSchema({
           "@type": "Place",
           "name": place
         }))
-      },
-      {
-        "@type": "Person",
-        "@id": `${website}#person`,
-        "name": "Nikita Liby",
-        "jobTitle": "Founder & Creative Director",
-        "description": "Professional makeup artist and beauty specialist specializing in luxury bridal aesthetics and precision beauty treatments in Pala, Kerala.",
-        "image": `${website}/images/nikita-liby-professional-makeup-artist-pala.webp`,
-        "url": `${website}/about`
       }
     ]
   };
