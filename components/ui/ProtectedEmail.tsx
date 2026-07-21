@@ -1,8 +1,8 @@
 'use client'
 
 export default function ProtectedEmail() {
-  const email = 'nixtudio1@gmail.com'
-  const subject = 'Bridal Makeup Enquiry'
+  const email = 'zelenzmakeups@gmail.com'
+  const subject = 'Bridal & Salon Booking Enquiry'
   
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`
@@ -14,7 +14,7 @@ export default function ProtectedEmail() {
       style={{ cursor: 'pointer', textDecoration: 'underline' }}
       className="text-current"
     >
-      nixtudio1@gmail.com
+      zelenzmakeups@gmail.com
     </span>
   )
 }

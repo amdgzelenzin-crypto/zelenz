@@ -256,7 +256,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
     text += `*Preferred Location:* ${formData.location}\n`;
 
     const encodedText = encodeURIComponent(text);
-    const waNumber = "919876543210"; // dummy contact WhatsApp number
+    const waNumber = "917560862329";
     const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
 
     window.open(waUrl, "_blank");
@@ -280,7 +280,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover z-0"
         >
-          <source src="/videos/bridal-hero.mp4" type="video/mp4" />
+          <source src="/videos/zelenz_hero_video.mp4" type="video/mp4" />
         </video>
 
         {/* Ambient Dark Overlay */}
@@ -364,18 +364,15 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             {/* Left side text blocks */}
             <div className="lg:col-span-6">
               <FadeUp>
-                <p className="label-caps mb-3">Zelenz Heritage</p>
+                <p className="label-caps mb-3">18 Years of Excellence</p>
                 <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">
-                  Redefining Luxury <em>Grooming</em> &amp; Beauty
+                  Redefining Luxury <em>Grooming</em> & Beauty
                 </h2>
               </FadeUp>
               <FadeUp delay={0.15}>
                 <div className="space-y-6 text-[#4E4247] font-sans text-base leading-relaxed">
                   <p>
-                    Zelenz Unisex Saloon was born from a desire to create a sanctuary of self-care where premium beauty, professional styling, and luxury customer service seamlessly unite. Spanning state-of-the-art facilities in both Pala and Kottayam, we serve as the region's ultimate destination for discerning individuals seeking top-tier aesthetic refinement.
-                  </p>
-                  <p>
-                    Our professional stylists and certified technicians specialize in bringing out your personal best. Whether it's the signature Balayage technique, medical-grade skin therapies, or our celebrated Bridal edit, we approach every service with attention to detail and a commitment to using only the finest international luxury brands.
+                    At Zelenz, we believe true luxury is not just about looking beautiful—it&apos;s about feeling confident, valued, and cared for. For over 18 years, we&apos;ve been delivering exceptional hair, beauty, and grooming experiences through expert craftsmanship, premium products, and personalized attention. Every guest who walks through our doors is treated with warmth, professionalism, and a commitment to excellence.
                   </p>
                 </div>
               </FadeUp>
@@ -394,7 +391,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <h3 className="font-serif text-xl font-medium text-[#3D1520]">Our Vision</h3>
                   </div>
                   <p className="text-[#4E4247]/90 font-sans text-sm leading-relaxed">
-                    To stand as the absolute gold standard for luxury unisex grooming in Kerala. We strive to create an inviting, stylish, and relaxing sanctuary where cutting-edge styling and customer-focused hospitality elevate daily self-care into a grand experience.
+                    To become a globally admired luxury beauty brand, setting new standards of excellence through exceptional artistry, innovation, and unforgettable client experiences.
                   </p>
                 </div>
               </FadeUp>
@@ -410,7 +407,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <h3 className="font-serif text-xl font-medium text-[#3D1520]">Our Mission</h3>
                   </div>
                   <p className="text-[#4E4247]/90 font-sans text-sm leading-relaxed">
-                    To empower our clients by providing bespoke styling, hair coloring, and advanced bridal makeovers tailored to their unique architecture. Through continuous education, medical-grade hygiene, and premium products, we guarantee unmatched beauty, cleanliness, and safety.
+                    To deliver exceptional hair, beauty, makeup, and grooming experiences through expert professionals, premium-quality products, and uncompromising service, ensuring every client feels confident, valued, and beautifully transformed.
                   </p>
                 </div>
               </FadeUp>
@@ -430,7 +427,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             <FadeUp>
               <p className="label-caps mb-3">Zelenz Catalogue</p>
               <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
-                Luxury Experiences &amp; <em>Signature</em> Services
+                Luxury Experiences & <em>Signature</em> Services
               </h2>
               <p className="text-sm font-sans text-[#A86070] mt-4 max-w-md mx-auto">
                 Explore our comprehensive services catalog spanning hair, skin, bridal, and kids beauty grooming.
@@ -536,7 +533,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <Sparkles size={16} />
                   </div>
                   <div>
-                    <h4 className="font-serif text-sm font-semibold text-[#3D1520] mb-1">Pricing &amp; Consultations Note</h4>
+                    <h4 className="font-serif text-sm font-semibold text-[#3D1520] mb-1">Pricing & Consultations Note</h4>
                     <p className="text-xs text-[#A86070] font-sans leading-relaxed">
                       Prices listed are starting rates (exclusive of taxes) and may vary depending on hair length, density, skin texture, customized makeup layers, or specific brand materials required. A comprehensive consultation will be provided prior to starting any treatment to finalize options.
                     </p>
@@ -656,7 +653,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#FFE4E8] pb-6">
             <div>
               <FadeUp>
-                <p className="label-caps mb-3">Portfolio &amp; Work</p>
+                <p className="label-caps mb-3">Portfolio & Work</p>
                 <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
                   Visual <em>Galleries</em>
                 </h2>
@@ -816,7 +813,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           {/* Header */}
           <div className="max-w-[700px] mb-16">
             <FadeUp>
-              <p className="label-caps mb-3">Reservation &amp; Location</p>
+              <p className="label-caps mb-3">Reservation & Location</p>
               <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Connect With <em>Zelenz</em> Saloon
               </h2>
@@ -904,8 +901,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                             onChange={handleFormChange}
                             className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all"
                           >
-                            <option value="Pala">Pala Branch</option>
-                            <option value="Kottayam">Kottayam Branch</option>
+                            <option value="Cherpunkal">Cherpunkal Branch (Opp. Mar Sleeva Medicity)</option>
+                            <option value="Pala">Pala Branch (Santhom Complex, Kottaramattom)</option>
                           </select>
                         </div>
                       </div>
@@ -928,7 +925,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                         type="submit"
                         className="w-full py-4 rounded-xl font-sans text-xs tracking-widest uppercase font-medium bg-[#3D1520] text-white hover:bg-[#D4A055] transition-all duration-300 shadow-md active:scale-98"
                       >
-                        Submit &amp; Open WhatsApp
+                        Submit & Open WhatsApp
                       </button>
                     </form>
                   )}
@@ -947,16 +944,16 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <div className="flex items-start gap-3.5">
                       <MapPin size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Pala Branch</p>
-                        <p className="text-[#A86070]">Dummy Building, Near Civil Station, Pala, Kerala 686575</p>
+                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Cherpunkal Branch (Main)</p>
+                        <p className="text-[#A86070]">Zelenz Unisex Saloon, Opp. Mar Sleeva Medicity, Cherpunkal</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
                       <MapPin size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Kottayam Branch</p>
-                        <p className="text-[#A86070]">Dummy Complex, Kanjikuzhy, Kottayam, Kerala 686004</p>
+                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Pala Branch</p>
+                        <p className="text-[#A86070]">Zelenz Makeups, Santhom Complex, Kottaramattom, Pala</p>
                       </div>
                     </div>
 
@@ -965,8 +962,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                       <div>
                         <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Call / WhatsApp</p>
                         <p className="text-[#A86070] hover:text-[#3D1520] transition-colors space-y-1">
-                          <a href="tel:+919876543210" className="block">+91 98765 43210 (Pala)</a>
-                          <a href="tel:+919876543211" className="block">+91 98765 43211 (Kottayam)</a>
+                          <a href="tel:+917560862329" className="block">+91 75608 62329</a>
+                          <a href="tel:+919847798820" className="block">+91 98477 98820</a>
                         </p>
                       </div>
                     </div>
@@ -976,7 +973,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                       <div>
                         <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Email Support</p>
                         <p className="text-[#A86070] hover:text-[#3D1520] transition-colors">
-                          <a href="mailto:info@dummyzelenz.com">info@dummyzelenz.com</a>
+                          <a href="mailto:zelenzmakeups@gmail.com">zelenzmakeups@gmail.com</a>
                         </p>
                       </div>
                     </div>

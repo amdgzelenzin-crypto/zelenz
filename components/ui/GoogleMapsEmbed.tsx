@@ -3,117 +3,153 @@
 export default function GoogleMapsEmbed() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
-      {/* ──────── LOCATION 1: PALA BRANCH ──────── */}
+      {/* ──────── LOCATION 1: CHERPUNKAL BRANCH (MAIN) ──────── */}
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
           boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
-          background: '#F9C8C8',
-          height: '350px',
+          background: 'linear-gradient(135deg, #FFF9FA 0%, #FFE4E8 100%)',
+          border: '1px solid #FFE4E8',
+          height: '320px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-          <div style={{ textAlign: 'center', padding: '20px' }}>
+          <div style={{ textAlign: 'center', padding: '24px' }}>
+            <div style={{
+              fontFamily: 'var(--font-sans, sans-serif)',
+              fontSize: '11px',
+              color: '#B76E79',
+              marginBottom: '6px',
+              fontWeight: 600,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase'
+            }}>
+              Main Location
+            </div>
             <div style={{
               fontFamily: 'var(--font-display, serif)',
-              fontSize: '20px',
+              fontSize: '22px',
               color: '#3D1520',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'
             }}>
-              ZELENZ SALON — PALA
+              ZELENZ — CHERPUNKAL
             </div>
             <div style={{
               fontFamily: 'var(--font-body, serif)',
               fontSize: '14px',
-              color: '#B76E79',
+              color: '#4E4247',
               marginBottom: '20px',
               lineHeight: '1.6'
             }}>
-              Dummy Building, Near Civil Station, Pala<br />
-              Kottayam District, Kerala 686575
+              Opp. Mar Sleeva Medicity, Cherpunkal<br />
+              Kottayam District, Kerala
             </div>
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/place/9%C2%B040'47.0%22N+76%C2%B038'41.5%22E/@9.6797295,76.6422854,17z/data=!3m1!4b1!4m4!3m3!8m2!3d9.6797295!4d76.6448603?hl=en&entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, #B76E79, #D4A055)',
+                background: '#3D1520',
                 color: '#FFFFFF',
-                padding: '10px 24px',
+                padding: '12px 28px',
                 borderRadius: '100px',
                 fontFamily: 'var(--font-sans, sans-serif)',
                 fontSize: '11px',
                 letterSpacing: '0.15em',
                 textDecoration: 'none',
                 fontWeight: '500',
-                transition: 'transform 300ms ease'
+                transition: 'transform 300ms ease, background 300ms ease'
               }}
-              onMouseOver={(e: any) => e.currentTarget.style.transform = 'scale(1.05)'}
-              onMouseOut={(e: any) => e.currentTarget.style.transform = 'scale(1)'}
+              onMouseOver={(e: any) => {
+                e.currentTarget.style.transform = 'scale(1.04)'
+                e.currentTarget.style.background = '#D4A055'
+              }}
+              onMouseOut={(e: any) => {
+                e.currentTarget.style.transform = 'scale(1)'
+                e.currentTarget.style.background = '#3D1520'
+              }}
             >
-              GET DIRECTIONS →
+              OPEN GOOGLE MAPS →
             </a>
           </div>
         </div>
       </div>
 
-      {/* ──────── LOCATION 2: KOTTAYAM BRANCH ──────── */}
+      {/* ──────── LOCATION 2: PALA BRANCH ──────── */}
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
           boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
-          background: '#F9C8C8',
-          height: '350px',
+          background: 'linear-gradient(135deg, #FFF9FA 0%, #FFE4E8 100%)',
+          border: '1px solid #FFE4E8',
+          height: '320px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-          <div style={{ textAlign: 'center', padding: '20px' }}>
+          <div style={{ textAlign: 'center', padding: '24px' }}>
+            <div style={{
+              fontFamily: 'var(--font-sans, sans-serif)',
+              fontSize: '11px',
+              color: '#B76E79',
+              marginBottom: '6px',
+              fontWeight: 600,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase'
+            }}>
+              Pala Branch
+            </div>
             <div style={{
               fontFamily: 'var(--font-display, serif)',
-              fontSize: '20px',
+              fontSize: '22px',
               color: '#3D1520',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'
             }}>
-              ZELENZ SALON — KOTTAYAM
+              ZELENZ — PALA
             </div>
             <div style={{
               fontFamily: 'var(--font-body, serif)',
               fontSize: '14px',
-              color: '#B76E79',
+              color: '#4E4247',
               marginBottom: '20px',
               lineHeight: '1.6'
             }}>
-              Dummy Complex, Kanjikuzhy, Kottayam<br />
-              Kerala 686004
+              Santhom Complex, Kottaramattom, Pala<br />
+              Kottayam District, Kerala
             </div>
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=Zelenz+Makeups+Santhom+Complex+Kottaramattom+Pala"
               target="_blank"
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, #B76E79, #D4A055)',
+                background: '#3D1520',
                 color: '#FFFFFF',
-                padding: '10px 24px',
+                padding: '12px 28px',
                 borderRadius: '100px',
                 fontFamily: 'var(--font-sans, sans-serif)',
                 fontSize: '11px',
                 letterSpacing: '0.15em',
                 textDecoration: 'none',
                 fontWeight: '500',
-                transition: 'transform 300ms ease'
+                transition: 'transform 300ms ease, background 300ms ease'
               }}
-              onMouseOver={(e: any) => e.currentTarget.style.transform = 'scale(1.05)'}
-              onMouseOut={(e: any) => e.currentTarget.style.transform = 'scale(1)'}
+              onMouseOver={(e: any) => {
+                e.currentTarget.style.transform = 'scale(1.04)'
+                e.currentTarget.style.background = '#D4A055'
+              }}
+              onMouseOut={(e: any) => {
+                e.currentTarget.style.transform = 'scale(1)'
+                e.currentTarget.style.background = '#3D1520'
+              }}
             >
-              GET DIRECTIONS →
+              OPEN GOOGLE MAPS →
             </a>
           </div>
         </div>

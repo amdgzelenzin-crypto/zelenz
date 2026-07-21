@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactCompiler: true,
   compress: true,
   poweredByHeader: false,
-  allowedDevOrigins: ['127.0.0.1'],
-  turbopack: {}, // Use Turbopack with default settings
+  allowedDevOrigins: ['localhost', '127.0.0.1', 'localhost:3000', '127.0.0.1:3000', 'localhost:5000', '127.0.0.1:5000'],
+  turbopack: {},
   images: {
     remotePatterns: [
       {
@@ -24,7 +23,6 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['framer-motion', 'react-hook-form', 'lucide-react'],
-    optimizeCss: true,
     scrollRestoration: true,
     largePageDataBytes: 128 * 1000, // 128KB
   },
