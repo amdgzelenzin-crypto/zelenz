@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -52,36 +53,20 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "1px" }}
+            className="flex items-center gap-2 group"
             aria-label="Zelenz Unisex Saloon — Home"
           >
-            <span
-              className="text-[16px] md:text-[18px] gold-foil-text"
-              style={{
-                fontFamily: "var(--font-display), Georgia, serif",
-                fontWeight: 500,
-                letterSpacing: "0.25em",
-                textTransform: "uppercase",
-                color: scrolled ? "#3D1520" : "#FFFFFF",
-                lineHeight: 1,
-                transition: "color 400ms ease",
-              }}
-            >
-              ZELENZ
-            </span>
-            <span
-              className="text-[9px] md:text-[10px]"
-              style={{
-                fontFamily: "var(--font-sans), sans-serif",
-                fontWeight: 400,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#D4A055",
-                lineHeight: 1,
-              }}
-            >
-              Unisex Saloon
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Zelenz Unisex Saloon Logo"
+              width={160}
+              height={48}
+              className={`h-6 md:h-11 w-auto object-contain transition-all duration-300 ${
+                scrolled ? "drop-shadow-xs" : "brightness-0 invert"
+              }`}
+              priority
+              suppressHydrationWarning
+            />
           </Link>
 
           {/* Nav links — desktop */}

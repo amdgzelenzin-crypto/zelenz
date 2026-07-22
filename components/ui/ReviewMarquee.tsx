@@ -1,110 +1,120 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import { StarRating } from "@/components/ui/PremiumIcon";
 
 export type ReviewItem = {
   quote: string;
   name: string;
   detail: string;
+  rating?: number;
 };
 
 const defaultReviews: ReviewItem[] = [
   {
-    quote: "I was extremely happy and satisfied with the makeup and hair for my wedding day. It turned out even better than I had imagined! She understood each and every request of mine and executed everything perfectly...",
-    name: "Jessy Joseph",
-    detail: "Bride",
+    quote: "The best salon experience I've ever had. Amazing atmosphere, skilled staff, and outstanding service!",
+    name: "Sarah Interiors",
+    detail: "Google Review",
+    rating: 5,
   },
   {
-    quote: "I had my engagement and wedding makeup done by Nikita, and it was such a wonderful experience. She was very vocal and guided me clearly on what would suit me best, which I truly appreciated.",
-    name: "Stelly Tomy",
-    detail: "Bride",
+    quote: "My engagement mehendi turned out beautifully. Harsha was patient, professional, and incredibly talented.",
+    name: "Athira Rajeev",
+    detail: "Google Review",
+    rating: 5,
   },
   {
-    quote: "Thank you so much Nikita for making me look my best on my BigDay. Your work played a huge role in making me so happy and confident on my wedding day. I looked exactly like what I expected ❤️",
-    name: "Jane Josy",
-    detail: "Bride",
+    quote: "They transformed my wedding look perfectly. The makeup, hairstyle, and saree draping were flawless.",
+    name: "Trisha Jacob",
+    detail: "Google Review",
+    rating: 5,
   },
   {
-    quote: "Nikita did my bridal makeup and I couldn't be happier with the results. She understood exactly the look I wanted and made me feel so confident and beautiful on my big day.",
-    name: "Meenu Mathai",
-    detail: "Bride",
+    quote: "Excellent hair spa and facial. The relaxing massage and professional care made the experience unforgettable.",
+    name: "Avanthika S",
+    detail: "Google Review",
+    rating: 5,
   },
   {
-    quote: "I just wanted to share my amazing experience with Nikita 🫶, she made me feel beautiful on my engagement day and I received so many compliments. I highly recommend NIXTUDIO for anyone!",
-    name: "Riya Kurian",
-    detail: "Bride",
+    quote: "I've trusted Zelenz for my hair treatments multiple times. They truly know what works best for your hair.",
+    name: "Anu Sebastian",
+    detail: "Google Review",
+    rating: 5,
   },
   {
-    quote: "Absolutely loved my engagement and bridal makeup❤️! Huge thanks to Nikita for making the whole experience feel so friendly and comfortable. She really listened to what I wanted, and the final look was beautiful😌.",
-    name: "Aleena Varghese",
-    detail: "Bride",
+    quote: "My haircut was exactly what I wanted, and the hair spa was fantastic. Highly recommended!",
+    name: "Janet Jacob",
+    detail: "Google Review",
+    rating: 5,
+  },
+  {
+    quote: "The Hydra Facial and hair treatments are amazing. Friendly staff and consistently excellent service.",
+    name: "Sweety Criss",
+    detail: "Google Review",
+    rating: 5,
   },
 ];
 
+function GoogleGIcon() {
+  return (
+    <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="#4285F4"
+        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.25 21.3 7.31 24 12 24z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.99 0 12s.46 3.84 1.26 5.42l4.02-3.15z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.7 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+      />
+    </svg>
+  );
+}
+
 function ReviewCard(r: ReviewItem) {
   return (
-    <div className="shrink-0 flex flex-col bg-white rounded-[20px] border border-[rgba(244,168,176,0.30)] card-glow w-[280px] md:w-[320px] p-[24px] md:p-[32px]">
-      {/* Opening quote */}
+    <div className="shrink-0 flex flex-col bg-white rounded-[20px] border border-[rgba(244,168,176,0.40)] card-glow w-[300px] md:w-[340px] p-6 md:p-7 shadow-xs hover:shadow-md transition-all duration-300">
+      {/* Top Header: Rating + Google Badge */}
+      <div className="flex items-center justify-between mb-4">
+        <StarRating count={r.rating ?? 5} size={15} />
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FFF5F7] border border-[#FFE4E8] text-[11px] font-sans font-medium text-[#6B3040]">
+          <GoogleGIcon />
+          <span>Google Review</span>
+        </div>
+      </div>
+
+      {/* Opening quote icon */}
       <span
-        style={{
-          display: "block",
-          fontFamily: "var(--font-display), Georgia, serif",
-          fontSize: "72px",
-          color: "#F9919F",
-          lineHeight: 0.8,
-          marginBottom: "14px",
-        }}
+        className="block font-serif text-[44px] text-[#F9919F] leading-none mb-1 select-none"
+        aria-hidden="true"
       >
         &ldquo;
       </span>
 
       {/* Quote text */}
-      <p
-        style={{
-          fontFamily: "var(--font-body), Georgia, serif",
-          fontStyle: "italic",
-          fontSize: "16px",
-          lineHeight: 1.7,
-          color: "#2D1518",
-          marginBottom: "24px",
-          flex: 1,
-        }}
-      >
+      <p className="font-serif italic text-sm md:text-[15px] leading-relaxed text-[#2D1518] mb-6 flex-1">
         {r.quote}
       </p>
 
       {/* Gold divider */}
-      <div
-        style={{
-          width: "32px",
-          height: "1px",
-          background: "#D4A055",
-          marginBottom: "16px",
-        }}
-      />
+      <div className="w-8 h-[1px] bg-[#D4A055] mb-4" />
 
-      {/* Name */}
-      <p
-        style={{
-          fontFamily: "var(--font-display), Georgia, serif",
-          fontSize: "14px",
-          fontWeight: 600,
-          color: "#3D1520",
-        }}
-      >
-        {r.name}
-      </p>
-      <p
-        style={{
-          fontFamily: "var(--font-sans), sans-serif",
-          fontSize: "11px",
-          letterSpacing: "0.12em",
-          color: "#6B3040",
-          marginTop: "4px",
-        }}
-      >
-        {r.detail}
-      </p>
+      {/* Name and Detail */}
+      <div>
+        <p className="font-serif font-semibold text-sm text-[#3D1520]">
+          {r.name}
+        </p>
+        <p className="font-sans text-[11px] tracking-wider uppercase text-[#A86070] mt-0.5">
+          {r.detail}
+        </p>
+      </div>
     </div>
   );
 }
@@ -284,121 +294,50 @@ export default function ReviewMarquee({
   }, []);
 
   return (
-    <section
-      style={{
-        background: "#FFF0EC",
-        padding: "80px 0",
-        overflow: "hidden",
-      }}
-    >
-      {/* Section heading */}
-      <div
-        style={{
-          textAlign: "center",
-          marginBottom: "48px",
-          padding: "0 24px",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "var(--font-sans, sans-serif)",
-            fontSize: "11px",
-            letterSpacing: "0.25em",
-            color: "#B76E79",
-            textTransform: "uppercase",
-            marginBottom: "12px",
-          }}
-        >
-          KIND WORDS
-        </p>
-        <h2
-          style={{
-            fontFamily: "var(--font-display, serif)",
-            fontSize: "clamp(32px, 4vw, 48px)",
-            fontWeight: "400",
-            fontStyle: "italic",
-            color: "#4E4247",
-          }}
-        >
-          What our brides{" "}
-          <em
-            style={{
-              color: "#B76E79",
-            }}
-          >
-            say.
-          </em>
-        </h2>
-      </div>
-
+    <div className="relative overflow-hidden py-4">
       {/* Left fade edge */}
       <div
+        className="absolute left-0 top-0 bottom-0 w-20 md:w-32 z-10 pointer-events-none"
         style={{
-          position: "relative",
+          background: "linear-gradient(to right, #FFF5F7, transparent)",
+        }}
+      />
+
+      {/* Right fade edge */}
+      <div
+        className="absolute right-0 top-0 bottom-0 w-20 md:w-32 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to left, #FFF5F7, transparent)",
+        }}
+      />
+
+      {/* Scrolling track */}
+      <div
+        ref={trackRef}
+        style={{
+          display: "flex",
+          gap: "24px",
+          width: "max-content",
+          willChange: "transform",
+          userSelect: "none",
+          WebkitUserSelect: "none",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            bottom: 0,
-            width: "120px",
-            background: `linear-gradient(
-            to right,
-            #FFF0EC,
-            transparent
-          )`,
-            zIndex: 2,
-            pointerEvents: "none",
-          }}
-        />
+        {/* SR-visible main reviews */}
+        {reviews.map((review, i) => (
+          <div key={`orig-${i}`}>
+            <ReviewCard {...review} />
+          </div>
+        ))}
 
-        {/* Right fade edge */}
-        <div
-          style={{
-            position: "absolute",
-            right: 0,
-            top: 0,
-            bottom: 0,
-            width: "120px",
-            background: `linear-gradient(
-            to left,
-            #FFF0EC,
-            transparent
-          )`,
-            zIndex: 2,
-            pointerEvents: "none",
-          }}
-        />
-
-        {/* Scrolling track */}
-        <div
-          ref={trackRef}
-          style={{
-            display: "flex",
-            gap: "24px",
-            width: "max-content",
-            willChange: "transform",
-            userSelect: "none",
-            WebkitUserSelect: "none",
-          }}
-        >
-          {/* SR-visible main reviews */}
-          {reviews.map((review, i) => (
-            <div key={`orig-${i}`}>
-              <ReviewCard {...review} />
-            </div>
-          ))}
-
-          {/* Client-side cloned reviews with aria-hidden to eliminate crawler duplicates */}
-          {isMounted && reviews.map((review, i) => (
-            <div key={`clone-${i}`} aria-hidden="true">
-              <ReviewCard {...review} />
-            </div>
-          ))}
-        </div>
+        {/* Client-side cloned reviews with aria-hidden to eliminate crawler duplicates */}
+        {isMounted && reviews.map((review, i) => (
+          <div key={`clone-${i}`} aria-hidden="true">
+            <ReviewCard {...review} />
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
+

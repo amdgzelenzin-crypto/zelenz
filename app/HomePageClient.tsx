@@ -211,6 +211,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
 
   // Gallery Section State
   const [galleryTab, setGalleryTab] = useState<"photos" | "videos">("photos");
+  const [photoCategory, setPhotoCategory] = useState<string>("all");
   const [photoLayoutMode, setPhotoLayoutMode] = useState<"masonry" | "grid">("masonry");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -227,8 +228,10 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Handlers for Photo Filter (simplified to display all photos directly)
-  const filteredPhotos = galleryItems;
+  // Handlers for Photo Filter
+  const filteredPhotos = photoCategory === "all"
+    ? galleryItems
+    : galleryItems.filter((img) => img.category === photoCategory);
 
   const handlePrevPhoto = useCallback(() => {
     setLightboxIndex(prev => (prev === null ? null : (prev - 1 + filteredPhotos.length) % filteredPhotos.length));
@@ -357,61 +360,72 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 2. OUR STORY ──── */}
       <section
         id="our-story"
-        className="section-padding bg-[#FFF9FA] relative overflow-hidden"
+        className="section-padding bg-white relative overflow-hidden border-b border-[#FFE4E8]"
       >
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-            {/* Left side text blocks */}
-            <div className="lg:col-span-6">
-              <FadeUp>
-                <p className="label-caps mb-3">18 Years of Excellence</p>
-                <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">
-                  Redefining Luxury <em>Grooming</em> & Beauty
-                </h2>
-              </FadeUp>
-              <FadeUp delay={0.15}>
-                <div className="space-y-6 text-[#4E4247] font-sans text-base leading-relaxed">
-                  <p>
-                    At Zelenz, we believe true luxury is not just about looking beautiful—it&apos;s about feeling confident, valued, and cared for. For over 18 years, we&apos;ve been delivering exceptional hair, beauty, and grooming experiences through expert craftsmanship, premium products, and personalized attention. Every guest who walks through our doors is treated with warmth, professionalism, and a commitment to excellence.
-                  </p>
-                </div>
-              </FadeUp>
-            </div>
+        {/* Soft background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FFF5F7] rounded-full blur-3xl opacity-60 pointer-events-none" />
 
-            {/* Right side Vision & Mission Cards */}
-            <div className="lg:col-span-6 space-y-8">
-              <FadeUp delay={0.2}>
-                <div
-                  className="p-8 rounded-2xl border border-[#FADADD] bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgba(183,110,121,0.08)] transform hover:-translate-y-1"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[#FDE8E8] flex items-center justify-center text-[#B76E79]">
-                      <Eye size={24} strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-serif text-xl font-medium text-[#3D1520]">Our Vision</h3>
-                  </div>
-                  <p className="text-[#4E4247]/90 font-sans text-sm leading-relaxed">
-                    To become a globally admired luxury beauty brand, setting new standards of excellence through exceptional artistry, innovation, and unforgettable client experiences.
-                  </p>
-                </div>
-              </FadeUp>
+        <div className="mx-auto max-w-[1140px] px-6 lg:px-12 relative z-10">
+          {/* Header & Logo */}
+          <div className="text-center max-w-[720px] mx-auto mb-14">
+            <FadeUp>
+              <div className="inline-flex items-center justify-center mb-6">
+                <Image
+                  src="/logo.png"
+                  alt="Zelenz Emblem"
+                  width={180}
+                  height={54}
+                  className="h-12 md:h-14 w-auto object-contain"
+                />
+              </div>
+              <p className="label-caps mb-3 text-[#B76E79]">18 Years of Mastery</p>
+              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+                Redefining Luxury <em>Grooming</em> & Beauty
+              </h2>
+            </FadeUp>
+          </div>
 
-              <FadeUp delay={0.35}>
-                <div
-                  className="p-8 rounded-2xl border border-[#FADADD] bg-white transition-all duration-500 hover:shadow-[0_8px_30px_rgba(183,110,121,0.08)] transform hover:-translate-y-1"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[#FDE8E8] flex items-center justify-center text-[#B76E79]">
-                      <Compass size={24} strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-serif text-xl font-medium text-[#3D1520]">Our Mission</h3>
-                  </div>
-                  <p className="text-[#4E4247]/90 font-sans text-sm leading-relaxed">
-                    To deliver exceptional hair, beauty, makeup, and grooming experiences through expert professionals, premium-quality products, and uncompromising service, ensuring every client feels confident, valued, and beautifully transformed.
-                  </p>
-                </div>
-              </FadeUp>
+          {/* Minimal Story Quote */}
+          <FadeUp delay={0.15}>
+            <div className="max-w-[840px] mx-auto text-center mb-14">
+              <p className="font-serif italic text-lg md:text-2xl text-[#3D1520] leading-relaxed mb-6">
+                &ldquo;True luxury is not just about looking beautiful—it&apos;s about feeling confident, valued, and genuinely cared for.&rdquo;
+              </p>
+              <p className="font-sans text-sm md:text-base text-[#4E4247]/90 leading-relaxed max-w-2xl mx-auto">
+                For over 18 years, Zelenz Unisex Saloon has set the gold standard in premium hair care, advanced skin therapy, custom grooming, and flawless bridal transformations across Pala & Kottayam.
+              </p>
             </div>
+          </FadeUp>
+
+          {/* Vision & Mission Minimal Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[960px] mx-auto">
+            <FadeUp delay={0.25}>
+              <div className="p-8 rounded-2xl bg-[#FFF9FA] border border-[#FFE4E8] transition-all duration-300 hover:border-[#F9919F] hover:shadow-xs">
+                <div className="flex items-center gap-3.5 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79]">
+                    <Eye size={20} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-serif text-lg font-medium text-[#3D1520]">Our Vision</h3>
+                </div>
+                <p className="text-[#4E4247]/90 font-sans text-xs md:text-sm leading-relaxed">
+                  To set new benchmarks in luxury salon experiences through artistry, medical-grade hygiene standards, and world-class beauty products.
+                </p>
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.35}>
+              <div className="p-8 rounded-2xl bg-[#FFF9FA] border border-[#FFE4E8] transition-all duration-300 hover:border-[#F9919F] hover:shadow-xs">
+                <div className="flex items-center gap-3.5 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79]">
+                    <Compass size={20} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-serif text-lg font-medium text-[#3D1520]">Our Mission</h3>
+                </div>
+                <p className="text-[#4E4247]/90 font-sans text-xs md:text-sm leading-relaxed">
+                  To deliver tailored hair, skin, and grooming treatments with warm hospitality, ensuring every guest leaves feeling radiant and confident.
+                </p>
+              </div>
+            </FadeUp>
           </div>
         </div>
       </section>
@@ -456,22 +470,20 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                           : "text-[#A86070] hover:bg-[#FFF9FA] hover:text-[#3D1520]"
                       }`}
                     >
-                      <span>{cat.label}</span>
-                      <ChevronRight 
-                        size={14} 
-                        className={`transition-transform duration-300 ${
-                          selectedServiceCategory === cat.id 
-                            ? "transform translate-x-1" 
-                            : "opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5"
-                        }`} 
-                      />
+                      <span className="flex items-center gap-3">
+                        <span className={`w-2 h-2 rounded-full transition-all ${selectedServiceCategory === cat.id ? "bg-[#3D1520] scale-110" : "bg-transparent border border-[#A86070]"}`} />
+                        {cat.label}
+                      </span>
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono transition-colors ${selectedServiceCategory === cat.id ? "bg-[#3D1520] text-white" : "bg-[#FFF5F7] text-[#A86070]"}`}>
+                        {cat.services.length}
+                      </span>
                     </button>
                   ))}
                 </div>
               </FadeUp>
             </div>
 
-            {/* Service Lists - Right side */}
+            {/* Service Items Grid - Right side */}
             <div className="lg:col-span-8">
               <FadeUp>
                 <div className="bg-white border border-[#FFE4E8] rounded-2xl p-6 md:p-10 shadow-[0_8px_32px_rgba(183,110,121,0.04)] min-h-[450px] flex flex-col">
@@ -523,23 +535,6 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                   })}
                 </div>
               </FadeUp>
-
-              {/* Dynamic Pricing Note */}
-              <FadeUp delay={0.15}>
-                <div
-                  className="mt-6 p-6 rounded-xl border border-[#FFE4E8] bg-white/60 flex items-start gap-4"
-                >
-                  <div className="w-8 h-8 rounded-full bg-[#FFE4E8] flex items-center justify-center text-[#B76E79] shrink-0 mt-0.5">
-                    <Sparkles size={16} />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-sm font-semibold text-[#3D1520] mb-1">Pricing & Consultations Note</h4>
-                    <p className="text-xs text-[#A86070] font-sans leading-relaxed">
-                      Prices listed are starting rates (exclusive of taxes) and may vary depending on hair length, density, skin texture, customized makeup layers, or specific brand materials required. A comprehensive consultation will be provided prior to starting any treatment to finalize options.
-                    </p>
-                  </div>
-                </div>
-              </FadeUp>
             </div>
           </div>
         </div>
@@ -554,70 +549,48 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           {/* Header */}
           <div className="text-center max-w-[650px] mx-auto mb-16">
             <FadeUp>
-              <p className="label-caps mb-3">Zelenz Standards</p>
+              <p className="label-caps mb-3">The Zelenz Difference</p>
               <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
-                Why Discerning Guests <em>Choose</em> Zelenz
+                Why Clients <em>Choose</em> Us
               </h2>
             </FadeUp>
           </div>
 
-          {/* 4 Column highlights grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FadeUp>
-              <div
-                className="p-8 rounded-2xl border border-[#FDE8E8] bg-[#FFF9FA] hover:bg-white hover:border-[#FADADD] transition-all duration-500 hover:shadow-[0_12px_40px_rgba(183,110,121,0.06)] h-full flex flex-col"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#D4A055] mb-6 shadow-sm">
-                  <Star size={22} strokeWidth={1.5} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: ShieldCheck,
+                title: "18+ Years Mastery",
+                desc: "Over 18 years of experience delivering top-tier hair, beauty, and grooming excellence."
+              },
+              {
+                icon: Sparkles,
+                title: "Medical-Grade Hygiene",
+                desc: "Strict sanitization protocol with single-use kits and autoclave sterilized equipment."
+              },
+              {
+                icon: Heart,
+                title: "Premium Products",
+                desc: "We exclusively use top global luxury hair, skin, and makeup brands."
+              },
+              {
+                icon: Smile,
+                title: "Personalized Care",
+                desc: "Bespoke consultations ensuring every haircut, facial, and makeover matches your persona."
+              }
+            ].map((feature, i) => (
+              <FadeUp key={i} delay={i * 0.1}>
+                <div className="bg-[#FFF9FA] border border-[#FFE4E8] rounded-2xl p-6 text-center hover:border-[#F9919F] transition-all duration-300 hover:shadow-xs group h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79] mx-auto mb-5 group-hover:scale-110 transition-transform">
+                      <feature.icon size={22} strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">{feature.title}</h3>
+                    <p className="font-sans text-xs text-[#4E4247]/85 leading-relaxed">{feature.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">Experienced Staff</h3>
-                <p className="text-[#A86070] font-sans text-xs md:text-sm leading-relaxed flex-1">
-                  Our team consists of internationally trained stylists and certified skin technicians dedicated to modern grooming, custom highlights, and flawless bridal drapes.
-                </p>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.1}>
-              <div
-                className="p-8 rounded-2xl border border-[#FDE8E8] bg-[#FFF9FA] hover:bg-white hover:border-[#FADADD] transition-all duration-500 hover:shadow-[0_12px_40px_rgba(183,110,121,0.06)] h-full flex flex-col"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#D4A055] mb-6 shadow-sm">
-                  <Sparkles size={22} strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">Premium Products</h3>
-                <p className="text-[#A86070] font-sans text-xs md:text-sm leading-relaxed flex-1">
-                  We use only high-end international hair and skincare products (ammonia-free hair dyes, botanicals, and professional makeup bases) for chemical-safe results.
-                </p>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.2}>
-              <div
-                className="p-8 rounded-2xl border border-[#FDE8E8] bg-[#FFF9FA] hover:bg-white hover:border-[#FADADD] transition-all duration-500 hover:shadow-[0_12px_40px_rgba(183,110,121,0.06)] h-full flex flex-col"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#D4A055] mb-6 shadow-sm">
-                  <Smile size={22} strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">Cozy Ambiance</h3>
-                <p className="text-[#A86070] font-sans text-xs md:text-sm leading-relaxed flex-1">
-                  Step into our modern, beautifully lit lounges. Relax in state-of-the-art chairs while listening to soft music and sipping our premium coffee, tea, or fresh juice.
-                </p>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.3}>
-              <div
-                className="p-8 rounded-2xl border border-[#FDE8E8] bg-[#FFF9FA] hover:bg-white hover:border-[#FADADD] transition-all duration-500 hover:shadow-[0_12px_40px_rgba(183,110,121,0.06)] h-full flex flex-col"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#D4A055] mb-6 shadow-sm">
-                  <ShieldCheck size={22} strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">Hygienic Environment</h3>
-                <p className="text-[#A86070] font-sans text-xs md:text-sm leading-relaxed flex-1">
-                  Your safety is paramount. All tools go through autoclaves and chemical disinfection. We use single-use towels, gowns, and clean applicator kits for every service.
-                </p>
-              </div>
-            </FadeUp>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
@@ -629,9 +602,13 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
           {/* Header */}
-          <div className="text-center max-w-[600px] mx-auto mb-12">
+          <div className="text-center max-w-[650px] mx-auto mb-12">
             <FadeUp>
-              <p className="label-caps mb-3">Testimonials</p>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#FFE4E8] text-xs font-sans font-medium text-[#6B3040] mb-4 shadow-xs">
+                <span className="text-[#D4A055] font-semibold tracking-wide">5.0 ★★★★★</span>
+                <span className="text-[#FFE4E8]">•</span>
+                <span>Verified Google Reviews</span>
+              </div>
               <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Our Happy <em>Clients</em>
               </h2>
@@ -692,61 +669,39 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           {/* Tab 1: PHOTO GALLERY CONTENT */}
           {galleryTab === "photos" && (
             <div>
-              {/* Photo Filter Pills + Layout Mode Selector */}
-              <div className="flex justify-end gap-4 mb-8">
-                {/* Grid / Masonry Toggle */}
-                <div className="flex items-center gap-1 border border-[#FFE4E8] rounded-lg overflow-hidden shrink-0">
+              {/* Photo Category Filter Pills */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {[
+                  { id: "all", label: "All Photos" },
+                  { id: "groom", label: "Groom Styling" },
+                  { id: "bridal", label: "Bridal" },
+                  { id: "hair", label: "Hair & Styling" },
+                  { id: "skin", label: "Skin & Facials" },
+                  { id: "nails", label: "Nails & Art" },
+                  { id: "party", label: "Party & Events" },
+                ].map((cat) => (
                   <button
-                    onClick={() => setPhotoLayoutMode("grid")}
-                    className={`px-3 py-1.5 transition-colors text-xs font-sans uppercase font-medium ${
-                      photoLayoutMode === "grid" ? "bg-[#FFE4E8] text-[#3D1520]" : "text-[#A86070]"
+                    key={cat.id}
+                    onClick={() => setPhotoCategory(cat.id)}
+                    className={`px-4 py-2 rounded-full font-sans text-xs uppercase font-medium tracking-wider transition-all ${
+                      photoCategory === cat.id
+                        ? "bg-[#3D1520] text-white shadow-xs"
+                        : "bg-[#FFF9FA] text-[#A86070] border border-[#FFE4E8] hover:bg-[#FFE4E8]"
                     }`}
                   >
-                    Grid
+                    {cat.label}
                   </button>
-                  <button
-                    onClick={() => setPhotoLayoutMode("masonry")}
-                    className={`px-3 py-1.5 transition-colors text-xs font-sans uppercase font-medium ${
-                      photoLayoutMode === "masonry" ? "bg-[#FFE4E8] text-[#3D1520]" : "text-[#A86070]"
-                    }`}
-                  >
-                    Masonry
-                  </button>
-                </div>
+                ))}
               </div>
 
-              {/* Photos List */}
-              {photoLayoutMode === "masonry" ? (
-                <div style={{ columns: "4 240px", gap: "16px" }}>
-                  {filteredPhotos.map((item, idx) => (
-                    <div
-                      key={`photo-m-${idx}`}
-                      onClick={() => setLightboxIndex(idx)}
-                      className="break-inside-avoid mb-4 relative overflow-hidden rounded-xl border border-[#FFE4E8] shadow-sm cursor-pointer group"
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        width={400}
-                        height={600}
-                        className="w-full h-auto object-cover transform group-hover:scale-[1.03] transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-[#3D1520]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-lg">
-                          +
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
+              {/* Photos Grid */}
+              {filteredPhotos.length > 0 ? (
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {filteredPhotos.map((item, idx) => (
                     <div
                       key={`photo-g-${idx}`}
                       onClick={() => setLightboxIndex(idx)}
-                      className="relative aspect-square overflow-hidden rounded-xl border border-[#FFE4E8] shadow-sm cursor-pointer group"
+                      className="relative aspect-square overflow-hidden rounded-xl border border-[#FFE4E8] shadow-xs cursor-pointer group"
                     >
                       <Image
                         src={item.src}
@@ -764,10 +719,11 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     </div>
                   ))}
                 </div>
-              )}
-
-              {filteredPhotos.length === 0 && (
-                <p className="text-center py-20 text-sm font-sans text-[#A86070]">No works uploaded in this category yet.</p>
+              ) : (
+                <div className="text-center py-20 bg-[#FFF5F7] rounded-2xl border border-[#FFE4E8]">
+                  <p className="font-serif text-lg text-[#3D1520] mb-2">No photos in this category yet</p>
+                  <p className="text-sm font-sans text-[#A86070]">More works will be uploaded soon. Check back shortly!</p>
+                </div>
               )}
             </div>
           )}

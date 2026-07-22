@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const footerNav = [
   { href: "#home",          label: "Home" },
@@ -39,32 +40,15 @@ export default function Footer() {
         >
           {/* Brand Column */}
           <div>
-            <p
-              className="gold-foil-text"
-              style={{
-                fontFamily: "var(--font-display), Georgia, serif",
-                fontSize: "18px",
-                fontWeight: 500,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                marginBottom: "4px",
-              }}
-            >
-              ZELENZ
-            </p>
-            <p
-              style={{
-                fontFamily: "var(--font-sans), sans-serif",
-                fontSize: "10px",
-                fontWeight: 400,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#E8CC90",
-                marginBottom: "20px",
-              }}
-            >
-              Unisex Saloon
-            </p>
+            <Link href="/" className="inline-block mb-5">
+              <Image
+                src="/logo.png"
+                alt="Zelenz Logo"
+                width={160}
+                height={48}
+                className="h-10 md:h-12 w-auto object-contain brightness-0 invert opacity-95"
+              />
+            </Link>
             <p
               style={{
                 fontFamily: "var(--font-body), Georgia, serif",
