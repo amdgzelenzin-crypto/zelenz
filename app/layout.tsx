@@ -120,9 +120,15 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/premium-bridal-makeup-studio-pala-kerala-hero.webp"
+          href="/videos/zelenz_hero_poster.webp"
           type="image/webp"
           fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/zelenz_hero_video.mp4"
+          type="video/mp4"
         />
         
         {/* DNS prefetch for external resources */}

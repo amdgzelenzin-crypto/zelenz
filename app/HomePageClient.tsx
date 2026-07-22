@@ -280,6 +280,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           loop
           playsInline
           preload="auto"
+          poster="/videos/zelenz_hero_poster.webp"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover z-0"
         >
@@ -708,8 +709,10 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                         alt={item.alt}
                         fill
                         className="object-cover transform group-hover:scale-[1.04] transition-transform duration-500"
-                        sizes="(max-width: 768px) 50vw, 25vw"
-                        loading="lazy"
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        priority={idx < 4}
+                        loading={idx < 4 ? "eager" : "lazy"}
+                        quality={80}
                       />
                       <div className="absolute inset-0 bg-[#3D1520]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-lg">
