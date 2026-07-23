@@ -96,7 +96,7 @@ type PremiumIconProps = {
 export function PremiumIcon({
   name,
   size = 20,
-  className = 'text-[#D4A055]',
+  className = 'text-[#c49c4d]',
   strokeWidth = 1.5,
 }: PremiumIconProps) {
   const Icon = ICON_MAP[name];
@@ -123,8 +123,8 @@ export function IconBadge({ name, size = 'md', className = '' }: IconBadgeProps)
       style={{
         width: s.box,
         height: s.box,
-        background: 'linear-gradient(135deg, rgba(212,160,85,0.14), rgba(183,110,121,0.1))',
-        border: '1px solid rgba(212,160,85,0.32)',
+        background: 'linear-gradient(135deg, rgba(196, 156, 77, 0.35), rgba(196, 156, 77, 0.1))',
+        border: '1px solid rgba(196, 156, 77, 0.35)',
       }}
     >
       <PremiumIcon name={name} size={s.icon} />
@@ -142,7 +142,7 @@ export function StarRating({ count = 5, size = 14, className = '' }: StarRatingP
   return (
     <span className={`inline-flex items-center gap-0.5 ${className}`} aria-label={`${count} out of 5 stars`}>
       {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} size={size} className="fill-[#D4A055] text-[#D4A055]" strokeWidth={1.5} aria-hidden="true" />
+        <Star key={i} size={size} className="fill-[#c49c4d] text-[#c49c4d]" strokeWidth={1.5} aria-hidden="true" />
       ))}
     </span>
   );
@@ -155,7 +155,7 @@ type IconLabelProps = {
   iconClassName?: string;
 };
 
-export function IconLabel({ icon, children, className = '', iconClassName = 'text-[#B76E79]' }: IconLabelProps) {
+export function IconLabel({ icon, children, className = '', iconClassName = 'text-[#c49c4d]' }: IconLabelProps) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <PremiumIcon name={icon} size={18} className={iconClassName} />

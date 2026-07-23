@@ -111,7 +111,7 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{
           __html: `
             body { font-family: Georgia, serif; }
-            .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+            .skeleton { background: linear-gradient(90deg, #e9ce98 25%, #e9ce98 50%, #e9ce98 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
             @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
           `
         }} />
@@ -141,7 +141,7 @@ export default function RootLayout({
         
         <JsonLd />
       </head>
-      <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased overflow-x-hidden" style={{ background: "#FDE8E8", color: "#3D1520" }}>
+      <body id="nix-body" suppressHydrationWarning className="min-h-screen antialiased overflow-x-hidden" style={{ background: "#000000", color: "#e9ce98" }}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

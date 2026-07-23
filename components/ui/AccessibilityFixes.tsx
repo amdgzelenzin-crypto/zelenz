@@ -24,7 +24,7 @@ export default function AccessibilityFixes({ children }: AccessibilityFixesProps
     const skipLink = document.createElement('a')
     skipLink.href = '#main-content'
     skipLink.textContent = 'Skip to main content'
-    skipLink.className = 'sr-only focus:absolute focus:top-4 left-4 bg-white px-4 py-2 text-sm'
+    skipLink.className = 'sr-only focus:absolute focus:top-4 left-4 bg-[#1a1a1a] px-4 py-2 text-sm'
     skipLink.tabIndex = 0
     document.body.prepend(skipLink)
 

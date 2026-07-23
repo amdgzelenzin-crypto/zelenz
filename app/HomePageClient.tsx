@@ -32,7 +32,7 @@ const ReviewMarquee = dynamic(
     .catch(() => ({ default: () => <div className="text-center py-8">Reviews loading...</div> })),
   {
     ssr: false,
-    loading: () => <div className="animate-pulse bg-gray-100 h-32 rounded-lg mb-8"></div>,
+    loading: () => <div className="animate-pulse h-32 rounded-lg mb-8" style={{background:'#1a1a1a'}}></div>,
   }
 );
 
@@ -42,7 +42,7 @@ const GoogleMapsEmbed = dynamic(
     .catch(() => ({ default: () => <div className="text-center py-8">Map loading...</div> })),
   {
     ssr: false,
-    loading: () => <div className="animate-pulse bg-gray-100 h-64 rounded-lg mb-8"></div>,
+    loading: () => <div className="animate-pulse h-64 rounded-lg mb-8" style={{background:'#1a1a1a'}}></div>,
   }
 );
 
@@ -149,7 +149,7 @@ function Lightbox({ items, index, onClose, onPrev, onNext }: {
   return (
     <div
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center p-4"
-      style={{ backgroundColor: "rgba(61,26,31,0.96)" }}
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.96)" }}
       onClick={onClose}
     >
       <button className="absolute top-6 right-6 text-white/70 hover:text-white text-3xl transition-colors z-10" onClick={onClose} aria-label="Close">
@@ -291,7 +291,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
         <div
           className="absolute inset-0 z-1"
           style={{
-            background: "linear-gradient(to bottom, rgba(61,26,31,0.4) 0%, rgba(61,26,31,0.65) 60%, rgba(61,26,31,0.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(26, 26, 26, 0.4) 0%, rgba(26, 26, 26, 0.65) 60%, rgba(0, 0, 0, 0.85) 100%)",
           }}
         />
 
@@ -299,7 +299,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
         <div className="relative z-10 max-w-[800px] w-full flex flex-col items-center">
           <FadeUp>
             <span
-              className="text-[#E8A890] uppercase tracking-[0.3em] text-xs md:text-sm font-sans mb-4 block"
+              className="text-[#c49c4d] uppercase tracking-[0.3em] text-xs md:text-sm font-sans mb-4 block"
             >
               WELCOME TO PRESTIGE BEAUTY
             </span>
@@ -310,7 +310,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
               className="font-serif font-light text-white text-5xl md:text-7xl lg:text-8xl leading-tight mb-4 tracking-wide"
               style={{ fontFamily: "var(--font-display), Georgia, serif" }}
             >
-              Zelenz <span className="italic text-[#E8CC90]">Unisex Saloon</span>
+              Zelenz <span className="italic text-[#c49c4d]">Unisex Saloon</span>
             </h1>
           </FadeUp>
 
@@ -326,7 +326,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <a
                 href="#contact"
-                className="px-8 py-3.5 rounded-full font-sans text-xs tracking-widest uppercase font-medium bg-[#D4A055] hover:bg-[#C4903A] text-white transition-all duration-300 transform hover:scale-105 shadow-lg active:scale-95"
+                className="px-8 py-3.5 rounded-full font-sans text-xs tracking-widest uppercase font-medium bg-[#c49c4d] hover:bg-[#c1a447] text-white transition-all duration-300 transform hover:scale-105 shadow-lg active:scale-95"
               >
                 Book Appointment
               </a>
@@ -352,7 +352,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             className="w-6 h-10 border border-white/20 rounded-full flex items-start justify-center p-1"
           >
             <div
-              className="w-1.5 h-1.5 bg-[#E8CC90] rounded-full animate-bounce"
+              className="w-1.5 h-1.5 bg-[#c49c4d] rounded-full animate-bounce"
             />
           </div>
         </div>
@@ -361,10 +361,10 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 2. OUR STORY ──── */}
       <section
         id="our-story"
-        className="section-padding bg-white relative overflow-hidden border-b border-[#FFE4E8]"
+        className="section-padding bg-[#000000] relative overflow-hidden border-b border-[#2a2200]"
       >
         {/* Soft background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FFF5F7] rounded-full blur-3xl opacity-60 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#000000] rounded-full blur-3xl opacity-60 pointer-events-none" />
 
         <div className="mx-auto max-w-[1140px] px-6 lg:px-12 relative z-10">
           {/* Header & Logo */}
@@ -379,8 +379,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                   className="h-12 md:h-14 w-auto object-contain"
                 />
               </div>
-              <p className="label-caps mb-3 text-[#B76E79]">18 Years of Mastery</p>
-              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <p className="label-caps mb-3 text-[#c49c4d]">18 Years of Mastery</p>
+              <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Redefining Luxury <em>Grooming</em> & Beauty
               </h2>
             </FadeUp>
@@ -389,10 +389,10 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           {/* Minimal Story Quote */}
           <FadeUp delay={0.15}>
             <div className="max-w-[840px] mx-auto text-center mb-14">
-              <p className="font-serif italic text-lg md:text-2xl text-[#3D1520] leading-relaxed mb-6">
+              <p className="font-serif italic text-lg md:text-2xl text-[#e9ce98] leading-relaxed mb-6">
                 &ldquo;True luxury is not just about looking beautiful—it&apos;s about feeling confident, valued, and genuinely cared for.&rdquo;
               </p>
-              <p className="font-sans text-sm md:text-base text-[#4E4247]/90 leading-relaxed max-w-2xl mx-auto">
+              <p className="font-sans text-sm md:text-base text-[#e9ce98]/90 leading-relaxed max-w-2xl mx-auto">
                 For over 18 years, Zelenz Unisex Saloon has set the gold standard in premium hair care, advanced skin therapy, custom grooming, and flawless bridal transformations across Pala & Kottayam.
               </p>
             </div>
@@ -401,28 +401,28 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           {/* Vision & Mission Minimal Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[960px] mx-auto">
             <FadeUp delay={0.25}>
-              <div className="p-8 rounded-2xl bg-[#FFF9FA] border border-[#FFE4E8] transition-all duration-300 hover:border-[#F9919F] hover:shadow-xs">
+              <div className="p-8 rounded-2xl bg-[#000000] border border-[#323232] transition-all duration-300 hover:border-[#c1a447] hover:shadow-xs">
                 <div className="flex items-center gap-3.5 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79]">
+                  <div className="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-[#323232] flex items-center justify-center text-[#c49c4d]">
                     <Eye size={20} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg font-medium text-[#3D1520]">Our Vision</h3>
+                  <h3 className="font-serif text-lg font-medium text-[#e9ce98]">Our Vision</h3>
                 </div>
-                <p className="text-[#4E4247]/90 font-sans text-xs md:text-sm leading-relaxed">
+                <p className="text-[#e9ce98]/90 font-sans text-xs md:text-sm leading-relaxed">
                   To set new benchmarks in luxury salon experiences through artistry, medical-grade hygiene standards, and world-class beauty products.
                 </p>
               </div>
             </FadeUp>
 
             <FadeUp delay={0.35}>
-              <div className="p-8 rounded-2xl bg-[#FFF9FA] border border-[#FFE4E8] transition-all duration-300 hover:border-[#F9919F] hover:shadow-xs">
+              <div className="p-8 rounded-2xl bg-[#000000] border border-[#323232] transition-all duration-300 hover:border-[#c1a447] hover:shadow-xs">
                 <div className="flex items-center gap-3.5 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79]">
+                  <div className="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-[#323232] flex items-center justify-center text-[#c49c4d]">
                     <Compass size={20} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg font-medium text-[#3D1520]">Our Mission</h3>
+                  <h3 className="font-serif text-lg font-medium text-[#e9ce98]">Our Mission</h3>
                 </div>
-                <p className="text-[#4E4247]/90 font-sans text-xs md:text-sm leading-relaxed">
+                <p className="text-[#e9ce98]/90 font-sans text-xs md:text-sm leading-relaxed">
                   To deliver tailored hair, skin, and grooming treatments with warm hospitality, ensuring every guest leaves feeling radiant and confident.
                 </p>
               </div>
@@ -434,17 +434,17 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 3. LUXURY EXPERIENCES / SIGNATURE SERVICES ──── */}
       <section
         id="services"
-        className="section-padding bg-[#FFF5F7] border-y border-[#FFE4E8]"
+        className="section-padding bg-[#000000] border-y border-[#323232]"
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
           {/* Header */}
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <FadeUp>
               <p className="label-caps mb-3">Zelenz Catalogue</p>
-              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Luxury Experiences & <em>Signature</em> Services
               </h2>
-              <p className="text-sm font-sans text-[#A86070] mt-4 max-w-md mx-auto">
+              <p className="text-sm font-sans text-[#c1a447] mt-4 max-w-md mx-auto">
                 Explore our comprehensive services catalog spanning hair, skin, bridal, and kids beauty grooming.
               </p>
             </FadeUp>
@@ -455,10 +455,10 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             <div className="lg:col-span-4 lg:sticky lg:top-28 z-20">
               <FadeUp>
                 <div
-                  className="bg-white border border-[#FFE4E8] rounded-2xl p-4 md:p-6 shadow-[0_4px_24px_rgba(183,110,121,0.04)] space-y-1.5 max-h-[80vh] overflow-y-auto"
+                  className="bg-[#1a1a1a] border border-[#323232] rounded-2xl p-4 md:p-6 shadow-[0_4px_24px_rgba(196,156,77,0.04)] space-y-1.5 max-h-[80vh] overflow-y-auto"
                   style={{ scrollbarWidth: "thin" }}
                 >
-                  <span className="text-[10px] font-sans font-bold tracking-[0.2em] text-[#B76E79] uppercase block mb-4 px-3">
+                  <span className="text-[10px] font-sans font-bold tracking-[0.2em] text-[#c49c4d] uppercase block mb-4 px-3">
                     Categories
                   </span>
                   {serviceCategories.map((cat) => (
@@ -467,15 +467,15 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                       onClick={() => setSelectedServiceCategory(cat.id)}
                       className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 font-sans text-xs tracking-wider uppercase font-medium flex items-center justify-between group ${
                         selectedServiceCategory === cat.id
-                          ? "bg-[#FFE4E8] text-[#3D1520] font-semibold"
-                          : "text-[#A86070] hover:bg-[#FFF9FA] hover:text-[#3D1520]"
+                          ? "bg-[#323232] text-[#e9ce98] font-semibold"
+                          : "text-[#c1a447] hover:bg-[#000000] hover:text-[#c49c4d]"
                       }`}
                     >
                       <span className="flex items-center gap-3">
-                        <span className={`w-2 h-2 rounded-full transition-all ${selectedServiceCategory === cat.id ? "bg-[#3D1520] scale-110" : "bg-transparent border border-[#A86070]"}`} />
+                        <span className={`w-2 h-2 rounded-full transition-all ${selectedServiceCategory === cat.id ? "bg-[#c49c4d] scale-110" : "bg-transparent border border-[#c1a447]"}`} />
                         {cat.label}
                       </span>
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono transition-colors ${selectedServiceCategory === cat.id ? "bg-[#3D1520] text-white" : "bg-[#FFF5F7] text-[#A86070]"}`}>
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono transition-colors ${selectedServiceCategory === cat.id ? "bg-[#000000] text-[#c49c4d]" : "bg-[#000000] text-[#c1a447]"}`}>
                         {cat.services.length}
                       </span>
                     </button>
@@ -487,32 +487,26 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             {/* Service Items Grid - Right side */}
             <div className="lg:col-span-8">
               <FadeUp>
-                <div className="bg-white border border-[#FFE4E8] rounded-2xl p-6 md:p-10 shadow-[0_8px_32px_rgba(183,110,121,0.04)] min-h-[450px] flex flex-col">
+                <div className="bg-[#1a1a1a] border border-[#323232] rounded-2xl p-6 md:p-10 shadow-[0_8px_32px_rgba(196,156,77,0.04)] min-h-[450px] flex flex-col">
                   {serviceCategories.map((cat) => {
                     if (cat.id !== selectedServiceCategory) return null;
                     return (
                       <div key={cat.id} className="flex-1 flex flex-col">
-                        <div className="mb-8 border-b border-[#FFE4E8] pb-6">
-                          <h3 className="font-serif text-2xl lg:text-3xl text-[#3D1520] mb-2">{cat.label}</h3>
-                          <p className="text-[#A86070] font-sans text-sm">{cat.desc}</p>
+                        <div className="mb-8 border-b border-[#323232] pb-6">
+                          <h3 className="font-serif text-2xl lg:text-3xl text-[#e9ce98] mb-2">{cat.label}</h3>
+                          <p className="text-[#c1a447] font-sans text-sm">{cat.desc}</p>
                         </div>
 
-                        {/* List */}
                         <div className="space-y-4 flex-1">
                           {cat.services.map((svc) => (
                             <div
                               key={svc.name}
-                              className="flex items-center justify-between py-3.5 border-b border-[#FFF0F2] last:border-b-0 hover:bg-[#FFF9FA]/80 px-2 rounded-lg transition-all duration-200 group"
+                              className="flex items-center justify-between py-3.5 border-b border-[#000000] last:border-b-0 hover:bg-[#000000]/80 px-2 rounded-lg transition-all duration-200 group"
                             >
                               <div className="flex items-center gap-3">
-                                <div className="w-1.5 h-1.5 bg-[#D4A055] rounded-full group-hover:scale-125 transition-transform" />
-                                <span className="font-sans text-sm md:text-base text-[#4E4247] font-medium group-hover:text-[#3D1520] transition-colors">
+                                <div className="w-1.5 h-1.5 bg-[#c49c4d] rounded-full group-hover:scale-125 transition-transform" />
+                                <span className="font-sans text-sm md:text-base text-[#c49c4d] font-semibold group-hover:text-[#e9ce98] transition-colors">
                                   {svc.name}
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-6">
-                                <span className="font-serif font-light text-base md:text-lg text-[#B76E79]">
-                                  {svc.price}
                                 </span>
                               </div>
                             </div>
@@ -520,13 +514,13 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                         </div>
 
                         {/* Card CTA */}
-                        <div className="mt-12 pt-6 border-t border-[#FFE4E8] flex flex-col sm:flex-row items-center justify-between gap-4">
-                          <span className="text-xs font-sans text-[#A86070] italic">
+                        <div className="mt-12 pt-6 border-t border-[#323232] flex flex-col sm:flex-row items-center justify-between gap-4">
+                          <span className="text-xs font-sans text-[#c1a447] italic">
                             Want custom combinations or specific styling packages?
                           </span>
                           <a
                             href="#contact"
-                            className="px-6 py-2.5 rounded-full font-sans text-[11px] tracking-widest uppercase font-medium bg-[#3D1520] text-white hover:bg-[#D4A055] hover:text-white transition-all duration-300 transform active:scale-95 shrink-0"
+                            className="px-6 py-2.5 rounded-full font-sans text-[11px] tracking-widest uppercase font-medium bg-[#000000] text-white hover:bg-[#c49c4d] hover:text-white transition-all duration-300 transform active:scale-95 shrink-0"
                           >
                             Book appointment
                           </a>
@@ -544,14 +538,14 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 4. WHY CHOOSE ZELENZ ──── */}
       <section
         id="why-choose"
-        className="section-padding bg-white"
+        className="section-padding bg-[#1a1a1a]"
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
           {/* Header */}
           <div className="text-center max-w-[650px] mx-auto mb-16">
             <FadeUp>
               <p className="label-caps mb-3">The Zelenz Difference</p>
-              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Why Clients <em>Choose</em> Us
               </h2>
             </FadeUp>
@@ -581,13 +575,13 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
               }
             ].map((feature, i) => (
               <FadeUp key={i} delay={i * 0.1}>
-                <div className="bg-[#FFF9FA] border border-[#FFE4E8] rounded-2xl p-6 text-center hover:border-[#F9919F] transition-all duration-300 hover:shadow-xs group h-full flex flex-col justify-between">
+                <div className="bg-[#000000] border border-[#323232] rounded-2xl p-6 text-center hover:border-[#c1a447] transition-all duration-300 hover:shadow-xs group h-full flex flex-col justify-between">
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-white border border-[#FFE4E8] flex items-center justify-center text-[#B76E79] mx-auto mb-5 group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-2xl bg-[#1a1a1a] border border-[#323232] flex items-center justify-center text-[#c49c4d] mx-auto mb-5 group-hover:scale-110 transition-transform">
                       <feature.icon size={22} strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-serif text-lg font-medium text-[#3D1520] mb-3">{feature.title}</h3>
-                    <p className="font-sans text-xs text-[#4E4247]/85 leading-relaxed">{feature.desc}</p>
+                    <h3 className="font-serif text-lg font-medium text-[#e9ce98] mb-3">{feature.title}</h3>
+                    <p className="font-sans text-xs text-[#e9ce98]/85 leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               </FadeUp>
@@ -599,18 +593,18 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 5. HAPPY CLIENTS ──── */}
       <section
         id="happy-clients"
-        className="section-padding bg-[#FFF5F7] border-y border-[#FFE4E8]"
+        className="section-padding bg-[#000000] border-y border-[#323232]"
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
           {/* Header */}
           <div className="text-center max-w-[650px] mx-auto mb-12">
             <FadeUp>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#FFE4E8] text-xs font-sans font-medium text-[#6B3040] mb-4 shadow-xs">
-                <span className="text-[#D4A055] font-semibold tracking-wide">5.0 ★★★★★</span>
-                <span className="text-[#FFE4E8]">•</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1a1a] border border-[#323232] text-xs font-sans font-medium text-[#e9ce98] mb-4 shadow-xs">
+                <span className="text-[#c49c4d] font-semibold tracking-wide">5.0 ★★★★★</span>
+                <span className="text-[#c49c4d]">•</span>
                 <span>Verified Google Reviews</span>
               </div>
-              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Our Happy <em>Clients</em>
               </h2>
             </FadeUp>
@@ -624,15 +618,15 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 6. GALLERY (Photos & Videos) ──── */}
       <section
         id="gallery"
-        className="section-padding bg-white"
+        className="section-padding bg-[#1a1a1a]"
       >
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#FFE4E8] pb-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#323232] pb-6">
             <div>
               <FadeUp>
                 <p className="label-caps mb-3">Portfolio & Work</p>
-                <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+                <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                   Visual <em>Galleries</em>
                 </h2>
               </FadeUp>
@@ -645,8 +639,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                   onClick={() => setGalleryTab("photos")}
                   className={`px-5 py-2.5 rounded-full font-sans text-xs tracking-wider uppercase font-medium transition-all ${
                     galleryTab === "photos"
-                      ? "bg-[#3D1520] text-white"
-                      : "bg-[#FFF9FA] text-[#A86070] border border-[#FFE4E8] hover:bg-[#FFE4E8]"
+                      ? "bg-[#000000] text-white"
+                      : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
                   }`}
                 >
                   Photo Gallery
@@ -657,8 +651,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                   onClick={() => setGalleryTab("videos")}
                   className={`px-5 py-2.5 rounded-full font-sans text-xs tracking-wider uppercase font-medium transition-all ${
                     galleryTab === "videos"
-                      ? "bg-[#3D1520] text-white"
-                      : "bg-[#FFF9FA] text-[#A86070] border border-[#FFE4E8] hover:bg-[#FFE4E8]"
+                      ? "bg-[#000000] text-white"
+                      : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
                   }`}
                 >
                   Video Gallery
@@ -686,8 +680,8 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     onClick={() => setPhotoCategory(cat.id)}
                     className={`px-4 py-2 rounded-full font-sans text-xs uppercase font-medium tracking-wider transition-all ${
                       photoCategory === cat.id
-                        ? "bg-[#3D1520] text-white shadow-xs"
-                        : "bg-[#FFF9FA] text-[#A86070] border border-[#FFE4E8] hover:bg-[#FFE4E8]"
+                        ? "bg-[#000000] text-white shadow-xs"
+                        : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
                     }`}
                   >
                     {cat.label}
@@ -702,7 +696,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <div
                       key={`photo-g-${idx}`}
                       onClick={() => setLightboxIndex(idx)}
-                      className="relative aspect-square overflow-hidden rounded-xl border border-[#FFE4E8] shadow-xs cursor-pointer group"
+                      className="relative aspect-square overflow-hidden rounded-xl border border-[#323232] shadow-xs cursor-pointer group"
                     >
                       <Image
                         src={item.src}
@@ -714,7 +708,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                         loading={idx < 4 ? "eager" : "lazy"}
                         quality={80}
                       />
-                      <div className="absolute inset-0 bg-[#3D1520]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-[#000000]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-lg">
                           +
                         </div>
@@ -723,9 +717,9 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-20 bg-[#FFF5F7] rounded-2xl border border-[#FFE4E8]">
-                  <p className="font-serif text-lg text-[#3D1520] mb-2">No photos in this category yet</p>
-                  <p className="text-sm font-sans text-[#A86070]">More works will be uploaded soon. Check back shortly!</p>
+                <div className="text-center py-20 bg-[#000000] rounded-2xl border border-[#323232]">
+                  <p className="font-serif text-lg text-[#e9ce98] mb-2">No photos in this category yet</p>
+                  <p className="text-sm font-sans text-[#c1a447]">More works will be uploaded soon. Check back shortly!</p>
                 </div>
               )}
             </div>
@@ -738,7 +732,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                 <FadeUp key={video.id}>
                   <div
                     onClick={() => setActiveVideoEmbed(video.videoUrl)}
-                    className="relative aspect-video overflow-hidden rounded-2xl border border-[#FFE4E8] shadow-md group cursor-pointer"
+                    className="relative aspect-video overflow-hidden rounded-2xl border border-[#323232] shadow-md group cursor-pointer"
                   >
                     <Image
                       src={video.thumbnail}
@@ -747,14 +741,14 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                       className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/50">
-                      <div className="w-16 h-16 rounded-full bg-[#D4A055] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 rounded-full bg-[#c49c4d] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <Play size={24} fill="white" className="ml-1" />
                       </div>
                     </div>
                   </div>
                   <div className="mt-4">
-                    <h3 className="font-serif text-lg font-medium text-[#3D1520]">{video.title}</h3>
-                    <p className="text-xs font-sans text-[#A86070] mt-1 leading-relaxed">{video.desc}</p>
+                    <h3 className="font-serif text-lg font-medium text-[#e9ce98]">{video.title}</h3>
+                    <p className="text-xs font-sans text-[#c1a447] mt-1 leading-relaxed">{video.desc}</p>
                   </div>
                 </FadeUp>
               ))}
@@ -766,17 +760,17 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
       {/* ──── 7. CONTACT US ──── */}
       <section
         id="contact"
-        className="section-padding bg-[#FFF5F7] border-t border-[#FFE4E8]"
+        className="section-padding bg-[#000000] border-t border-[#323232]"
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
           {/* Header */}
           <div className="max-w-[700px] mb-16">
             <FadeUp>
               <p className="label-caps mb-3">Reservation & Location</p>
-              <h2 className="font-serif font-light text-[#3D1520] text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <h2 className="font-serif font-light text-[#e9ce98] text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Connect With <em>Zelenz</em> Saloon
               </h2>
-              <p className="text-sm font-sans text-[#A86070] mt-4">
+              <p className="text-sm font-sans text-[#c1a447] mt-4">
                 Fill out the booking request form, and our coordinator will message you on WhatsApp to confirm slot timings.
               </p>
             </FadeUp>
@@ -787,19 +781,19 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             <div className="lg:col-span-7 space-y-10">
               {/* Form Card */}
               <FadeUp>
-                <div className="bg-white border border-[#FFE4E8] rounded-2xl p-6 md:p-10 shadow-[0_8px_32px_rgba(183,110,121,0.04)]">
+                <div className="bg-[#1a1a1a] border border-[#323232] rounded-2xl p-6 md:p-10 shadow-[0_8px_32px_rgba(196, 156, 77, 0.04)]">
                   {formSubmitted ? (
                     <div className="text-center py-12">
-                      <div className="w-16 h-16 rounded-full bg-[#FFE4E8] flex items-center justify-center text-[#B76E79] mx-auto mb-6">
+                      <div className="w-16 h-16 rounded-full bg-[#323232] flex items-center justify-center text-[#c49c4d] mx-auto mb-6">
                         <Check size={28} />
                       </div>
-                      <h3 className="font-serif text-2xl text-[#3D1520] mb-2">Enquiry Sent!</h3>
-                      <p className="text-sm font-sans text-[#A86070] max-w-sm mx-auto mb-6">
+                      <h3 className="font-serif text-2xl text-[#e9ce98] mb-2">Enquiry Sent!</h3>
+                      <p className="text-sm font-sans text-[#c1a447] max-w-sm mx-auto mb-6">
                         Thank you for your enquiry. We will redirect you to WhatsApp to complete your slot booking process.
                       </p>
                       <button
                         onClick={() => setFormSubmitted(false)}
-                        className="px-6 py-2 rounded-full font-sans text-xs tracking-wider uppercase bg-[#FFE4E8] text-[#3D1520] hover:bg-[#FFE4E8]/80 transition-colors"
+                        className="px-6 py-2 rounded-full font-sans text-xs tracking-wider uppercase bg-[#323232] text-[#e9ce98] hover:bg-[#323232]/80 transition-colors"
                       >
                         Send another enquiry
                       </button>
@@ -808,7 +802,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     <form onSubmit={handleFormSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#A86070] uppercase block mb-2">
+                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#c1a447] uppercase block mb-2">
                             Your Name *
                           </label>
                           <input
@@ -818,11 +812,11 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                             placeholder="John Doe"
                             value={formData.name}
                             onChange={handleFormChange}
-                            className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] placeholder-gray-400 focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all"
+                            className="w-full bg-[#000000] border border-[#323232] rounded-xl px-4 py-3 text-sm font-sans text-[#e9ce98] placeholder-[#6b5a2a] focus:outline-none focus:border-[#c49c4d] focus:ring-1 focus:ring-[#c49c4d] transition-all"
                           />
                         </div>
                         <div>
-                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#A86070] uppercase block mb-2">
+                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#c1a447] uppercase block mb-2">
                             Phone Number *
                           </label>
                           <input
@@ -832,14 +826,14 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                             placeholder="+91"
                             value={formData.phone}
                             onChange={handleFormChange}
-                            className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] placeholder-gray-400 focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all"
+                            className="w-full bg-[#000000] border border-[#323232] rounded-xl px-4 py-3 text-sm font-sans text-[#e9ce98] placeholder-[#6b5a2a] focus:outline-none focus:border-[#c49c4d] focus:ring-1 focus:ring-[#c49c4d] transition-all"
                           />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#A86070] uppercase block mb-2">
+                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#c1a447] uppercase block mb-2">
                             Preferred Date
                           </label>
                           <input
@@ -847,18 +841,18 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                             name="date"
                             value={formData.date}
                             onChange={handleFormChange}
-                            className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all"
+                            className="w-full bg-[#000000] border border-[#323232] rounded-xl px-4 py-3 text-sm font-sans text-[#e9ce98] focus:outline-none focus:border-[#c49c4d] focus:ring-1 focus:ring-[#c49c4d] transition-all"
                           />
                         </div>
                         <div>
-                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#A86070] uppercase block mb-2">
+                          <label className="text-[10px] font-sans font-semibold tracking-wider text-[#c1a447] uppercase block mb-2">
                             Preferred Location
                           </label>
                           <select
                             name="location"
                             value={formData.location}
                             onChange={handleFormChange}
-                            className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all"
+                            className="w-full bg-[#000000] border border-[#323232] rounded-xl px-4 py-3 text-sm font-sans text-[#e9ce98] focus:outline-none focus:border-[#c49c4d] focus:ring-1 focus:ring-[#c49c4d] transition-all"
                           >
                             <option value="Cherpunkal">Cherpunkal Branch (Opp. Mar Sleeva Medicity)</option>
                             <option value="Pala">Pala Branch (Santhom Complex, Kottaramattom)</option>
@@ -867,7 +861,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                       </div>
 
                       <div>
-                        <label className="text-[10px] font-sans font-semibold tracking-wider text-[#A86070] uppercase block mb-2">
+                        <label className="text-[10px] font-sans font-semibold tracking-wider text-[#c1a447] uppercase block mb-2">
                           Services Required
                         </label>
                         <textarea
@@ -876,13 +870,13 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                           placeholder="e.g. Haircut, Global Color, Bridal Makeup..."
                           value={formData.services}
                           onChange={handleFormChange}
-                          className="w-full bg-[#FFF9FA] border border-[#FFE4E8] rounded-xl px-4 py-3 text-sm font-sans text-[#3D1520] placeholder-gray-400 focus:outline-none focus:border-[#B76E79] focus:ring-1 focus:ring-[#B76E79] transition-all resize-none"
+                          className="w-full bg-[#000000] border border-[#323232] rounded-xl px-4 py-3 text-sm font-sans text-[#e9ce98] placeholder-[#6b5a2a] focus:outline-none focus:border-[#c49c4d] focus:ring-1 focus:ring-[#c49c4d] transition-all resize-none"
                         />
                       </div>
 
                       <button
                         type="submit"
-                        className="w-full py-4 rounded-xl font-sans text-xs tracking-widest uppercase font-medium bg-[#3D1520] text-white hover:bg-[#D4A055] transition-all duration-300 shadow-md active:scale-98"
+                        className="w-full py-4 rounded-xl font-sans text-xs tracking-widest uppercase font-medium bg-[#000000] text-white hover:bg-[#c49c4d] transition-all duration-300 shadow-md active:scale-98"
                       >
                         Submit & Open WhatsApp
                       </button>
@@ -896,31 +890,31 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
             <div className="lg:col-span-5 space-y-8">
               {/* Branch Hours & Info */}
               <FadeUp delay={0.2}>
-                <div className="bg-white border border-[#FFE4E8] rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_rgba(183,110,121,0.04)] space-y-6">
-                  <h3 className="font-serif text-xl font-medium text-[#3D1520]">Studio Contacts</h3>
+                <div className="bg-[#1a1a1a] border border-[#323232] rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_rgba(196, 156, 77, 0.04)] space-y-6">
+                  <h3 className="font-serif text-xl font-medium text-[#e9ce98]">Studio Contacts</h3>
 
-                  <div className="space-y-4 font-sans text-sm text-[#4E4247]">
+                  <div className="space-y-4 font-sans text-sm text-[#e9ce98]">
                     <div className="flex items-start gap-3.5">
-                      <MapPin size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
+                      <MapPin size={18} className="text-[#c49c4d] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Cherpunkal Branch (Main)</p>
-                        <p className="text-[#A86070]">Zelenz Unisex Saloon, Opp. Mar Sleeva Medicity, Cherpunkal</p>
+                        <p className="font-semibold text-[#e9ce98] text-xs uppercase tracking-wider mb-1">Cherpunkal Branch (Main)</p>
+                        <p className="text-[#c1a447]">Zelenz Unisex Saloon, Opp. Mar Sleeva Medicity, Cherpunkal</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <MapPin size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
+                      <MapPin size={18} className="text-[#c49c4d] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Pala Branch</p>
-                        <p className="text-[#A86070]">Zelenz Makeups, Santhom Complex, Kottaramattom, Pala</p>
+                        <p className="font-semibold text-[#e9ce98] text-xs uppercase tracking-wider mb-1">Pala Branch</p>
+                        <p className="text-[#c1a447]">Zelenz Makeups, Santhom Complex, Kottaramattom, Pala</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <Phone size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
+                      <Phone size={18} className="text-[#c49c4d] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Call / WhatsApp</p>
-                        <p className="text-[#A86070] hover:text-[#3D1520] transition-colors space-y-1">
+                        <p className="font-semibold text-[#e9ce98] text-xs uppercase tracking-wider mb-1">Call / WhatsApp</p>
+                        <p className="text-[#c1a447] hover:text-[#c49c4d] transition-colors space-y-1">
                           <a href="tel:+917560862329" className="block">+91 75608 62329</a>
                           <a href="tel:+919847798820" className="block">+91 98477 98820</a>
                         </p>
@@ -928,20 +922,20 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <Mail size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
+                      <Mail size={18} className="text-[#c49c4d] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Email Support</p>
-                        <p className="text-[#A86070] hover:text-[#3D1520] transition-colors">
+                        <p className="font-semibold text-[#e9ce98] text-xs uppercase tracking-wider mb-1">Email Support</p>
+                        <p className="text-[#c1a447] hover:text-[#c49c4d] transition-colors">
                           <a href="mailto:zelenzmakeups@gmail.com">zelenzmakeups@gmail.com</a>
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <Clock size={18} className="text-[#B76E79] shrink-0 mt-0.5" />
+                      <Clock size={18} className="text-[#c49c4d] shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#3D1520] text-xs uppercase tracking-wider mb-1">Working Hours</p>
-                        <p className="text-[#A86070]">Mon – Sun: 9:30 AM – 7:30 PM</p>
+                        <p className="font-semibold text-[#e9ce98] text-xs uppercase tracking-wider mb-1">Working Hours</p>
+                        <p className="text-[#c1a447]">Mon – Sun: 9:30 AM – 7:30 PM</p>
                       </div>
                     </div>
                   </div>
@@ -951,7 +945,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           </div>
 
           {/* Double map view row */}
-          <div className="mt-16 border-t border-[#FFE4E8] pt-16">
+          <div className="mt-16 border-t border-[#323232] pt-16">
             <FadeUp>
               <GoogleMapsEmbed />
             </FadeUp>
@@ -972,7 +966,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
 
       {activeVideoEmbed !== null && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#3D1520]/95"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#000000]/95"
           onClick={() => setActiveVideoEmbed(null)}
         >
           <button

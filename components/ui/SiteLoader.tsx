@@ -86,7 +86,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
         .nix-loader {
           position: fixed;
           inset: 0;
-          background: #3D1520;
+          background: #000000;
           z-index: 100001;
           display: flex;
           flex-direction: column;
@@ -108,11 +108,11 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
           font-weight: 400;
           letter-spacing: 0.25em;
           background: linear-gradient(135deg,
-            #D4A055 0%,
-            #F5E6C8 35%,
-            #D4A055 50%,
-            #B8843A 70%,
-            #D4A055 100%);
+            #c49c4d 0%,
+            #e9ce98 35%,
+            #c49c4d 50%,
+            #c49c4d 70%,
+            #c49c4d 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -125,7 +125,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
           font-family: var(--font-script), 'Georgia', serif;
           font-size: clamp(14px, 3vw, 18px);
           font-style: italic;
-          color: #F9C8C8;
+          color: #323232;
           opacity: 0;
           margin-top: 6px;
           animation: scriptIn 500ms
@@ -135,7 +135,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
         .nix-bar-track {
           width: clamp(120px, 30vw, 200px);
           height: 2px;
-          background: rgba(249, 200, 200, 0.15);
+          background: rgba(196, 156, 77, 0.15);
           border-radius: 2px;
           margin-top: 40px;
           overflow: hidden;
@@ -145,9 +145,9 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
           width: 0%;
           border-radius: 2px;
           background: linear-gradient(90deg,
-            #B76E79,
-            #D4A055,
-            #B76E79);
+            #c49c4d,
+            #c49c4d,
+            #c49c4d);
           animation: goldFill 2s
             cubic-bezier(0.4, 0, 0.2, 1)
             0.2s forwards;
@@ -156,7 +156,7 @@ export default function SiteLoader({ controlled = false }: SiteLoaderProps) {
           font-family: var(--font-body), 'Georgia', serif;
           font-size: clamp(10px, 2.5vw, 12px);
           font-style: italic;
-          color: rgba(249, 200, 200, 0.45);
+          color: rgba(196, 156, 77, 0.45);
           margin-top: 20px;
           letter-spacing: 0.15em;
         }

@@ -24,7 +24,7 @@ export default function OrbitalBrands() {
   return (
     <section
       style={{
-        background: "#3D1520",
+        background: "#000000",
         minHeight: "700px",
         display: "flex",
         flexDirection: "column",
@@ -64,7 +64,7 @@ export default function OrbitalBrands() {
               fontSize: "11px",
               letterSpacing: "0.25em",
               textTransform: "uppercase",
-              color: "#F9919F",
+              color: "#c1a447",
               lineHeight: 1.4,
             }}
           >
@@ -120,7 +120,7 @@ export default function OrbitalBrands() {
                     fontSize: "clamp(9px, 1.2vw, 12px)",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "#E8CC90",
+                    color: "#c49c4d",
                   }}
                 >
                   {brand}
@@ -211,7 +211,7 @@ export default function OrbitalBrands() {
             width: "6px",
             height: "6px",
             borderRadius: "50%",
-            background: "#C4903A",
+            background: "#c1a447",
             transform: "translate(-50%, -50%)",
             pointerEvents: "none",
             zIndex: 20,

@@ -7,7 +7,7 @@ const services = [
 ];
 
 const SEPARATOR = (
-  <span style={{ color: "#F9919F", margin: "0 28px", fontSize: "12px", lineHeight: 1 }}>✦</span>
+  <span style={{ color: "#c1a447", margin: "0 28px", fontSize: "12px", lineHeight: 1 }}>✦</span>
 );
 
 export default function ServiceTicker() {
@@ -17,7 +17,7 @@ export default function ServiceTicker() {
   return (
     <div
       style={{
-        background: "#3D1520",
+        background: "#000000",
         height: "52px",
         overflow: "hidden",
         display: "flex",
@@ -43,7 +43,7 @@ export default function ServiceTicker() {
                 fontSize: "14px",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#E8CC90",
+                color: "#c49c4d",
               }}
             >
               {item}

@@ -12,13 +12,13 @@ export default function AppleIcon() {
       <div
         style={{
           fontSize: 100,
-          background: '#3D1520',
+          background: '#000000',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#E8A890',
+          color: '#c49c4d',
         }}
       >
         N

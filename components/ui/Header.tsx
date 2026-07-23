@@ -44,9 +44,9 @@ export default function Header() {
           right: 0,
           zIndex: 50,
           transition: "background 400ms ease, box-shadow 400ms ease",
-          background: scrolled ? "rgba(253,232,232,0.92)" : "transparent",
+          background: scrolled ? "rgba(10,10,10,0.96)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
-          boxShadow: scrolled ? "0 1px 0 rgba(61,21,32,0.08)" : "none",
+          boxShadow: scrolled ? "0 1px 0 rgba(196,156,77,0.15)" : "none",
         }}
       >
         <div className="mx-auto flex flex-row items-center justify-between max-w-[1440px] px-4 md:px-12 h-16 md:h-20">
@@ -81,7 +81,7 @@ export default function Header() {
                   fontWeight: 400,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: scrolled ? "#3D1520" : "rgba(255,255,255,0.88)",
+                  color: scrolled ? "#e9ce98" : "rgba(233, 206, 152, 0.85)",
                   textDecoration: "none",
                   transition: "color 300ms ease",
                 }}
@@ -101,11 +101,11 @@ export default function Header() {
               fontWeight: 400,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#FFFFFF",
+              color: "#000000",
               textDecoration: "none",
               padding: "10px 22px",
               borderRadius: "100px",
-              background: "#E8A890",
+              background: "#c49c4d",
               transition: "background 300ms ease",
               whiteSpace: "nowrap",
             }}
@@ -118,7 +118,7 @@ export default function Header() {
             className="flex md:hidden items-center justify-center p-2"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
-            style={{ color: scrolled ? "#3D1520" : "#FFFFFF" }}
+            style={{ color: "#c49c4d" }}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="4" y1="8" x2="20" y2="8" />
@@ -133,7 +133,7 @@ export default function Header() {
         <div
           className="fixed inset-0 z-[9999] flex flex-col"
           style={{
-            background: "rgba(61,26,31,0.97)",
+            background: "rgba(0,0,0,0.97)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
           }}
@@ -149,7 +149,7 @@ export default function Header() {
                 fontSize: "16px",
                 fontWeight: 500,
                 letterSpacing: "0.2em",
-                color: "#D4A055",
+                color: "#c49c4d",
                 textTransform: "uppercase",
               }}
             >
@@ -158,7 +158,7 @@ export default function Header() {
             <button
               onClick={() => setIsOpen(false)}
               style={{
-                color: "#FDE8E8",
+                color: "#c49c4d",
                 padding: "12px",
                 fontSize: "28px",
                 lineHeight: 1,
@@ -190,7 +190,7 @@ export default function Header() {
                     fontFamily: "var(--font-display), Georgia, serif",
                     fontStyle: "italic",
                     fontSize: "clamp(24px, 6vw, 32px)",
-                    color: "#FDE8E8",
+                    color: "#e9ce98",
                     textAlign: "center",
                     padding: "12px 0",
                     textDecoration: "none",
@@ -211,11 +211,11 @@ export default function Header() {
                 fontWeight: 400,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#FFFFFF",
+                color: "#000000",
                 textDecoration: "none",
                 padding: "14px 28px",
                 borderRadius: "100px",
-                background: "#E8A890",
+                background: "#c49c4d",
                 width: "fit-content",
               }}
             >

@@ -31,11 +31,11 @@ function useCountUp(target: number, duration = 2000, active: boolean) {
 function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
   const count = useCountUp(stat.value, 2000, active);
   return (
-    <div className="flex-1 text-center bg-white md:bg-transparent rounded-[100px] md:rounded-none px-[16px] py-[20px] md:p-0 border border-[#FADADD] md:border-none card-glow rosegold-shimmer md:shadow-none min-h-[100px] min-w-[100px] flex flex-col justify-center items-center">
-      <p className="font-serif font-normal text-[32px] md:text-[clamp(40px,5vw,64px)] text-[#3D1520] md:text-[#D4A055] leading-none mb-1 md:mb-2 tracking-[-0.01em] gold-foil-text">
+    <div className="flex-1 text-center bg-[#1a1a1a] md:bg-transparent rounded-[100px] md:rounded-none px-[16px] py-[20px] md:p-0 border border-[#e9ce98] md:border-none card-glow rosegold-shimmer md:shadow-none min-h-[100px] min-w-[100px] flex flex-col justify-center items-center">
+      <p className="font-serif font-normal text-[32px] md:text-[clamp(40px,5vw,64px)] text-[#000000] md:text-[#c49c4d] leading-none mb-1 md:mb-2 tracking-[-0.01em] gold-foil-text">
         {count}{active ? stat.suffix : ""}
       </p>
-      <p className="font-sans text-[9px] md:text-[10px] tracking-[0.20em] uppercase text-[#A86070] md:text-[#B07880]">
+      <p className="font-sans text-[9px] md:text-[10px] tracking-[0.20em] uppercase text-[#c1a447] md:text-[#c49c4d]">
         {stat.label}
       </p>
     </div>

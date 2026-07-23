@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react'
 
 const ELEMENT_TYPES = [
-  { type: "sparkle", content: "✦", color: "#D4A055", fontSize: [8, 12] },
-  { type: "sparkle2", content: "✧", color: "#D4A055", fontSize: [8, 12] },
+  { type: "sparkle", content: "✦", color: "#c49c4d", fontSize: [8, 12] },
+  { type: "sparkle2", content: "✧", color: "#c49c4d", fontSize: [8, 12] },
 ];
 
 function getRandomType() {

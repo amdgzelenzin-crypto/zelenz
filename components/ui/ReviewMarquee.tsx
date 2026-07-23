@@ -71,7 +71,7 @@ function GoogleGIcon() {
         d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.99 0 12s.46 3.84 1.26 5.42l4.02-3.15z"
       />
       <path
-        fill="#EA4335"
+        fill="#c49c4d"
         d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.7 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
       />
     </svg>
@@ -80,11 +80,11 @@ function GoogleGIcon() {
 
 function ReviewCard(r: ReviewItem) {
   return (
-    <div className="shrink-0 flex flex-col bg-white rounded-[20px] border border-[rgba(244,168,176,0.40)] card-glow w-[300px] md:w-[340px] p-6 md:p-7 shadow-xs hover:shadow-md transition-all duration-300">
+    <div className="shrink-0 flex flex-col bg-[#1a1a1a] rounded-[20px] border border-[rgba(244,168,176,0.40)] card-glow w-[300px] md:w-[340px] p-6 md:p-7 shadow-xs hover:shadow-md transition-all duration-300">
       {/* Top Header: Rating + Google Badge */}
       <div className="flex items-center justify-between mb-4">
         <StarRating count={r.rating ?? 5} size={15} />
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FFF5F7] border border-[#FFE4E8] text-[11px] font-sans font-medium text-[#6B3040]">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#000000] border border-[#323232] text-[11px] font-sans font-medium text-[#e9ce98]">
           <GoogleGIcon />
           <span>Google Review</span>
         </div>
@@ -92,26 +92,26 @@ function ReviewCard(r: ReviewItem) {
 
       {/* Opening quote icon */}
       <span
-        className="block font-serif text-[44px] text-[#F9919F] leading-none mb-1 select-none"
+        className="block font-serif text-[44px] text-[#c1a447] leading-none mb-1 select-none"
         aria-hidden="true"
       >
         &ldquo;
       </span>
 
       {/* Quote text */}
-      <p className="font-serif italic text-sm md:text-[15px] leading-relaxed text-[#2D1518] mb-6 flex-1">
+      <p className="font-serif italic text-sm md:text-[15px] leading-relaxed text-[#e9ce98] mb-6 flex-1">
         {r.quote}
       </p>
 
       {/* Gold divider */}
-      <div className="w-8 h-[1px] bg-[#D4A055] mb-4" />
+      <div className="w-8 h-[1px] bg-[#c49c4d] mb-4" />
 
       {/* Name and Detail */}
       <div>
-        <p className="font-serif font-semibold text-sm text-[#3D1520]">
+        <p className="font-serif font-semibold text-sm text-[#c49c4d]">
           {r.name}
         </p>
-        <p className="font-sans text-[11px] tracking-wider uppercase text-[#A86070] mt-0.5">
+        <p className="font-sans text-[11px] tracking-wider uppercase text-[#c1a447] mt-0.5">
           {r.detail}
         </p>
       </div>
@@ -299,7 +299,7 @@ export default function ReviewMarquee({
       <div
         className="absolute left-0 top-0 bottom-0 w-20 md:w-32 z-10 pointer-events-none"
         style={{
-          background: "linear-gradient(to right, #FFF5F7, transparent)",
+          background: "linear-gradient(to right, #000000, transparent)",
         }}
       />
 
@@ -307,7 +307,7 @@ export default function ReviewMarquee({
       <div
         className="absolute right-0 top-0 bottom-0 w-20 md:w-32 z-10 pointer-events-none"
         style={{
-          background: "linear-gradient(to left, #FFF5F7, transparent)",
+          background: "linear-gradient(to left, #000000, transparent)",
         }}
       />
 

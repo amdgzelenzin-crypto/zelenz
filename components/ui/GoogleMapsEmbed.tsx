@@ -7,9 +7,9 @@ export default function GoogleMapsEmbed() {
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
-          boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
-          background: 'linear-gradient(135deg, #FFF9FA 0%, #FFE4E8 100%)',
-          border: '1px solid #FFE4E8',
+          boxShadow: '0 8px 40px rgba(196, 156, 77, 0.12), 0 2px 8px rgba(196, 156, 77, 0.06)',
+          background: 'linear-gradient(135deg, #000000 0%, #323232 100%)',
+          border: '1px solid #323232',
           height: '320px',
           display: 'flex',
           alignItems: 'center',
@@ -19,7 +19,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-sans, sans-serif)',
               fontSize: '11px',
-              color: '#B76E79',
+              color: '#c49c4d',
               marginBottom: '6px',
               fontWeight: 600,
               letterSpacing: '0.15em',
@@ -30,7 +30,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-display, serif)',
               fontSize: '22px',
-              color: '#3D1520',
+              color: '#000000',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'
@@ -40,7 +40,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-body, serif)',
               fontSize: '14px',
-              color: '#4E4247',
+              color: '#e9ce98',
               marginBottom: '20px',
               lineHeight: '1.6'
             }}>
@@ -53,8 +53,8 @@ export default function GoogleMapsEmbed() {
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: '#3D1520',
-                color: '#FFFFFF',
+                background: '#000000',
+                color: '#ffffff',
                 padding: '12px 28px',
                 borderRadius: '100px',
                 fontFamily: 'var(--font-sans, sans-serif)',
@@ -66,11 +66,11 @@ export default function GoogleMapsEmbed() {
               }}
               onMouseOver={(e: any) => {
                 e.currentTarget.style.transform = 'scale(1.04)'
-                e.currentTarget.style.background = '#D4A055'
+                e.currentTarget.style.background = '#c49c4d'
               }}
               onMouseOut={(e: any) => {
                 e.currentTarget.style.transform = 'scale(1)'
-                e.currentTarget.style.background = '#3D1520'
+                e.currentTarget.style.background = '#000000'
               }}
             >
               OPEN GOOGLE MAPS →
@@ -83,9 +83,9 @@ export default function GoogleMapsEmbed() {
       <div style={{ position: 'relative', width: '100%' }}>
         <div style={{
           borderRadius: '20px', overflow: 'hidden',
-          boxShadow: '0 8px 40px rgba(183,110,121,0.12), 0 2px 8px rgba(183,110,121,0.06)',
-          background: 'linear-gradient(135deg, #FFF9FA 0%, #FFE4E8 100%)',
-          border: '1px solid #FFE4E8',
+          boxShadow: '0 8px 40px rgba(196, 156, 77, 0.12), 0 2px 8px rgba(196, 156, 77, 0.06)',
+          background: 'linear-gradient(135deg, #000000 0%, #323232 100%)',
+          border: '1px solid #323232',
           height: '320px',
           display: 'flex',
           alignItems: 'center',
@@ -95,7 +95,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-sans, sans-serif)',
               fontSize: '11px',
-              color: '#B76E79',
+              color: '#c49c4d',
               marginBottom: '6px',
               fontWeight: 600,
               letterSpacing: '0.15em',
@@ -106,7 +106,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-display, serif)',
               fontSize: '22px',
-              color: '#3D1520',
+              color: '#000000',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'
@@ -116,7 +116,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-body, serif)',
               fontSize: '14px',
-              color: '#4E4247',
+              color: '#e9ce98',
               marginBottom: '20px',
               lineHeight: '1.6'
             }}>
@@ -129,8 +129,8 @@ export default function GoogleMapsEmbed() {
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: '#3D1520',
-                color: '#FFFFFF',
+                background: '#000000',
+                color: '#ffffff',
                 padding: '12px 28px',
                 borderRadius: '100px',
                 fontFamily: 'var(--font-sans, sans-serif)',
@@ -142,11 +142,11 @@ export default function GoogleMapsEmbed() {
               }}
               onMouseOver={(e: any) => {
                 e.currentTarget.style.transform = 'scale(1.04)'
-                e.currentTarget.style.background = '#D4A055'
+                e.currentTarget.style.background = '#c49c4d'
               }}
               onMouseOut={(e: any) => {
                 e.currentTarget.style.transform = 'scale(1)'
-                e.currentTarget.style.background = '#3D1520'
+                e.currentTarget.style.background = '#000000'
               }}
             >
               OPEN GOOGLE MAPS →

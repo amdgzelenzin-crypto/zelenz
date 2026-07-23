@@ -83,7 +83,7 @@ export default function LazyImage({
   if (hasError) {
     return (
       <div
-        className={`${className || ''} bg-gray-200 flex items-center justify-center text-gray-500 text-sm`}
+        className={`${className || ''} bg-[#1a1a1a] flex items-center justify-center text-[#c49c4d] text-sm`}
         style={{
           width: fill ? '100%' : width,
           height: fill ? '100%' : height,
