@@ -30,7 +30,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-display, serif)',
               fontSize: '22px',
-              color: '#000000',
+              color: '#c79c44',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'
@@ -106,7 +106,7 @@ export default function GoogleMapsEmbed() {
             <div style={{
               fontFamily: 'var(--font-display, serif)',
               fontSize: '22px',
-              color: '#000000',
+              color: '#c79c44',
               marginBottom: '12px',
               fontWeight: 500,
               letterSpacing: '0.05em'

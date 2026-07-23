@@ -325,7 +325,7 @@ export default function Footer() {
             lineHeight: "1.6",
           }}
         >
-          <span style={{ fontSize: "12px", color: "rgba(196, 156, 77, 0.85)" }}>Designed & Developed by</span> <span style={{ color: "#c49c4d", fontSize: "12px" }}>AMDG <strong style={{ fontWeight: 700 }}>Developers</strong></span><br />
+          <span style={{ fontSize: "12px", color: "rgba(196, 156, 77, 0.50)" }}>Designed & Developed by</span> <span style={{ color: "rgba(196, 156, 77, 0.50)", fontSize: "12px" }}><strong style={{ fontWeight: 700 }}>AMDG DEVELOPERS</strong></span><br />
           <span style={{ fontFamily: "var(--font-body), Georgia, serif", fontStyle: "italic", fontSize: "12px", color: "rgba(196, 156, 77, 0.6)" }}>A Division of AMDG MEDIA</span><br />
           <a
             href="https://www.amdgmedia.co.in"
