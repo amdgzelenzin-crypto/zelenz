@@ -107,15 +107,6 @@ export default function RootLayout({
       className={`${playfair.variable} ${lora.variable} ${jost.variable} ${cormorant.variable}`}
     >
       <head>
-        {/* Critical CSS for above-the-fold content */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            body { font-family: Georgia, serif; }
-            .skeleton { background: linear-gradient(90deg, #e9ce98 25%, #e9ce98 50%, #e9ce98 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
-            @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-          `
-        }} />
-        
         <link rel="alternate" type="text/plain" href="https://nixtudio.in/llms.txt" title="LLMs.txt" />
         <link
           rel="preload"

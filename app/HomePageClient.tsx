@@ -59,7 +59,8 @@ const serviceCategories = [
       { name: "Root Touch-up", price: "₹2,000" },
       { name: "Global Hair Color", price: "₹6,500" },
       { name: "Luxury Hair Spa", price: "₹1,250" },
-      { name: "Creative Styling", price: "₹1,500" }
+      { name: "Creative Styling", price: "₹1,500" },
+      { name: "Beard Shaping & Trim", price: "₹250" }
     ]
   },
   {
@@ -81,18 +82,35 @@ const serviceCategories = [
       { name: "Gel Polish Application", price: "₹1,100" },
       { name: "Gel Nail Extensions", price: "₹2,750" },
       { name: "Classic Pedicure", price: "₹1,200" },
-      { name: "Classic Manicure", price: "₹650" }
+      { name: "Classic Manicure", price: "₹650" },
+      { name: "Premium Pedicure", price: "₹1,800" },
+      { name: "Premium Manicure", price: "₹1,100" }
+    ]
+  },
+  {
+    id: "bridal-makeup",
+    label: "Bridal & Party Makeup",
+    desc: "HD, 3D, airbrush, and customized makeups for your special day.",
+    services: [
+      { name: "HD and 3D makeup", price: "₹15,000" },
+      { name: "Airbrush Makeups", price: "₹18,000" },
+      { name: "Dewy Makeups", price: "₹8,500" },
+      { name: "Matte Makeups", price: "₹8,500" },
+      { name: "Minimal makeup", price: "₹5,500" },
+      { name: "Glass makeup", price: "₹9,000" },
+      { name: "Saree draping", price: "₹1,500" },
+      { name: "Soft Glam Makeups,full glam makeup and hairstyling", price: "₹10,000" },
+      { name: "Hd Bridal Makeup,", price: "₹27,500" },
+      { name: "Saree Draping & Styling", price: "₹3,000" }
     ]
   },
   {
     id: "premium-grooming",
     label: "Premium Grooming",
-    desc: "Grooming, hair shaping, and luxury makeovers for special occasions.",
+    desc: "Precision beard design and high-definition makeups for grooms.",
     services: [
-      { name: "Beard Shaping & Trim", price: "₹250" },
-      { name: "Premium Groom Makeup", price: "₹7,500" },
-      { name: "HD Bridal Makeup", price: "₹27,500" },
-      { name: "Saree Draping & Styling", price: "₹3,000" }
+      { name: "Beard Shaping and Trim", price: "₹250" },
+      { name: "premium Groom Makeup", price: "₹7,500" }
     ]
   }
 ];
@@ -210,13 +228,9 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
   const [selectedServiceCategory, setSelectedServiceCategory] = useState(serviceCategories[0].id);
 
   // Gallery Section State
-  const [galleryTab, setGalleryTab] = useState<"photos" | "videos">("photos");
   const [photoCategory, setPhotoCategory] = useState<string>("all");
   const [photoLayoutMode, setPhotoLayoutMode] = useState<"masonry" | "grid">("masonry");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
-  // Video Player Modal State
-  const [activeVideoEmbed, setActiveVideoEmbed] = useState<string | null>(null);
 
   // Contact Form State
   const [formData, setFormData] = useState({
@@ -505,7 +519,7 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                             >
                               <div className="flex items-center gap-3">
                                 <div className="w-1.5 h-1.5 bg-[#c49c4d] rounded-full group-hover:scale-125 transition-transform" />
-                                <span className="font-sans text-sm md:text-base text-[#c49c4d] font-semibold group-hover:text-[#e9ce98] transition-colors">
+                                <span className="font-sans text-sm md:text-base font-semibold transition-colors service-item-name">
                                   {svc.name}
                                 </span>
                               </div>
@@ -631,129 +645,65 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
                 </h2>
               </FadeUp>
             </div>
-
-            {/* Photos / Videos Toggle Tab pills */}
-            <div className="flex gap-2">
-              <FadeUp delay={0.1}>
-                <button
-                  onClick={() => setGalleryTab("photos")}
-                  className={`px-5 py-2.5 rounded-full font-sans text-xs tracking-wider uppercase font-medium transition-all ${
-                    galleryTab === "photos"
-                      ? "bg-[#000000] text-white"
-                      : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
-                  }`}
-                >
-                  Photo Gallery
-                </button>
-              </FadeUp>
-              <FadeUp delay={0.15}>
-                <button
-                  onClick={() => setGalleryTab("videos")}
-                  className={`px-5 py-2.5 rounded-full font-sans text-xs tracking-wider uppercase font-medium transition-all ${
-                    galleryTab === "videos"
-                      ? "bg-[#000000] text-white"
-                      : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
-                  }`}
-                >
-                  Video Gallery
-                </button>
-              </FadeUp>
-            </div>
           </div>
 
-          {/* Tab 1: PHOTO GALLERY CONTENT */}
-          {galleryTab === "photos" && (
-            <div>
-              {/* Photo Category Filter Pills */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                {[
-                  { id: "all", label: "All Photos" },
-                  { id: "groom", label: "Groom Styling" },
-                  { id: "bridal", label: "Bridal" },
-                  { id: "hair", label: "Hair & Styling" },
-                  { id: "skin", label: "Skin & Facials" },
-                  { id: "nails", label: "Nails & Art" },
-                  { id: "party", label: "Party & Events" },
-                ].map((cat) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setPhotoCategory(cat.id)}
-                    className={`px-4 py-2 rounded-full font-sans text-xs uppercase font-medium tracking-wider transition-all ${
-                      photoCategory === cat.id
-                        ? "bg-[#000000] text-white shadow-xs"
-                        : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
-                    }`}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
-
-              {/* Photos Grid */}
-              {filteredPhotos.length > 0 ? (
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {filteredPhotos.map((item, idx) => (
-                    <div
-                      key={`photo-g-${idx}`}
-                      onClick={() => setLightboxIndex(idx)}
-                      className="relative aspect-square overflow-hidden rounded-xl border border-[#323232] shadow-xs cursor-pointer group"
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        className="object-cover transform group-hover:scale-[1.04] transition-transform duration-500"
-                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        priority={idx < 4}
-                        loading={idx < 4 ? "eager" : "lazy"}
-                        quality={80}
-                      />
-                      <div className="absolute inset-0 bg-[#000000]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-lg">
-                          +
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-20 bg-[#000000] rounded-2xl border border-[#323232]">
-                  <p className="font-serif text-lg text-[#e9ce98] mb-2">No photos in this category yet</p>
-                  <p className="text-sm font-sans text-[#c1a447]">More works will be uploaded soon. Check back shortly!</p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Tab 2: VIDEO GALLERY CONTENT */}
-          {galleryTab === "videos" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {galleryVideos.map((video) => (
-                <FadeUp key={video.id}>
-                  <div
-                    onClick={() => setActiveVideoEmbed(video.videoUrl)}
-                    className="relative aspect-video overflow-hidden rounded-2xl border border-[#323232] shadow-md group cursor-pointer"
-                  >
-                    <Image
-                      src={video.thumbnail}
-                      alt={video.title}
-                      fill
-                      className="object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/50">
-                      <div className="w-16 h-16 rounded-full bg-[#c49c4d] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <Play size={24} fill="white" className="ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="font-serif text-lg font-medium text-[#e9ce98]">{video.title}</h3>
-                    <p className="text-xs font-sans text-[#c1a447] mt-1 leading-relaxed">{video.desc}</p>
-                  </div>
-                </FadeUp>
+          {/* PHOTO GALLERY CONTENT */}
+          <div>
+            {/* Photo Category Filter Pills */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {[
+                { id: "all", label: "All Photos" },
+                { id: "bridal", label: "Bridal" },
+                { id: "groom", label: "Groom Styling" },
+              ].map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setPhotoCategory(cat.id)}
+                  className={`px-4 py-2 rounded-full font-sans text-xs uppercase font-medium tracking-wider transition-all ${
+                    photoCategory === cat.id
+                      ? "bg-[#000000] text-white shadow-xs"
+                      : "bg-[#000000] text-[#c1a447] border border-[#323232] hover:bg-[#323232]"
+                  }`}
+                >
+                  {cat.label}
+                </button>
               ))}
             </div>
-          )}
+
+            {/* Photos Grid */}
+            {filteredPhotos.length > 0 ? (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {filteredPhotos.map((item, idx) => (
+                  <div
+                    key={`photo-g-${idx}`}
+                    onClick={() => setLightboxIndex(idx)}
+                    className="relative aspect-square overflow-hidden rounded-xl border border-[#323232] shadow-xs cursor-pointer group"
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover transform group-hover:scale-[1.04] transition-transform duration-500"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      priority={idx < 4}
+                      loading={idx < 4 ? "eager" : "lazy"}
+                      quality={80}
+                    />
+                    <div className="absolute inset-0 bg-[#000000]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white text-lg">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20 bg-[#000000] rounded-2xl border border-[#323232]">
+                <p className="font-serif text-lg text-[#e9ce98] mb-2">No photos in this category yet</p>
+                <p className="text-sm font-sans text-[#c1a447]">More works will be uploaded soon. Check back shortly!</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -962,31 +912,6 @@ export default function HomePageClient({ galleryItems }: HomePageClientProps) {
           onPrev={handlePrevPhoto}
           onNext={handleNextPhoto}
         />
-      )}
-
-      {activeVideoEmbed !== null && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#000000]/95"
-          onClick={() => setActiveVideoEmbed(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white/70 hover:text-white"
-            onClick={() => setActiveVideoEmbed(null)}
-          >
-            <X size={32} />
-          </button>
-          <div
-            className="relative w-full max-w-[800px] aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              src={activeVideoEmbed}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
       )}
     </>
   );

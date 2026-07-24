@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export type Category = "groom" | "bridal" | "hair" | "skin" | "nails" | "party";
+export type Category = "groom" | "bridal";
 
 export type GalleryItem = {
   src: string;
@@ -13,14 +13,10 @@ export type GalleryItem = {
 const CATEGORY_FOLDERS: Record<string, Category> = {
   groom: 'groom',
   bridal: 'bridal',
-  hair: 'hair',
-  skin: 'skin',
-  nails: 'nails',
-  party: 'party',
 };
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif']);
-const CATEGORY_ORDER: Category[] = ['groom', 'bridal', 'hair', 'skin', 'nails', 'party'];
+const CATEGORY_ORDER: Category[] = ['groom', 'bridal'];
 
 function isImageFile(filename: string): boolean {
   return IMAGE_EXTENSIONS.has(path.extname(filename).toLowerCase());
@@ -37,21 +33,12 @@ function buildAltText(category: Category, filename: string): string {
   if (category === 'bridal') {
     return "Bridal makeover & wedding makeup at Zelenz Unisex Saloon";
   }
-  if (category === 'hair') {
-    return "Hair styling, coloring & hair botox treatment at Zelenz Unisex Saloon";
-  }
-  if (category === 'skin') {
-    return "Skin facials & Hydra facial treatments at Zelenz Unisex Saloon";
-  }
-  if (category === 'nails') {
-    return "Nail art & gel extensions at Zelenz Unisex Saloon";
-  }
-  return "Party makeup & event styling at Zelenz Unisex Saloon";
+  return "Bridal makeover & wedding makeup at Zelenz Unisex Saloon";
 }
 
 /**
  * Loads gallery images from category subfolders under /public/images/gallery/
- * Folders: groom, bridal, hair, skin, nails, party
+ * Folders: groom, bridal
  * Runs at build time (server-side)
  */
 export function getGalleryImages(): GalleryItem[] {
