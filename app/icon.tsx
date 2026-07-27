@@ -19,9 +19,11 @@ export default function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           color: '#c49c4d',
+          fontWeight: 'bold',
+          fontFamily: 'serif',
         }}
       >
-        N
+        Z
       </div>
     ),
     { ...size }

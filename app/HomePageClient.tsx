@@ -53,14 +53,22 @@ const serviceCategories = [
   {
     id: "hair-lounge",
     label: "Hair Lounge",
-    desc: "Premium cuts, styling, coloring, and restorative spa treatments.",
+    desc: "Premium cuts, styling, coloring, treatments, and beauty services.",
     services: [
       { name: "Haircut & Blast Dry", price: "₹450" },
       { name: "Root Touch-up", price: "₹2,000" },
       { name: "Global Hair Color", price: "₹6,500" },
       { name: "Luxury Hair Spa", price: "₹1,250" },
       { name: "Creative Styling", price: "₹1,500" },
-      { name: "Beard Shaping & Trim", price: "₹250" }
+      { name: "Mehandi Design" },
+      { name: "Eyebrow Tinting & Lifting" },
+      { name: "Waxing" },
+      { name: "Keratin" },
+      { name: "Botox" },
+      { name: "Nanoplastia" },
+      { name: "Permanent blow dry" },
+      { name: "Smoothening" },
+      { name: "Permanent spa" }
     ]
   },
   {
@@ -71,7 +79,24 @@ const serviceCategories = [
       { name: "Hydra-Boost Cleanup", price: "₹1,350" },
       { name: "Skin Brightening Facial", price: "₹2,100" },
       { name: "Premium Detan Treatment", price: "₹550" },
-      { name: "Luxury Bridal Facial", price: "₹4,500" }
+      { name: "Luxury Bridal Facial", price: "₹4,500" },
+      { name: "Hydrafacial" },
+      { name: "Korean glow facial" },
+      { name: "Whitening facial" },
+      { name: "Vitamin facial" },
+      { name: "Glutathione" },
+      { name: "B.B glow" }
+    ]
+  },
+  {
+    id: "waxing",
+    label: "Waxing",
+    desc: "Smooth and gentle hair removal treatments for silky skin.",
+    services: [
+      { name: "Brazilian waxing" },
+      { name: "Rica wax" },
+      { name: "Classic wax" },
+      { name: "Chocolate wax" }
     ]
   },
   {
@@ -99,8 +124,8 @@ const serviceCategories = [
       { name: "Minimal makeup", price: "₹5,500" },
       { name: "Glass makeup", price: "₹9,000" },
       { name: "Saree draping", price: "₹1,500" },
-      { name: "Soft Glam Makeups,full glam makeup and hairstyling", price: "₹10,000" },
-      { name: "Hd Bridal Makeup,", price: "₹27,500" },
+      { name: "Soft Glam Makeups, full glam makeup and hairstyling", price: "₹10,000" },
+      { name: "Hd Bridal Makeup", price: "₹27,500" },
       { name: "Saree Draping & Styling", price: "₹3,000" }
     ]
   },
@@ -110,7 +135,7 @@ const serviceCategories = [
     desc: "Precision beard design and high-definition makeups for grooms.",
     services: [
       { name: "Beard Shaping and Trim", price: "₹250" },
-      { name: "premium Groom Makeup", price: "₹7,500" }
+      { name: "Premium Groom Makeup", price: "₹7,500" }
     ]
   }
 ];
